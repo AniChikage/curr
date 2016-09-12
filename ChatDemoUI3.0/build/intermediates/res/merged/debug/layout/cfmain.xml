@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:CoverFlowPager="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <cn.edu.zafu.easemob.CoverFlowLib.CoverFlowContainer
+            android:id="@+id/pager_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <cn.edu.zafu.easemob.CoverFlowLib.VelocityViewPager
+                android:layout_width="120dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
+                CoverFlowPager:listSpacing="-35dp"
+                CoverFlowPager:selectedSpacing="30dp"
+                CoverFlowPager:rotateFactor="70.0"
+                CoverFlowPager:rotateLimit="70.0"
+                CoverFlowPager:scaleFactor="0.1"
+                CoverFlowPager:alphaFactor="0.3"
+                CoverFlowPager:gravityFactor="-5.0"
+                CoverFlowPager:listRadius="2.0"
+                />
+    </cn.edu.zafu.easemob.CoverFlowLib.CoverFlowContainer>
+
+
+    <TextView android:id="@+id/selectedTitle"
+              android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:textSize="30sp" android:textColor="#FFF"
+              android:gravity="center"
+              android:layout_marginBottom="20dp"
+              android:layout_alignParentBottom="true"/>
+</RelativeLayout>

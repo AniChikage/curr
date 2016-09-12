@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="abc_action_bar_embed_tabs_pre_jb">true</bool>
+    <bool name="abc_config_allowActionMenuItemTextWithIcon">true</bool>
+    <color name="black">#000</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="hint">#8d8d8d</color>
+    <color name="jinrirewen">#999999</color>
+    <color name="solid_blue">#0000ff</color>
+    <color name="solid_gray">#dddddd</color>
+    <color name="solid_green">#f0f0</color>
+    <color name="solid_red">#f00</color>
+    <color name="solid_white">#fff</color>
+    <color name="solid_yellow">#ffffff00</color>
+    <color name="tab_text_color">#eb2a2d</color>
+    <color name="voip_interface_text_color">#bababa</color>
+    <declare-styleable name="BannerLayoutStyle">
+        <attr format="color|reference" name="selectedIndicatorColor"/>
+        <attr format="color|reference" name="unSelectedIndicatorColor"/>
+        <attr format="enum" name="indicatorShape">
+            <enum name="rect" value="0"/>
+            <enum name="oval" value="1"/>
+        </attr>
+
+        <attr format="dimension|reference" name="selectedIndicatorHeight"/>
+        <attr format="dimension|reference" name="selectedIndicatorWidth"/>
+
+        <attr format="dimension|reference" name="unSelectedIndicatorHeight"/>
+        <attr format="dimension|reference" name="unSelectedIndicatorWidth"/>
+
+        <attr format="enum" name="indicatorPosition">
+            <enum name="centerBottom" value="0"/>
+            <enum name="rightBottom" value="1"/>
+            <enum name="leftBottom" value="2"/>
+            <enum name="centerTop" value="3"/>
+            <enum name="rightTop" value="4"/>
+            <enum name="leftTop" value="5"/>
+        </attr>
+
+        <attr format="dimension|reference" name="indicatorSpace"/>
+        <attr format="dimension|reference" name="indicatorMargin"/>
+        <attr format="integer|reference" name="autoPlayDuration"/>
+        <attr format="integer|reference" name="scrollDuration"/>
+        <attr format="boolean" name="isAutoPlay"/>
+        <attr format="integer|reference" name="defaultImage"/>
+    </declare-styleable>
+    <declare-styleable name="CircleFlowIndicator">
+        <attr format="color" name="activeColor"/>
+        <attr format="color" name="inactiveColor"/>
+        <attr format="dimension" name="radius"/>
+        <attr format="boolean" name="centered"/>
+        <attr format="integer" name="fadeOut"/>
+        <attr name="inactiveType">
+            <flag name="stroke" value="0"/>
+            <flag name="fill" value="1"/>
+        </attr>
+        <attr name="activeType">
+            <flag name="stroke" value="0"/>
+            <flag name="fill" value="1"/>
+        </attr>
+        <attr format="dimension" name="circleSeparation"/>
+        <attr format="dimension" name="activeRadius"/>
+    </declare-styleable>
+    <declare-styleable name="CoverFlowPager">
+        <attr format="integer" name="visibleIndex"/>
+        <attr format="dimension" name="listSpacing"/>
+        <attr format="dimension" name="selectedSpacing"/>
+        <attr format="float" name="rotateFactor"/>
+        <attr format="float" name="rotateLimit"/>
+        <attr format="float" name="alphaFactor"/>
+        <attr format="float" name="scaleFactor"/>
+        <attr format="float" name="gravityFactor"/>
+        <attr format="float" name="listRadius"/>
+    </declare-styleable>
+    <declare-styleable name="ImageCoverFlowView">
+        <attr format="integer" name="visibleImage"/>
+        <attr format="fraction" name="reflectionHeight"/>
+        <attr format="dimension" name="reflectionGap"/>
+        <attr format="boolean" name="topImageClickEnable"/>
+        <attr format="enum" name="coverflowGravity">
+            <enum name="top" value="0"/>
+            <enum name="bottom" value="1"/>
+            <enum name="center_vertical" value="2"/>
+        </attr>
+        <attr format="enum" name="coverflowLayoutMode">
+            <enum name="match_parent" value="0"/>
+            <enum name="wrap_content" value="1"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="ViewFlow">
+        <attr format="integer" name="sidebuffer"/>
+    </declare-styleable>
+    <dimen name="abc_config_prefDialogWidth">440dp</dimen>
+    <item name="abc_dialog_fixed_height_major" type="dimen">60%</item>
+    <item name="abc_dialog_fixed_height_minor" type="dimen">90%</item>
+    <item name="abc_dialog_fixed_width_major" type="dimen">60%</item>
+    <item name="abc_dialog_fixed_width_minor" type="dimen">90%</item>
+    <item name="abc_dialog_min_width_major" type="dimen">55%</item>
+    <item name="abc_dialog_min_width_minor" type="dimen">80%</item>
+    <dimen name="abc_search_view_text_min_width">192dip</dimen>
+    <dimen name="image_thumbnail_size">148dp</dimen>
+    <dimen name="image_thumbnail_spacing">2dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <drawable name="blue">#770000ff</drawable>
+    <drawable name="green">#7700ff00</drawable>
+    <drawable name="red">#7f00</drawable>
+    <drawable name="screen_background_black">#ff000000</drawable>
+    <drawable name="translucent_background">#e0000000</drawable>
+    <drawable name="transparent_background">#00000000</drawable>
+    <drawable name="yellow">#77ffff00</drawable>
+    <integer name="abc_max_action_buttons">4</integer>
+    <string name="answer">接听</string>
+    <string name="are_connected_to_each_other">正在连接对方...</string>
+    <string name="call_duration">通话时长</string>
+    <string name="connection_failure">连接建立失败！...</string>
+    <string name="did_not_answer">未接听</string>
+    <string name="direct_call">Direct</string>
+    <string name="hands_free">免提</string>
+    <string name="hang_up">挂断</string>
+    <string name="hanging_up">正在挂断..</string>
+    <string name="has_been_cancelled">已取消</string>
+    <string name="have_connected_with">已经和对方建立连接，等待对方接受...</string>
+    <string name="in_the_call">通话中...</string>
+    <string name="is_not_yet_connected_to_the_server">尚未连接至服务器</string>
+    <string name="mute">静音</string>
+    <string name="refused">已拒绝</string>
+    <string name="relay_call">Relay</string>
+    <string name="the_other_is_hang_up">对方已经挂断</string>
+    <string name="the_other_is_not_online">对方不在线</string>
+    <string name="the_other_is_on_the_phone">对方正在通话中</string>
+    <string name="the_other_is_on_the_phone_please">对方正在通话中，请稍后再拨</string>
+    <string name="the_other_party_did_not_answer">对方未接听</string>
+    <string name="the_other_party_has_refused_to">对方已拒绝</string>
+    <string name="the_other_party_is_not_online">对方不在线，请稍后再拨...</string>
+    <string name="the_other_party_refused_to_accept">对方拒绝接受！...</string>
+    <style name="AnimFade2" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_from_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_to_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_to_right</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_from_left</item>
+    </style>
+    <style name="AnimationFade">
+
+        <!-- PopupWindow左右弹出的效果 -->
+        <item name="android:windowEnterAnimation">@anim/inuptodown</item>
+        <item name="android:windowExitAnimation">@anim/outdowntoup</item>
+    </style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="Base.Theme.AppCompat.DialogWhenLarge" parent="Base.Theme.AppCompat.Dialog.FixedSize"/>
+    <style name="Base.Theme.AppCompat.Light.DialogWhenLarge" parent="Base.Theme.AppCompat.Light.Dialog.FixedSize"/>
+    <style name="horizontal_slide" parent="android:Theme.NoTitleBar">
+        <item name="android:windowAnimationStyle">@style/AnimFade2</item>
+    </style>
+    <style name="nornal_style" parent="android:Theme.NoTitleBar"/>
+</resources>

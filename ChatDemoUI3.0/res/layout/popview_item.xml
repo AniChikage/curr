@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C0C0C0"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_weight="1"
+        android:id="@+id/zhuanchang"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="专长" />
+
+    <Button
+        android:layout_weight="1"
+        android:id="@+id/jiage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/zhuanchang"
+        android:text="价格" />
+
+    <Button
+        android:layout_weight="1"
+        android:id="@+id/keyuyue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/jiage"
+        android:text="可预约" />
+
+</LinearLayout>
