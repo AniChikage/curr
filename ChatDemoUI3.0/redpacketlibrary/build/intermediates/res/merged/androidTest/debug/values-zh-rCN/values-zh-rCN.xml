@@ -112,7 +112,7 @@
     <string name="add_friend">添加好友</string>
     <string name="add_public_chat_room">添加聊天室</string>
     <string name="add_public_group_chat">添加公开群</string>
-    <string name="address_book">通讯录</string>
+    <string name="address_book">咨询师</string>
     <string name="agree">同意</string>
     <string name="all_members">所有成员</string>
     <string name="answer">接听</string>
@@ -264,9 +264,9 @@
     <string name="send_failure_please">发送失败，请检测服务器是否连接</string>
     <string name="send_successful">发送请求成功,等待对方验证</string>
     <string name="send_the_request_is">发送请求成功，等待群主同意</string>
-    <string name="session">会话</string>
+    <string name="session">首页</string>
     <string name="set">设置</string>
-    <string name="setting">设置</string>
+    <string name="setting">我的</string>
     <string name="setting_nickname">设置昵称</string>
     <string name="shake">震动</string>
     <string name="sure_to_empty_this">确定清空此群的聊天记录吗？</string>

@@ -1,10 +1,12 @@
 package com.hyphenate.chatuidemo.Main;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -26,7 +28,7 @@ import java.util.List;
 import java.util.Map;
 
 
-public class QuestionActivity extends ActionBarActivity {
+public class QuestionActivity extends Activity {
 
     private Context hcontext;
     private ListView viewFlow;

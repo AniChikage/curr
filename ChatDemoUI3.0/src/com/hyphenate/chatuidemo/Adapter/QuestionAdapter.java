@@ -92,6 +92,21 @@ public class QuestionAdapter extends BaseAdapter {
         listItemView.radioButton3.setText((String)listItems.get(position).get("c3"));
         listItemView.radioButton4.setText((String)listItems.get(position).get("c4"));
         listItemView.radioButton5.setText((String)listItems.get(position).get("c5"));
+        listItemView.radioButton1.setChecked(false);
+        listItemView.radioButton2.setChecked(false);
+        listItemView.radioButton3.setChecked(false);
+        listItemView.radioButton4.setChecked(false);
+        listItemView.radioButton5.setChecked(false);
+        if(tagList[position]==1)
+            listItemView.radioButton1.setChecked(true);
+        if(tagList[position]==2)
+            listItemView.radioButton2.setChecked(true);
+        if(tagList[position]==3)
+            listItemView.radioButton3.setChecked(true);
+        if(tagList[position]==4)
+            listItemView.radioButton4.setChecked(true);
+        if(tagList[position]==5)
+            listItemView.radioButton5.setChecked(true);
         listItemView.radioButton1.setTag(1);
         listItemView.radioButton2.setTag(2);
         listItemView.radioButton3.setTag(3);

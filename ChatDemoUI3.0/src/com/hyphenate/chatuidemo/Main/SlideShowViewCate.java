@@ -131,6 +131,9 @@ public class SlideShowViewCate extends FrameLayout {
         textViews=new ArrayList<TextView>();
         imageViewsList = new ArrayList<ImageView>();
         dotViewsList = new ArrayList<View>();
+        textViews.clear();
+        imageViewsList.clear();
+        dotViewsList.clear();
         // 异步任务获取图片
         Asyn async=new Asyn();
         try {
@@ -146,10 +149,10 @@ public class SlideShowViewCate extends FrameLayout {
     private void initUI(Context context, ArrayList<String> adhint, ArrayList<String> adimg, ArrayList<String> adid){
         LayoutInflater.from(context).inflate(R.layout.layout_slideshow, this, true);
 
-        final Context innerContext = context;
         LinearLayout dotLayout = (LinearLayout)findViewById(R.id.dotLayout);
         dotLayout.removeAllViews();
 
+        final Context innerContext = context;
         // 热点个数与图片特殊相等
         for (int i = 0; i < adhint.size(); i++) {
             ImageView view =  new ImageView(context);

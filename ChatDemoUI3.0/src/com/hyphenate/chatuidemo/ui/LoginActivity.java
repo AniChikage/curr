@@ -158,7 +158,7 @@ public class LoginActivity extends BaseActivity {
 				}
 				// get user's info (this should be get from App's server or 3rd party service)
 				DemoHelper.getInstance().getUserProfileManager().asyncGetCurrentUserInfo();
-/*
+
 				new Thread(new Runnable() {
 					public void run() {
 						try{
@@ -176,12 +176,12 @@ public class LoginActivity extends BaseActivity {
 					}
 				}).start();
 
-				*/
+				/*
 				Intent intent = new Intent(LoginActivity.this,
 						MainActivity.class);
 				startActivity(intent);
 
-				finish();
+				finish();*/
 			}
 
 			@Override
@@ -213,7 +213,7 @@ public class LoginActivity extends BaseActivity {
 			Log.e("dologin" ,string);
 			//Toast.makeText(Login.this, String.valueOf(string.indexOf("login")), Toast.LENGTH_SHORT).show();
 			if(string.indexOf("token")>0) {
-				Intent intent =new Intent(LoginActivity.this, Mainpage.class);
+				Intent intent =new Intent(LoginActivity.this, MainActivity.class);
 				Bundle bundle = new Bundle();
 				bundle.putString("app_username",usernameEditText.getText().toString());
 				intent.putExtras(bundle);

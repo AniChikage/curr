@@ -408,12 +408,12 @@
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\EaseUI\\unspecified\\res\\layout\\ease_row_received_video_call.xml"
     },
     {
-        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\layout\\rp_fragment_phone_captcha.xml",
-        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\res\\layout\\rp_fragment_phone_captcha.xml"
-    },
-    {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\layout\\ease_row_big_expression.xml",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\EaseUI\\unspecified\\res\\layout\\ease_row_big_expression.xml"
+    },
+    {
+        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\layout\\rp_fragment_phone_captcha.xml",
+        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\res\\layout\\rp_fragment_phone_captcha.xml"
     },
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\layout\\ease_row_received_video.xml",

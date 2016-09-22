@@ -76,6 +76,7 @@ import com.hyphenate.chatuidemo.DemoHelper;
 import com.hyphenate.chatuidemo.Main.ArticleDetail;
 import com.hyphenate.chatuidemo.Main.Category;
 import com.hyphenate.chatuidemo.Main.QuestionActivity;
+import com.hyphenate.chatuidemo.Main.SettingActivity;
 import com.hyphenate.chatuidemo.Main.SlideShowView;
 import com.hyphenate.chatuidemo.Main.SlideShowViewCs;
 import com.hyphenate.chatuidemo.R;
@@ -105,6 +106,7 @@ public class MainActivity extends BaseActivity {
 	// textview for unread message count
 	private TextView unreadLabel;
 	private String user_id;
+	private String firstChecked="0";
 	// textview for unread event message
 	private TextView unreadAddressLable;
 	private TextView paixu;
@@ -163,7 +165,7 @@ public class MainActivity extends BaseActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		requestWindowFeature(Window.FEATURE_NO_TITLE); //设置无标题栏
+		//requestWindowFeature(Window.FEATURE_NO_TITLE); //设置无标题栏
 		super.onCreate(savedInstanceState);
 		hcontext=this.getApplicationContext();
 		
@@ -190,8 +192,8 @@ public class MainActivity extends BaseActivity {
 			return;
 		}
 		setContentView(R.layout.em_activity_main);
-		getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS); //透明状态栏
-		getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION); //透明导航栏
+		//getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS); //透明状态栏
+		//getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION); //透明导航栏
 		// runtime permission for android 6.0, just require all permissions here for simple
 		requestPermissions();
 
@@ -222,7 +224,7 @@ public class MainActivity extends BaseActivity {
 			showAccountRemovedDialog();
 		}
 
-
+		//获取
 		Log.e(TAG,EMClient.getInstance().getCurrentUser());
 
 		inviteMessgeDao = new InviteMessgeDao(this);
@@ -271,9 +273,11 @@ public class MainActivity extends BaseActivity {
 			try {
 				JSONObject jsonObjs = new JSONObject(string).getJSONObject("user");
 				user_id = jsonObjs.getString("id");
+				Log.e(TAG,user_id);
 				try{
 					initView();
 					initData();
+					initFirstVisit();
 				}
 				catch (Exception ex){
 					Toast.makeText(MainActivity.this,"获取失败",Toast.LENGTH_LONG).show();
@@ -307,8 +311,41 @@ public class MainActivity extends BaseActivity {
 	private void initData(){
 		initMainpage();
 		initConsellor();
-		initMine();
+		//initMine();
 	}
+
+	private void initFirstVisit(){
+		new Thread(new Runnable() {
+			public void run() {
+				try {
+					ConnNet operaton = new ConnNet();
+					String result = operaton.checkFirstVisit("1",user_id);
+					Message msg = new Message();
+					msg.obj = result;
+					hCheckFirstVisit.sendMessage(msg);
+				} catch (Exception ex) {
+					Toast.makeText(MainActivity.this, "咨询师获取失败", Toast.LENGTH_LONG).show();
+				}
+			}
+		}).start();
+	}
+
+	Handler hCheckFirstVisit=new Handler(){
+		@Override
+		public void handleMessage(Message msg) {
+			String string=(String) msg.obj;
+
+			try {
+				firstChecked = new JSONObject(string).getString("1st");
+				Log.e("firstchecked",firstChecked);
+				initMine();
+			} catch (JSONException e) {
+				System.out.println("Jsons parse error !");
+				e.printStackTrace();
+			}
+			super.handleMessage(msg);
+		}
+	};
 
 	private void initMainpage(){
 		//mainpage begin
@@ -418,23 +455,33 @@ public class MainActivity extends BaseActivity {
 		mainpage_mine_header_view = LayoutInflater.from(this).inflate(R.layout.mainpage_mine_header, null);
 		mainpage_mine_header_ll = (LinearLayout)mainpage_mine_header_view.findViewById(R.id.mine_header_ll);
 		app_username = (TextView)mainpage_mine_header_view.findViewById(R.id.app_username);
+		app_username.setText(EMClient.getInstance().getCurrentUser().toString());
 		dochuzhen = (ImageView) mainpage_mine_header_view.findViewById(R.id.dochuzhen);
+		if(firstChecked!="0"){
+			dochuzhen.setImageResource(R.drawable.quesdone);
+		}
 		dochuzhen.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(MainActivity.this,QuestionActivity.class);
-				Bundle bundle = new Bundle();
-				bundle.putString("user_id",user_id);
-				intent.putExtras(bundle);
-				startActivity(intent);
+				if(firstChecked=="0"){
+					Intent intent = new Intent(MainActivity.this,QuestionActivity.class);
+					Bundle bundle = new Bundle();
+					bundle.putString("user_id",user_id);
+					intent.putExtras(bundle);
+					startActivity(intent);
+				}
+				else{
+					Toast.makeText(MainActivity.this,"您已经完成初诊",Toast.LENGTH_LONG).show();
+				}
 			}
 		});
 		mp_setting = (ImageView) mainpage_mine_header_view.findViewById(R.id.mp_setting);
 		mp_setting.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				logout();
-				Toast.makeText(MainActivity.this,"开发中",Toast.LENGTH_LONG).show();
+				startActivity(new Intent(MainActivity.this,SettingActivity.class));
+				//logout();
+				//Toast.makeText(MainActivity.this,"开发中",Toast.LENGTH_LONG).show();
 			}
 		});
 
@@ -620,7 +667,7 @@ public class MainActivity extends BaseActivity {
 							//finish();
 						}
 						else
-							Toast.makeText(getApplicationContext(),"kong", Toast.LENGTH_SHORT).show();
+							Toast.makeText(getApplicationContext(),"获取咨询师列表失败", Toast.LENGTH_SHORT).show();
 					}
 					catch (Exception ex){
 						Toast.makeText(MainActivity.this,ex.toString() ,Toast.LENGTH_SHORT).show();
@@ -833,7 +880,7 @@ public class MainActivity extends BaseActivity {
 								bundle.putString("msgid",person.get("jrywnoid").toString());
 								intent.putExtras(bundle);
 								startActivity(intent);
-								finish();
+								//finish();
 							}
 							else
 								Toast.makeText(getApplicationContext(),"kong", Toast.LENGTH_SHORT).show();
@@ -1069,7 +1116,7 @@ public class MainActivity extends BaseActivity {
 			conflictBuilder.create().dismiss();
 			conflictBuilder = null;
 		}
-		unregisterBroadcastReceiver();
+		//unregisterBroadcastReceiver();
 
 		try {
             unregisterReceiver(internalDebugReceiver);

@@ -2,19 +2,6 @@
 <resources>
     <bool name="abc_action_bar_embed_tabs_pre_jb">true</bool>
     <bool name="abc_config_allowActionMenuItemTextWithIcon">true</bool>
-    <color name="black">#000</color>
-    <color name="colorAccent">#FF4081</color>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="hint">#8d8d8d</color>
-    <color name="jinrirewen">#999999</color>
-    <color name="solid_blue">#0000ff</color>
-    <color name="solid_gray">#dddddd</color>
-    <color name="solid_green">#f0f0</color>
-    <color name="solid_red">#f00</color>
-    <color name="solid_white">#fff</color>
-    <color name="solid_yellow">#ffffff00</color>
-    <color name="tab_text_color">#eb2a2d</color>
     <color name="voip_interface_text_color">#bababa</color>
     <declare-styleable name="BannerLayoutStyle">
         <attr format="color|reference" name="selectedIndicatorColor"/>
@@ -105,13 +92,6 @@
     <dimen name="padding_large">16dp</dimen>
     <dimen name="padding_medium">8dp</dimen>
     <dimen name="padding_small">8dp</dimen>
-    <drawable name="blue">#770000ff</drawable>
-    <drawable name="green">#7700ff00</drawable>
-    <drawable name="red">#7f00</drawable>
-    <drawable name="screen_background_black">#ff000000</drawable>
-    <drawable name="translucent_background">#e0000000</drawable>
-    <drawable name="transparent_background">#00000000</drawable>
-    <drawable name="yellow">#77ffff00</drawable>
     <integer name="abc_max_action_buttons">4</integer>
     <string name="answer">接听</string>
     <string name="are_connected_to_each_other">正在连接对方...</string>
@@ -148,12 +128,14 @@
         <!-- PopupWindow左右弹出的效果 -->
         <item name="android:windowEnterAnimation">@anim/inuptodown</item>
         <item name="android:windowExitAnimation">@anim/outdowntoup</item>
+
     </style>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
     </style>
     <style name="Base.Theme.AppCompat.DialogWhenLarge" parent="Base.Theme.AppCompat.Dialog.FixedSize"/>
     <style name="Base.Theme.AppCompat.Light.DialogWhenLarge" parent="Base.Theme.AppCompat.Light.Dialog.FixedSize"/>

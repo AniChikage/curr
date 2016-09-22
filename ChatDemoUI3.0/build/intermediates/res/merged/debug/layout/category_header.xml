@@ -18,11 +18,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="5">
-            <cn.edu.zafu.easemob.Main.SlideShowViewCate
+            <com.hyphenate.chatuidemo.Main.SlideShowViewCate
                 android:id="@+id/slideshow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-            </cn.edu.zafu.easemob.Main.SlideShowViewCate>
+            </com.hyphenate.chatuidemo.Main.SlideShowViewCate>
         </LinearLayout>
         <LinearLayout
             android:layout_weight="24"

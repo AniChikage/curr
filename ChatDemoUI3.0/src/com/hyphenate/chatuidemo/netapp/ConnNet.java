@@ -9,6 +9,8 @@ import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.BasicHttpEntity;
+import org.apache.http.entity.HttpEntityWrapper;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
@@ -47,8 +49,9 @@ public class ConnNet {
     private static final String urlDelOrder="http://www.clr-vision.com:18080/Therapista/order/delOrder";
     private static final String urlGetOrderByUid="http://www.clr-vision.com:18080/Therapista/order/getOrdersByUid";
     private static final String urladdHarvest="http://www.clr-vision.com:18080/Therapista/harvest/addHarvest";
-    private static final String urladdHarvestz="http://www.clr-vision.com:18080/Therapista/harvest/addHarvest";
+    private static final String urladdHarvestz="http://www.clr-vision.com:18080/Therapista/harvestz/addHarvestz";
     private static final String urlgetQuestions="http://www.clr-vision.com:18080/Therapista/measurement/getMeasurements";
+    private static final String urlCheckFirstVisit="http://www.clr-vision.com:18080/Therapista/factor/checkFirstVisit";
     /*
     private static final  String urlLogin="http://10.15.3.101:8080/Therapista/user/login";
     private static final  String urlgetConsellors="http://10.15.3.101:8080/Therapista/consellor/getConsellors";
@@ -654,13 +657,15 @@ public class ConnNet {
         return result;
     }
 
-    public String addHarvestz(String result){
-        try {
+    public String addHarvestz(String s){
+        String result="";try {
 //            JSONArray jsonArray = new JSONArray();
+
             List<NameValuePair> params=new ArrayList<NameValuePair>();
-            params.add(new BasicNameValuePair("harvestz",result));
+            params.add(new BasicNameValuePair("harvestz",s));
             HttpEntity entity = new UrlEncodedFormEntity(params, HTTP.UTF_8);
             HttpPost httpPost = new HttpPost(urladdHarvestz);
+
             httpPost.setEntity(entity);
             HttpClient client = new DefaultHttpClient();
             HttpResponse httpResponse = client.execute(httpPost);
@@ -742,6 +747,38 @@ public class ConnNet {
         singleConsellor = singleConsellor.replace("\"{","{");
         singleConsellor = singleConsellor.replace("}\"","}");
         return singleConsellor;
+    }
+
+    //checkfirstvisit
+    public String checkFirstVisit(String gid, String uid){
+        String checkResult="";
+        try {
+            List<NameValuePair> params=new ArrayList<NameValuePair>();
+            params.add(new BasicNameValuePair("uid",uid));
+            params.add(new BasicNameValuePair("gid",gid));
+
+            HttpEntity entity = new UrlEncodedFormEntity(params, HTTP.UTF_8);
+            HttpPost httpPost = new HttpPost(urlCheckFirstVisit);
+            httpPost.setEntity(entity);
+            HttpClient client = new DefaultHttpClient();
+            HttpResponse httpResponse = client.execute(httpPost);
+
+            if (httpResponse.getStatusLine().getStatusCode()== HttpStatus.SC_OK) {
+                checkResult= EntityUtils.toString(httpResponse.getEntity(), "utf-8");
+                //Log.v("asd",singleConsellor);
+            }
+            else {
+                checkResult="检测初诊失败";
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            checkResult = e.toString();
+        }
+        checkResult = checkResult.replace("\\\"","\"");
+        checkResult = checkResult.replace("\"{","{");
+        checkResult = checkResult.replace("}\"","}");
+        return checkResult;
     }
 
     //获取具体文章

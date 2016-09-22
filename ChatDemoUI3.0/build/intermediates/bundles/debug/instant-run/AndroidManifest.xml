@@ -363,6 +363,34 @@
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustPan" />
 
+        <!-- APPOINTMENT CONFIRM -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.Appointment.AppointConfirm"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- MYAPPOINT -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.Appointment.MyAppoint"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- MYSETTING -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.MySetting"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- SETTINGACTIVITY -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.Main.SettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" />
+
         <!-- 开机自启动服务 -->
         <receiver android:name="com.hyphenate.chatuidemo.receiver.StartServiceReceiver" >
             <intent-filter android:priority="1000" >

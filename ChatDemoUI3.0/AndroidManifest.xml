@@ -364,6 +364,34 @@
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustPan"></activity>
 
+        <!-- APPOINTMENT CONFIRM-->
+        <activity
+            android:name=".Appointment.AppointConfirm"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan"></activity>
+
+        <!-- MYAPPOINT-->
+        <activity
+            android:name=".Appointment.MyAppoint"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan"></activity>
+
+        <!-- MYSETTING-->
+        <activity
+            android:name=".ui.MySetting"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan"></activity>
+
+        <!-- SETTINGACTIVITY-->
+        <activity
+            android:name=".Main.SettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan"></activity>
+
 
         <!-- 开机自启动服务 -->
         <receiver android:name=".receiver.StartServiceReceiver">

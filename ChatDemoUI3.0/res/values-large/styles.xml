@@ -6,12 +6,14 @@
         <!-- PopupWindow左右弹出的效果 -->
         <item name="android:windowEnterAnimation">@anim/inuptodown</item>
         <item name="android:windowExitAnimation">@anim/outdowntoup</item>
+
     </style>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
     </style>
     <declare-styleable name="ViewFlow">
         <attr name="sidebuffer" format="integer" />
