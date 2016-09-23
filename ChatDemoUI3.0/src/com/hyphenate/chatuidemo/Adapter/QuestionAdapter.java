@@ -36,6 +36,7 @@ public class QuestionAdapter extends BaseAdapter {
         public RadioButton radioButton5;
     }
     public QuestionAdapter(Context context, List<Map<String, Object>> listItems) {
+        super();
         this.context = context;
         listContainer = LayoutInflater.from(context);   //创建视图容器并设置上下文
         this.listItems = listItems;
@@ -70,7 +71,7 @@ public class QuestionAdapter extends BaseAdapter {
         final int selectID = position;
         //自定义视图
         ListItemView  listItemView = null;
-        if (convertView == null) {
+        if (true) {
             listItemView = new ListItemView();
             //获取list_item布局文件的视图
             convertView = listContainer.from(context).inflate(R.layout.question_item, null);
@@ -86,27 +87,16 @@ public class QuestionAdapter extends BaseAdapter {
         }else {
             listItemView = (ListItemView)convertView.getTag();
         }
+
+        listItemView.radioButton1.destroyDrawingCache();
+
         listItemView.content.setText( (String)listItems.get(position).get("content"));
         listItemView.radioButton1.setText((String)listItems.get(position).get("c1"));
         listItemView.radioButton2.setText((String)listItems.get(position).get("c2"));
         listItemView.radioButton3.setText((String)listItems.get(position).get("c3"));
         listItemView.radioButton4.setText((String)listItems.get(position).get("c4"));
         listItemView.radioButton5.setText((String)listItems.get(position).get("c5"));
-        listItemView.radioButton1.setChecked(false);
-        listItemView.radioButton2.setChecked(false);
-        listItemView.radioButton3.setChecked(false);
-        listItemView.radioButton4.setChecked(false);
-        listItemView.radioButton5.setChecked(false);
-        if(tagList[position]==1)
-            listItemView.radioButton1.setChecked(true);
-        if(tagList[position]==2)
-            listItemView.radioButton2.setChecked(true);
-        if(tagList[position]==3)
-            listItemView.radioButton3.setChecked(true);
-        if(tagList[position]==4)
-            listItemView.radioButton4.setChecked(true);
-        if(tagList[position]==5)
-            listItemView.radioButton5.setChecked(true);
+
         listItemView.radioButton1.setTag(1);
         listItemView.radioButton2.setTag(2);
         listItemView.radioButton3.setTag(3);
@@ -124,6 +114,40 @@ public class QuestionAdapter extends BaseAdapter {
         listItemView.radioButton3.setOnClickListener(listener);
         listItemView.radioButton4.setOnClickListener(listener);
         listItemView.radioButton5.setOnClickListener(listener);
+//        listItemView.radioButton1.setChecked(false);
+//        listItemView.radioButton2.setChecked(false);
+//        listItemView.radioButton3.setChecked(false);
+//        listItemView.radioButton4.setChecked(false);
+//        listItemView.radioButton5.setChecked(false);
+        Log.e("bullshit", ((Integer)position).toString());
+        Log.e("bullshit", tagList[position].toString());
+        if(tagList[position]==1)
+            listItemView.radioButton1.setChecked(true);
+        else
+            listItemView.radioButton1.setChecked(false);
+        if(tagList[position]==2)
+            listItemView.radioButton2.setChecked(true);
+        else
+            listItemView.radioButton2.setChecked(false);
+        if(tagList[position]==3)
+            listItemView.radioButton3.setChecked(true);
+        else
+            listItemView.radioButton3.setChecked(false);
+        if(tagList[position]==4)
+            listItemView.radioButton4.setChecked(true);
+        else
+            listItemView.radioButton4.setChecked(false);
+        if(tagList[position]==5)
+            listItemView.radioButton5.setChecked(true);
+        else
+            listItemView.radioButton5.setChecked(false);
+
+        //        listItemView.radioButton1.setChecked(false);
+//        listItemView.radioButton2.setChecked(false);
+//        listItemView.radioButton3.setChecked(false);
+//        listItemView.radioButton4.setChecked(false);
+//        listItemView.radioButton5.setChecked(false);
+
 
         return convertView;
     }

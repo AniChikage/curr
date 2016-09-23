@@ -83,8 +83,14 @@ public class SlideShowViewCate extends FrameLayout {
         public void handleMessage(Message msg) {
             // TODO Auto-generated method stub
             super.handleMessage(msg);
+            try{
+                viewPager.removeAllViews();
+                viewPager.setCurrentItem(currentItem);
+            } catch (Exception e) {
+                Log.e("cheater", e.toString());
+            }
             //Log.i("currentItem","currentItem"+currentItem);
-            viewPager.setCurrentItem(currentItem);
+
         }
     };
 
@@ -243,6 +249,7 @@ public class SlideShowViewCate extends FrameLayout {
             if (parent != null) {
                 parent.removeAllViews();
             }
+//            ((ViewPager) container).removeView(l1);
             ((ViewPager) container).addView(l1, 0);
             return l1;
         }
@@ -375,8 +382,7 @@ public class SlideShowViewCate extends FrameLayout {
                 //解除drawable对view的引用
                 drawable.setCallback(null);
             }
-            System.gc();
-
+            //System.gc();
         }
         text.clear();
         textViews.clear();
