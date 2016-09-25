@@ -71,6 +71,7 @@ public class ArticleDetail extends Activity {
         }
     }
 
+
     private void initId(){
         testid=(TextView)findViewById(R.id.testid);
         listview = (ListView) findViewById(R.id.article_detail_listview);

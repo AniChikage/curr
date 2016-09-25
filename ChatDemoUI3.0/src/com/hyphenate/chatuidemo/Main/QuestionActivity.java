@@ -21,6 +21,7 @@ import android.widget.Toast;
 import com.hyphenate.chatuidemo.Adapter.QuestionAdapter;
 import com.hyphenate.chatuidemo.R;
 import com.hyphenate.chatuidemo.netapp.ConnNet;
+import com.hyphenate.chatuidemo.ui.MainActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -264,6 +265,14 @@ public class QuestionActivity extends Activity {
             super.handleMessage(msg);
         }
     };
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        System.out.println("按下了back键   onBackPressed()");
+        MainActivity.testPrint();
+        MainActivity.freshMine();
+    }
 
 
 }

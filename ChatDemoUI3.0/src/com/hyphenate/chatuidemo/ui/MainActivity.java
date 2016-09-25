@@ -15,6 +15,8 @@ package com.hyphenate.chatuidemo.ui;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
+import android.app.Activity;
+import android.app.Application;
 import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -75,6 +77,7 @@ import com.hyphenate.chatuidemo.Consultant.Csdetail;
 import com.hyphenate.chatuidemo.DemoHelper;
 import com.hyphenate.chatuidemo.Main.ArticleDetail;
 import com.hyphenate.chatuidemo.Main.Category;
+import com.hyphenate.chatuidemo.Main.MainActivit;
 import com.hyphenate.chatuidemo.Main.QuestionActivity;
 import com.hyphenate.chatuidemo.Main.SettingActivity;
 import com.hyphenate.chatuidemo.Main.SlideShowView;
@@ -105,19 +108,22 @@ public class MainActivity extends BaseActivity {
 	protected static final String TAG = "MainActivity";
 	// textview for unread message count
 	private TextView unreadLabel;
-	private String user_id;
-	private String firstChecked="0";
+	private static String user_id;
+	private static String user_id_s;
+	private static String firstChecked="0";
 	// textview for unread event message
 	private TextView unreadAddressLable;
 	private TextView paixu;
-	private TextView app_username;
-	private ImageView dochuzhen;
-	private ImageView mp_setting;
+	private static TextView app_username;
+	private String user_email;
+	private static ImageView dochuzhen;
+	private static ImageView mp_setting;
 	private PopupWindow popupwindow;
 
 	private Button[] mTabs;
 	private ContactListFragment contactListFragment;
 	private Context hcontext;
+	private static Context in_hcontext;
 	private Fragment[] fragments;
 	private int index;
 	private int currentTabIndex;
@@ -128,24 +134,25 @@ public class MainActivity extends BaseActivity {
 
 	private ListView mainpage_mp_listview;
 	private ListView mainpage_cs_listview;
-	private ListView mainpage_mine_listview;
+	private static ListView mainpage_mine_listview;
 	private ListView[] mainpage_listview;
 
 	private SlideShowView slideshow;
 	private SlideShowViewCs slideShowViewCs;
 	private LinearLayout mainpage_mp_header_ll;
 	private LinearLayout mainpage_cs_header_ll;
-	private LinearLayout mainpage_mine_header_ll;
-	private View mainpage_mp_header_view;
-	private View mainpage_cs_header_view;
-	private View mainpage_mine_header_view;
+	private static LinearLayout mainpage_mine_header_ll;
+	private static View mainpage_mp_header_view;
+	private static View mainpage_cs_header_view;
+	private static View mainpage_mine_header_view;
 	private JrywListViewAdapter jrywListViewAdapter;
 	private CsabListViewAdapter csabListViewAdapter;
-	private AppointAdapter appointAdapter;
+	private static AppointAdapter appointAdapter;
 	private TextView anli,kepu,xuzhi;
 	private ImageView iv_anli,iv_kepu,iv_xuzhi;
 
-	private List<Map<String, Object>> csabLista,jrywList,minelist;
+	private List<Map<String, Object>> csabLista,jrywList;
+	private static List<Map<String, Object>> minelist;
 
 	private android.app.AlertDialog.Builder conflictBuilder;
 	private android.app.AlertDialog.Builder accountRemovedBuilder;
@@ -168,7 +175,10 @@ public class MainActivity extends BaseActivity {
 		//requestWindowFeature(Window.FEATURE_NO_TITLE); //设置无标题栏
 		super.onCreate(savedInstanceState);
 		hcontext=this.getApplicationContext();
-		
+		in_hcontext = hcontext;
+
+		//监听生命周期
+
 		if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 		    String packageName = getPackageName();
 		    PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
@@ -179,7 +189,7 @@ public class MainActivity extends BaseActivity {
 		        startActivity(intent);
 		    }
 		}
-		
+
 		//make sure activity will not in background if user is logged into another device or removed
 		if (savedInstanceState != null && savedInstanceState.getBoolean(Constant.ACCOUNT_REMOVED, false)) {
 		    DemoHelper.getInstance().logout(false,null);
@@ -197,21 +207,25 @@ public class MainActivity extends BaseActivity {
 		// runtime permission for android 6.0, just require all permissions here for simple
 		requestPermissions();
 
-
-		new Thread(new Runnable() {
-			public void run() {
-				try {
-					ConnNet operaton = new ConnNet();
-					String result = operaton.getUser(EMClient.getInstance().getCurrentUser());
-					Message msg = new Message();
-					msg.obj = result;
-					hgetuser.sendMessage(msg);
-				} catch (Exception ex) {
-					Toast.makeText(MainActivity.this, "咨询师获取失败", Toast.LENGTH_LONG).show();
+		//Bundle bundle = getIntent().getExtras();
+		//if(bundle!=null) {
+		//	user_email = bundle.getString("app_username");
+		//	Log.e("user_email", user_email);
+			new Thread(new Runnable() {
+				public void run() {
+					try {
+						ConnNet operaton = new ConnNet();
+						String result = operaton.getUser(EMClient.getInstance().getCurrentUser().toString());
+						Message msg = new Message();
+						msg.obj = result;
+						hgetuser.sendMessage(msg);
+					} catch (Exception ex) {
+						Toast.makeText(MainActivity.this, "咨询师获取失败", Toast.LENGTH_LONG).show();
+					}
 				}
-			}
-		}).start();
+			}).start();
 
+		//}
 
 		//umeng api
 		MobclickAgent.updateOnlineConfig(this);
@@ -273,6 +287,7 @@ public class MainActivity extends BaseActivity {
 			try {
 				JSONObject jsonObjs = new JSONObject(string).getJSONObject("user");
 				user_id = jsonObjs.getString("id");
+				user_id_s = user_id;
 				Log.e(TAG,user_id);
 				try{
 					initView();
@@ -314,7 +329,7 @@ public class MainActivity extends BaseActivity {
 		//initMine();
 	}
 
-	private void initFirstVisit(){
+	private static void initFirstVisit(){
 		new Thread(new Runnable() {
 			public void run() {
 				try {
@@ -324,13 +339,13 @@ public class MainActivity extends BaseActivity {
 					msg.obj = result;
 					hCheckFirstVisit.sendMessage(msg);
 				} catch (Exception ex) {
-					Toast.makeText(MainActivity.this, "咨询师获取失败", Toast.LENGTH_LONG).show();
+					Toast.makeText(in_hcontext, "咨询师获取失败", Toast.LENGTH_LONG).show();
 				}
 			}
 		}).start();
 	}
 
-	Handler hCheckFirstVisit=new Handler(){
+	static Handler hCheckFirstVisit=new Handler(){
 		@Override
 		public void handleMessage(Message msg) {
 			String string=(String) msg.obj;
@@ -451,11 +466,12 @@ public class MainActivity extends BaseActivity {
 		SysnConsellorsAds();
 	}
 
-	private void initMine(){
-		mainpage_mine_header_view = LayoutInflater.from(this).inflate(R.layout.mainpage_mine_header, null);
+	private static void initMine(){
+		mainpage_mine_header_view = LayoutInflater.from(in_hcontext).inflate(R.layout.mainpage_mine_header, null);
 		mainpage_mine_header_ll = (LinearLayout)mainpage_mine_header_view.findViewById(R.id.mine_header_ll);
 		app_username = (TextView)mainpage_mine_header_view.findViewById(R.id.app_username);
 		app_username.setText(EMClient.getInstance().getCurrentUser().toString());
+		Log.e("","lllllllllllll");
 		dochuzhen = (ImageView) mainpage_mine_header_view.findViewById(R.id.dochuzhen);
 		if(firstChecked.equals("0")){
 			dochuzhen.setImageResource(R.drawable.quesundo);
@@ -467,14 +483,16 @@ public class MainActivity extends BaseActivity {
 			@Override
 			public void onClick(View v) {
 				if(firstChecked.equals("0")){
-					Intent intent = new Intent(MainActivity.this,QuestionActivity.class);
+					Intent intent = new Intent(in_hcontext,QuestionActivity.class);
+					intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 					Bundle bundle = new Bundle();
 					bundle.putString("user_id",user_id);
 					intent.putExtras(bundle);
-					startActivity(intent);
+					mainpage_mine_listview.removeHeaderView(mainpage_mine_header_view);
+					in_hcontext.startActivity(intent);
 				}
 				else{
-					Toast.makeText(MainActivity.this,"您已经完成初诊",Toast.LENGTH_LONG).show();
+					Toast.makeText(in_hcontext,"您已经完成初诊",Toast.LENGTH_LONG).show();
 				}
 			}
 		});
@@ -482,14 +500,19 @@ public class MainActivity extends BaseActivity {
 		mp_setting.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(MainActivity.this,SettingActivity.class));
+				Intent intent = new Intent(in_hcontext,SettingActivity.class);
+				intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+				in_hcontext.startActivity(intent);
 				//logout();
 				//Toast.makeText(MainActivity.this,"开发中",Toast.LENGTH_LONG).show();
 			}
 		});
 
-		WindowManager wmmine = this.getWindowManager();
-		int allheight = wmmine.getDefaultDisplay().getHeight();
+		DisplayMetrics dm = new DisplayMetrics();
+		dm = in_hcontext.getApplicationContext().getResources().getDisplayMetrics();
+		//WindowManager wmmine = in_hcontext.getApplicationContext().getResources().getWindowManager();
+		//int allheight = wmmine.getDefaultDisplay().getHeight();
+		int allheight = dm.heightPixels;
 		int upmineh= (int) allheight*795/1905;
 		ViewGroup.LayoutParams lpmine = mainpage_mine_header_ll.getLayoutParams();
 		lpmine.width=lpmine.MATCH_PARENT;
@@ -498,7 +521,7 @@ public class MainActivity extends BaseActivity {
 		SysnMyAppoint();
 	}
 
-	private void SysnMyAppoint(){
+	private static void SysnMyAppoint(){
 		new Thread(new Runnable() {
 			public void run() {
 				try{
@@ -516,7 +539,7 @@ public class MainActivity extends BaseActivity {
 		}).start();
 	}
 
-	Handler myAppointHandler=new Handler(){
+	static Handler myAppointHandler=new Handler(){
 		@Override
 		public void handleMessage(Message msg) {
 			String string=(String) msg.obj;
@@ -553,9 +576,10 @@ public class MainActivity extends BaseActivity {
 				e.printStackTrace();
 			}
 
+			Log.e("lsv",String.valueOf(mainpage_mine_listview.getChildCount()));
 			mainpage_mine_listview.addHeaderView(mainpage_mine_header_view);
 			minelist = listItems;
-			appointAdapter = new AppointAdapter(hcontext, minelist);
+			appointAdapter = new AppointAdapter(in_hcontext, minelist);
 			mainpage_mine_listview.setAdapter(appointAdapter);
 			mainpage_mine_listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -566,11 +590,11 @@ public class MainActivity extends BaseActivity {
 						HashMap<String,Object> person = (HashMap<String,Object>)lv.getItemAtPosition(position);//SimpleAdapter返回Map
 						if(person!=null){
 							//Toast.makeText(getApplicationContext(),person.get("appoint_oid").toString(), Toast.LENGTH_SHORT).show();
-							Intent intent = new Intent(MainActivity.this, AppointDetail.class);
+							Intent intent = new Intent(in_hcontext, AppointDetail.class);
 							Bundle bundle = new Bundle();
 							bundle.putString("appoint_oid",person.get("appoint_oid").toString());
 							intent.putExtras(bundle);
-							startActivity(intent);
+							in_hcontext.startActivity(intent);
 						}
 						else{
 
@@ -578,7 +602,7 @@ public class MainActivity extends BaseActivity {
 						//Toast.makeText(getApplicationContext(),"", Toast.LENGTH_SHORT).show();
 					}
 					catch (Exception ex){
-						Toast.makeText(MainActivity.this,ex.toString() ,Toast.LENGTH_SHORT).show();
+						Toast.makeText(in_hcontext,ex.toString() ,Toast.LENGTH_SHORT).show();
 						Log.e("get error",ex.toString());
 					}
 				}
@@ -947,7 +971,7 @@ public class MainActivity extends BaseActivity {
 		}
 	};
 
-	private Bitmap getBitmapFromByte(byte[] temp){
+	private static Bitmap getBitmapFromByte(byte[] temp){
 		if(temp != null){
 			Bitmap bitmap = BitmapFactory.decodeByteArray(temp, 0, temp.length);
 			return bitmap;
@@ -958,7 +982,7 @@ public class MainActivity extends BaseActivity {
 
 	/**
 	 * on tab clicked
-	 * 
+	 *
 	 * @param view
 	 */
 	public void onTabClicked(View view) {
@@ -986,7 +1010,7 @@ public class MainActivity extends BaseActivity {
 	}
 
 	EMMessageListener messageListener = new EMMessageListener() {
-		
+
 		@Override
 		public void onMessageReceived(List<EMMessage> messages) {
 			// notify new message
@@ -995,7 +1019,7 @@ public class MainActivity extends BaseActivity {
 		    }
 			refreshUIWithMessage();
 		}
-		
+
 		@Override
 		public void onCmdMessageReceived(List<EMMessage> messages) {
 			//red packet code : 处理红包回执透传消息
@@ -1009,15 +1033,15 @@ public class MainActivity extends BaseActivity {
 			//end of red packet code
 			refreshUIWithMessage();
 		}
-		
+
 		@Override
 		public void onMessageReadAckReceived(List<EMMessage> messages) {
 		}
-		
+
 		@Override
 		public void onMessageDeliveryAckReceived(List<EMMessage> message) {
 		}
-		
+
 		@Override
 		public void onMessageChanged(EMMessage message, Object change) {}
 	};
@@ -1041,7 +1065,7 @@ public class MainActivity extends BaseActivity {
 	public void back(View view) {
 		super.back(view);
 	}
-	
+
 	private void registerBroadcastReceiver() {
         broadcastManager = LocalBroadcastManager.getInstance(this);
         IntentFilter intentFilter = new IntentFilter();
@@ -1049,7 +1073,7 @@ public class MainActivity extends BaseActivity {
         intentFilter.addAction(Constant.ACTION_GROUP_CHANAGED);
 		intentFilter.addAction(RedPacketConstant.REFRESH_GROUP_RED_PACKET_ACTION);
         broadcastReceiver = new BroadcastReceiver() {
-            
+
             @Override
             public void onReceive(Context context, Intent intent) {
                 //updateUnreadLabel();
@@ -1081,7 +1105,7 @@ public class MainActivity extends BaseActivity {
         };
         broadcastManager.registerReceiver(broadcastReceiver, intentFilter);
     }
-	
+
 	public class MyContactListener implements EMContactListener {
         @Override
         public void onContactAdded(String username) {}
@@ -1106,15 +1130,15 @@ public class MainActivity extends BaseActivity {
         @Override
         public void onContactRefused(String username) {}
 	}
-	
+
 	private void unregisterBroadcastReceiver(){
 	    broadcastManager.unregisterReceiver(broadcastReceiver);
 	}
 
 	@Override
 	protected void onDestroy() {
-		super.onDestroy();		
-		
+		super.onDestroy();
+
 		if (conflictBuilder != null) {
 			conflictBuilder.create().dismiss();
 			conflictBuilder = null;
@@ -1125,7 +1149,7 @@ public class MainActivity extends BaseActivity {
             unregisterReceiver(internalDebugReceiver);
         } catch (Exception e) {
         }
-		
+
 	}
 
 	/**
@@ -1160,7 +1184,7 @@ public class MainActivity extends BaseActivity {
 	*/
 	/**
 	 * get unread event notification count, including application, accepted, etc
-	 * 
+	 *
 	 * @return
 	 */
 	public int getUnreadAddressCountTotal() {
@@ -1171,7 +1195,7 @@ public class MainActivity extends BaseActivity {
 
 	/**
 	 * get unread message count
-	 * 
+	 *
 	 * @return
 	 */
 	public int getUnreadMsgCountTotal() {
@@ -1190,7 +1214,7 @@ public class MainActivity extends BaseActivity {
 	@Override
 	protected void onResume() {
 		super.onResume();
-		
+
 		if (!isConflict && !isCurrentAccountRemoved) {
 			//updateUnreadLabel();
 			//updateUnreadAddressLable();
@@ -1312,31 +1336,31 @@ public class MainActivity extends BaseActivity {
 			showAccountRemovedDialog();
 		}
 	}
-	
+
 	/**
 	 * debug purpose only, you can ignore this
 	 */
 	private void registerInternalDebugReceiver() {
 	    internalDebugReceiver = new BroadcastReceiver() {
-            
+
             @Override
             public void onReceive(Context context, Intent intent) {
                 DemoHelper.getInstance().logout(false,new EMCallBack() {
-                    
+
                     @Override
                     public void onSuccess() {
                         runOnUiThread(new Runnable() {
                             public void run() {
                                 finish();
                                 startActivity(new Intent(MainActivity.this, LoginActivity.class));
-                                
+
                             }
                         });
                     }
-                    
+
                     @Override
                     public void onProgress(int progress, String status) {}
-                    
+
                     @Override
                     public void onError(int code, String message) {}
                 });
@@ -1346,7 +1370,7 @@ public class MainActivity extends BaseActivity {
         registerReceiver(internalDebugReceiver, filter);
     }
 
-	@Override 
+	@Override
 	public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
 			@NonNull int[] grantResults) {
 		PermissionsManager.getInstance().notifyPermissionsChange(permissions, grantResults);
@@ -1370,6 +1394,82 @@ public class MainActivity extends BaseActivity {
 			@Override
 			public void onError(int code, String message) {
 
+			}
+		});
+	}
+
+	public static void testPrint(){
+		Log.e("callback","yes");
+	}
+
+	public static void freshMine(){
+		Log.e("callback","yes");
+		initFirstVisit();
+	}
+
+	public static void initFirstVisitFresh(){
+		new Thread(new Runnable() {
+			public void run() {
+				try {
+					ConnNet operaton = new ConnNet();
+					String result = operaton.checkFirstVisit("1",user_id_s);
+					Message msg = new Message();
+					msg.obj = result;
+					hCheckFirstVisitFresh.sendMessage(msg);
+				} catch (Exception ex) {
+					ex.printStackTrace();
+				}
+			}
+		}).start();
+	}
+
+	static String firstChecked1;
+	static Handler hCheckFirstVisitFresh=new Handler(){
+		@Override
+		public void handleMessage(Message msg) {
+			String string=(String) msg.obj;
+			Log.e("hCheckFirstVisitFresh",string);
+			try {
+				firstChecked1 = new JSONObject(string).getString("1st");
+				Log.e("firstcheckedFresh",firstChecked1);
+				//if(!firstChecked1.equals("0")){
+					freshMinea();
+				//}
+
+			} catch (JSONException e) {
+				System.out.println("Jsons parse error !");
+				e.printStackTrace();
+			}
+			super.handleMessage(msg);
+		}
+	};
+
+	static View mainpage_mine_header_view1;
+	static LinearLayout mainpage_mine_header_ll1;
+	static ImageView dochuzhen1;
+	public static void freshMinea(){
+		mainpage_mine_header_view1 = LayoutInflater.from(in_hcontext).inflate(R.layout.mainpage_mine_header, null);
+		mainpage_mine_header_ll1 = (LinearLayout)mainpage_mine_header_view1.findViewById(R.id.mine_header_ll);
+		dochuzhen1 = (ImageView) mainpage_mine_header_view1.findViewById(R.id.dochuzhen);
+		if(firstChecked1.equals("0")){
+			dochuzhen1.setImageResource(R.drawable.quesundo);
+		}
+		else{
+			dochuzhen1.setImageResource(R.drawable.quesdone);
+		}
+		dochuzhen1.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				if(firstChecked1.equals("0")){
+					Intent intent = new Intent(in_hcontext,QuestionActivity.class);
+					Bundle bundle = new Bundle();
+					bundle.putString("user_id",user_id_s);
+					intent.putExtras(bundle);
+					in_hcontext.startActivity(intent);
+				}
+				else{
+					Toast.makeText(in_hcontext,"您已经完成初诊",Toast.LENGTH_LONG).show();
+				}
 			}
 		});
 	}

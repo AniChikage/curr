@@ -34,6 +34,7 @@ import com.hyphenate.chatuidemo.Appointment.AppointConfirm;
 import com.hyphenate.chatuidemo.Base64.BASE64Decoder;
 import com.hyphenate.chatuidemo.R;
 import com.hyphenate.chatuidemo.netapp.ConnNet;
+import com.hyphenate.chatuidemo.ui.MainActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -628,6 +629,13 @@ public class Csdetail extends Activity {
         } catch (Exception e) {
             return null;
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        System.out.println("按下了back键   onBackPressed()");
+        MainActivity.testPrint();
     }
 
 }
