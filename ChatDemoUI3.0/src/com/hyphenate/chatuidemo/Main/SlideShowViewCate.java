@@ -84,7 +84,7 @@ public class SlideShowViewCate extends FrameLayout {
             // TODO Auto-generated method stub
             super.handleMessage(msg);
             try{
-                viewPager.removeAllViews();
+                //viewPager.removeAllViews();
                 viewPager.setCurrentItem(currentItem);
             } catch (Exception e) {
                 Log.e("cheater", e.toString());
@@ -218,12 +218,13 @@ public class SlideShowViewCate extends FrameLayout {
         @Override
         public Object instantiateItem(View container, int position) {
 
+            /*
             if (((ViewPager) container).getChildCount() == imageViewsList.size()){
                 RelativeLayout l2= (RelativeLayout) imageViewsList.get(position % imageViewsList.size()).getParent();
                 l2.removeAllViewsInLayout();
                 ((ViewPager) container).removeView(l2);
-
             }
+            */
             ImageView imageView = imageViewsList.get(position % imageViewsList.size());
             TextView textView=textViews.get(position % imageViewsList.size());
             RelativeLayout l1=new RelativeLayout(context);
@@ -243,13 +244,14 @@ public class SlideShowViewCate extends FrameLayout {
             textView.setLayoutParams(params);
             textView.setTextColor(Color.WHITE);
             imageView.setLayoutParams(params1);
+            //l1.removeAllViews();
+            l1.removeAllViewsInLayout();
             l1.addView(imageView);
             l1.addView(textView);
             ViewGroup parent = (ViewGroup)l1.getParent();
             if (parent != null) {
                 parent.removeAllViews();
             }
-//            ((ViewPager) container).removeView(l1);
             ((ViewPager) container).addView(l1, 0);
             return l1;
         }

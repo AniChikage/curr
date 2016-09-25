@@ -160,7 +160,7 @@ public class Category extends Activity {
                             bundle.putString("msgid",person.get("jrywnoid").toString());
                             intent.putExtras(bundle);
                             startActivity(intent);
-                            finish();
+                           // finish();
                         }
                         else
                             Toast.makeText(getApplicationContext(),"kong", Toast.LENGTH_SHORT).show();

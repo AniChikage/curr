@@ -25,9 +25,12 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import org.json.JSONObject;
 
 /**
  * register screen
@@ -76,16 +79,6 @@ public class RegisterActivity extends BaseActivity {
 
 			new Thread(new Runnable() {
 				public void run() {
-					ConnNet operaton=new ConnNet();
-					String result=operaton.doRegister(urlPath,userNameEditText.getText().toString(),passwordEditText.getText().toString(),"18711591158");
-					Message msg=new Message();
-					msg.obj=result;
-					handler.sendMessage(msg);
-				}
-			}).start();
-
-			new Thread(new Runnable() {
-				public void run() {
 					try {
 						// call method in SDK
 						EMClient.getInstance().createAccount(username, pwd);
@@ -96,6 +89,16 @@ public class RegisterActivity extends BaseActivity {
 								// save current user
 								DemoHelper.getInstance().setCurrentUserName(username);
 								Toast.makeText(getApplicationContext(), getResources().getString(R.string.Registered_successfully), Toast.LENGTH_SHORT).show();
+								Log.e("huanxinaddUser",getResources().getString(R.string.Registered_successfully));
+								new Thread(new Runnable() {
+									public void run() {
+										ConnNet operaton=new ConnNet();
+										String result=operaton.doRegister(urlPath,userNameEditText.getText().toString(),passwordEditText.getText().toString(),"18711591158");
+										Message msg=new Message();
+										msg.obj=result;
+										handler.sendMessage(msg);
+									}
+								}).start();
 								//finish();
 							}
 						});
@@ -129,15 +132,26 @@ public class RegisterActivity extends BaseActivity {
 		@Override
 		public void handleMessage(Message msg) {
 			String string=(String) msg.obj;
-			if(string.equals("registered email")){
-				Toast.makeText(RegisterActivity.this, "该邮箱已经注册！", Toast.LENGTH_SHORT).show();
+			Log.e("adduser",string);
+			try{
+				String addUserStatus = new JSONObject(string).getString("addUser");
+				Log.e("addUserStatus",addUserStatus);
+				if(addUserStatus.equals("registered email")){
+					Toast.makeText(RegisterActivity.this, "该邮箱已经注册！", Toast.LENGTH_SHORT).show();
+				}
+				else if(addUserStatus.equals("1")){
+					Toast.makeText(RegisterActivity.this, "注册成功！", Toast.LENGTH_SHORT).show();
+					Log.e("yes","yes");
+					finish();
+				}
+				else{
+					Toast.makeText(RegisterActivity.this, string, Toast.LENGTH_SHORT).show();
+				}
 			}
-			else if(string.equals("1")){
-				Toast.makeText(RegisterActivity.this, "注册成功！", Toast.LENGTH_SHORT).show();
+			catch(Exception ex){
+				ex.printStackTrace();
 			}
-			else{
-				Toast.makeText(RegisterActivity.this, string, Toast.LENGTH_SHORT).show();
-			}
+
 			super.handleMessage(msg);
 		}
 	};
