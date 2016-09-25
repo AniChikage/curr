@@ -8,9 +8,13 @@ import android.os.Message;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -32,6 +36,8 @@ public class QuestionActivity extends Activity {
 
     private Context hcontext;
     private ListView viewFlow;
+    private View qa_header_View;
+    private LinearLayout qa_header_ll;
     private QuestionAdapter questionListViewAdapter;
     private List<Map<String, Object>> listItems, questionList;
     private Button postHarvest;
@@ -86,7 +92,7 @@ public class QuestionActivity extends Activity {
                                     JSONArray jsonArray = new JSONArray();
                                     for (i=0;i<questionListViewAdapter.length;i++){
                                         JSONObject jsonObject = new JSONObject();
-                                        jsonObject.put("uid", "12");
+                                        jsonObject.put("uid", user_id);
                                         jsonObject.put("mid", (String)questionList.get(i).get("mid"));
                                         jsonObject.put("result", ((Integer)questionListViewAdapter.tagList[i]).toString());
                                         jsonArray.put(jsonObject);
@@ -144,6 +150,15 @@ public class QuestionActivity extends Activity {
     private void init() {
         postHarvest = (Button) findViewById(R.id.post_harvest);
         viewFlow = (ListView)findViewById(R.id.question_listView);
+        qa_header_View = LayoutInflater.from(this).inflate(R.layout.qa_header_view, null,false);
+        qa_header_ll = (LinearLayout) qa_header_View.findViewById(R.id.qa_header_ll);
+        WindowManager wm1 = this.getWindowManager();
+        int height1 = wm1.getDefaultDisplay().getHeight();
+        ViewGroup.LayoutParams lp1 =qa_header_ll.getLayoutParams();
+        lp1.width=lp1.MATCH_PARENT;
+        //lp1.height=height1*693/1679;
+        lp1.height=height1*160/1679;
+        qa_header_ll.setLayoutParams(lp1);
     }
 
     private void SysnConsellors(){
@@ -174,7 +189,7 @@ public class QuestionActivity extends Activity {
                     JSONObject jsonObj = (JSONObject)jsonObjs.get(i);
                     int mid = jsonObj.getInt("mid");
                     int gid = jsonObj.getInt("gid");
-                    String content = jsonObj.getString("content");
+                    String content = String.valueOf(i+1)+". "+jsonObj.getString("content");
                     String c1 = jsonObj.getString("c1");
                     int r1 = jsonObj.getInt("r1");
                     String c2 = jsonObj.getString("c2");
@@ -216,6 +231,7 @@ public class QuestionActivity extends Activity {
             }
 
             questionList = listItems;
+            viewFlow.addHeaderView(qa_header_View);
             questionListViewAdapter = new QuestionAdapter(hcontext, questionList);
             viewFlow.setAdapter(questionListViewAdapter);
             viewFlow.setOnItemClickListener(new AdapterView.OnItemClickListener() {

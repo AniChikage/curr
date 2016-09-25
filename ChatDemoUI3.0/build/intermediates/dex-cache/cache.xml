@@ -5,7 +5,7 @@
         jar="G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         revision="23.0.1"
-        sha1="eaf772b7dbf8fd17c59af926794fcd83f72637da">
+        sha1="73613ff9310cee25d941221d5e086e55c2c8f316">
         <dex dex="G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_b54cdb18a18443ce3f3f87208e83cc5316cf4fd3\classes.dex" />
     </item>
     <item
@@ -40,7 +40,7 @@
         jar="G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.1"
-        sha1="950fdd242ca987e0497e5b948ede46673657cbd9">
+        sha1="6dce41916702c15fe2eebc582d0d947e8747e100">
         <dex dex="G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_da2e2c10de31f0e9701196469883fcecb249d10c\classes.dex" />
     </item>
     <item

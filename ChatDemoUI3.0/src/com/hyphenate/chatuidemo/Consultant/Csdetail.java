@@ -442,9 +442,25 @@ public class Csdetail extends Activity {
                 String gender = jsonObjs.getString("gender");
                 String authen = jsonObjs.getString("authen");
                 String career = jsonObjs.getString("career");
-                String pro1 = jsonObjs.getJSONObject("pro1").getString("field");
-                String pro2 = jsonObjs.getJSONObject("pro2").getString("field");
-                String pro3 = jsonObjs.getJSONObject("pro3").getString("field");
+                String pro1,pro2,pro3;
+                try{
+                    pro1 = jsonObjs.getJSONObject("pro1").getString("field");
+                }
+                catch (Exception e){
+                    pro1 = "";
+                }
+                try{
+                    pro2 = jsonObjs.getJSONObject("pro2").getString("field");
+                }
+                catch (Exception e){
+                    pro2 = "";
+                }
+                try{
+                    pro3 = jsonObjs.getJSONObject("pro3").getString("field");
+                }
+                catch (Exception e){
+                    pro3 = "";
+                }
                 String price = jsonObjs.getJSONObject("rate").getString("price");
                 String asdf = jsonObjs.getString("bust");
                 String recruit = jsonObjs.getString("recruit");
@@ -454,9 +470,17 @@ public class Csdetail extends Activity {
                 csabname.setText(realname);
                 csablevel.setText(authen);
                 csabgender.setText(gender);
-                csabtime.setText(career+"小时");
-                csabprice.setText(price+"/60分钟");
-                csabzhuanchang.setText(pro1+","+pro2+","+pro3);
+                if(Integer.valueOf(career)>1000){
+                    csabtime.setText(">1000小时");
+                }
+                else if(Integer.valueOf(career)>100&&Integer.valueOf(career)<=1000){
+                    csabtime.setText(">100小时");
+                }
+                else{
+                    csabtime.setText("<100小时");
+                }
+                csabprice.setText(price+"元/单位咨询时长");
+                csabzhuanchang.setText(pro1+" "+pro2+" "+pro3);
                 csabqita.setText(getStringFromBASE64(description));
                 try{
                     DateFormat df = new SimpleDateFormat("yyyy-MM-dd");

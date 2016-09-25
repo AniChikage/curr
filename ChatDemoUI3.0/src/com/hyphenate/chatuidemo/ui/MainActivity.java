@@ -334,7 +334,7 @@ public class MainActivity extends BaseActivity {
 		@Override
 		public void handleMessage(Message msg) {
 			String string=(String) msg.obj;
-
+			Log.e("hCheckFirstVisit",string);
 			try {
 				firstChecked = new JSONObject(string).getString("1st");
 				Log.e("firstchecked",firstChecked);
@@ -457,22 +457,25 @@ public class MainActivity extends BaseActivity {
 		app_username = (TextView)mainpage_mine_header_view.findViewById(R.id.app_username);
 		app_username.setText(EMClient.getInstance().getCurrentUser().toString());
 		dochuzhen = (ImageView) mainpage_mine_header_view.findViewById(R.id.dochuzhen);
-		if(firstChecked!="0"){
+		if(firstChecked.equals("0")){
+			dochuzhen.setImageResource(R.drawable.quesundo);
+		}
+		else{
 			dochuzhen.setImageResource(R.drawable.quesdone);
 		}
 		dochuzhen.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				//if(firstChecked=="0"){
+				if(firstChecked.equals("0")){
 					Intent intent = new Intent(MainActivity.this,QuestionActivity.class);
 					Bundle bundle = new Bundle();
 					bundle.putString("user_id",user_id);
 					intent.putExtras(bundle);
 					startActivity(intent);
-				//}
-				//else{
-				//	Toast.makeText(MainActivity.this,"您已经完成初诊",Toast.LENGTH_LONG).show();
-				//}
+				}
+				else{
+					Toast.makeText(MainActivity.this,"您已经完成初诊",Toast.LENGTH_LONG).show();
+				}
 			}
 		});
 		mp_setting = (ImageView) mainpage_mine_header_view.findViewById(R.id.mp_setting);
