@@ -26,6 +26,7 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.hyphenate.EMCallBack;
@@ -48,6 +49,9 @@ public class LoginActivity extends BaseActivity {
 	private EditText usernameEditText;
 	private EditText passwordEditText;
 
+	private RadioButton user_role;
+	private RadioButton consellor_role;
+
 	private boolean progressShow;
 	private boolean autoLogin = false;
 
@@ -66,6 +70,8 @@ public class LoginActivity extends BaseActivity {
 
 		usernameEditText = (EditText) findViewById(R.id.username);
 		passwordEditText = (EditText) findViewById(R.id.password);
+		user_role = (RadioButton) findViewById(R.id.user_role);
+		consellor_role = (RadioButton) findViewById(R.id.consellor_role);
 
 		// if user changed, clear the password
 		usernameEditText.addTextChangedListener(new TextWatcher() {
@@ -159,22 +165,32 @@ public class LoginActivity extends BaseActivity {
 				// get user's info (this should be get from App's server or 3rd party service)
 				DemoHelper.getInstance().getUserProfileManager().asyncGetCurrentUserInfo();
 
-				new Thread(new Runnable() {
-					public void run() {
-						try{
-							ConnNet operaton=new ConnNet();
-							//String result=operaton.doLogin(usernameEditText.getText().toString(),passwordEditText.getText().toString());
-							String resul=operaton.getConn("http://www.clr-vision.com:18080/Therapista/user/login",usernameEditText.getText().toString(),passwordEditText.getText().toString(),"111");
-							Message msg=new Message();
-							msg.obj=resul;
-							handler.sendMessage(msg);
-						}
-						catch (Exception ex){
-							Toast.makeText(LoginActivity.this,"用户名或者密码不能为空",Toast.LENGTH_LONG).show();
-						}
+				if(user_role.isChecked()){
+					new Thread(new Runnable() {
+						public void run() {
+							try{
+								ConnNet operaton=new ConnNet();
+								//String result=operaton.doLogin(usernameEditText.getText().toString(),passwordEditText.getText().toString());
+								String resul=operaton.getConn("http://www.clr-vision.com:18080/Therapista/user/login",usernameEditText.getText().toString(),passwordEditText.getText().toString(),"111");
+								Message msg=new Message();
+								msg.obj=resul;
+								handler.sendMessage(msg);
+							}
+							catch (Exception ex){
+								Toast.makeText(LoginActivity.this,"用户名或者密码不能为空",Toast.LENGTH_LONG).show();
+							}
 
-					}
-				}).start();
+						}
+					}).start();
+				}
+				else if(consellor_role.isChecked()){
+					Toast.makeText(LoginActivity.this,"开发中",Toast.LENGTH_LONG).show();
+				}
+				else{
+					Toast.makeText(LoginActivity.this,"请先选择登陆角色",Toast.LENGTH_LONG).show();
+				}
+
+
 
 				/*
 				Intent intent = new Intent(LoginActivity.this,
