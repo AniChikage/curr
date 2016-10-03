@@ -31,6 +31,7 @@ import android.widget.Toast;
 
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
+import com.hyphenate.chatuidemo.Consellor.ConsellorPage;
 import com.hyphenate.chatuidemo.DemoApplication;
 import com.hyphenate.chatuidemo.DemoHelper;
 import com.hyphenate.chatuidemo.Main.Mainpage;
@@ -184,7 +185,21 @@ public class LoginActivity extends BaseActivity {
 					}).start();
 				}
 				else if(consellor_role.isChecked()){
-					Toast.makeText(LoginActivity.this,"开发中",Toast.LENGTH_LONG).show();
+					new Thread(new Runnable() {
+						public void run() {
+							try{
+								ConnNet operaton=new ConnNet();
+								String result = operaton.consellorLogin(usernameEditText.getText().toString(),passwordEditText.getText().toString());
+								Message msg=new Message();
+								msg.obj=result;
+								cshandler.sendMessage(msg);
+							}
+							catch (Exception ex){
+								Toast.makeText(LoginActivity.this,"用户名或者密码不能为空",Toast.LENGTH_LONG).show();
+							}
+
+						}
+					}).start();
 				}
 				else{
 					Toast.makeText(LoginActivity.this,"请先选择登陆角色",Toast.LENGTH_LONG).show();
@@ -242,13 +257,35 @@ public class LoginActivity extends BaseActivity {
                 Toast.makeText(Login.this,"该账号尚未注册！",Toast.LENGTH_LONG);
             }*/
 			else{
-				Toast.makeText(LoginActivity.this, "登录失败", Toast.LENGTH_SHORT).show();
+				Toast.makeText(LoginActivity.this, "用户登录失败", Toast.LENGTH_SHORT).show();
 			}
 			// Toast.makeText(Login.this, string, Toast.LENGTH_SHORT).show();
 			Log.e(string,string);
 			super.handleMessage(msg);
 		}
 	};
+
+	Handler cshandler=new Handler(){
+		@Override
+		public void handleMessage(Message msg) {
+			String string=(String) msg.obj;
+			Log.e("csdologin" ,string);
+			if(string.indexOf("token")>0) {
+				Intent intent =new Intent(LoginActivity.this, ConsellorPage.class);
+				Bundle bundle = new Bundle();
+				bundle.putString("app_username",usernameEditText.getText().toString());
+				intent.putExtras(bundle);
+				startActivity(intent);
+				finish();
+			}
+			else{
+				Toast.makeText(LoginActivity.this, "咨询师登录失败", Toast.LENGTH_SHORT).show();
+			}
+			Log.e("sdsdf",string);
+			super.handleMessage(msg);
+		}
+	};
+
 
 	/**
 	 * register

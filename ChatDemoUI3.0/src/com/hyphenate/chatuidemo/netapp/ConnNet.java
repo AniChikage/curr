@@ -32,7 +32,9 @@ public class ConnNet {
 
     private static final String urlLogin="http://www.clr-vision.com:18080/Therapista/user/login";
     private static final String urlgetConsellors="http://www.clr-vision.com:18080/Therapista/consellor/getConsellors";
+    private static final String urlConsellorLogin="http://www.clr-vision.com:18080/Therapista/consellor/login";
     private static final String urladdConsellor="http://www.clr-vision.com:18080/Therapista/consellor/addConsellor";
+    private static final String urlGetSConsellor="http://www.clr-vision.com:18080/Therapista/consellor/getConsellor";
     private static final String urlgetConsellorAds="http://www.clr-vision.com:18080/Therapista/consellor/getConsellorAds";
     private static final String urlgetConsellor="http://www.clr-vision.com:18080/Therapista/consellor/getConsellor";
     private static final String urlgetArticals="http://www.clr-vision.com:18080/Therapista/article/getArticles";
@@ -749,6 +751,37 @@ public class ConnNet {
         return singleConsellor;
     }
 
+    //获取单个咨询师
+    public String getConsellor(String username){
+        String singleConsellor="";
+        try {
+            List<NameValuePair> params=new ArrayList<NameValuePair>();
+            params.add(new BasicNameValuePair("username",username));
+
+            HttpEntity entity = new UrlEncodedFormEntity(params, HTTP.UTF_8);
+            HttpPost httpPost = new HttpPost(urlGetSConsellor);
+            httpPost.setEntity(entity);
+            HttpClient client = new DefaultHttpClient();
+            HttpResponse httpResponse = client.execute(httpPost);
+
+            if (httpResponse.getStatusLine().getStatusCode()== HttpStatus.SC_OK) {
+                singleConsellor= EntityUtils.toString(httpResponse.getEntity(), "utf-8");
+                //Log.v("asd",singleConsellor);
+            }
+            else {
+                singleConsellor="登陆失败！";
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            singleConsellor = e.toString();
+        }
+        singleConsellor = singleConsellor.replace("\\\"","\"");
+        singleConsellor = singleConsellor.replace("\"{","{");
+        singleConsellor = singleConsellor.replace("}\"","}");
+        return singleConsellor;
+    }
+
     //checkfirstvisit
     public String checkFirstVisit(String gid, String uid){
         String checkResult="";
@@ -858,6 +891,71 @@ public class ConnNet {
             e.printStackTrace();
             result = e.toString();
         }
+        return result;
+    }
+
+    public String csGetConsellor(){
+        String result = "";
+        try {
+            List<NameValuePair> params=new ArrayList<NameValuePair>();
+
+            HttpEntity entity = new UrlEncodedFormEntity(params, HTTP.UTF_8);
+            HttpPost httpPost = new HttpPost(urlGetSConsellor);
+            httpPost.setEntity(entity);
+            HttpClient client = new DefaultHttpClient();
+            HttpResponse httpResponse = client.execute(httpPost);
+
+            if (httpResponse.getStatusLine().getStatusCode()== HttpStatus.SC_OK)
+            {
+                result= EntityUtils.toString(httpResponse.getEntity(), "utf-8");
+            }
+            else
+            {
+                result="登录失败！";
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            result = e.toString();
+        }
+        result = result.replace("\\\"","\"");
+        result = result.replace("\"{","{");
+        result = result.replace("}\"","}");
+        return result;
+    }
+
+    /*
+    * 咨询师登陆
+    * */
+    public String consellorLogin(String username, String password){
+        String result = "";
+        try {
+            List<NameValuePair> params=new ArrayList<NameValuePair>();
+            params.add(new BasicNameValuePair("username",username));
+            params.add(new BasicNameValuePair("password",password));
+
+            HttpEntity entity = new UrlEncodedFormEntity(params, HTTP.UTF_8);
+            HttpPost httpPost = new HttpPost(urlConsellorLogin);
+            httpPost.setEntity(entity);
+            HttpClient client = new DefaultHttpClient();
+            HttpResponse httpResponse = client.execute(httpPost);
+
+            if (httpResponse.getStatusLine().getStatusCode()== HttpStatus.SC_OK)
+            {
+                result= EntityUtils.toString(httpResponse.getEntity(), "utf-8");
+            }
+            else
+            {
+                result="登录失败！";
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            result = e.toString();
+        }
+        result = result.replace("\\\"","\"");
+        result = result.replace("\"{","{");
+        result = result.replace("}\"","}");
         return result;
     }
 
