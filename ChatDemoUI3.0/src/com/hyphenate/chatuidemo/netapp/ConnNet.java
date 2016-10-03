@@ -48,6 +48,7 @@ public class ConnNet {
     private static final String urlAddOrder="http://www.clr-vision.com:18080/Therapista/order/addOrder";
     private static final String urlGetOrders="http://www.clr-vision.com:18080/Therapista/order/getOrders";
     private static final String urlGetOrder="http://www.clr-vision.com:18080/Therapista/order/getOrder";
+    private static final String urlGetOrderByCid="http://www.clr-vision.com:18080/Therapista/order/getOrdersByCid";
     private static final String urlDelOrder="http://www.clr-vision.com:18080/Therapista/order/delOrder";
     private static final String urlGetOrderByUid="http://www.clr-vision.com:18080/Therapista/order/getOrdersByUid";
     private static final String urladdHarvest="http://www.clr-vision.com:18080/Therapista/harvest/addHarvest";
@@ -356,6 +357,37 @@ public class ConnNet {
             }
             else {
                 result="获取oid预约失败！";
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            result = e.toString();
+        }
+        result = result.replace("\\\"","\"");
+        result = result.replace("\"{","{");
+        result = result.replace("}\"","}");
+        return result;
+    }
+
+    //get order by cid
+    public String getOrderByCid(String cid){
+        String result="";
+        try {
+            List<NameValuePair> params=new ArrayList<NameValuePair>();
+            params.add(new BasicNameValuePair("cid",cid));
+
+            HttpEntity entity = new UrlEncodedFormEntity(params, HTTP.UTF_8);
+            HttpPost httpPost = new HttpPost(urlGetOrderByCid);
+            httpPost.setEntity(entity);
+            HttpClient client = new DefaultHttpClient();
+            HttpResponse httpResponse = client.execute(httpPost);
+
+            if (httpResponse.getStatusLine().getStatusCode()== HttpStatus.SC_OK) {
+                result= EntityUtils.toString(httpResponse.getEntity(), "utf-8");
+                //Log.v("asd",singleConsellor);
+            }
+            else {
+                result="通过cid获取预约失败";
             }
         }
         catch (Exception e) {
@@ -779,6 +811,7 @@ public class ConnNet {
         singleConsellor = singleConsellor.replace("\\\"","\"");
         singleConsellor = singleConsellor.replace("\"{","{");
         singleConsellor = singleConsellor.replace("}\"","}");
+        singleConsellor = singleConsellor.replace("}\\n\"","}");
         return singleConsellor;
     }
 

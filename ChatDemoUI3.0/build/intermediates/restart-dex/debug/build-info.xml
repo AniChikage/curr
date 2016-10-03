@@ -4,30 +4,45 @@
     api-level="23"
     density="420dpi"
     format="7"
-    timestamp="86395770825726"
+    timestamp="105085538435516"
     token="-8231835860491549266" >
 
     <task
         name="javac"
-        duration="8255" />
+        duration="7261" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="3857" />
+        duration="112" />
     <task
         name="verifier"
-        duration="1511" />
+        duration="29" />
 
     <artifact
-        location="G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\outputs\apk\ChatDemoUI3.0-debug.apk"
-        type="MAIN" />
+        location="G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
+        type="DEX" />
 
-    <build timestamp="86395770825726" >
+    <build timestamp="101965679059621" >
         <artifact
             location="G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\outputs\apk\ChatDemoUI3.0-debug.apk"
             type="MAIN" />
+    </build>
+    <build timestamp="104270309220979" >
+        <artifact
+            location="G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
+            type="DEX" />
+    </build>
+    <build timestamp="104738718360602" >
+        <artifact
+            location="G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\transforms\dex\debug\folders\1000\5\slice_4\classes.dex"
+            type="DEX" />
+    </build>
+    <build timestamp="105085538435516" >
+        <artifact
+            location="G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
+            type="DEX" />
     </build>
 
 </instant-run>
