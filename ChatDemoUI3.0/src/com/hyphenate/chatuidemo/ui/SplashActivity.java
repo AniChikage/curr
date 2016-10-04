@@ -23,7 +23,7 @@ import com.hyphenate.chatuidemo.R;
 public class SplashActivity extends BaseActivity {
 
 	private createSDFile mycreateSDFile;
-	private static final int sleepTime = 2000;
+	private static final int sleepTime = 3000;
 
 	@Override
 	protected void onCreate(Bundle arg0) {
@@ -46,12 +46,8 @@ public class SplashActivity extends BaseActivity {
 		super.onStart();
 		mycreateSDFile = new createSDFile(getBaseContext());
 		try{
-			mycreateSDFile.deleteSDFile("cache");
-			mycreateSDFile.deleteSDFile("cachetype");
-			mycreateSDFile.createSDFile("cache");
-			mycreateSDFile.createSDFile("cachetype");
-			mycreateSDFile.writeSDFile("ctest1","cache");
-			mycreateSDFile.writeSDFile("consellor","cachetype");
+			//mycreateSDFile.writeSDFile("test2","cache");
+			//mycreateSDFile.writeSDFile("user","cachetype");
 			Log.e("fdg",mycreateSDFile.readSDFile("cache"));
 			Log.e("fdg",mycreateSDFile.readSDFile("cachetype"));
 
@@ -81,7 +77,37 @@ public class SplashActivity extends BaseActivity {
 				}
 			}
 			else if(mycreateSDFile.readSDFile("cachetype").trim().equals("user")){
-
+				if(mycreateSDFile.readSDFile("cache").trim().equals("")){
+					try {
+						Thread.sleep(sleepTime);
+					} catch (InterruptedException e) {
+					}
+					startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+					finish();
+				}
+				else if(!mycreateSDFile.readSDFile("cache").trim().equals("")){
+					long start = System.currentTimeMillis();
+					long costTime = System.currentTimeMillis() - start;
+					//wait
+					if (sleepTime - costTime > 0) {
+						try {
+							Thread.sleep(sleepTime - costTime);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+					}
+					//enter main screen
+					startActivity(new Intent(SplashActivity.this, MainActivity.class));
+					finish();
+				}
+			}
+			else{
+				try {
+					Thread.sleep(sleepTime);
+				} catch (InterruptedException e) {
+				}
+				startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+				finish();
 			}
 		}
 		catch (Exception ex){

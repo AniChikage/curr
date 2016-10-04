@@ -4237,11 +4237,12 @@ containing a value of this type.
         public static final int select_dialog_item_material=0x7f0300f4;
         public static final int select_dialog_multichoice_material=0x7f0300f5;
         public static final int select_dialog_singlechoice_material=0x7f0300f6;
-        public static final int settingactivity=0x7f0300f7;
-        public static final int support_simple_spinner_dropdown_item=0x7f0300f8;
-        public static final int umeng_common_download_notification=0x7f0300f9;
-        public static final int umeng_update_dialog=0x7f0300fa;
-        public static final int welcome=0x7f0300fb;
+        public static final int setting=0x7f0300f7;
+        public static final int settingactivity=0x7f0300f8;
+        public static final int support_simple_spinner_dropdown_item=0x7f0300f9;
+        public static final int umeng_common_download_notification=0x7f0300fa;
+        public static final int umeng_update_dialog=0x7f0300fb;
+        public static final int welcome=0x7f0300fc;
     }
     public static final class menu {
         public static final int em_context_contact_list=0x7f0e0000;

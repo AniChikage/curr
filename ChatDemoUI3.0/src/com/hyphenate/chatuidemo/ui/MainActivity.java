@@ -75,6 +75,7 @@ import com.hyphenate.chatuidemo.Appointment.AppointDetail;
 import com.hyphenate.chatuidemo.Constant;
 import com.hyphenate.chatuidemo.Consultant.Csdetail;
 import com.hyphenate.chatuidemo.DemoHelper;
+import com.hyphenate.chatuidemo.Help.createSDFile;
 import com.hyphenate.chatuidemo.Main.ArticleDetail;
 import com.hyphenate.chatuidemo.Main.Category;
 import com.hyphenate.chatuidemo.Main.MainActivit;
@@ -101,6 +102,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Timer;
+import java.util.TimerTask;
 
 @SuppressLint("NewApi")
 public class MainActivity extends BaseActivity {
@@ -111,6 +114,7 @@ public class MainActivity extends BaseActivity {
 	private static String user_id;
 	private static String user_id_s;
 	private static String firstChecked="0";
+	private createSDFile mycreateSDFile;
 	// textview for unread event message
 	private TextView unreadAddressLable;
 	private TextView paixu;
@@ -162,8 +166,8 @@ public class MainActivity extends BaseActivity {
 	private ConversationListFragment conversationListFragment;
 	private BroadcastReceiver broadcastReceiver;
 	private LocalBroadcastManager broadcastManager;
-
-	/**
+	private String useremail;
+	public static MainActivity instance = null; 	/**
 	 * check if current user account was remove
 	 */
 	public boolean getCurrentAccountRemoved() {
@@ -176,7 +180,10 @@ public class MainActivity extends BaseActivity {
 		super.onCreate(savedInstanceState);
 		hcontext=this.getApplicationContext();
 		in_hcontext = hcontext;
-
+		mycreateSDFile = new createSDFile(hcontext);
+		instance = this;
+		useremail = mycreateSDFile.readSDFile("cache");
+		Log.e(TAG,useremail);
 		//监听生命周期
 
 		if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -207,15 +214,12 @@ public class MainActivity extends BaseActivity {
 		// runtime permission for android 6.0, just require all permissions here for simple
 		requestPermissions();
 
-		//Bundle bundle = getIntent().getExtras();
-		//if(bundle!=null) {
-		//	user_email = bundle.getString("app_username");
-		//	Log.e("user_email", user_email);
+
 			new Thread(new Runnable() {
 				public void run() {
 					try {
 						ConnNet operaton = new ConnNet();
-						String result = operaton.getUser(EMClient.getInstance().getCurrentUser().toString());
+						String result = operaton.getUser(useremail);
 						Message msg = new Message();
 						msg.obj = result;
 						hgetuser.sendMessage(msg);
@@ -239,7 +243,7 @@ public class MainActivity extends BaseActivity {
 		}
 
 		//获取
-		Log.e(TAG,EMClient.getInstance().getCurrentUser());
+		//Log.e(TAG,EMClient.getInstance().getCurrentUser());
 
 		inviteMessgeDao = new InviteMessgeDao(this);
 		//Log.e(TAG,inviteMessgeDao.COLUMN_NAME_FROM);
@@ -284,6 +288,7 @@ public class MainActivity extends BaseActivity {
 		@Override
 		public void handleMessage(Message msg) {
 			String string=(String) msg.obj;
+			Log.e(".......",string);
 			try {
 				JSONObject jsonObjs = new JSONObject(string).getJSONObject("user");
 				user_id = jsonObjs.getString("id");
@@ -500,8 +505,14 @@ public class MainActivity extends BaseActivity {
 		mp_setting.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(in_hcontext,SettingActivity.class);
+				//System.exit(0);
+				Intent intent = new Intent(in_hcontext,Setting.class);
+				//Intent intent = new Intent();
 				intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+				//intent.setClass(in_hcontext,Setting.class);
+				//intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);//设置不要刷新将要跳到的界面
+				//intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);//它可以关掉所要到的界面中间的activity
+				//startActivity(intent);
 				in_hcontext.startActivity(intent);
 				//logout();
 				//Toast.makeText(MainActivity.this,"开发中",Toast.LENGTH_LONG).show();
@@ -1244,6 +1255,7 @@ public class MainActivity extends BaseActivity {
 		super.onSaveInstanceState(outState);
 	}
 
+	/*
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		if (keyCode == KeyEvent.KEYCODE_BACK) {
@@ -1252,7 +1264,7 @@ public class MainActivity extends BaseActivity {
 		}
 		return super.onKeyDown(keyCode, event);
 	}
-
+*/
 
 
 	/**
@@ -1472,5 +1484,46 @@ public class MainActivity extends BaseActivity {
 				}
 			}
 		});
+	}
+
+	public static void finishThis(){
+		Log.e(TAG,"mainay end");
+		MainActivity.instance.finish();
+	}
+
+	/**
+	 * 菜单、返回键响应
+	 */
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		// TODO Auto-generated method stub
+		if(keyCode == KeyEvent.KEYCODE_BACK)
+		{
+			exitBy2Click(); //调用双击退出函数
+		}
+		return false;
+	}
+	/**
+	 * 双击退出函数
+	 */
+	private static Boolean isExit = false;
+
+	private void exitBy2Click() {
+		Timer tExit = null;
+		if (isExit == false) {
+			isExit = true; // 准备退出
+			Toast.makeText(this, "再按一次退出程序", Toast.LENGTH_SHORT).show();
+			tExit = new Timer();
+			tExit.schedule(new TimerTask() {
+				@Override
+				public void run() {
+					isExit = false; // 取消退出
+				}
+			}, 2000); // 如果2秒钟内没有按下返回键，则启动定时器取消掉刚才执行的任务
+
+		} else {
+			finish();
+			System.exit(0);
+		}
 	}
 }

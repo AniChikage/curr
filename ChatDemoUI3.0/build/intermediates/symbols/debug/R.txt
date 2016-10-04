@@ -2359,11 +2359,12 @@ int layout rp_widget_title_bar 0x7f0300f3
 int layout select_dialog_item_material 0x7f0300f4
 int layout select_dialog_multichoice_material 0x7f0300f5
 int layout select_dialog_singlechoice_material 0x7f0300f6
-int layout settingactivity 0x7f0300f7
-int layout support_simple_spinner_dropdown_item 0x7f0300f8
-int layout umeng_common_download_notification 0x7f0300f9
-int layout umeng_update_dialog 0x7f0300fa
-int layout welcome 0x7f0300fb
+int layout setting 0x7f0300f7
+int layout settingactivity 0x7f0300f8
+int layout support_simple_spinner_dropdown_item 0x7f0300f9
+int layout umeng_common_download_notification 0x7f0300fa
+int layout umeng_update_dialog 0x7f0300fb
+int layout welcome 0x7f0300fc
 int menu em_context_contact_list 0x7f0e0000
 int menu em_context_tab_contact 0x7f0e0001
 int menu em_delete_contact 0x7f0e0002

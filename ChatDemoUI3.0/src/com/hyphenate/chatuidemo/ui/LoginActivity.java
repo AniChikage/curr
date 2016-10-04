@@ -24,6 +24,7 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -34,11 +35,15 @@ import com.hyphenate.chat.EMClient;
 import com.hyphenate.chatuidemo.Consellor.ConsellorPage;
 import com.hyphenate.chatuidemo.DemoApplication;
 import com.hyphenate.chatuidemo.DemoHelper;
+import com.hyphenate.chatuidemo.Help.createSDFile;
 import com.hyphenate.chatuidemo.Main.Mainpage;
 import com.hyphenate.chatuidemo.R;
 import com.hyphenate.chatuidemo.db.DemoDBManager;
 import com.hyphenate.chatuidemo.netapp.ConnNet;
 import com.hyphenate.easeui.utils.EaseCommonUtils;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * Login screen
@@ -49,6 +54,8 @@ public class LoginActivity extends BaseActivity {
 	public static final int REQUEST_CODE_SETNICK = 1;
 	private EditText usernameEditText;
 	private EditText passwordEditText;
+
+	private createSDFile mycreateSDFile;
 
 	private RadioButton user_role;
 	private RadioButton consellor_role;
@@ -68,6 +75,8 @@ public class LoginActivity extends BaseActivity {
 			return;
 		}
 		setContentView(R.layout.em_activity_login);
+
+		mycreateSDFile = new createSDFile(getBaseContext());
 
 		usernameEditText = (EditText) findViewById(R.id.username);
 		passwordEditText = (EditText) findViewById(R.id.password);
@@ -167,6 +176,18 @@ public class LoginActivity extends BaseActivity {
 				DemoHelper.getInstance().getUserProfileManager().asyncGetCurrentUserInfo();
 
 				if(user_role.isChecked()){
+					try{
+						mycreateSDFile.deleteSDFile("cache");
+						mycreateSDFile.deleteSDFile("cachetype");
+						mycreateSDFile.createSDFile("cache");
+						mycreateSDFile.createSDFile("cachetype");
+						mycreateSDFile.writeSDFile(usernameEditText.getText().toString(),"cache");
+						mycreateSDFile.writeSDFile("user","cachetype");
+					}
+					catch (Exception ex){
+						ex.printStackTrace();
+					}
+
 					new Thread(new Runnable() {
 						public void run() {
 							try{
@@ -185,6 +206,17 @@ public class LoginActivity extends BaseActivity {
 					}).start();
 				}
 				else if(consellor_role.isChecked()){
+					try{
+						mycreateSDFile.deleteSDFile("cache");
+						mycreateSDFile.deleteSDFile("cachetype");
+						mycreateSDFile.createSDFile("cache");
+						mycreateSDFile.createSDFile("cachetype");
+						mycreateSDFile.writeSDFile(usernameEditText.getText().toString(),"cache");
+						mycreateSDFile.writeSDFile("consellor","cachetype");
+					}
+					catch (Exception ex){
+						ex.printStackTrace();
+					}
 					new Thread(new Runnable() {
 						public void run() {
 							try{
@@ -303,6 +335,42 @@ public class LoginActivity extends BaseActivity {
 		super.onResume();
 		if (autoLogin) {
 			return;
+		}
+	}
+
+	/**
+	 * 菜单、返回键响应
+	 */
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		// TODO Auto-generated method stub
+		if(keyCode == KeyEvent.KEYCODE_BACK)
+		{
+			exitBy2Click(); //调用双击退出函数
+		}
+		return false;
+	}
+	/**
+	 * 双击退出函数
+	 */
+	private static Boolean isExit = false;
+
+	private void exitBy2Click() {
+		Timer tExit = null;
+		if (isExit == false) {
+			isExit = true; // 准备退出
+			Toast.makeText(this, "再按一次退出程序", Toast.LENGTH_SHORT).show();
+			tExit = new Timer();
+			tExit.schedule(new TimerTask() {
+				@Override
+				public void run() {
+					isExit = false; // 取消退出
+				}
+			}, 2000); // 如果2秒钟内没有按下返回键，则启动定时器取消掉刚才执行的任务
+
+		} else {
+			finish();
+			System.exit(0);
 		}
 	}
 }

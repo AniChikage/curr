@@ -397,6 +397,13 @@
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustPan" />
 
+        <!-- SETTING -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.Setting"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" />
+
         <!-- 开机自启动服务 -->
         <receiver android:name="com.hyphenate.chatuidemo.receiver.StartServiceReceiver" >
             <intent-filter android:priority="1000" >

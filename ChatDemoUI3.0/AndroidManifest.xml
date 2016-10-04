@@ -399,6 +399,13 @@
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustPan"></activity>
 
+        <!-- SETTING-->
+        <activity
+            android:name=".ui.Setting"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan"></activity>
+
 
         <!-- 开机自启动服务 -->
         <receiver android:name=".receiver.StartServiceReceiver">
