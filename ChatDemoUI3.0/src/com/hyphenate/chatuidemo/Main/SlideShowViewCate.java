@@ -133,13 +133,10 @@ public class SlideShowViewCate extends FrameLayout {
      * 初始化相关Data
      */
     private void initData(ArrayList<String> adhint, ArrayList<String> adimg, ArrayList<String> adid){
-        System.gc();
+        //System.gc();
         textViews=new ArrayList<TextView>();
         imageViewsList = new ArrayList<ImageView>();
         dotViewsList = new ArrayList<View>();
-        textViews.clear();
-        imageViewsList.clear();
-        dotViewsList.clear();
         // 异步任务获取图片
         Asyn async=new Asyn();
         try {
@@ -212,12 +209,16 @@ public class SlideShowViewCate extends FrameLayout {
         @Override
         public void destroyItem(View container, int position, Object object) {
             // TODO Auto-generated method stub
-
+            ((ViewPager)container).removeView(imageViewsList.get(position));
+            ((ViewPager)container).removeView(textViews.get(position));
+            ((ViewPager)container).removeView(dotViewsList.get(position));
         }
 
         @Override
         public Object instantiateItem(View container, int position) {
-
+            ((ViewPager)container).removeView(imageViewsList.get(position));
+            ((ViewPager)container).removeView(textViews.get(position));
+            ((ViewPager)container).removeView(dotViewsList.get(position));
             /*
             if (((ViewPager) container).getChildCount() == imageViewsList.size()){
                 RelativeLayout l2= (RelativeLayout) imageViewsList.get(position % imageViewsList.size()).getParent();
@@ -245,7 +246,7 @@ public class SlideShowViewCate extends FrameLayout {
             textView.setTextColor(Color.WHITE);
             imageView.setLayoutParams(params1);
             //l1.removeAllViews();
-            l1.removeAllViewsInLayout();
+            //l1.removeAllViewsInLayout();
             l1.addView(imageView);
             l1.addView(textView);
             ViewGroup parent = (ViewGroup)l1.getParent();
