@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.hyphenate.chatuidemo"
-    android:versionCode="36"
-    android:versionName="3.1.4" >
+    android:versionCode="38"
+    android:versionName="3.1.6" >
 
     <uses-sdk
         android:minSdkVersion="11"
@@ -403,6 +403,22 @@
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustPan" />
+
+        <!-- SETTING -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.CcSetting"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <!-- CSAPPOINTDETAIL -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.Appointment.CdAppointDetail"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
 
         <!-- 开机自启动服务 -->
         <receiver android:name="com.hyphenate.chatuidemo.receiver.StartServiceReceiver" >

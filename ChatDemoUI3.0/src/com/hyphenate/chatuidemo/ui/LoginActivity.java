@@ -221,7 +221,7 @@ public class LoginActivity extends BaseActivity {
 						public void run() {
 							try{
 								ConnNet operaton=new ConnNet();
-								String result = operaton.consellorLogin(usernameEditText.getText().toString(),passwordEditText.getText().toString());
+								String result = operaton.consellorLogin(usernameEditText.getText().toString().trim(),passwordEditText.getText().toString().trim());
 								Message msg=new Message();
 								msg.obj=result;
 								cshandler.sendMessage(msg);
@@ -304,9 +304,6 @@ public class LoginActivity extends BaseActivity {
 			Log.e("csdologin" ,string);
 			if(string.indexOf("token")>0) {
 				Intent intent =new Intent(LoginActivity.this, ConsellorPage.class);
-				Bundle bundle = new Bundle();
-				bundle.putString("app_username",usernameEditText.getText().toString());
-				intent.putExtras(bundle);
 				startActivity(intent);
 				finish();
 			}

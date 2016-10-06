@@ -31,6 +31,7 @@
                     <TextView
                         android:id="@+id/app_username"
                         android:gravity="center"
+                        android:textColor="@color/black"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="您还未登陆"/>

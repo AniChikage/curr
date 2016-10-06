@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
+import com.hyphenate.chatuidemo.Consellor.ConsellorPage;
 import com.hyphenate.chatuidemo.DemoHelper;
 import com.hyphenate.chatuidemo.Help.createSDFile;
 import com.hyphenate.chatuidemo.R;
@@ -21,6 +22,7 @@ public class Setting extends Activity {
 
     private Button btn_logout;
     private createSDFile mycreateSDFile;
+    private String type;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +35,7 @@ public class Setting extends Activity {
     private void initId(){
         btn_logout = (Button)findViewById(R.id.btn_logout);
         mycreateSDFile = new createSDFile(getBaseContext());
+        type = mycreateSDFile.readSDFile("cachetype");
     }
 
     private void initClick(){
@@ -47,8 +50,7 @@ public class Setting extends Activity {
     };
 
     private void logout(){
-        mycreateSDFile.deleteSDFile("cache");
-        mycreateSDFile.deleteSDFile("cachetype");
+
         //EMClient.getInstance().logout(true);
         //startActivity(new Intent(Setting.this, LoginActivity.class));
         //finish();
@@ -60,9 +62,14 @@ public class Setting extends Activity {
                     public void run() {
                         // show login screen
                         finish();
+                        if(type.equals("user"))
                         MainActivity.finishThis();
+                        else{
+                            ConsellorPage.finishThis();
+                        }
                         startActivity(new Intent(Setting.this, LoginActivity.class));
-
+                        mycreateSDFile.deleteSDFile("cache");
+                        mycreateSDFile.deleteSDFile("cachetype");
                     }
                 });
             }
