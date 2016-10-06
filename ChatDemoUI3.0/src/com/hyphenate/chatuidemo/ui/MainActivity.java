@@ -119,6 +119,8 @@ public class MainActivity extends BaseActivity {
 	private TextView unreadAddressLable;
 	private TextView paixu;
 	private static TextView app_username;
+	private TextView btn_recmd;
+	private TextView btn_default;
 	private String user_email;
 	private static ImageView dochuzhen;
 	private static ImageView mp_setting;
@@ -167,7 +169,9 @@ public class MainActivity extends BaseActivity {
 	private BroadcastReceiver broadcastReceiver;
 	private LocalBroadcastManager broadcastManager;
 	private String useremail;
-	public static MainActivity instance = null; 	/**
+	public static MainActivity instance = null;
+	private ProgressDialog pd=null;
+	/**
 	 * check if current user account was remove
 	 */
 	public boolean getCurrentAccountRemoved() {
@@ -180,6 +184,7 @@ public class MainActivity extends BaseActivity {
 		super.onCreate(savedInstanceState);
 		hcontext=this.getApplicationContext();
 		in_hcontext = hcontext;
+		pd = new ProgressDialog(MainActivity.this);
 		mycreateSDFile = new createSDFile(hcontext);
 		instance = this;
 		useremail = mycreateSDFile.readSDFile("cache");
@@ -722,7 +727,11 @@ public class MainActivity extends BaseActivity {
 	private void SysnConsellorsAds(){
 		mainpage_cs_header_ll = (LinearLayout) mainpage_cs_header_view.findViewById(R.id.mpcs_header_ll);
 		paixu = (TextView) mainpage_cs_header_view.findViewById(R.id.paixu);
+		btn_recmd = (TextView) mainpage_cs_header_view.findViewById(R.id.btn_recmd);
+		btn_default = (TextView) mainpage_cs_header_view.findViewById(R.id.btn_default);
 		paixu.setOnClickListener(new click_paixu());
+		btn_recmd.setOnClickListener(new click_recmd());
+		btn_default.setOnClickListener(new click_default());
 		WindowManager wm1 = this.getWindowManager();
 		int height1 = wm1.getDefaultDisplay().getHeight();
 		int a1= (int) height1*552/1679;
@@ -795,6 +804,136 @@ public class MainActivity extends BaseActivity {
 		}
 	}
 
+	class click_recmd implements View.OnClickListener{
+		@Override
+		public void onClick(View v) {
+			pd.setMessage("获取中……");
+			pd.show();
+			new Thread(new Runnable(){
+				@Override
+				public void run() {
+					try{
+						ConnNet operaton=new ConnNet();
+						String result=operaton.getConsellorRecmd();
+						Message msg=new Message();
+						msg.obj=result;
+						recmdhandler.sendMessage(msg);
+					}
+					catch (Exception ex){
+
+					}
+				}
+			}).start();
+		}
+	}
+
+	class click_default implements View.OnClickListener{
+		@Override
+		public void onClick(View v) {
+			pd.setMessage("获取中……");
+			pd.show();
+			new Thread(new Runnable(){
+				@Override
+				public void run() {
+					try{
+						ConnNet operaton=new ConnNet();
+						String result=operaton.getConsellors();
+						Message msg=new Message();
+						msg.obj=result;
+						recmdhandler.sendMessage(msg);
+					}
+					catch (Exception ex){
+
+					}
+				}
+			}).start();
+		}
+	}
+
+	//咨询师信息
+	Handler recmdhandler=new Handler(){
+		@Override
+		public void handleMessage(Message msg) {
+			String string=(String) msg.obj;
+			Log.e(TAG+"recmd",string);
+			List<Map<String, Object>> listItems = new ArrayList<Map<String, Object>>();
+			try {
+				JSONArray jsonObjs = new JSONObject(string).getJSONArray("consellors");
+				for(int i = 0; i < jsonObjs.length() ; i++){
+					JSONObject jsonObj = (JSONObject)jsonObjs.get(i);
+					int id = jsonObj.getInt("id");
+					String name = jsonObj.getString("realname");
+					String gender = jsonObj.getString("gender");
+					String level = jsonObj.getString("authen");
+					String time = jsonObj.getString("career");
+					String goodat = jsonObj.getJSONObject("pro1").getString("field");
+					String price = jsonObj.getJSONObject("rate").getString("price");
+					Map<String, Object> map = new HashMap<String, Object>();
+					//Log.e("get: img length",String.valueOf(jsonObj.getString("portrait").length()));
+					// Log.e("get: img string",jsonObj.getString("portrait"));
+					//===============================================================
+					String asdf=jsonObj.getString("portrait");
+					asdf=asdf.replace("/n","/n");
+
+					//===============================================================
+					Drawable drawable =new BitmapDrawable(getBitmapFromByte(Base64.decode(asdf,Base64.DEFAULT)));
+					//Drawable drawable =new BitmapDrawable(getBitmapFromByte(jsonObj.getString("portrait").getBytes()));
+					map.put("csabimg", drawable);               //咨询师头像
+					map.put("csabid",String.valueOf(id));
+					map.put("csabname", name);              //姓名
+					map.put("csabgender", gender);     //性别
+					map.put("csablevel", level); //职业等级
+					//map.put("csabtime", time); //案例时长
+					map.put("csabgoodat", goodat); //擅长领域
+					map.put("csabprice", price); //价格
+					listItems.add(map);
+				}
+			} catch (JSONException e) {
+				System.out.println("Jsons parse error !");
+				e.printStackTrace();
+			}
+			try{
+				pd.dismiss();
+			}
+			catch (Exception ex){
+				ex.printStackTrace();
+			}
+			//mainpage_cs_listview.addHeaderView(mainpage_cs_header_view);
+			csabLista = listItems;
+			csabListViewAdapter = new CsabListViewAdapter(hcontext, csabLista);
+			mainpage_cs_listview.setAdapter(csabListViewAdapter);
+			mainpage_cs_listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+				@Override
+				public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
+					try{
+						ListView lv = (ListView)parent;
+						HashMap<String,Object> person = (HashMap<String,Object>)lv.getItemAtPosition(position);//SimpleAdapter返回Map
+						if(person!=null){
+							//Toast.makeText(getApplicationContext(), person.get("csabid").toString(), Toast.LENGTH_SHORT).show();
+							Intent intent = new Intent(MainActivity.this, Csdetail.class);
+							Bundle bundle = new Bundle();
+							bundle.putString("csnoid",person.get("csabid").toString());
+							bundle.putString("user_id",user_id);
+							intent.putExtras(bundle);
+							startActivity(intent);
+							//finish();
+						}
+						else
+							Toast.makeText(getApplicationContext(),"获取咨询师列表失败", Toast.LENGTH_SHORT).show();
+					}
+					catch (Exception ex){
+						Toast.makeText(MainActivity.this,ex.toString() ,Toast.LENGTH_SHORT).show();
+						Log.e("get error",ex.toString());
+					}
+				}
+			});
+			//Log.e("TAG" ,string);
+			//Log.e("TAG" ,String.valueOf(string.length()));
+			super.handleMessage(msg);
+		}
+	};
+
 	public void initmPopupWindowView() {
 
 		// // 获取自定义布局文件pop.xml的视图
@@ -829,6 +968,21 @@ public class MainActivity extends BaseActivity {
 			@Override
 			public void onClick(View v) {
 				paixu.setText("专长");
+				pd.setMessage("获取中……");
+				pd.show();
+				new Thread(new Runnable() {
+					public void run() {
+						try {
+							ConnNet operaton = new ConnNet();
+							String result = operaton.getConsellorGoodat();
+							Message msg = new Message();
+							msg.obj = result;
+							recmdhandler.sendMessage(msg);
+						} catch (Exception ex) {
+							Toast.makeText(in_hcontext, "咨询师获取失败", Toast.LENGTH_LONG).show();
+						}
+					}
+				}).start();
 				if (popupwindow != null&&popupwindow.isShowing()) {
 					popupwindow.dismiss();
 				}
@@ -838,6 +992,21 @@ public class MainActivity extends BaseActivity {
 			@Override
 			public void onClick(View v) {
 				paixu.setText("价格");
+				pd.setMessage("获取中……");
+				pd.show();
+				new Thread(new Runnable() {
+					public void run() {
+						try {
+							ConnNet operaton = new ConnNet();
+							String result = operaton.getConsellorPrice();
+							Message msg = new Message();
+							msg.obj = result;
+							recmdhandler.sendMessage(msg);
+						} catch (Exception ex) {
+							Toast.makeText(in_hcontext, "咨询师获取失败", Toast.LENGTH_LONG).show();
+						}
+					}
+				}).start();
 				if (popupwindow != null&&popupwindow.isShowing()) {
 					popupwindow.dismiss();
 				}

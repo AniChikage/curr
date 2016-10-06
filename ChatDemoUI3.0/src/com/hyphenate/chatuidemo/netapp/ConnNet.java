@@ -37,6 +37,9 @@ public class ConnNet {
     private static final String urlGetSConsellor="http://www.clr-vision.com:18080/Therapista/consellor/getConsellor";
     private static final String urlgetConsellorAds="http://www.clr-vision.com:18080/Therapista/consellor/getConsellorAds";
     private static final String urlgetConsellor="http://www.clr-vision.com:18080/Therapista/consellor/getConsellor";
+    private static final String urlGetConsellorRecmd="http://www.clr-vision.com:18080/Therapista/consellor/recommendConsellors";
+    private static final String urlGetConsellorGoodat="http://www.clr-vision.com:18080/Therapista/consellor/getConsellorsOrderbyPro";
+    private static final String urlGetConsellorPrice="http://www.clr-vision.com:18080/Therapista/consellor/getConsellorsOrderbyPrice";
     private static final String urlgetArticals="http://www.clr-vision.com:18080/Therapista/article/getArticles";
     private static final String urlgetArticalAds="http://www.clr-vision.com:18080/Therapista/article/getArticleAds";
     private static final String urlgetArtical="http://www.clr-vision.com:18080/Therapista/article/getArticle";
@@ -780,6 +783,97 @@ public class ConnNet {
         singleConsellor = singleConsellor.replace("\\\"","\"");
         singleConsellor = singleConsellor.replace("\"{","{");
         singleConsellor = singleConsellor.replace("}\"","}");
+        return singleConsellor;
+    }
+
+    //获取单个咨询师
+    public String getConsellorRecmd(){
+        String singleConsellor="";
+        try {
+            List<NameValuePair> params=new ArrayList<NameValuePair>();
+
+            HttpEntity entity = new UrlEncodedFormEntity(params, HTTP.UTF_8);
+            HttpPost httpPost = new HttpPost(urlGetConsellorRecmd);
+            httpPost.setEntity(entity);
+            HttpClient client = new DefaultHttpClient();
+            HttpResponse httpResponse = client.execute(httpPost);
+
+            if (httpResponse.getStatusLine().getStatusCode()== HttpStatus.SC_OK) {
+                singleConsellor= EntityUtils.toString(httpResponse.getEntity(), "utf-8");
+                //Log.v("asd",singleConsellor);
+            }
+            else {
+                singleConsellor="获取推荐咨询师失败！";
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            singleConsellor = e.toString();
+        }
+        singleConsellor = singleConsellor.replace("\\\"","\"");
+        singleConsellor = singleConsellor.replace("\"{","{");
+        singleConsellor = singleConsellor.replace("}\"","}");
+        singleConsellor = singleConsellor.replace("}\\n\"","}");
+        return singleConsellor;
+    }
+
+    public String getConsellorGoodat(){
+        String singleConsellor="";
+        try {
+            List<NameValuePair> params=new ArrayList<NameValuePair>();
+
+            HttpEntity entity = new UrlEncodedFormEntity(params, HTTP.UTF_8);
+            HttpPost httpPost = new HttpPost(urlGetConsellorGoodat);
+            httpPost.setEntity(entity);
+            HttpClient client = new DefaultHttpClient();
+            HttpResponse httpResponse = client.execute(httpPost);
+
+            if (httpResponse.getStatusLine().getStatusCode()== HttpStatus.SC_OK) {
+                singleConsellor= EntityUtils.toString(httpResponse.getEntity(), "utf-8");
+                //Log.v("asd",singleConsellor);
+            }
+            else {
+                singleConsellor="获取专长咨询师失败！";
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            singleConsellor = e.toString();
+        }
+        singleConsellor = singleConsellor.replace("\\\"","\"");
+        singleConsellor = singleConsellor.replace("\"{","{");
+        singleConsellor = singleConsellor.replace("}\"","}");
+        singleConsellor = singleConsellor.replace("}\\n\"","}");
+        return singleConsellor;
+    }
+
+    public String getConsellorPrice(){
+        String singleConsellor="";
+        try {
+            List<NameValuePair> params=new ArrayList<NameValuePair>();
+
+            HttpEntity entity = new UrlEncodedFormEntity(params, HTTP.UTF_8);
+            HttpPost httpPost = new HttpPost(urlGetConsellorPrice);
+            httpPost.setEntity(entity);
+            HttpClient client = new DefaultHttpClient();
+            HttpResponse httpResponse = client.execute(httpPost);
+
+            if (httpResponse.getStatusLine().getStatusCode()== HttpStatus.SC_OK) {
+                singleConsellor= EntityUtils.toString(httpResponse.getEntity(), "utf-8");
+                //Log.v("asd",singleConsellor);
+            }
+            else {
+                singleConsellor="获取价格咨询师失败！";
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            singleConsellor = e.toString();
+        }
+        singleConsellor = singleConsellor.replace("\\\"","\"");
+        singleConsellor = singleConsellor.replace("\"{","{");
+        singleConsellor = singleConsellor.replace("}\"","}");
+        singleConsellor = singleConsellor.replace("}\\n\"","}");
         return singleConsellor;
     }
 
