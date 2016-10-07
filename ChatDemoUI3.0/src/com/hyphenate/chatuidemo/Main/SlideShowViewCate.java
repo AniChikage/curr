@@ -42,6 +42,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+
 /**
  * ViewPager实现的轮播图广告自定义视图，如京东首页的广告轮播图效果；
  * 既支持自动轮播页面也支持手势滑动切换页面
@@ -62,14 +63,14 @@ public class SlideShowViewCate extends FrameLayout {
     //自定义轮播图的资源
     private String[] imageUrls;
     //放轮播图片的ImageView 的list
-    private static List<ImageView> imageViewsList;
-    private static List<TextView> textViews;
+    private  List<ImageView> imageViewsList;
+    private  List<TextView> textViews;
     //放圆点的View的list
-    private static List<View> dotViewsList;
+    private  List<View> dotViewsList;
 
-    private static ViewPager viewPager;
+    private  ViewPager viewPager;
     //当前轮播页
-    private static int currentItem  = 0;
+    private  int currentItem  = 0;
     //定时任务
     private static ScheduledExecutorService scheduledExecutorService;
 
@@ -77,20 +78,14 @@ public class SlideShowViewCate extends FrameLayout {
     static Boolean stopthear=false;
 
     //Handler
-    private static Handler handler = new Handler(){
+    private  Handler handler = new Handler(){
 
         @Override
         public void handleMessage(Message msg) {
             // TODO Auto-generated method stub
             super.handleMessage(msg);
-            try{
-                //viewPager.removeAllViews();
-                viewPager.setCurrentItem(currentItem);
-            } catch (Exception e) {
-                Log.e("cheater", e.toString());
-            }
             //Log.i("currentItem","currentItem"+currentItem);
-
+            viewPager.setCurrentItem(currentItem);
         }
     };
 
@@ -133,7 +128,7 @@ public class SlideShowViewCate extends FrameLayout {
      * 初始化相关Data
      */
     private void initData(ArrayList<String> adhint, ArrayList<String> adimg, ArrayList<String> adid){
-        //System.gc();
+        System.gc();
         textViews=new ArrayList<TextView>();
         imageViewsList = new ArrayList<ImageView>();
         dotViewsList = new ArrayList<View>();
@@ -152,10 +147,10 @@ public class SlideShowViewCate extends FrameLayout {
     private void initUI(Context context, ArrayList<String> adhint, ArrayList<String> adimg, ArrayList<String> adid){
         LayoutInflater.from(context).inflate(R.layout.layout_slideshow, this, true);
 
+        final Context innerContext = context;
         LinearLayout dotLayout = (LinearLayout)findViewById(R.id.dotLayout);
         dotLayout.removeAllViews();
 
-        final Context innerContext = context;
         // 热点个数与图片特殊相等
         for (int i = 0; i < adhint.size(); i++) {
             ImageView view =  new ImageView(context);
@@ -209,23 +204,18 @@ public class SlideShowViewCate extends FrameLayout {
         @Override
         public void destroyItem(View container, int position, Object object) {
             // TODO Auto-generated method stub
-            ((ViewPager)container).removeView(imageViewsList.get(position));
-            ((ViewPager)container).removeView(textViews.get(position));
-            ((ViewPager)container).removeView(dotViewsList.get(position));
+
         }
 
         @Override
         public Object instantiateItem(View container, int position) {
-            ((ViewPager)container).removeView(imageViewsList.get(position));
-            ((ViewPager)container).removeView(textViews.get(position));
-            ((ViewPager)container).removeView(dotViewsList.get(position));
-            /*
+
             if (((ViewPager) container).getChildCount() == imageViewsList.size()){
                 RelativeLayout l2= (RelativeLayout) imageViewsList.get(position % imageViewsList.size()).getParent();
                 l2.removeAllViewsInLayout();
                 ((ViewPager) container).removeView(l2);
+
             }
-            */
             ImageView imageView = imageViewsList.get(position % imageViewsList.size());
             TextView textView=textViews.get(position % imageViewsList.size());
             RelativeLayout l1=new RelativeLayout(context);
@@ -245,8 +235,6 @@ public class SlideShowViewCate extends FrameLayout {
             textView.setLayoutParams(params);
             textView.setTextColor(Color.WHITE);
             imageView.setLayoutParams(params1);
-            //l1.removeAllViews();
-            //l1.removeAllViewsInLayout();
             l1.addView(imageView);
             l1.addView(textView);
             ViewGroup parent = (ViewGroup)l1.getParent();
@@ -352,7 +340,7 @@ public class SlideShowViewCate extends FrameLayout {
      *执行轮播图切换任务
      *
      */
-    static Runnable runnable=new Runnable() {
+     Runnable runnable=new Runnable() {
         @Override
         public void run() {
             if (!stopthear){
@@ -363,14 +351,14 @@ public class SlideShowViewCate extends FrameLayout {
                 }}
         }
     };
-    public static void stop(boolean bln){
+    public  void stop(boolean bln){
         stopthear=bln;
     }
     /**
      * 销毁ImageView资源，回收内存
      *
      */
-    public static void destoryBitmaps() {
+    public  void destoryBitmaps() {
         /*stopPlay();
 
         stopthear=true;*/
@@ -385,7 +373,8 @@ public class SlideShowViewCate extends FrameLayout {
                 //解除drawable对view的引用
                 drawable.setCallback(null);
             }
-            //System.gc();
+            System.gc();
+
         }
         text.clear();
         textViews.clear();

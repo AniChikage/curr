@@ -18,7 +18,7 @@
                 android:layout_height="match_parent">
                 <LinearLayout
                     android:layout_weight="121"
-                    android:background="@drawable/background31"
+                    android:background="@drawable/backg2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 

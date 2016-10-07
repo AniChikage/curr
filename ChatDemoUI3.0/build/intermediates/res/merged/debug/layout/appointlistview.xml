@@ -1,85 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="80dip"
+    android:layout_height="100dip"
     android:background="#fff"
-    android:minHeight="80.0dip"
-    android:orientation="horizontal">
+    android:minHeight="100.0dip"
+    android:orientation="vertical">
 
     <LinearLayout
-        android:layout_weight="1044"
+        android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     </LinearLayout>
     <LinearLayout
-        android:layout_weight="873"
+        android:layout_weight="3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <ImageView
-            android:id="@+id/appoint_img"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_weight="1006"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </LinearLayout>
-    <LinearLayout
-        android:layout_weight="293"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
         <LinearLayout
-            android:layout_weight="1"
-            android:orientation="vertical"
+            android:layout_weight="1044"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <LinearLayout
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:layout_weight="1"
-                    android:id="@+id/appoint_cname"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="bottom"
-                    android:textColor="#000"
-                    android:scaleType="fitXY" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:layout_weight="1"
-                    android:gravity="center_vertical"
-                    android:id="@+id/appoint_time"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="#000"
-                    android:text=""/>
-            </LinearLayout>
         </LinearLayout>
         <LinearLayout
-            android:layout_weight="2"
+            android:layout_weight="873"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/appoint_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1006"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="293"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <TextView
-                android:layout_marginRight="20dp"
-                android:textColor="#000"
-                android:gravity="center_vertical"
-                android:id="@+id/appoint_hint"
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_weight="1"
+                        android:id="@+id/appoint_cname"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom"
+                        android:textColor="#000"
+                        android:scaleType="fitXY" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:id="@+id/appoint_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="#000"
+                        android:text=""/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginRight="20dp"
+                    android:textColor="#000"
+                    android:gravity="center_vertical"
+                    android:id="@+id/appoint_hint"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
 
+            </LinearLayout>
+            <TextView
+                android:id="@+id/appoint_oid"
+                android:layout_width="0dp"
+                android:layout_height="0dp" />
         </LinearLayout>
-        <TextView
-            android:id="@+id/appoint_oid"
-            android:layout_width="0dp"
-            android:layout_height="0dp" />
     </LinearLayout>
-
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </LinearLayout>
+    <TextView
+        android:background="#d3d3d3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
 </LinearLayout>

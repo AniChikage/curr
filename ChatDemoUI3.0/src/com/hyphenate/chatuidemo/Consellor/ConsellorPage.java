@@ -1,6 +1,7 @@
 package com.hyphenate.chatuidemo.Consellor;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -16,6 +17,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -64,16 +67,23 @@ public class ConsellorPage extends Activity {
     private ImageView dochuzhen;
     private ImageView mp_setting;
     public static ConsellorPage instance = null;
+    private ProgressDialog pd=null;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE); //设置无标题栏
         setContentView(R.layout.consellorpage);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS); //透明状态栏
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION); //透明导航栏
         hcontext = this.getApplicationContext();
         mycreateSDFile = new createSDFile(hcontext);
         consellor_email = mycreateSDFile.readSDFile("cache");
         instance = this;
+        pd = new ProgressDialog(ConsellorPage.this);
         try{
             initId();
+            pd.setMessage("获取中……");
+            pd.show();
             new Thread(new Runnable() {
                 public void run() {
                     try {
@@ -169,7 +179,8 @@ public class ConsellorPage extends Activity {
                     String username = jsonObj.getJSONObject("user").getString("nickname");
                     String str_schedule = jsonObj.getString("schedule");
                     JSONObject jsonObjsc = new JSONObject(str_schedule).getJSONObject("consellor");
-                    String portrait = jsonObjsc.getString("portrait");
+                    //String portrait = jsonObjsc.getString("portrait");
+                    String portrait = jsonObj.getJSONObject("user").getString("portrait");
                     String consellor_name = jsonObjsc.getString("realname");
                     Drawable drawable = new BitmapDrawable(getBitmapFromByte(Base64.decode(portrait,Base64.DEFAULT)));
                     Map<String, Object> map = new HashMap<String, Object>();
@@ -220,7 +231,7 @@ public class ConsellorPage extends Activity {
                     }
                 }
             });
-
+            pd.dismiss();
             super.handleMessage(msg);
         }
     };

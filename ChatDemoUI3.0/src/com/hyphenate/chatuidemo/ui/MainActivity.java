@@ -180,8 +180,9 @@ public class MainActivity extends BaseActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		//requestWindowFeature(Window.FEATURE_NO_TITLE); //设置无标题栏
+
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE); //设置无标题栏
 		hcontext=this.getApplicationContext();
 		in_hcontext = hcontext;
 		pd = new ProgressDialog(MainActivity.this);
@@ -214,8 +215,8 @@ public class MainActivity extends BaseActivity {
 			return;
 		}
 		setContentView(R.layout.em_activity_main);
-		//getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS); //透明状态栏
-		//getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION); //透明导航栏
+		getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS); //透明状态栏
+		getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION); //透明导航栏
 		// runtime permission for android 6.0, just require all permissions here for simple
 		requestPermissions();
 
@@ -610,6 +611,7 @@ public class MainActivity extends BaseActivity {
 							Bundle bundle = new Bundle();
 							bundle.putString("appoint_oid",person.get("appoint_oid").toString());
 							intent.putExtras(bundle);
+							intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 							in_hcontext.startActivity(intent);
 						}
 						else{

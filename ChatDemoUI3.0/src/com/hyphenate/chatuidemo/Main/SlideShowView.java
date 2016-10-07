@@ -58,27 +58,27 @@ public class SlideShowView extends FrameLayout {
 
 
     //自动轮播启用开关
-    private static boolean isAutoPlay = true;
+    private  boolean isAutoPlay = true;
 
     //自定义轮播图的资源
     private String[] imageUrls;
     //放轮播图片的ImageView 的list
-    private static List<ImageView> imageViewsList;
-    private static List<TextView> textViews;
+    private  List<ImageView> imageViewsList;
+    private  List<TextView> textViews;
     //放圆点的View的list
-    private static List<View> dotViewsList;
+    private  List<View> dotViewsList;
 
-    private static ViewPager viewPager;
+    private  ViewPager viewPager;
     //当前轮播页
-    private static int currentItem  = 0;
+    private  int currentItem  = 0;
     //定时任务
-    private static ScheduledExecutorService scheduledExecutorService;
+    private  ScheduledExecutorService scheduledExecutorService;
 
     private Context context;
     static Boolean stopthear=false;
 
     //Handler
-    private static Handler handler = new Handler(){
+    private  Handler handler = new Handler(){
 
         @Override
         public void handleMessage(Message msg) {
@@ -121,7 +121,7 @@ public class SlideShowView extends FrameLayout {
     /**
      * 停止轮播图切换
      */
-    private static void stopPlay(){
+    private  void stopPlay(){
         scheduledExecutorService.shutdown();
     }
     /**
@@ -340,7 +340,7 @@ public class SlideShowView extends FrameLayout {
      *执行轮播图切换任务
      *
      */
-    static Runnable runnable=new Runnable() {
+     Runnable runnable=new Runnable() {
         @Override
         public void run() {
             if (!stopthear){
@@ -351,14 +351,14 @@ public class SlideShowView extends FrameLayout {
                 }}
         }
     };
-    public static void stop(boolean bln){
+    public  void stop(boolean bln){
         stopthear=bln;
     }
     /**
      * 销毁ImageView资源，回收内存
      *
      */
-    public static void destoryBitmaps() {
+    public  void destoryBitmaps() {
         /*stopPlay();
 
         stopthear=true;*/

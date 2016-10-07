@@ -6,12 +6,14 @@
     android:layout_height="match_parent"
     android:background="@color/common_bg" >
 
+
+    <!-- android:background="@color/bottom_bar_normal_bg" -->
     <LinearLayout
         android:id="@+id/main_bottom"
         android:layout_width="match_parent"
         android:layout_height="52dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/bottom_bar_normal_bg"
+        android:background="@color/solid_red"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         tools:ignore="DisableBaselineAlignment">
@@ -22,11 +24,12 @@
             android:layout_height="match_parent"
             android:layout_weight="1" >
 
+            <!--  android:background="@drawable/em_main_bottom_item_bg"  -->
             <Button
                 android:id="@+id/btn_conversation"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/em_main_bottom_item_bg"
+                android:background="@drawable/longbutton"
                 android:drawableTop="@drawable/em_tab_chat_bg"
                 android:onClick="onTabClicked"
                 android:paddingBottom="2dip"
@@ -60,7 +63,7 @@
                 android:id="@+id/btn_address_list"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/em_main_bottom_item_bg"
+                android:background="@drawable/longbutton"
                 android:drawableTop="@drawable/em_tab_contact_list_bg"
                 android:onClick="onTabClicked"
                 android:paddingBottom="2dip"
@@ -89,7 +92,7 @@
                 android:id="@+id/btn_setting"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/em_main_bottom_item_bg"
+                android:background="@drawable/longbutton"
                 android:drawableTop="@drawable/em_tab_setting_bg"
                 android:onClick="onTabClicked"
                 android:paddingBottom="2dip"
