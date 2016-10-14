@@ -52,7 +52,8 @@
         android:name="com.android.tools.fd.runtime.BootstrapApplication"
         android:allowBackup="true"
         android:icon="@drawable/em_logo_uidemo"
-        android:label="@string/app_name" >
+        android:label="@string/app_name"
+        android:largeHeap="true" >
         <activity
             android:name="com.hyphenate.chatuidemo.ui.MainActivity"
             android:launchMode="singleTask"

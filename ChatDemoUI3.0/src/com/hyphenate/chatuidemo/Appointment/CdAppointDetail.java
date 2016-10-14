@@ -20,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.hyphenate.chat.EMClient;
 import com.hyphenate.chatuidemo.Base64.BASE64Decoder;
 import com.hyphenate.chatuidemo.R;
 import com.hyphenate.chatuidemo.netapp.ConnNet;
@@ -196,7 +197,7 @@ public class CdAppointDetail extends Activity {
                 String peroid = jsonObj.getString("period");
                 String starttime = jsonObj.getString("starttime");
                 tv_appoint_detail.setText(requirement);
-                consellor_id = "consellor"+cid;
+                consellor_id = user_email;
                 adyuyuehao.setText("预约号："+oid);
                 adordertime.setText("订单生成时间："+createtime);
                 adperprice.setText(perprice+"元/小时");
@@ -225,7 +226,7 @@ public class CdAppointDetail extends Activity {
          * 拨打视频通话
          * @param to
          * @throws EMServiceNotReadyException
-         */
+
         try {
             //EMClient.getInstance().callManager().makeVideoCall(consellornoid);
             Intent intent = new Intent(CdAppointDetail.this, VideoCallActivity.class);
@@ -235,6 +236,14 @@ public class CdAppointDetail extends Activity {
         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
+        } */
+        if (!EMClient.getInstance().isConnected())
+            Toast.makeText(this, R.string.not_connect_to_server, Toast.LENGTH_SHORT).show();
+        else {
+            startActivity(new Intent(this, VideoCallActivity.class).putExtra("username", consellornoid)
+                    .putExtra("isComingCall", false));
+            // videoCallBtn.setEnabled(false);
+            //inputMenu.hideExtendMenuContainer();
         }
         /*
         if (!EMChatManager.getInstance().isConnected()) {

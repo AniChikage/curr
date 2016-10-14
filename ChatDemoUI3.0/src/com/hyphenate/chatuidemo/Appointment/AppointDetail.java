@@ -47,7 +47,7 @@ public class AppointDetail extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE); //设置无标题栏
         setContentView(R.layout.appointdetail);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS); //透明状态栏
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION); //透明导航栏
+        //getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION); //透明导航栏
         hcontext = this.getApplicationContext();
 
         Bundle bundle = getIntent().getExtras();
@@ -190,11 +190,11 @@ public class AppointDetail extends Activity {
                 Drawable drawable =new BitmapDrawable(getBitmapFromByte(Base64.decode(portrait, Base64.DEFAULT)));
                 adcsimg.setBackgroundDrawable(drawable);
                 String price = jsonObjc.getString("rid");
-                String cid = jsonObjc.getString("id");
+                String cid = jsonObjc.getString("username");
                 String peroid = jsonObj.getString("period");
                 String starttime = jsonObj.getString("starttime");
                 tv_appoint_detail.setText(requirement);
-                consellor_id = "consellor"+cid;
+                consellor_id = cid;
                 adyuyuehao.setText("预约号："+oid);
                 adordertime.setText("订单生成时间："+createtime);
                 adperprice.setText(perprice+"元/小时");
@@ -223,7 +223,7 @@ public class AppointDetail extends Activity {
          * 拨打视频通话
          * @param to
          * @throws EMServiceNotReadyException
-         */
+
         try {
             //EMClient.getInstance().callManager().makeVideoCall(consellornoid);
             Intent intent = new Intent(AppointDetail.this, VideoCallActivity.class);
@@ -233,23 +233,17 @@ public class AppointDetail extends Activity {
         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
-        }
-        /*
-        if (!EMChatManager.getInstance().isConnected()) {
-            Toast.makeText(AppointDetail.this, "未连接到服务器", Toast.LENGTH_SHORT).show();
-        }
+        }*/
+
+        if (!EMClient.getInstance().isConnected())
+            Toast.makeText(this, R.string.not_connect_to_server, Toast.LENGTH_SHORT).show();
         else {
-            String toUser=consellornoid;
-            if (TextUtils.isEmpty(toUser)){
-                Toast.makeText(AppointDetail.this, "请填写接受方账号", Toast.LENGTH_SHORT).show();
-                return ;
-            }
-            Intent intent = new Intent(AppointDetail.this, VideoCallActivity.class);
-            intent.putExtra("username", toUser);
-            intent.putExtra("isComingCall", false);
-            startActivity(intent);
+            startActivity(new Intent(this, VideoCallActivity.class).putExtra("username", consellornoid)
+                    .putExtra("isComingCall", false));
+            // videoCallBtn.setEnabled(false);
+            //inputMenu.hideExtendMenuContainer();
         }
-        */
+       /* */
     }
 
     private Bitmap getBitmapFromByte(byte[] temp) {
@@ -272,4 +266,19 @@ public class AppointDetail extends Activity {
             return null;
         }
     }
+
+    /**
+     * make a video call
+
+    protected void startVideoCall() {
+        if (!EMClient.getInstance().isConnected())
+            Toast.makeText(this, R.string.not_connect_to_server, Toast.LENGTH_SHORT).show();
+        else {
+            startActivity(new Intent(this, VideoCallActivity.class).putExtra("username", toChatUsername)
+                    .putExtra("isComingCall", false));
+            // videoCallBtn.setEnabled(false);
+            //inputMenu.hideExtendMenuContainer();
+        }
+    }
+     */
 }

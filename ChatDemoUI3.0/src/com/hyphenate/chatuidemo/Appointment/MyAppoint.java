@@ -19,9 +19,11 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.hyphenate.chat.EMClient;
 import com.hyphenate.chatuidemo.Adapter.AppointAdapter;
 import com.hyphenate.chatuidemo.R;
 import com.hyphenate.chatuidemo.netapp.ConnNet;
+import com.hyphenate.chatuidemo.ui.VideoCallActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -158,5 +160,7 @@ public class MyAppoint extends Activity {
             return null;
         }
     }
+
+
 
 }

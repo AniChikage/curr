@@ -92,6 +92,7 @@ public class Setting extends Activity {
         });
     }
 
+
     /*
     @Override
     public void onBackPressed() {

@@ -104,28 +104,28 @@
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_bigexpression.xml"
     },
     {
-        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_location.xml",
-        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_location.xml"
+        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_picture.xml",
+        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_picture.xml"
     },
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_file.xml",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_file.xml"
     },
     {
-        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_picture.xml",
-        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_picture.xml"
+        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_location.xml",
+        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_location.xml"
     },
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_location.xml",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_location.xml"
     },
     {
-        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_fragment_chat.xml",
-        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_fragment_chat.xml"
-    },
-    {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_message.xml",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_message.xml"
+    },
+    {
+        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_fragment_chat.xml",
+        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_fragment_chat.xml"
     },
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_activity_show_big_image.xml",

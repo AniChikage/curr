@@ -249,7 +249,7 @@ public class MainActivity extends BaseActivity {
 		}
 
 		//获取
-		//Log.e(TAG,EMClient.getInstance().getCurrentUser());
+		Log.e(TAG,EMClient.getInstance().getCurrentUser());
 
 		inviteMessgeDao = new InviteMessgeDao(this);
 		//Log.e(TAG,inviteMessgeDao.COLUMN_NAME_FROM);
