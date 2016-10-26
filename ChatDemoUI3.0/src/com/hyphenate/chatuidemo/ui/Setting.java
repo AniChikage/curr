@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hyphenate.EMCallBack;
@@ -23,6 +24,7 @@ public class Setting extends Activity {
     private Button btn_logout;
     private createSDFile mycreateSDFile;
     private String type;
+    private TextView tv_clear_cache;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,20 +36,35 @@ public class Setting extends Activity {
 
     private void initId(){
         btn_logout = (Button)findViewById(R.id.btn_logout);
+        tv_clear_cache = (TextView)findViewById(R.id.clear_cache);
         mycreateSDFile = new createSDFile(getBaseContext());
         type = mycreateSDFile.readSDFile("cachetype");
     }
 
     private void initClick(){
         btn_logout.setOnClickListener(onClickListener);
+        tv_clear_cache.setOnClickListener(onClickListener);
     }
 
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            logout();
+            switch (v.getId()){
+                case R.id.clear_cache:
+                    clearCache();
+                    break;
+                case R.id.btn_logout:
+                    logout();
+                    break;
+            }
         }
     };
+
+    private void clearCache(){
+        mycreateSDFile.deleteSDFile("cache");
+        mycreateSDFile.deleteSDFile("cachetype");
+        Toast.makeText(this,"清除缓存成功！",Toast.LENGTH_LONG).show();
+    }
 
     private void logout(){
 

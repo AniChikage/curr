@@ -111,131 +111,135 @@ public class LoginActivity extends BaseActivity {
 	 * @param view
 	 */
 	public void login(View view) {
-		if (!EaseCommonUtils.isNetWorkConnected(this)) {
-			Toast.makeText(this, R.string.network_isnot_available, Toast.LENGTH_SHORT).show();
-			return;
+		if(!user_role.isChecked()&&!consellor_role.isChecked()){
+			Toast.makeText(this,"请先选择登陆角色！",Toast.LENGTH_LONG).show();
 		}
-		String currentUsername = usernameEditText.getText().toString().trim();
-		String currentPassword = passwordEditText.getText().toString().trim();
-
-		if (TextUtils.isEmpty(currentUsername)) {
-			Toast.makeText(this, R.string.User_name_cannot_be_empty, Toast.LENGTH_SHORT).show();
-			return;
-		}
-		if (TextUtils.isEmpty(currentPassword)) {
-			Toast.makeText(this, R.string.Password_cannot_be_empty, Toast.LENGTH_SHORT).show();
-			return;
-		}
-
-		progressShow = true;
-		final ProgressDialog pd = new ProgressDialog(LoginActivity.this);
-		pd.setCanceledOnTouchOutside(false);
-		pd.setOnCancelListener(new OnCancelListener() {
-
-			@Override
-			public void onCancel(DialogInterface dialog) {
-				Log.d(TAG, "EMClient.getInstance().onCancel");
-				progressShow = false;
+		else{
+			if (!EaseCommonUtils.isNetWorkConnected(this)) {
+				Toast.makeText(this, R.string.network_isnot_available, Toast.LENGTH_SHORT).show();
+				return;
 			}
-		});
-		pd.setMessage(getString(R.string.Is_landing));
-		pd.show();
+			String currentUsername = usernameEditText.getText().toString().trim();
+			String currentPassword = passwordEditText.getText().toString().trim();
 
-		// After logout，the DemoDB may still be accessed due to async callback, so the DemoDB will be re-opened again.
-		// close it before login to make sure DemoDB not overlap
-        DemoDBManager.getInstance().closeDB();
+			if (TextUtils.isEmpty(currentUsername)) {
+				Toast.makeText(this, R.string.User_name_cannot_be_empty, Toast.LENGTH_SHORT).show();
+				return;
+			}
+			if (TextUtils.isEmpty(currentPassword)) {
+				Toast.makeText(this, R.string.Password_cannot_be_empty, Toast.LENGTH_SHORT).show();
+				return;
+			}
 
-        // reset current user name before login
-        DemoHelper.getInstance().setCurrentUserName(currentUsername);
-        
-		final long start = System.currentTimeMillis();
-		// call login method
-		Log.d(TAG, "EMClient.getInstance().login");
-		EMClient.getInstance().login(currentUsername, currentPassword, new EMCallBack() {
+			progressShow = true;
+			final ProgressDialog pd = new ProgressDialog(LoginActivity.this);
+			pd.setCanceledOnTouchOutside(false);
+			pd.setOnCancelListener(new OnCancelListener() {
 
-			@Override
-			public void onSuccess() {
-				Log.d(TAG, "login: onSuccess");
-
-
-				// ** manually load all local groups and conversation
-			    EMClient.getInstance().groupManager().loadAllGroups();
-			    EMClient.getInstance().chatManager().loadAllConversations();
-
-			    // update current user's display name for APNs
-				boolean updatenick = EMClient.getInstance().updateCurrentUserNick(
-						DemoApplication.currentUserNick.trim());
-				if (!updatenick) {
-					Log.e("LoginActivity", "update current user nick fail");
+				@Override
+				public void onCancel(DialogInterface dialog) {
+					Log.d(TAG, "EMClient.getInstance().onCancel");
+					progressShow = false;
 				}
+			});
+			pd.setMessage(getString(R.string.Is_landing));
+			pd.show();
 
-				if (!LoginActivity.this.isFinishing() && pd.isShowing()) {
-				    pd.dismiss();
-				}
-				// get user's info (this should be get from App's server or 3rd party service)
-				DemoHelper.getInstance().getUserProfileManager().asyncGetCurrentUserInfo();
+			// After logout，the DemoDB may still be accessed due to async callback, so the DemoDB will be re-opened again.
+			// close it before login to make sure DemoDB not overlap
+			DemoDBManager.getInstance().closeDB();
 
-				if(user_role.isChecked()){
-					try{
-						mycreateSDFile.deleteSDFile("cache");
-						mycreateSDFile.deleteSDFile("cachetype");
-						mycreateSDFile.createSDFile("cache");
-						mycreateSDFile.createSDFile("cachetype");
-						mycreateSDFile.writeSDFile(usernameEditText.getText().toString(),"cache");
-						mycreateSDFile.writeSDFile("user","cachetype");
+			// reset current user name before login
+			DemoHelper.getInstance().setCurrentUserName(currentUsername);
+
+			final long start = System.currentTimeMillis();
+			// call login method
+			Log.d(TAG, "EMClient.getInstance().login");
+			EMClient.getInstance().login(currentUsername, currentPassword, new EMCallBack() {
+
+				@Override
+				public void onSuccess() {
+					Log.d(TAG, "login: onSuccess");
+
+
+					// ** manually load all local groups and conversation
+					EMClient.getInstance().groupManager().loadAllGroups();
+					EMClient.getInstance().chatManager().loadAllConversations();
+
+					// update current user's display name for APNs
+					boolean updatenick = EMClient.getInstance().updateCurrentUserNick(
+							DemoApplication.currentUserNick.trim());
+					if (!updatenick) {
+						Log.e("LoginActivity", "update current user nick fail");
 					}
-					catch (Exception ex){
-						ex.printStackTrace();
+
+					if (!LoginActivity.this.isFinishing() && pd.isShowing()) {
+						pd.dismiss();
 					}
+					// get user's info (this should be get from App's server or 3rd party service)
+					DemoHelper.getInstance().getUserProfileManager().asyncGetCurrentUserInfo();
 
-					new Thread(new Runnable() {
-						public void run() {
-							try{
-								ConnNet operaton=new ConnNet();
-								//String result=operaton.doLogin(usernameEditText.getText().toString(),passwordEditText.getText().toString());
-								String resul=operaton.getConn("http://www.clr-vision.com:18080/Therapista/user/login",usernameEditText.getText().toString(),passwordEditText.getText().toString(),"111");
-								Message msg=new Message();
-								msg.obj=resul;
-								handler.sendMessage(msg);
-							}
-							catch (Exception ex){
-								Toast.makeText(LoginActivity.this,"用户名或者密码不能为空",Toast.LENGTH_LONG).show();
-							}
-
+					if(user_role.isChecked()){
+						try{
+							mycreateSDFile.deleteSDFile("cache");
+							mycreateSDFile.deleteSDFile("cachetype");
+							mycreateSDFile.createSDFile("cache");
+							mycreateSDFile.createSDFile("cachetype");
+							mycreateSDFile.writeSDFile(usernameEditText.getText().toString(),"cache");
+							mycreateSDFile.writeSDFile("user","cachetype");
 						}
-					}).start();
-				}
-				else if(consellor_role.isChecked()){
-					try{
-						mycreateSDFile.deleteSDFile("cache");
-						mycreateSDFile.deleteSDFile("cachetype");
-						mycreateSDFile.createSDFile("cache");
-						mycreateSDFile.createSDFile("cachetype");
-						mycreateSDFile.writeSDFile(usernameEditText.getText().toString(),"cache");
-						mycreateSDFile.writeSDFile("consellor","cachetype");
-					}
-					catch (Exception ex){
-						ex.printStackTrace();
-					}
-					new Thread(new Runnable() {
-						public void run() {
-							try{
-								ConnNet operaton=new ConnNet();
-								String result = operaton.consellorLogin(usernameEditText.getText().toString().trim(),passwordEditText.getText().toString().trim());
-								Message msg=new Message();
-								msg.obj=result;
-								cshandler.sendMessage(msg);
-							}
-							catch (Exception ex){
-								Toast.makeText(LoginActivity.this,"用户名或者密码不能为空",Toast.LENGTH_LONG).show();
-							}
-
+						catch (Exception ex){
+							ex.printStackTrace();
 						}
-					}).start();
-				}
-				else{
-					Toast.makeText(LoginActivity.this,"请先选择登陆角色",Toast.LENGTH_LONG).show();
-				}
+
+						new Thread(new Runnable() {
+							public void run() {
+								try{
+									ConnNet operaton=new ConnNet();
+									//String result=operaton.doLogin(usernameEditText.getText().toString(),passwordEditText.getText().toString());
+									String resul=operaton.getConn("http://www.clr-vision.com:18080/Therapista/user/login",usernameEditText.getText().toString(),passwordEditText.getText().toString(),"111");
+									Message msg=new Message();
+									msg.obj=resul;
+									handler.sendMessage(msg);
+								}
+								catch (Exception ex){
+									Toast.makeText(LoginActivity.this,"用户名或者密码不能为空",Toast.LENGTH_LONG).show();
+								}
+
+							}
+						}).start();
+					}
+					else if(consellor_role.isChecked()){
+						try{
+							mycreateSDFile.deleteSDFile("cache");
+							mycreateSDFile.deleteSDFile("cachetype");
+							mycreateSDFile.createSDFile("cache");
+							mycreateSDFile.createSDFile("cachetype");
+							mycreateSDFile.writeSDFile(usernameEditText.getText().toString(),"cache");
+							mycreateSDFile.writeSDFile("consellor","cachetype");
+						}
+						catch (Exception ex){
+							ex.printStackTrace();
+						}
+						new Thread(new Runnable() {
+							public void run() {
+								try{
+									ConnNet operaton=new ConnNet();
+									String result = operaton.consellorLogin(usernameEditText.getText().toString().trim(),passwordEditText.getText().toString().trim());
+									Message msg=new Message();
+									msg.obj=result;
+									cshandler.sendMessage(msg);
+								}
+								catch (Exception ex){
+									Toast.makeText(LoginActivity.this,"用户名或者密码不能为空",Toast.LENGTH_LONG).show();
+								}
+
+							}
+						}).start();
+					}
+					else{
+						Toast.makeText(LoginActivity.this,"请先选择登陆角色",Toast.LENGTH_LONG).show();
+					}
 
 
 
@@ -245,28 +249,30 @@ public class LoginActivity extends BaseActivity {
 				startActivity(intent);
 
 				finish();*/
-			}
-
-			@Override
-			public void onProgress(int progress, String status) {
-				Log.d(TAG, "login: onProgress");
-			}
-
-			@Override
-			public void onError(final int code, final String message) {
-				Log.d(TAG, "login: onError: " + code);
-				if (!progressShow) {
-					return;
 				}
-				runOnUiThread(new Runnable() {
-					public void run() {
-						pd.dismiss();
-						Toast.makeText(getApplicationContext(), getString(R.string.Login_failed) + message,
-								Toast.LENGTH_SHORT).show();
+
+				@Override
+				public void onProgress(int progress, String status) {
+					Log.d(TAG, "login: onProgress");
+				}
+
+				@Override
+				public void onError(final int code, final String message) {
+					Log.d(TAG, "login: onError: " + code);
+					if (!progressShow) {
+						return;
 					}
-				});
-			}
-		});
+					runOnUiThread(new Runnable() {
+						public void run() {
+							pd.dismiss();
+							Toast.makeText(getApplicationContext(), getString(R.string.Login_failed) + message,
+									Toast.LENGTH_SHORT).show();
+						}
+					});
+				}
+			});
+		}
+
 	}
 
 	Handler handler=new Handler(){

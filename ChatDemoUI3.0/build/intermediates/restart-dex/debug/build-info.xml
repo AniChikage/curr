@@ -4,27 +4,27 @@
     api-level="22"
     density="xxxhdpi"
     format="7"
-    timestamp="12406160060379"
+    timestamp="2137764697221"
     token="-8231835860491549266" >
 
     <task
         name="javac"
-        duration="12019" />
+        duration="7350" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="8814" />
+        duration="5706" />
     <task
         name="verifier"
-        duration="1701" />
+        duration="1793" />
 
     <artifact
         location="G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\outputs\apk\ChatDemoUI3.0-debug.apk"
         type="MAIN" />
 
-    <build timestamp="12406160060379" >
+    <build timestamp="2137764697221" >
         <artifact
             location="G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\outputs\apk\ChatDemoUI3.0-debug.apk"
             type="MAIN" />

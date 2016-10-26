@@ -1,4 +1,6 @@
-<resources>
+<resources
+    tools:ignore="MissingTranslation"
+    xmlns:tools="http://schemas.android.com/tools">
     <string name="are_connected_to_each_other">正在连接对方...</string>
     <string name="is_not_yet_connected_to_the_server">尚未连接至服务器</string>
     <string name="have_connected_with">已经和对方建立连接，等待对方接受...</string>
