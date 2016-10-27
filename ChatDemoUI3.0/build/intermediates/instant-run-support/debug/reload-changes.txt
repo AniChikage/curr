@@ -1,0 +1,2 @@
+CHANGED,G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\hyphenate\chatuidemo\ui\Welcome$override.class
+CHANGED,G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class

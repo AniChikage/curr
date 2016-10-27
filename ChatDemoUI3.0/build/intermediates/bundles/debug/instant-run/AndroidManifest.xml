@@ -66,11 +66,6 @@
             android:name="com.hyphenate.chatuidemo.ui.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <!-- 登陆 -->
@@ -413,6 +408,19 @@
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <!-- WELCOME -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.Welcome"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <!-- CSAPPOINTDETAIL -->
