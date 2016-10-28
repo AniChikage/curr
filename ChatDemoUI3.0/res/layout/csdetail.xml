@@ -9,12 +9,11 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
         <LinearLayout
-            android:layout_weight="1217"
+            android:layout_weight="167"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
             <LinearLayout
-                android:layout_weight="490"
                 android:background="@drawable/longbutton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -85,218 +84,22 @@
                 </LinearLayout>
 
             </LinearLayout>
-            <ImageView
-                android:id="@+id/csdtimg"
-                android:layout_weight="364"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_weight="606"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:id="@+id/csabname"
-                    android:layout_weight="726"
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-                <LinearLayout
-                    android:layout_weight="564"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                </LinearLayout>
-                <TextView
-                    android:id="@+id/csablevel"
-                    android:gravity="center"
-                    android:layout_weight="518"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </LinearLayout>
         </LinearLayout>
+
         <LinearLayout
-            android:layout_weight="1887"
-            android:background="#f3f3f3"
+            android:layout_weight="39"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
+            <ListView
+                android:id="@+id/cslist"
+                android:divider="@null"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+            </ListView>
         </LinearLayout>
-        <LinearLayout
-            android:layout_weight="1293"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <LinearLayout
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:text="性别"
-                    android:layout_marginLeft="10dp"
-                    android:gravity="center_vertical"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent" />
-                <TextView
-                    android:id="@+id/csabgender"
-                    android:gravity="center_vertical|right"
-                    android:layout_marginRight="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </LinearLayout>
-            <TextView
-                android:background="#f3f3f3"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="1dp" />
-            <LinearLayout
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:text="从业年限"
-                    android:layout_marginLeft="10dp"
-                    android:gravity="center_vertical"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent" />
-                <TextView
-                    android:id="@+id/csabyear"
-                    android:gravity="center_vertical|right"
-                    android:layout_marginRight="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </LinearLayout>
-            <TextView
-                android:background="#f3f3f3"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="1dp" />
-            <LinearLayout
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:text="案例时长"
-                    android:layout_marginLeft="10dp"
-                    android:gravity="center_vertical"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent" />
-                <TextView
-                    android:id="@+id/csabtime"
-                    android:gravity="center_vertical|right"
-                    android:layout_marginRight="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </LinearLayout>
-            <TextView
-                android:background="#f3f3f3"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="1dp" />
-            <LinearLayout
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:text="收费标准"
-                    android:layout_marginLeft="10dp"
-                    android:gravity="center_vertical"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent" />
-                <TextView
-                    android:id="@+id/csabprice"
-                    android:gravity="center_vertical|right"
-                    android:layout_marginRight="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </LinearLayout>
-            <TextView
-                android:background="#f3f3f3"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="1dp" />
-            <LinearLayout
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:text="专长"
-                    android:layout_marginLeft="10dp"
-                    android:gravity="center_vertical"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent" />
-                <TextView
-                    android:id="@+id/csabzhuanchang"
-                    android:layout_marginRight="10dp"
-                    android:gravity="center_vertical|right"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </LinearLayout>
-            <TextView
-                android:background="#f3f3f3"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="1dp" />
-            <LinearLayout
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:text="不足"
-                    android:layout_marginLeft="10dp"
-                    android:gravity="center_vertical"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent" />
-                <TextView
-                    android:id="@+id/csabbuzu"
-                    android:gravity="center_vertical|right"
-                    android:layout_marginRight="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </LinearLayout>
 
-        </LinearLayout>
         <LinearLayout
-            android:layout_weight="1764"
-            android:background="#f3f3f3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_weight="7"
-                android:text="其他信息"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-            <TextView
-                android:layout_weight="2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_weight="1577"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/csabqita"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_weight="1787"
+            android:layout_weight="172"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <TextView
@@ -308,7 +111,6 @@
                 android:textColor="@color/solid_white"
                 android:background="@drawable/longbutton"/>
         </LinearLayout>
-
 
     </LinearLayout>
 

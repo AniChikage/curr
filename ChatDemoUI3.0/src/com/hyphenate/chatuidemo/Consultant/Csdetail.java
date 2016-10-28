@@ -18,7 +18,9 @@ import android.util.Base64;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
@@ -26,10 +28,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.hyphenate.chatuidemo.Adapter.CsOtherInfoAdapter;
+import com.hyphenate.chatuidemo.Adapter.JrywListViewAdapter;
 import com.hyphenate.chatuidemo.Appointment.AppointConfirm;
 import com.hyphenate.chatuidemo.Base64.BASE64Decoder;
 import com.hyphenate.chatuidemo.R;
@@ -44,8 +49,12 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.TimeZone;
 
 
@@ -57,13 +66,18 @@ public class Csdetail extends Activity {
     private ImageView img,csdtback;
     private TextView text, yuyue, quxiao, queding, first_day_date, second_day_date,third_day_date,forth_day_date;
     private TextView first_day_hint, second_day_hint, third_day_hint, forth_day_hint;
-    private TextView csabname,csablevel,csabgender,csabyear,csabtime,csabprice,csabzhuanchang,csabbuzu,csabqita;
+    private TextView csabname,csablevel,csabgender,csabyear,csabtime,csabprice,csabzhuanchang,csabbuzu;
     private ImageView img_first,img_second,img_third,img_forth;
     private String csnoid, user_id, sid="";
     private LinearLayout date_select;
     private LinearLayout llup;
     private RelativeLayout lldown;
     private Context context;
+    private View csdt_header_View;
+    private LinearLayout csdt_header_ll;
+    private ListView csdt_listview;
+    private List<Map<String, Object>> csotList;
+    private CsOtherInfoAdapter csOtherInfoAdapter;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE); //设置无标题栏
@@ -94,20 +108,12 @@ public class Csdetail extends Activity {
     }
 
     private void initId() {
-        img = (ImageView) findViewById(R.id.csdtimg);
+
         //text = (TextView) findViewById(R.id.csdttext);
         yuyue = (TextView) findViewById(R.id.csdtyuyue);
         quxiao = (TextView)findViewById(R.id.quxiao);
         queding = (TextView)findViewById(R.id.queding);
-        csabname = (TextView)findViewById(R.id.csabname);
-        csablevel = (TextView)findViewById(R.id.csablevel);
-        csabgender = (TextView)findViewById(R.id.csabgender);
-        csabyear = (TextView)findViewById(R.id.csabyear);
-        csabtime = (TextView)findViewById(R.id.csabtime);
-        csabprice = (TextView)findViewById(R.id.csabprice);
-        csabzhuanchang = (TextView)findViewById(R.id.csabzhuanchang);
-        csabqita = (TextView)findViewById(R.id.csabqita);
-        csabbuzu = (TextView)findViewById(R.id.csabbuzu);
+
         first_day_date = (TextView)findViewById(R.id.first_day_date);
         first_day_hint = (TextView)findViewById(R.id.first_day_hint);
         second_day_date = (TextView)findViewById(R.id.second_day_date);
@@ -124,6 +130,27 @@ public class Csdetail extends Activity {
         date_select = (LinearLayout)findViewById(R.id.date_select);
         llup = (LinearLayout)findViewById(R.id.llup);
         lldown = (RelativeLayout)findViewById(R.id.lldown);
+
+        //listview
+        csdt_listview = (ListView) findViewById(R.id.cslist);
+        csdt_header_View = LayoutInflater.from(this).inflate(R.layout.csdt_header, null,false);
+        csdt_header_ll = (LinearLayout) csdt_header_View.findViewById(R.id.csdt_header_ll);
+        img = (ImageView) csdt_header_View.findViewById(R.id.csdtimg);
+        csabname = (TextView)csdt_header_View.findViewById(R.id.csabname);
+        csablevel = (TextView)csdt_header_View.findViewById(R.id.csablevel);
+        csabgender = (TextView)csdt_header_View.findViewById(R.id.csabgender);
+        csabyear = (TextView)csdt_header_View.findViewById(R.id.csabyear);
+        csabtime = (TextView)csdt_header_View.findViewById(R.id.csabtime);
+        csabprice = (TextView)csdt_header_View.findViewById(R.id.csabprice);
+        csabzhuanchang = (TextView)csdt_header_View.findViewById(R.id.csabzhuanchang);
+        csabbuzu = (TextView)csdt_header_View.findViewById(R.id.csabbuzu);
+        WindowManager wm1 = this.getWindowManager();
+        int height1 = wm1.getDefaultDisplay().getHeight();
+        ViewGroup.LayoutParams lp1 =csdt_header_ll.getLayoutParams();
+        lp1.width=lp1.MATCH_PARENT;
+        lp1.height=height1*1300/1679;
+        csdt_header_ll.setLayoutParams(lp1);
+
     }
 
     private void initDate(){
@@ -434,6 +461,7 @@ public class Csdetail extends Activity {
         public void handleMessage(Message msg) {
             String string = (String) msg.obj;
             Log.e("single str", string);
+            List<Map<String, Object>> listItems = new ArrayList<Map<String, Object>>();
             //saveFile(string);
             try {
                 JSONObject jsonObjs = new JSONObject(string).getJSONObject("consellor");
@@ -482,7 +510,10 @@ public class Csdetail extends Activity {
                 }
                 csabprice.setText(price+"元/单位咨询时长");
                 csabzhuanchang.setText(pro1+" "+pro2+" "+pro3);
-                csabqita.setText(getStringFromBASE64(description));
+                Map<String, Object> map = new HashMap<String, Object>();
+                map.put("otherInfo", getStringFromBASE64(description));
+                listItems.add(map);
+                //csabqita.setText(getStringFromBASE64(description));
                 try{
                     DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
                     Calendar calendar= Calendar.getInstance();
@@ -496,10 +527,15 @@ public class Csdetail extends Activity {
                 catch (Exception ex){
                     Log.e("",ex.toString());
                 }
+
             } catch (JSONException e) {
                 System.out.println("Jsons parse error !");
                 e.printStackTrace();
             }
+            csdt_listview.addHeaderView(csdt_header_View);
+            csotList = listItems;
+            csOtherInfoAdapter = new CsOtherInfoAdapter(context, csotList);
+            csdt_listview.setAdapter(csOtherInfoAdapter);
             super.handleMessage(msg);
         }
 
