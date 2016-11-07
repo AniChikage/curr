@@ -129,6 +129,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         </ListView>
+        <TextView
+            android:id="@+id/tologin"
+            android:visibility="invisible"
+            android:background="@drawable/tologbg"
+            android:layout_margin="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </RelativeLayout>
 
 </RelativeLayout>

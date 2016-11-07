@@ -433,6 +433,14 @@
             android:windowSoftInputMode="adjustPan">
         </activity>
 
+        <!-- CSAPPOINTDETAIL-->
+        <activity
+            android:name=".ui.LoginActivity_new"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+
 
         <!-- 开机自启动服务 -->
         <receiver android:name=".receiver.StartServiceReceiver">

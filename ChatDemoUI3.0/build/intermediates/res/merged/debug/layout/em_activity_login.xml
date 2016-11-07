@@ -21,7 +21,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dip"
-        android:layout_weight="1" >
+        android:layout_weight="2" >
 
         <RelativeLayout
             android:id="@+id/rl_username"
@@ -115,6 +115,7 @@
         </RelativeLayout>
 
         <LinearLayout
+            android:id="@+id/logandreg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/choose_role"
@@ -152,6 +153,19 @@
                 android:text="@string/login"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/logandreg"
+            android:layout_height="40dp">
+            <TextView
+                android:id="@+id/log_scan"
+                android:text="随便逛逛"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
         </LinearLayout>
     </RelativeLayout>
 

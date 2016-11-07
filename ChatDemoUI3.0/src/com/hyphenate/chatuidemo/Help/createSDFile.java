@@ -94,6 +94,16 @@ public class createSDFile {
         }
         return sb.toString();
     }
+
+    //
+    public boolean hasFile(String fileName){
+        File file = new File(SDPATH + "//" + fileName);
+        if (file == null || !file.exists() || file.isDirectory())
+            return false;
+        else
+            return true;
+    }
+
     public String getFILESPATH() {
         return FILESPATH;
     }

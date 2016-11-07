@@ -28,6 +28,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hyphenate.EMCallBack;
@@ -54,6 +55,8 @@ public class LoginActivity extends BaseActivity {
 	public static final int REQUEST_CODE_SETNICK = 1;
 	private EditText usernameEditText;
 	private EditText passwordEditText;
+
+	private TextView log_scan;
 
 	private createSDFile mycreateSDFile;
 
@@ -82,6 +85,14 @@ public class LoginActivity extends BaseActivity {
 		passwordEditText = (EditText) findViewById(R.id.password);
 		user_role = (RadioButton) findViewById(R.id.user_role);
 		consellor_role = (RadioButton) findViewById(R.id.consellor_role);
+		log_scan = (TextView)findViewById(R.id.log_scan);
+		log_scan.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(LoginActivity.this, MainActivity.class));
+				finish();
+			}
+		});
 
 		// if user changed, clear the password
 		usernameEditText.addTextChangedListener(new TextWatcher() {

@@ -33,6 +33,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.os.PowerManager;
+import android.speech.tts.TextToSpeech;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -108,10 +109,11 @@ import java.util.TimerTask;
 @SuppressLint("NewApi")
 public class MainActivity extends BaseActivity {
 
+	//region 变量
 	protected static final String TAG = "MainActivity";
 	// textview for unread message count
 	private TextView unreadLabel;
-	private static String user_id;
+	private static String user_id=null;
 	private static String user_id_s;
 	private static String firstChecked="0";
 	private createSDFile mycreateSDFile;
@@ -121,6 +123,7 @@ public class MainActivity extends BaseActivity {
 	private static TextView app_username;
 	private TextView btn_recmd;
 	private TextView btn_default;
+	private TextView tologin;
 	private String user_email;
 	private static ImageView dochuzhen;
 	private static ImageView mp_setting;
@@ -174,6 +177,9 @@ public class MainActivity extends BaseActivity {
 	/**
 	 * check if current user account was remove
 	 */
+
+	//endregion
+
 	public boolean getCurrentAccountRemoved() {
 		return isCurrentAccountRemoved;
 	}
@@ -184,14 +190,29 @@ public class MainActivity extends BaseActivity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE); //设置无标题栏
 		hcontext=this.getApplicationContext();
-		in_hcontext = hcontext;
-		pd = new ProgressDialog(MainActivity.this);
 		mycreateSDFile = new createSDFile(hcontext);
+		if(mycreateSDFile.hasFile("cache")){
+			setContentView(R.layout.em_activity_main);
+		}
+		else{
+			setContentView(R.layout.em_activity_main);
+		}
+		getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS); //透明状态栏
+		in_hcontext = hcontext;
+
+		pd = new ProgressDialog(MainActivity.this);
+
 		instance = this;
-		useremail = mycreateSDFile.readSDFile("cache");
+		if(mycreateSDFile.hasFile("cache")){
+			useremail = mycreateSDFile.readSDFile("cache");
+		}
+		else{
+			useremail = "您还未登录";
+		}
 		Log.e(TAG,useremail);
 		//监听生命周期
 
+		//region 垃圾
 		if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 		    String packageName = getPackageName();
 		    PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
@@ -202,7 +223,6 @@ public class MainActivity extends BaseActivity {
 		        startActivity(intent);
 		    }
 		}
-
 		//make sure activity will not in background if user is logged into another device or removed
 		if (savedInstanceState != null && savedInstanceState.getBoolean(Constant.ACCOUNT_REMOVED, false)) {
 		    DemoHelper.getInstance().logout(false,null);
@@ -214,13 +234,19 @@ public class MainActivity extends BaseActivity {
 			startActivity(new Intent(this, LoginActivity.class));
 			return;
 		}
-		setContentView(R.layout.em_activity_main);
-		getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS); //透明状态栏
-		//getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION); //透明导航栏
-		// runtime permission for android 6.0, just require all permissions here for simple
 		requestPermissions();
+		//endregion
 
+		try{
+			initView();
+			initData();
+		}
+		catch (Exception ex){
+			Log.e("error",ex.toString());
+		}
 
+		//region 获取用户
+		if(mycreateSDFile.hasFile("cache")) {
 			new Thread(new Runnable() {
 				public void run() {
 					try {
@@ -234,10 +260,11 @@ public class MainActivity extends BaseActivity {
 					}
 				}
 			}).start();
+			Log.e("hetuser","getuser");
+		}
+		//endregion
 
-		//}
-
-		//umeng api
+		//region 垃圾
 		MobclickAgent.updateOnlineConfig(this);
 		UmengUpdateAgent.setUpdateOnlyWifi(false);
 		UmengUpdateAgent.update(this);
@@ -252,26 +279,7 @@ public class MainActivity extends BaseActivity {
 		Log.e(TAG,EMClient.getInstance().getCurrentUser());
 
 		inviteMessgeDao = new InviteMessgeDao(this);
-		//Log.e(TAG,inviteMessgeDao.COLUMN_NAME_FROM);
-		/*
-		UserDao userDao = new UserDao(this);
-		conversationListFragment = new ConversationListFragment();
-		contactListFragment = new ContactListFragment();
-		SettingsFragment settingFragment = new SettingsFragment();
-		fragments = new Fragment[] { conversationListFragment, contactListFragment, settingFragment};
-
-		getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, conversationListFragment)
-				.add(R.id.fragment_container, contactListFragment).hide(contactListFragment).show(conversationListFragment)
-				.commit();
-
-		//register broadcast receiver to receive the change of group from DemoHelper
-		registerBroadcastReceiver();
-		
-		
-		EMClient.getInstance().contactManager().setContactListener(new MyContactListener());
-		//debug purpose only
-        registerInternalDebugReceiver();
-        */
+		//endregion
 	}
 
 	@TargetApi(23)
@@ -301,8 +309,8 @@ public class MainActivity extends BaseActivity {
 				user_id_s = user_id;
 				Log.e(TAG,user_id);
 				try{
-					initView();
-					initData();
+					//initView();
+					//initData();
 					initFirstVisit();
 				}
 				catch (Exception ex){
@@ -322,6 +330,13 @@ public class MainActivity extends BaseActivity {
 	private void initView() {
 		unreadLabel = (TextView) findViewById(R.id.unread_msg_number);
 		unreadAddressLable = (TextView) findViewById(R.id.unread_address_number);
+		tologin = (TextView)findViewById(R.id.tologin);
+		tologin.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(MainActivity.this,LoginActivity.class));
+			}
+		});
 		mTabs = new Button[3];
 		mTabs[0] = (Button) findViewById(R.id.btn_conversation);
 		mTabs[1] = (Button) findViewById(R.id.btn_address_list);
@@ -373,6 +388,8 @@ public class MainActivity extends BaseActivity {
 		}
 	};
 
+
+	//region initMainPage
 	private void initMainpage(){
 		//mainpage begin
 		mainpage_mp_header_view = LayoutInflater.from(this).inflate(R.layout.mainpage_header, null);
@@ -469,13 +486,16 @@ public class MainActivity extends BaseActivity {
 		SysnAds();  //同步header
 		//mainpage end
 	}
+	//endregion
 
+	//region initConsellor
 	private void initConsellor(){
 		//mainpage_cs_listview = (ListView)findViewById(R.id.mainpage_cs_listview);
 		mainpage_cs_header_view = LayoutInflater.from(this).inflate(R.layout.mainpage_cs_header, null);
 		SysnConsellors();
 		SysnConsellorsAds();
 	}
+	//endregion
 
 	private static void initMine(){
 		mainpage_mine_header_view = LayoutInflater.from(in_hcontext).inflate(R.layout.mainpage_mine_header, null);
@@ -707,6 +727,7 @@ public class MainActivity extends BaseActivity {
 							Bundle bundle = new Bundle();
 							bundle.putString("csnoid",person.get("csabid").toString());
 							bundle.putString("user_id",user_id);
+							Log.e("put csdetail uid","null");
 							intent.putExtras(bundle);
 							startActivity(intent);
 							//finish();
@@ -1182,8 +1203,14 @@ public class MainActivity extends BaseActivity {
 
 		if (currentTabIndex != index) {
 			mainpage_listview[index].setVisibility(View.VISIBLE);
-			mainpage_listview[currentTabIndex].setVisibility(View.INVISIBLE);
+			if(index == 2 && !mycreateSDFile.hasFile("cache")){
+				tologin.setVisibility(View.VISIBLE);
 			}
+			else{
+				tologin.setVisibility(View.INVISIBLE);
+			}
+			mainpage_listview[currentTabIndex].setVisibility(View.INVISIBLE);
+		}
 		mTabs[currentTabIndex].setSelected(false);
 		// set current tab selected
 		mTabs[index].setSelected(true);
