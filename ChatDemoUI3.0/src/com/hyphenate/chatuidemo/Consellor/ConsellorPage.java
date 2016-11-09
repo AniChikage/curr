@@ -178,6 +178,14 @@ public class ConsellorPage extends Activity {
                     String starttime = jsonObj.getString("starttime");
                     String username = jsonObj.getJSONObject("user").getString("nickname");
                     String str_schedule = jsonObj.getString("schedule");
+                    String isAccept = "";
+                    try{
+                        isAccept = jsonObj.getString("refuse");
+                    }
+                    catch(Exception ex){
+                        isAccept = "notSet";
+                    }
+                    Log.e("isaccept",isAccept);
                     JSONObject jsonObjsc = new JSONObject(str_schedule).getJSONObject("consellor");
                     //String portrait = jsonObjsc.getString("portrait");
                     String portrait = jsonObj.getJSONObject("user").getString("portrait");
@@ -185,11 +193,19 @@ public class ConsellorPage extends Activity {
                     Drawable drawable = new BitmapDrawable(getBitmapFromByte(Base64.decode(portrait,Base64.DEFAULT)));
                     Map<String, Object> map = new HashMap<String, Object>();
                     map.put("appoint_img", drawable);
-                    if(paid.equals("1")){
-                        map.put("appoint_hint", "已支付");
+                    if(isAccept.equals("0")){
+                        if(paid.equals("1")){
+                            map.put("appoint_hint", "已支付");
+                        }
+                        else{
+                            map.put("appoint_hint", "未支付");
+                        }
+                    }
+                    else if(isAccept.equals("1")){
+                        map.put("appoint_hint", "已拒绝");
                     }
                     else{
-                        map.put("appoint_hint", "未支付");
+                        map.put("appoint_hint", "还未审核");
                     }
                     map.put("appoint_oid",oid);
                     map.put("appoint_cname",consellor_name);

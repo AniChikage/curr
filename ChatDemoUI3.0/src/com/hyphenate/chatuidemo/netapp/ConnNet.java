@@ -53,6 +53,7 @@ public class ConnNet {
     private static final String urlGetOrder="http://www.clr-vision.com:18080/Therapista/order/getOrder";
     private static final String urlGetOrderByCid="http://www.clr-vision.com:18080/Therapista/order/getOrdersByCid";
     private static final String urlDelOrder="http://www.clr-vision.com:18080/Therapista/order/delOrder";
+    private static final String urlAltOrder="http://www.clr-vision.com:18080/Therapista/order/altOrder";
     private static final String urlGetOrderByUid="http://www.clr-vision.com:18080/Therapista/order/getOrdersByUid";
     private static final String urladdHarvest="http://www.clr-vision.com:18080/Therapista/harvest/addHarvest";
     private static final String urladdHarvestz="http://www.clr-vision.com:18080/Therapista/harvestz/addHarvestz";
@@ -421,6 +422,38 @@ public class ConnNet {
             }
             else {
                 result="获取oid预约失败！";
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            result = e.toString();
+        }
+        result = result.replace("\\\"","\"");
+        result = result.replace("\"{","{");
+        result = result.replace("}\"","}");
+        return result;
+    }
+
+    //alt order
+    public String altOrder(String oid, String refuse){
+        String result="";
+        try {
+            List<NameValuePair> params=new ArrayList<NameValuePair>();
+            params.add(new BasicNameValuePair("oid",oid));
+            params.add(new BasicNameValuePair("refuse",refuse));
+
+            HttpEntity entity = new UrlEncodedFormEntity(params, HTTP.UTF_8);
+            HttpPost httpPost = new HttpPost(urlAltOrder);
+            httpPost.setEntity(entity);
+            HttpClient client = new DefaultHttpClient();
+            HttpResponse httpResponse = client.execute(httpPost);
+
+            if (httpResponse.getStatusLine().getStatusCode()== HttpStatus.SC_OK) {
+                result= EntityUtils.toString(httpResponse.getEntity(), "utf-8");
+                //Log.v("asd",singleConsellor);
+            }
+            else {
+                result="更改order失败";
             }
         }
         catch (Exception e) {

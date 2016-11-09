@@ -36,11 +36,12 @@ import org.json.JSONObject;
  */
 public class CdAppointDetail extends Activity {
     private Context hcontext;
-    private Button btn_pay,adcancelorer;
+    private Button btn_pay,adcancelorer,btn_reject;
     private TextView tv_appoint_detail,adyuyuehao,adordertime,adtime,adperprice,adtotalprice,adcall,adcsname,adpaid;
     private ImageView adcsimg,adback;
     private String appoint_oid, consellor_id="";
     private String user_email;
+    private String isAccept="";
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE); //设置无标题栏
@@ -70,6 +71,7 @@ public class CdAppointDetail extends Activity {
         adpaid = (TextView)findViewById(R.id.adpaid);
         //btn_pay = (Button)findViewById(R.id.btn_pay);
         adcancelorer = (Button)findViewById(R.id.adcancelorder);
+        btn_reject = (Button)findViewById(R.id.btn_reject);
         tv_appoint_detail = (TextView)findViewById(R.id.tv_appoint_detail);
         adcsimg = (ImageView)findViewById(R.id.adcsimg);
         adback = (ImageView)findViewById(R.id.adback);
@@ -80,6 +82,7 @@ public class CdAppointDetail extends Activity {
         //btn_pay.setOnClickListener(onClickListener);
         adback.setOnClickListener(onClickListener);
         adcancelorer.setOnClickListener(onClickListener);
+        btn_reject.setOnClickListener(onClickListener);
     }
 
     View.OnClickListener onClickListener = new View.OnClickListener() {
@@ -105,13 +108,63 @@ public class CdAppointDetail extends Activity {
                     finish();
                     break;
                 case R.id.adcancelorder:
-                    cancelOrder();
+                    if(isAccept.equals("notSet")){
+                        acceptOrder("0");
+                    }
+                    break;
+                case R.id.btn_reject:
+                    if(isAccept.equals("notSet")){
+                        acceptOrder("1");
+                    }
                     break;
                 default:
                     break;
             }
         }
     };
+
+    //beginregion
+    private void acceptOrder(String myrefuse){
+        final String refuse = myrefuse;
+        new Thread(new Runnable() {
+            public void run() {
+                try{
+                    ConnNet operaton=new ConnNet();
+                    String result=operaton.altOrder(appoint_oid,refuse);
+                    Message msg=new Message();
+                    msg.obj=result;
+                    accept_handler.sendMessage(msg);
+                }
+                catch (Exception ex){
+                    Log.e("get orders","通过失败");
+                }
+
+            }
+        }).start();
+    }
+
+    Handler accept_handler=new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            String string=(String) msg.obj;
+            Log.e("alt status",string);
+            try {
+                String del = new JSONObject(string).getString("altOrder");
+                if(del.equals("1")){
+                    Toast.makeText(CdAppointDetail.this,"审核yes！", Toast.LENGTH_LONG).show();
+                }
+                else{
+                    Toast.makeText(CdAppointDetail.this,"审核no！", Toast.LENGTH_LONG).show();
+                }
+            } catch (JSONException e) {
+                System.out.println("Jsons parse error !");
+                e.printStackTrace();
+            }
+            super.handleMessage(msg);
+        }
+    };
+    //endregion
+
 
     private void cancelOrder(){
         new Thread(new Runnable() {
@@ -196,22 +249,46 @@ public class CdAppointDetail extends Activity {
                 String cid = jsonObjc.getString("id");
                 String peroid = jsonObj.getString("period");
                 String starttime = jsonObj.getString("starttime");
+                try{
+                    isAccept = jsonObj.getString("refuse");
+                }
+                catch (Exception ex){
+                    isAccept = "notSet";
+                }
                 tv_appoint_detail.setText(requirement);
                 consellor_id = user_email;
                 adyuyuehao.setText("预约号："+oid);
                 adordertime.setText("订单生成时间："+createtime);
-                adperprice.setText(perprice+"元/小时");
+                adperprice.setText(perprice+"元/单位咨询时间");
                 adtotalprice.setText(totalprice+"元");
                 adcsname.setText(user_name);
-                adtime.setText(period+"小时");
-                if(paid.equals("0")){
-                    adpaid.setText("待付款");
-
+                adtime.setText(period+"单位咨询时间");
+                if(isAccept.equals("1")){
+                    adpaid.setText("已拒绝");
+                    adcancelorer.setVisibility(View.INVISIBLE);
+                    btn_reject.setVisibility(View.INVISIBLE);
+                }
+                else if(isAccept.equals("0")){
+                    if(paid.equals("0")){
+                        adpaid.setText("待付款");
+                    }
+                    else{
+                        adpaid.setText("已支付");
+                    }
+                    adcancelorer.setVisibility(View.INVISIBLE);
+                    btn_reject.setVisibility(View.INVISIBLE);
                 }
                 else{
-                    adpaid.setText("已支付");
+                    if(paid.equals("0")){
+                        adpaid.setText("待付款");
+                    }
+                    else{
+                        adpaid.setText("已支付");
+                    }
+                    adcancelorer.setVisibility(View.VISIBLE);
+                    btn_reject.setVisibility(View.VISIBLE);
                 }
-
+                //if()
                 Log.e("consellor id",consellor_id);
             } catch (JSONException e) {
                 System.out.println("Jsons parse error !");

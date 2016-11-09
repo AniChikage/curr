@@ -48,12 +48,12 @@
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\layout\\rp_divider.xml"
     },
     {
-        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rp_fragment_bind_bankcard.xml",
-        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\layout\\rp_fragment_bind_bankcard.xml"
-    },
-    {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rp_gridpasswordview.xml",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\layout\\rp_gridpasswordview.xml"
+    },
+    {
+        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rp_fragment_bind_bankcard.xml",
+        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\layout\\rp_fragment_bind_bankcard.xml"
     },
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rp_group_member_item.xml",

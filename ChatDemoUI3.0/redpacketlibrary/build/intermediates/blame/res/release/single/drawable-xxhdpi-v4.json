@@ -8,12 +8,12 @@
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\res\\drawable-xxhdpi\\rp_search_bar_input.9.png"
     },
     {
-        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\rp_bg_circular_yellow.png",
-        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\res\\drawable-xxhdpi\\rp_bg_circular_yellow.png"
-    },
-    {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\rp_picture_right.png",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\res\\drawable-xxhdpi\\rp_picture_right.png"
+    },
+    {
+        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\rp_bg_circular_yellow.png",
+        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\res\\drawable-xxhdpi\\rp_bg_circular_yellow.png"
     },
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\rp_forget_pwd.png",
@@ -276,12 +276,12 @@
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\res\\drawable-xxhdpi\\rp_no_verify_identity.png"
     },
     {
-        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\rp_no_bankcard.png",
-        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\res\\drawable-xxhdpi\\rp_no_bankcard.png"
-    },
-    {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\rp_question_black.png",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\res\\drawable-xxhdpi\\rp_question_black.png"
+    },
+    {
+        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\rp_no_bankcard.png",
+        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\res\\drawable-xxhdpi\\rp_no_bankcard.png"
     },
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\rp_add_card_icon.png",

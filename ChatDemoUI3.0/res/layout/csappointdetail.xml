@@ -425,10 +425,21 @@
         <Button
             android:layout_weight="1"
             android:id="@+id/adcancelorder"
-            android:text="取消预约"
+            android:text="通过"
             android:textSize="20dp"
-            android:background="#ddd"
-            android:textColor="#939393"
+            android:background="@drawable/longbutton"
+            android:textColor="#fff"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btn_reject"
+            android:text="拒绝"
+            android:textSize="20dp"
+            android:visibility="invisible"
+            android:background="@color/solid_gray"
+            android:textColor="#000"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 

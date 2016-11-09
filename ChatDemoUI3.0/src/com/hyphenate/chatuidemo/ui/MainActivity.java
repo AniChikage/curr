@@ -115,6 +115,7 @@ public class MainActivity extends BaseActivity {
 	private TextView unreadLabel;
 	private static String user_id=null;
 	private static String user_id_s;
+	private static String isAccept;
 	private static String firstChecked="0";
 	private createSDFile mycreateSDFile;
 	// textview for unread event message
@@ -589,6 +590,12 @@ public class MainActivity extends BaseActivity {
 					String sid = jsonObj.getString("sid");
 					String oid = jsonObj.getString("oid");
 					String paid = jsonObj.getString("paid");
+					try{
+						isAccept = jsonObj.getString("refuse");
+					}
+					catch (Exception ex){
+						isAccept = "notSet";
+					}
 					String starttime = jsonObj.getString("starttime");
 					String str_schedule = jsonObj.getString("schedule");
 					JSONObject jsonObjsc = new JSONObject(str_schedule).getJSONObject("consellor");
@@ -597,11 +604,19 @@ public class MainActivity extends BaseActivity {
 					Drawable drawable = new BitmapDrawable(getBitmapFromByte(Base64.decode(portrait,Base64.DEFAULT)));
 					Map<String, Object> map = new HashMap<String, Object>();
 					map.put("appoint_img", drawable);
-					if(paid.equals("1")){
-						map.put("appoint_hint", "已支付");
+					if(isAccept.equals("notSet")){
+						map.put("appoint_hint", "未审核");
+					}
+					else if(isAccept.equals("0")){
+						if(paid.equals("1")){
+							map.put("appoint_hint", "已支付");
+						}
+						else{
+							map.put("appoint_hint", "未支付");
+						}
 					}
 					else{
-						map.put("appoint_hint", "未支付");
+						map.put("appoint_hint", "未通过");
 					}
 					map.put("appoint_oid",oid);
 					map.put("appoint_cname",consellor_name);
