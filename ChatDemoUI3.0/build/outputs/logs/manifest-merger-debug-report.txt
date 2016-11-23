@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:2:1-599:12
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:2:1-607:12
 	package
 		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:4:5-39
 		INJECTED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml
@@ -29,6 +29,9 @@ MERGED from [com.android.support:appcompat-v7:23.4.0] G:\testan\easemob-sdk-3.1.
 MERGED from [com.android.support:animated-vector-drawable:23.4.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\AndroidManifest.xml:5:5-44
 MERGED from [com.android.support:support-vector-drawable:23.4.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:5:5-43
 MERGED from [com.android.support:support-vector-drawable:23.4.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:5:5-43
+MERGED from [com.prolificinteractive:material-calendarview:1.4.2] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.prolificinteractive\material-calendarview\1.4.2\AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.citux:datetimepicker:0.2.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.github.citux\datetimepicker\0.2.0\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-v13:23.1.1] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\support-v13\23.1.1\AndroidManifest.xml:20:5-44
 	tools:overrideLibrary
 		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:12:9-56
 	android:targetSdkVersion
@@ -41,6 +44,7 @@ MERGED from [com.android.support:support-vector-drawable:23.4.0] G:\testan\easem
 		INJECTED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml
 uses-permission#android.permission.VIBRATE
 ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:14:5-66
+MERGED from [com.github.citux:datetimepicker:0.2.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.github.citux\datetimepicker\0.2.0\AndroidManifest.xml:26:5-66
 	android:name
 		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:14:22-63
 uses-permission#android.permission.INTERNET
@@ -148,17 +152,20 @@ ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xm
 	android:name
 		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:50:30-85
 application
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:52:5-597:19
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:52:5-605:19
 MERGED from [com.android.support:appcompat-v7:23.4.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.4.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
 MERGED from [com.android.support:support-vector-drawable:23.4.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
 MERGED from [com.android.support:support-vector-drawable:23.4.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
+MERGED from [com.prolificinteractive:material-calendarview:1.4.2] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.prolificinteractive\material-calendarview\1.4.2\AndroidManifest.xml:12:5-20
+MERGED from [com.github.citux:datetimepicker:0.2.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.github.citux\datetimepicker\0.2.0\AndroidManifest.xml:28:5-20
+MERGED from [com.android.support:support-v13:23.1.1] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\support-v13\23.1.1\AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:57:9-41
 	android:allowBackup
 		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:54:9-35
 	android:icon
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:56:9-48
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:56:9-42
 	android:largeHeap
 		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:55:9-33
 	android:name
@@ -759,223 +766,233 @@ ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xm
 		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:440:13-52
 	android:name
 		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:438:13-49
+activity#com.hyphenate.chatuidemo.Consellor.ManageSchedule
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:445:9-450:20
+	android:screenOrientation
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:447:13-49
+	android:windowSoftInputMode
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:449:13-52
+	android:theme
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:448:13-52
+	android:name
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:446:13-53
 receiver#com.hyphenate.chatuidemo.receiver.StartServiceReceiver
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:446:9-453:20
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:454:9-461:20
 	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:446:19-64
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:454:19-64
 intent-filter#android.intent.action.BOOT_COMPLETED+android.intent.action.QUICKBOOT_POWERON+android.intent.category.LAUNCHER
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:447:13-452:29
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:455:13-460:29
 	android:priority
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:447:28-51
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:455:28-51
 action#android.intent.action.BOOT_COMPLETED
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:448:17-79
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:456:17-79
 	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:448:25-76
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:456:25-76
 action#android.intent.action.QUICKBOOT_POWERON
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:449:17-82
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:457:17-82
 	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:449:25-79
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:457:25-79
 receiver#com.hyphenate.chat.EMGCMBroadcastReceiver
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:456:9-465:20
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:464:9-473:20
 	android:exported
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:458:13-36
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:466:13-36
 	android:permission
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:459:13-73
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:467:13-73
 	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:457:13-69
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:465:13-69
 intent-filter#com.google.android.c2dm.intent.RECEIVE+com.hyphenate.chatuidemo
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:460:13-464:29
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:468:13-472:29
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:461:17-81
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:469:17-81
 	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:461:25-78
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:469:25-78
 category#com.hyphenate.chatuidemo
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:463:17-69
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:471:17-69
 	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:463:27-66
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:471:27-66
 service#com.hyphenate.chat.EMGCMListenerService
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:467:9-469:48
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:475:9-477:48
 	android:exported
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:469:13-37
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:477:13-37
 	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:468:13-67
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:476:13-67
 receiver#com.hyphenate.chatuidemo.receiver.GCMPushBroadCast
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:471:9-479:20
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:479:9-487:20
 	android:exported
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:473:13-37
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:481:13-37
 	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:472:13-54
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:480:13-54
 intent-filter#com.hyphenate.chatuidemo+com.hyphenate.sdk.push
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:474:13-478:29
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:482:13-486:29
 action#com.hyphenate.sdk.push
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:475:17-65
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:483:17-65
 	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:475:25-62
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:483:25-62
 service#com.xiaomi.mipush.sdk.PushMessageHandler
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:484:9-488:46
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:492:9-496:46
 	android:enabled
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:486:13-35
-	android:exported
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:487:13-36
-	tools:ignore
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:488:13-43
-	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:485:13-68
-service#com.xiaomi.mipush.sdk.MessageHandleService
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:489:9-491:38
-	android:enabled
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:491:13-35
-	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:490:13-70
-receiver#com.hyphenate.chat.EMMipushReceiver
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:493:9-506:20
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:494:13-35
 	android:exported
 		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:495:13-36
 	tools:ignore
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:496:13-44
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:496:13-43
 	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:494:13-63
-intent-filter#com.xiaomi.mipush.RECEIVE_MESSAGE
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:497:13-499:29
-action#com.xiaomi.mipush.RECEIVE_MESSAGE
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:498:17-76
-	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:498:25-73
-intent-filter#com.xiaomi.mipush.MESSAGE_ARRIVED
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:500:13-502:29
-action#com.xiaomi.mipush.MESSAGE_ARRIVED
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:501:17-76
-	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:501:25-73
-intent-filter#com.xiaomi.mipush.ERROR
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:503:13-505:29
-action#com.xiaomi.mipush.ERROR
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:504:17-66
-	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:504:25-63
-receiver#com.hyphenate.chat.EMHuaweiPushReceiver
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:511:9-525:20
-	android:exported
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:513:13-36
-	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:512:13-67
-intent-filter#com.huawei.android.push.intent.RECEIVE+com.huawei.android.push.intent.REGISTRATION
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:514:13-520:29
-action#com.huawei.android.push.intent.REGISTRATION
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:517:17-86
-	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:517:25-83
-action#com.huawei.android.push.intent.RECEIVE
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:519:17-81
-	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:519:25-78
-meta-data#CS_cloud_ablitity
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:522:13-524:56
-	android:value
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:524:17-53
-	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:523:17-49
-receiver#com.huawei.android.pushagent.PushEventReceiver
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:528:9-538:20
-	android:process
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:531:13-43
-	android:exported
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:530:13-36
-	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:529:13-74
-intent-filter#com.huawei.android.push.PLUGIN+com.huawei.android.push.intent.REFRESH_PUSH_CHANNEL+com.huawei.intent.action.PUSH+com.huawei.intent.action.PUSH_ON
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:532:13-537:29
-action#com.huawei.android.push.intent.REFRESH_PUSH_CHANNEL
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:533:17-94
-	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:533:25-91
-action#com.huawei.intent.action.PUSH
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:534:17-72
-	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:534:25-69
-action#com.huawei.intent.action.PUSH_ON
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:535:17-75
-	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:535:25-72
-action#com.huawei.android.push.PLUGIN
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:536:17-73
-	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:536:25-70
-service#com.huawei.android.pushagent.PushService
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:541:9-543:54
-	android:process
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:543:13-43
-	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:542:13-68
-service#com.umeng.update.net.DownloadingService
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:547:9-549:61
-	android:process
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:549:13-50
-	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:548:13-67
-activity#com.umeng.update.UpdateDialogActivity
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:551:9-553:84
-	android:theme
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:553:13-72
-	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:552:13-65
-meta-data#EASEMOB_APPKEY
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:559:9-561:48
-	android:value
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:561:13-45
-	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:560:13-42
-service#com.hyphenate.chat.EMChatService
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:563:9-566:46
-	android:exported
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:565:13-36
-	tools:ignore
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:566:13-43
-	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:564:13-60
-receiver#com.hyphenate.chat.EMMonitorReceiver
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:568:9-579:20
-	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:568:19-70
-intent-filter#android.intent.action.PACKAGE_REMOVED
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:569:13-573:29
-action#android.intent.action.PACKAGE_REMOVED
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:570:17-80
-	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:570:25-77
-data
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:572:17-50
-	android:scheme
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:572:23-47
-intent-filter#android.intent.action.BOOT_COMPLETED+android.intent.action.USER_PRESENT
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:575:13-578:29
-action#android.intent.action.USER_PRESENT
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:577:17-77
-	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:577:25-74
-service#com.baidu.location.f
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:582:9-585:41
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:493:13-68
+service#com.xiaomi.mipush.sdk.MessageHandleService
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:497:9-499:38
 	android:enabled
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:584:13-35
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:499:13-35
+	android:name
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:498:13-70
+receiver#com.hyphenate.chat.EMMipushReceiver
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:501:9-514:20
+	android:exported
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:503:13-36
+	tools:ignore
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:504:13-44
+	android:name
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:502:13-63
+intent-filter#com.xiaomi.mipush.RECEIVE_MESSAGE
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:505:13-507:29
+action#com.xiaomi.mipush.RECEIVE_MESSAGE
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:506:17-76
+	android:name
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:506:25-73
+intent-filter#com.xiaomi.mipush.MESSAGE_ARRIVED
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:508:13-510:29
+action#com.xiaomi.mipush.MESSAGE_ARRIVED
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:509:17-76
+	android:name
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:509:25-73
+intent-filter#com.xiaomi.mipush.ERROR
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:511:13-513:29
+action#com.xiaomi.mipush.ERROR
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:512:17-66
+	android:name
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:512:25-63
+receiver#com.hyphenate.chat.EMHuaweiPushReceiver
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:519:9-533:20
+	android:exported
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:521:13-36
+	android:name
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:520:13-67
+intent-filter#com.huawei.android.push.intent.RECEIVE+com.huawei.android.push.intent.REGISTRATION
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:522:13-528:29
+action#com.huawei.android.push.intent.REGISTRATION
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:525:17-86
+	android:name
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:525:25-83
+action#com.huawei.android.push.intent.RECEIVE
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:527:17-81
+	android:name
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:527:25-78
+meta-data#CS_cloud_ablitity
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:530:13-532:56
+	android:value
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:532:17-53
+	android:name
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:531:17-49
+receiver#com.huawei.android.pushagent.PushEventReceiver
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:536:9-546:20
 	android:process
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:585:13-38
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:539:13-43
+	android:exported
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:538:13-36
 	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:583:13-48
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:537:13-74
+intent-filter#com.huawei.android.push.PLUGIN+com.huawei.android.push.intent.REFRESH_PUSH_CHANNEL+com.huawei.intent.action.PUSH+com.huawei.intent.action.PUSH_ON
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:540:13-545:29
+action#com.huawei.android.push.intent.REFRESH_PUSH_CHANNEL
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:541:17-94
+	android:name
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:541:25-91
+action#com.huawei.intent.action.PUSH
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:542:17-72
+	android:name
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:542:25-69
+action#com.huawei.intent.action.PUSH_ON
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:543:17-75
+	android:name
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:543:25-72
+action#com.huawei.android.push.PLUGIN
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:544:17-73
+	android:name
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:544:25-70
+service#com.huawei.android.pushagent.PushService
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:549:9-551:54
+	android:process
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:551:13-43
+	android:name
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:550:13-68
+service#com.umeng.update.net.DownloadingService
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:555:9-557:61
+	android:process
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:557:13-50
+	android:name
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:556:13-67
+activity#com.umeng.update.UpdateDialogActivity
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:559:9-561:84
+	android:theme
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:561:13-72
+	android:name
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:560:13-65
+meta-data#EASEMOB_APPKEY
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:567:9-569:48
+	android:value
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:569:13-45
+	android:name
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:568:13-42
+service#com.hyphenate.chat.EMChatService
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:571:9-574:46
+	android:exported
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:573:13-36
+	tools:ignore
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:574:13-43
+	android:name
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:572:13-60
+receiver#com.hyphenate.chat.EMMonitorReceiver
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:576:9-587:20
+	android:name
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:576:19-70
+intent-filter#android.intent.action.PACKAGE_REMOVED
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:577:13-581:29
+action#android.intent.action.PACKAGE_REMOVED
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:578:17-80
+	android:name
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:578:25-77
+data
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:580:17-50
+	android:scheme
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:580:23-47
+intent-filter#android.intent.action.BOOT_COMPLETED+android.intent.action.USER_PRESENT
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:583:13-586:29
+action#android.intent.action.USER_PRESENT
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:585:17-77
+	android:name
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:585:25-74
+service#com.baidu.location.f
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:590:9-593:41
+	android:enabled
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:592:13-35
+	android:process
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:593:13-38
+	android:name
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:591:13-48
 meta-data#UMENG_APPKEY
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:587:9-589:66
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:595:9-597:66
 	android:value
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:589:13-53
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:597:13-53
 	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:588:13-40
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:596:13-40
 meta-data#UMENG_CHANNEL
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:590:9-592:41
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:598:9-600:41
 	android:value
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:592:13-38
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:600:13-38
 	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:591:13-41
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:599:13-41
 meta-data#com.baidu.lbsapi.API_KEY
-ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:593:9-595:64
+ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:601:9-603:64
 	android:value
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:595:13-61
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:603:13-61
 	android:name
-		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:594:13-52
+		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:602:13-52

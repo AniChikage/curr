@@ -28,9 +28,30 @@
                     "startLine": 5,
                     "startColumn": 4,
                     "startOffset": 224,
-                    "endLine": 10,
+                    "endLine": 7,
                     "endColumn": 12,
-                    "endOffset": 638
+                    "endOffset": 356
+                },
+                "from": {
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.github.citux\\datetimepicker\\0.2.0\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 168,
+                        "endLine": 6,
+                        "endColumn": 12,
+                        "endOffset": 300
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 361,
+                    "endLine": 13,
+                    "endColumn": 12,
+                    "endOffset": 775
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
@@ -46,12 +67,12 @@
             },
             {
                 "to": {
-                    "startLine": 11,
+                    "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 643,
-                    "endLine": 16,
+                    "startOffset": 780,
+                    "endLine": 19,
                     "endColumn": 12,
-                    "endOffset": 1063
+                    "endOffset": 1200
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
@@ -67,12 +88,12 @@
             },
             {
                 "to": {
-                    "startLine": 17,
+                    "startLine": 20,
                     "startColumn": 4,
-                    "startOffset": 1068,
-                    "endLine": 22,
+                    "startOffset": 1205,
+                    "endLine": 25,
                     "endColumn": 12,
-                    "endOffset": 1491
+                    "endOffset": 1628
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
@@ -88,12 +109,12 @@
             },
             {
                 "to": {
-                    "startLine": 23,
+                    "startLine": 26,
                     "startColumn": 4,
-                    "startOffset": 1496,
-                    "endLine": 28,
+                    "startOffset": 1633,
+                    "endLine": 31,
                     "endColumn": 12,
-                    "endOffset": 1917
+                    "endOffset": 2054
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
@@ -109,12 +130,12 @@
             },
             {
                 "to": {
-                    "startLine": 29,
+                    "startLine": 32,
                     "startColumn": 4,
-                    "startOffset": 1922,
-                    "endLine": 34,
+                    "startOffset": 2059,
+                    "endLine": 37,
                     "endColumn": 12,
-                    "endOffset": 2344
+                    "endOffset": 2481
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
@@ -130,12 +151,12 @@
             },
             {
                 "to": {
-                    "startLine": 35,
+                    "startLine": 38,
                     "startColumn": 4,
-                    "startOffset": 2349,
-                    "endLine": 40,
+                    "startOffset": 2486,
+                    "endLine": 43,
                     "endColumn": 12,
-                    "endOffset": 2769
+                    "endOffset": 2906
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
@@ -151,11 +172,11 @@
             },
             {
                 "to": {
-                    "startLine": 41,
+                    "startLine": 44,
                     "startColumn": 4,
-                    "startOffset": 2774,
+                    "startOffset": 2911,
                     "endColumn": 88,
-                    "endOffset": 2858
+                    "endOffset": 2995
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
@@ -170,11 +191,11 @@
             },
             {
                 "to": {
-                    "startLine": 42,
+                    "startLine": 45,
                     "startColumn": 4,
-                    "startOffset": 2863,
+                    "startOffset": 3000,
                     "endColumn": 100,
-                    "endOffset": 2959
+                    "endOffset": 3096
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
@@ -189,12 +210,12 @@
             },
             {
                 "to": {
-                    "startLine": 43,
+                    "startLine": 46,
                     "startColumn": 4,
-                    "startOffset": 2964,
-                    "endLine": 47,
+                    "startOffset": 3101,
+                    "endLine": 50,
                     "endColumn": 12,
-                    "endOffset": 3367
+                    "endOffset": 3504
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
@@ -210,12 +231,12 @@
             },
             {
                 "to": {
-                    "startLine": 48,
+                    "startLine": 51,
                     "startColumn": 4,
-                    "startOffset": 3372,
-                    "endLine": 52,
+                    "startOffset": 3509,
+                    "endLine": 55,
                     "endColumn": 12,
-                    "endOffset": 3787
+                    "endOffset": 3924
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
@@ -231,12 +252,12 @@
             },
             {
                 "to": {
-                    "startLine": 53,
+                    "startLine": 56,
                     "startColumn": 4,
-                    "startOffset": 3792,
-                    "endLine": 54,
+                    "startOffset": 3929,
+                    "endLine": 57,
                     "endColumn": 12,
-                    "endOffset": 3894
+                    "endOffset": 4031
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
@@ -252,12 +273,12 @@
             },
             {
                 "to": {
-                    "startLine": 55,
+                    "startLine": 58,
                     "startColumn": 4,
-                    "startOffset": 3899,
-                    "endLine": 56,
+                    "startOffset": 4036,
+                    "endLine": 59,
                     "endColumn": 12,
-                    "endOffset": 4023
+                    "endOffset": 4160
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
@@ -273,11 +294,11 @@
             },
             {
                 "to": {
-                    "startLine": 57,
+                    "startLine": 60,
                     "startColumn": 4,
-                    "startOffset": 4028,
+                    "startOffset": 4165,
                     "endColumn": 70,
-                    "endOffset": 4094
+                    "endOffset": 4231
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
@@ -292,11 +313,11 @@
             },
             {
                 "to": {
-                    "startLine": 58,
+                    "startLine": 61,
                     "startColumn": 4,
-                    "startOffset": 4099,
+                    "startOffset": 4236,
                     "endColumn": 82,
-                    "endOffset": 4177
+                    "endOffset": 4314
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
@@ -311,12 +332,12 @@
             },
             {
                 "to": {
-                    "startLine": 59,
+                    "startLine": 62,
                     "startColumn": 4,
-                    "startOffset": 4182,
-                    "endLine": 109,
+                    "startOffset": 4319,
+                    "endLine": 112,
                     "endColumn": 12,
-                    "endOffset": 7885
+                    "endOffset": 8022
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
@@ -332,12 +353,12 @@
             },
             {
                 "to": {
-                    "startLine": 110,
+                    "startLine": 113,
                     "startColumn": 4,
-                    "startOffset": 7890,
-                    "endLine": 161,
+                    "startOffset": 8027,
+                    "endLine": 164,
                     "endColumn": 12,
-                    "endOffset": 11733
+                    "endOffset": 11870
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
@@ -353,11 +374,11 @@
             },
             {
                 "to": {
-                    "startLine": 162,
+                    "startLine": 165,
                     "startColumn": 4,
-                    "startOffset": 11738,
+                    "startOffset": 11875,
                     "endColumn": 90,
-                    "endOffset": 11824
+                    "endOffset": 11961
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
@@ -372,12 +393,12 @@
             },
             {
                 "to": {
-                    "startLine": 163,
+                    "startLine": 166,
                     "startColumn": 4,
-                    "startOffset": 11829,
-                    "endLine": 165,
+                    "startOffset": 11966,
+                    "endLine": 168,
                     "endColumn": 12,
-                    "endOffset": 11999
+                    "endOffset": 12136
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\EaseUI\\unspecified\\res\\values-v11\\values-v11.xml",
@@ -393,11 +414,11 @@
             },
             {
                 "to": {
-                    "startLine": 166,
+                    "startLine": 169,
                     "startColumn": 4,
-                    "startOffset": 12004,
+                    "startOffset": 12141,
                     "endColumn": 84,
-                    "endOffset": 12084
+                    "endOffset": 12221
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\EaseUI\\unspecified\\res\\values-v11\\values-v11.xml",

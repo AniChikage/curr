@@ -151,7 +151,7 @@ public class CdAppointDetail extends Activity {
             try {
                 String del = new JSONObject(string).getString("altOrder");
                 if(del.equals("1")){
-                    Toast.makeText(CdAppointDetail.this,"审核yes！", Toast.LENGTH_LONG).show();
+                    Toast.makeText(CdAppointDetail.this,"审核通过！", Toast.LENGTH_LONG).show();
                 }
                 else{
                     Toast.makeText(CdAppointDetail.this,"审核no！", Toast.LENGTH_LONG).show();

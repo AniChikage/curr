@@ -45,6 +45,8 @@ public class ConnNet {
     private static final String urlgetArtical="http://www.clr-vision.com:18080/Therapista/article/getArticle";
     private static final String urlGetSchedule="http://www.clr-vision.com:18080/Therapista/schedule/getSchedulesByDate";
     private static final String urlGetScheduleBySid="http://www.clr-vision.com:18080/Therapista/schedule/getSchedule";
+    private static final String urlAddSchedule="http://www.clr-vision.com:18080/Therapista/schedule/addSchedule";
+    private static final String urlDelSchedule="http://www.clr-vision.com:18080/Therapista/schedule/delSchedule";
     private static final String urlAddNeed="http://www.clr-vision.com:18080/Therapista/need/addNeed";
     private static final String urlGetNeeds="http://www.clr-vision.com:18080/Therapista/need/getNeeds";
     private static final String urlGetUser="http://www.clr-vision.com:18080/Therapista/user/getUser";
@@ -641,6 +643,74 @@ public class ConnNet {
 
             HttpEntity entity = new UrlEncodedFormEntity(params, HTTP.UTF_8);
             HttpPost httpPost = new HttpPost(urlGetScheduleBySid);
+            httpPost.setEntity(entity);
+            HttpClient client = new DefaultHttpClient();
+            HttpResponse httpResponse = client.execute(httpPost);
+
+            if (httpResponse.getStatusLine().getStatusCode()== HttpStatus.SC_OK)
+            {
+                result= EntityUtils.toString(httpResponse.getEntity(), "utf-8");
+            }
+            else
+            {
+                result="获取失败！";
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            result = e.toString();
+        }
+        result = result.replace("\\\"","\"");
+        result = result.replace("\"{","{");
+        result = result.replace("}\"","}");
+        // result = parseConnselor(result);
+        return result;
+    }
+
+    //get schedule by sid
+    public String addSchedule(String cid, String sdate, String starttime, String endtime){
+        String result = "";
+        try {
+            List<NameValuePair> params=new ArrayList<NameValuePair>();
+            params.add(new BasicNameValuePair("cid",cid));
+            params.add(new BasicNameValuePair("sdate",sdate));
+            params.add(new BasicNameValuePair("start",starttime));
+            params.add(new BasicNameValuePair("end",endtime));
+
+            HttpEntity entity = new UrlEncodedFormEntity(params, HTTP.UTF_8);
+            HttpPost httpPost = new HttpPost(urlAddSchedule);
+            httpPost.setEntity(entity);
+            HttpClient client = new DefaultHttpClient();
+            HttpResponse httpResponse = client.execute(httpPost);
+
+            if (httpResponse.getStatusLine().getStatusCode()== HttpStatus.SC_OK)
+            {
+                result= EntityUtils.toString(httpResponse.getEntity(), "utf-8");
+            }
+            else
+            {
+                result="获取失败！";
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            result = e.toString();
+        }
+        result = result.replace("\\\"","\"");
+        result = result.replace("\"{","{");
+        result = result.replace("}\"","}");
+        // result = parseConnselor(result);
+        return result;
+    }
+
+    //del schedule
+    public String delSchedule(String sid){
+        String result = "";
+        try {
+            List<NameValuePair> params=new ArrayList<NameValuePair>();
+            params.add(new BasicNameValuePair("sid",sid));
+            HttpEntity entity = new UrlEncodedFormEntity(params, HTTP.UTF_8);
+            HttpPost httpPost = new HttpPost(urlDelSchedule);
             httpPost.setEntity(entity);
             HttpClient client = new DefaultHttpClient();
             HttpResponse httpResponse = client.execute(httpPost);

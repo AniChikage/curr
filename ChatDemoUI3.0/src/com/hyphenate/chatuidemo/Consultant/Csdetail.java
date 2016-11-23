@@ -2,6 +2,7 @@ package com.hyphenate.chatuidemo.Consultant;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -29,6 +30,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -78,6 +80,7 @@ public class Csdetail extends Activity {
     private ListView csdt_listview;
     private List<Map<String, Object>> csotList;
     private CsOtherInfoAdapter csOtherInfoAdapter;
+    private ProgressDialog pb=null;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE); //设置无标题栏
@@ -85,6 +88,7 @@ public class Csdetail extends Activity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS); //透明状态栏
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION); //透明导航栏
         context = this.getApplicationContext();
+        pb = new ProgressDialog(Csdetail.this);
         initId();
         initDate();
         initOnClick();
@@ -433,6 +437,8 @@ public class Csdetail extends Activity {
 
     //
     private void freshSchedule(final int flag){
+        pb.setMessage("获取中......");
+        pb.show();
         new Thread(new Runnable() {
             public void run() {
                 try {
@@ -603,6 +609,7 @@ public class Csdetail extends Activity {
                 System.out.println("Jsons parse error !");
                 e.printStackTrace();
             }
+            pb.dismiss();
             super.handleMessage(msg);
         }
 

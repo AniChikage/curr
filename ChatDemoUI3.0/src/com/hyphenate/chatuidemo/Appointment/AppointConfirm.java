@@ -1,6 +1,7 @@
 package com.hyphenate.chatuidemo.Appointment;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -37,6 +38,7 @@ public class AppointConfirm extends Activity {
     private Context context;
     private String user_id, sid, nid, starttime,danjia;
     private ImageView acback,iv_portrait;
+    private ProgressDialog pd=null;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE); //设置无标题栏
@@ -44,6 +46,7 @@ public class AppointConfirm extends Activity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS); //透明状态栏
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION); //透明导航栏
         context = getApplication();
+        pd = new ProgressDialog(AppointConfirm.this);
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
             sid = bundle.getString("sid");
@@ -137,6 +140,8 @@ public class AppointConfirm extends Activity {
     };
 
     public void addOrder(){
+        pd.setMessage("提交中......");
+        pd.show();
         new Thread(new Runnable() {
             public void run() {
                 if(!blms.getText().toString().equals("")){
@@ -266,7 +271,19 @@ public class AppointConfirm extends Activity {
         public void handleMessage(Message msg) {
             String string = (String) msg.obj;
             Log.e("add order done",string);
+            try {
+                String jsonObjs = new JSONObject(string).getString("addOrder");
+                if(jsonObjs!=""){
+                    Toast.makeText(AppointConfirm.this,"提交成功！",Toast.LENGTH_LONG).show();
+                    pd.dismiss();
+                }
+                else{
+                    Toast.makeText(AppointConfirm.this,"提交失败！",Toast.LENGTH_LONG).show();
+                }
+            }
+            catch (Exception ex){
 
+            }
             super.handleMessage(msg);
         }
     };

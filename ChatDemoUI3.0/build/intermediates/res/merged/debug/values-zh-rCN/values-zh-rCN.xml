@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
     <string name="Add_a_button_was_clicked">添加按钮被点击</string>
     <string name="Add_a_friend">加个好友呗</string>
     <string name="Add_group_members_fail">添加群成员失败:</string>
@@ -177,12 +177,14 @@
     <string name="connect_failuer_toast">请检查网络或稍候重试</string>
     <string name="copy">复制</string>
     <string name="copy_message">复制消息</string>
+    <string msgid="3968620852217927702" name="day_picker_description">"按月份划分的日期网格"</string>
     <string name="delete">删除</string>
     <string name="delete_conversation">删除会话</string>
     <string name="delete_conversation_messages">删除会话和消息</string>
     <string name="delete_message">删除消息</string>
     <string name="delete_video">删除视频</string>
     <string name="delete_voice">删除语音</string>
+    <string msgid="6908431551612331381" name="deleted_key">"已删除 <ns1:g id="KEY">%1$s</ns1:g>"</string>
     <string name="deleting">正在删除...</string>
     <string name="diagnose">诊断</string>
     <string name="did_not_answer">未接听</string>
@@ -197,6 +199,7 @@
     <string name="dl_update_nick">更新昵称</string>
     <string name="dl_update_photo">更新头像</string>
     <string name="dl_waiting">请等待...</string>
+    <string msgid="7007948707597430919" name="done_label">"完成"</string>
     <string name="downwaiting">正在下载文件请稍后</string>
     <string name="dynamic_expression">[动态表情]</string>
     <string name="ease_user_remove">此用户已被移除</string>
@@ -222,11 +225,13 @@
     <string name="hanging_up">正在挂断..</string>
     <string name="have_connected_with">已经和对方建立连接，等待对方接受...</string>
     <string name="have_you_removed">已把你从他好友列表里移除</string>
+    <string msgid="7586639618712934060" name="hour_picker_description">"小时转盘"</string>
     <string name="illegal_user_name">用户名不合法</string>
     <string name="input_new_nick_hint">输入新昵称</string>
     <string name="is_down_please_wait">正在下载视频请稍候</string>
     <string name="is_modify_the_group_name">正在修改群名称...</string>
     <string name="is_quit_the_group_chat">正在退出群聊...</string>
+    <string msgid="2674929164900463786" name="item_is_selected">"已选择 <ns1:g id="ITEM">%1$s</ns1:g>"</string>
     <string name="list_is_for">将在后台获取好友和群聊列表...</string>
     <string name="location_message">位置信息</string>
     <string name="location_prefix">[我的位置]</string>
@@ -235,6 +240,7 @@
     <string name="login_failure_failed">登录失败: 获取好友或群聊失败</string>
     <string name="logout">退出登录</string>
     <string name="logout_hint">退出后不会删除任何历史数据，下次登录依然可以使用本账号</string>
+    <string msgid="6024811202872705251" name="minute_picker_description">"分钟转盘"</string>
     <string name="move_out_backlist">移出黑名单</string>
     <string name="move_up_to_cancel">手指上滑，取消发送</string>
     <string name="mute">静音</string>
@@ -279,6 +285,10 @@
     <string name="search_pubic_group">搜索公开群</string>
     <string name="searching">正在搜索..</string>
     <string name="select_contacts">选择联系人</string>
+    <string msgid="3973338219107019769" name="select_day">"选择月份和日期"</string>
+    <string msgid="7651068754188418859" name="select_hours">"选择小时"</string>
+    <string msgid="8327182090226828481" name="select_minutes">"选择分钟"</string>
+    <string msgid="2603330600102539372" name="select_year">"选择年份"</string>
     <string name="send_fail">发送消息失败,</string>
     <string name="send_failure_please">发送失败，请检测服务器是否连接</string>
     <string name="send_successful">发送请求成功,等待对方验证</string>
@@ -319,5 +329,6 @@
     <string name="voice_prefix">[语音]</string>
     <string name="were_mentioned">[有人@我]</string>
     <string name="yangshengqi">使用扬声器播放语音</string>
+    <string msgid="6963340404644587098" name="year_picker_description">"年份列表"</string>
     <string name="you_are_group">你被群创建者从此群中移除</string>
 </resources>

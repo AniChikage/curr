@@ -167,6 +167,7 @@ public class MainActivity extends BaseActivity {
 	private android.app.AlertDialog.Builder conflictBuilder;
 	private android.app.AlertDialog.Builder accountRemovedBuilder;
 	private boolean isConflictDialogShow;
+	private ProgressDialog pd_update=null;
 	private boolean isAccountRemovedDialogShow;
 	private BroadcastReceiver internalDebugReceiver;
 	private ConversationListFragment conversationListFragment;
@@ -192,23 +193,26 @@ public class MainActivity extends BaseActivity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE); //设置无标题栏
 		hcontext=this.getApplicationContext();
 		mycreateSDFile = new createSDFile(hcontext);
-		if(mycreateSDFile.hasFile("cache")){
+		//if(mycreateSDFile.hasFile("cache")){
+		//	setContentView(R.layout.em_activity_main);
+		//}
+		//else{
 			setContentView(R.layout.em_activity_main);
-		}
-		else{
-			setContentView(R.layout.em_activity_main);
-		}
+		//}
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS); //透明状态栏
 		in_hcontext = hcontext;
 
 		pd = new ProgressDialog(MainActivity.this);
+		pd_update = new ProgressDialog(MainActivity.this);
 
 		instance = this;
 		if(mycreateSDFile.hasFile("cache")){
 			useremail = mycreateSDFile.readSDFile("cache");
+			Log.e(TAG,"has cache");
 		}
 		else{
 			useremail = "您还未登录";
+			Log.e(TAG,"has not cache");
 		}
 		Log.e(TAG,useremail);
 		//监听生命周期
@@ -248,6 +252,8 @@ public class MainActivity extends BaseActivity {
 
 		//region 获取用户
 		if(mycreateSDFile.hasFile("cache")) {
+			//pd_update.setMessage("更新数据中......");
+			//pd_update.show();
 			new Thread(new Runnable() {
 				public void run() {
 					try {

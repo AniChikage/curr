@@ -71,12 +71,13 @@ public class LoginActivity extends BaseActivity {
 		super.onCreate(savedInstanceState);
 
 		// enter the main activity if already logged in
+		/*
 		if (DemoHelper.getInstance().isLoggedIn()) {
 			autoLogin = true;
 			startActivity(new Intent(LoginActivity.this, MainActivity.class));
-
 			return;
 		}
+		*/
 		setContentView(R.layout.em_activity_login);
 
 		mycreateSDFile = new createSDFile(getBaseContext());

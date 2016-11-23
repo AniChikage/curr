@@ -6,7 +6,7 @@
     android:versionName="3.1.6" >
 
     <uses-sdk
-        android:minSdkVersion="11"
+        android:minSdkVersion="14"
         android:targetSdkVersion="22" />
 
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -50,7 +50,7 @@
     <application
         android:name="com.hyphenate.chatuidemo.DemoApplication"
         android:allowBackup="true"
-        android:icon="@drawable/em_logo_uidemo"
+        android:icon="@drawable/app_logo"
         android:label="@string/app_name"
         android:largeHeap="true" >
         <activity
@@ -433,6 +433,14 @@
         <!-- CSAPPOINTDETAIL -->
         <activity
             android:name="com.hyphenate.chatuidemo.ui.LoginActivity_new"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <!-- ManageSchedule -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.Consellor.ManageSchedule"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustPan" >

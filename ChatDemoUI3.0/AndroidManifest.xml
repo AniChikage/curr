@@ -53,7 +53,7 @@
         android:name=".DemoApplication"
         android:allowBackup="true"
         android:largeHeap="true"
-        android:icon="@drawable/em_logo_uidemo"
+        android:icon="@drawable/app_logo"
         android:label="@string/app_name">
         <activity
             android:name=".ui.MainActivity"
@@ -436,6 +436,14 @@
         <!-- CSAPPOINTDETAIL-->
         <activity
             android:name=".ui.LoginActivity_new"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+
+        <!-- ManageSchedule-->
+        <activity
+            android:name=".Consellor.ManageSchedule"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustPan">
