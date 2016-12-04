@@ -987,7 +987,7 @@ public class MainActivity extends BaseActivity {
 		DisplayMetrics metric = new DisplayMetrics();
 		getWindowManager().getDefaultDisplay().getMetrics(metric);
 		int width = metric.widthPixels;     // 屏幕宽度（像素）
-		popupwindow = new PopupWindow(customView, width/3,width/3 );
+		popupwindow = new PopupWindow(customView, width/3,width*2/9 );
 		// 设置动画效果 [R.style.AnimationFade 是自己事先定义好的]
 		popupwindow.setAnimationStyle(R.style.AnimationFade);
 		// 自定义view添加触摸事件
@@ -1007,7 +1007,7 @@ public class MainActivity extends BaseActivity {
 		/** 在这里可以实现自定义视图的功能 */
 		Button btton2 = (Button) customView.findViewById(R.id.zhuanchang);
 		Button btton3 = (Button) customView.findViewById(R.id.jiage);
-		Button btton4 = (Button) customView.findViewById(R.id.keyuyue);
+		//Button btton4 = (Button) customView.findViewById(R.id.keyuyue);
 		btton2.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -1056,6 +1056,7 @@ public class MainActivity extends BaseActivity {
 				}
 			}
 		});
+		/*
 		btton4.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -1065,6 +1066,7 @@ public class MainActivity extends BaseActivity {
 				}
 			}
 		});
+		*/
 	}
 
 

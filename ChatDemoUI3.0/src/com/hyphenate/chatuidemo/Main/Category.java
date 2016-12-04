@@ -57,7 +57,7 @@ public class Category extends Activity {
         setContentView(R.layout.category);
         hcontext=this.getApplicationContext();
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS); //透明状态栏
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION); //透明导航栏
+        //getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION); //透明导航栏
 
         //接收信息
         Bundle bundle = getIntent().getExtras();

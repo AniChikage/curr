@@ -25,6 +25,9 @@
     <string msgid="7586639618712934060" name="hour_picker_description">"Apskritas valandų šliaužiklis"</string>
     <string msgid="2674929164900463786" name="item_is_selected">"Elementas „<ns1:g id="ITEM">%1$s</ns1:g>“ pasirinktas"</string>
     <string msgid="6024811202872705251" name="minute_picker_description">"Apskritas minučių šliaužiklis"</string>
+    <string name="pull_to_refresh_pull_label">Traukite, kad atnaujinti…</string>
+    <string name="pull_to_refresh_refreshing_label">Kraunama…</string>
+    <string name="pull_to_refresh_release_label">Paleiskite, kad atnaujinti…</string>
     <string msgid="3973338219107019769" name="select_day">"Pasirinkite mėnesį ir dieną"</string>
     <string msgid="7651068754188418859" name="select_hours">"Pasirinkite valandas"</string>
     <string msgid="8327182090226828481" name="select_minutes">"Pasirinkite minutes"</string>

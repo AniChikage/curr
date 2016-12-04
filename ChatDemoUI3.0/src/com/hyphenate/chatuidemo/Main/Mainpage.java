@@ -604,7 +604,7 @@ public class Mainpage extends Activity {
         /** 在这里可以实现自定义视图的功能 */
         Button btton2 = (Button) customView.findViewById(R.id.zhuanchang);
         Button btton3 = (Button) customView.findViewById(R.id.jiage);
-        Button btton4 = (Button) customView.findViewById(R.id.keyuyue);
+        //Button btton4 = (Button) customView.findViewById(R.id.keyuyue);
         btton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -623,15 +623,7 @@ public class Mainpage extends Activity {
                 }
             }
         });
-        btton4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                paixu.setText("可预约");
-                if (popupwindow != null&&popupwindow.isShowing()) {
-                    popupwindow.dismiss();
-                }
-            }
-        });
+
     }
 
     //咨询师信息

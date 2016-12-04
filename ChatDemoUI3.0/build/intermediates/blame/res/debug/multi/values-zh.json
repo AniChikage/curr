@@ -8215,8 +8215,65 @@
                     "startLine": 434,
                     "startColumn": 4,
                     "startOffset": 23920,
+                    "endColumn": 60,
+                    "endOffset": 23976
+                },
+                "from": {
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.github.chrisbanes.actionbarpulltorefresh\\library\\0.9.9\\res\\values-zh\\values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 206,
+                        "endColumn": 60,
+                        "endOffset": 262
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 435,
+                    "startColumn": 4,
+                    "startOffset": 23981,
+                    "endColumn": 66,
+                    "endOffset": 24043
+                },
+                "from": {
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.github.chrisbanes.actionbarpulltorefresh\\library\\0.9.9\\res\\values-zh\\values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 267,
+                        "endColumn": 66,
+                        "endOffset": 329
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 436,
+                    "startColumn": 4,
+                    "startOffset": 24048,
+                    "endColumn": 64,
+                    "endOffset": 24108
+                },
+                "from": {
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.github.chrisbanes.actionbarpulltorefresh\\library\\0.9.9\\res\\values-zh\\values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 334,
+                        "endColumn": 64,
+                        "endOffset": 394
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 437,
+                    "startColumn": 4,
+                    "startOffset": 24113,
                     "endColumn": 47,
-                    "endOffset": 23963
+                    "endOffset": 24156
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -8231,11 +8288,11 @@
             },
             {
                 "to": {
-                    "startLine": 435,
+                    "startLine": 438,
                     "startColumn": 4,
-                    "startOffset": 23968,
+                    "startOffset": 24161,
                     "endColumn": 42,
-                    "endOffset": 24006
+                    "endOffset": 24199
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8250,11 +8307,11 @@
             },
             {
                 "to": {
-                    "startLine": 436,
+                    "startLine": 439,
                     "startColumn": 4,
-                    "startOffset": 24011,
+                    "startOffset": 24204,
                     "endColumn": 64,
-                    "endOffset": 24071
+                    "endOffset": 24264
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -8269,11 +8326,11 @@
             },
             {
                 "to": {
-                    "startLine": 437,
+                    "startLine": 440,
                     "startColumn": 4,
-                    "startOffset": 24076,
+                    "startOffset": 24269,
                     "endColumn": 48,
-                    "endOffset": 24120
+                    "endOffset": 24313
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8288,11 +8345,11 @@
             },
             {
                 "to": {
-                    "startLine": 438,
+                    "startLine": 441,
                     "startColumn": 4,
-                    "startOffset": 24125,
+                    "startOffset": 24318,
                     "endColumn": 64,
-                    "endOffset": 24185
+                    "endOffset": 24378
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8307,11 +8364,11 @@
             },
             {
                 "to": {
-                    "startLine": 439,
+                    "startLine": 442,
                     "startColumn": 4,
-                    "startOffset": 24190,
+                    "startOffset": 24383,
                     "endColumn": 60,
-                    "endOffset": 24246
+                    "endOffset": 24439
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8326,11 +8383,11 @@
             },
             {
                 "to": {
-                    "startLine": 440,
+                    "startLine": 443,
                     "startColumn": 4,
-                    "startOffset": 24251,
+                    "startOffset": 24444,
                     "endColumn": 60,
-                    "endOffset": 24307
+                    "endOffset": 24500
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8345,11 +8402,11 @@
             },
             {
                 "to": {
-                    "startLine": 441,
+                    "startLine": 444,
                     "startColumn": 4,
-                    "startOffset": 24312,
+                    "startOffset": 24505,
                     "endColumn": 51,
-                    "endOffset": 24359
+                    "endOffset": 24552
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8364,11 +8421,11 @@
             },
             {
                 "to": {
-                    "startLine": 442,
+                    "startLine": 445,
                     "startColumn": 4,
-                    "startOffset": 24364,
+                    "startOffset": 24557,
                     "endColumn": 51,
-                    "endOffset": 24411
+                    "endOffset": 24604
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -8383,11 +8440,11 @@
             },
             {
                 "to": {
-                    "startLine": 443,
+                    "startLine": 446,
                     "startColumn": 4,
-                    "startOffset": 24416,
+                    "startOffset": 24609,
                     "endColumn": 60,
-                    "endOffset": 24472
+                    "endOffset": 24665
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -8402,11 +8459,11 @@
             },
             {
                 "to": {
-                    "startLine": 444,
+                    "startLine": 447,
                     "startColumn": 4,
-                    "startOffset": 24477,
+                    "startOffset": 24670,
                     "endColumn": 48,
-                    "endOffset": 24521
+                    "endOffset": 24714
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -8421,11 +8478,11 @@
             },
             {
                 "to": {
-                    "startLine": 445,
+                    "startLine": 448,
                     "startColumn": 4,
-                    "startOffset": 24526,
+                    "startOffset": 24719,
                     "endColumn": 40,
-                    "endOffset": 24562
+                    "endOffset": 24755
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8440,11 +8497,11 @@
             },
             {
                 "to": {
-                    "startLine": 446,
+                    "startLine": 449,
                     "startColumn": 4,
-                    "startOffset": 24567,
+                    "startOffset": 24760,
                     "endColumn": 57,
-                    "endOffset": 24620
+                    "endOffset": 24813
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -8459,11 +8516,11 @@
             },
             {
                 "to": {
-                    "startLine": 447,
+                    "startLine": 450,
                     "startColumn": 4,
-                    "startOffset": 24625,
+                    "startOffset": 24818,
                     "endColumn": 37,
-                    "endOffset": 24658
+                    "endOffset": 24851
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -8478,11 +8535,11 @@
             },
             {
                 "to": {
-                    "startLine": 448,
+                    "startLine": 451,
                     "startColumn": 4,
-                    "startOffset": 24663,
+                    "startOffset": 24856,
                     "endColumn": 52,
-                    "endOffset": 24711
+                    "endOffset": 24904
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -8497,11 +8554,11 @@
             },
             {
                 "to": {
-                    "startLine": 449,
+                    "startLine": 452,
                     "startColumn": 4,
-                    "startOffset": 24716,
+                    "startOffset": 24909,
                     "endColumn": 39,
-                    "endOffset": 24751
+                    "endOffset": 24944
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -8516,11 +8573,11 @@
             },
             {
                 "to": {
-                    "startLine": 450,
+                    "startLine": 453,
                     "startColumn": 4,
-                    "startOffset": 24756,
+                    "startOffset": 24949,
                     "endColumn": 76,
-                    "endOffset": 24828
+                    "endOffset": 25021
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -8535,11 +8592,11 @@
             },
             {
                 "to": {
-                    "startLine": 451,
+                    "startLine": 454,
                     "startColumn": 4,
-                    "startOffset": 24833,
+                    "startOffset": 25026,
                     "endColumn": 44,
-                    "endOffset": 24873
+                    "endOffset": 25066
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -8554,11 +8611,11 @@
             },
             {
                 "to": {
-                    "startLine": 452,
+                    "startLine": 455,
                     "startColumn": 4,
-                    "startOffset": 24878,
+                    "startOffset": 25071,
                     "endColumn": 55,
-                    "endOffset": 24929
+                    "endOffset": 25122
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -8573,11 +8630,11 @@
             },
             {
                 "to": {
-                    "startLine": 453,
+                    "startLine": 456,
                     "startColumn": 4,
-                    "startOffset": 24934,
+                    "startOffset": 25127,
                     "endColumn": 62,
-                    "endOffset": 24992
+                    "endOffset": 25185
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -8592,11 +8649,11 @@
             },
             {
                 "to": {
-                    "startLine": 454,
+                    "startLine": 457,
                     "startColumn": 4,
-                    "startOffset": 24997,
+                    "startOffset": 25190,
                     "endColumn": 37,
-                    "endOffset": 25030
+                    "endOffset": 25223
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -8611,11 +8668,11 @@
             },
             {
                 "to": {
-                    "startLine": 455,
+                    "startLine": 458,
                     "startColumn": 4,
-                    "startOffset": 25035,
+                    "startOffset": 25228,
                     "endColumn": 48,
-                    "endOffset": 25079
+                    "endOffset": 25272
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8630,11 +8687,11 @@
             },
             {
                 "to": {
-                    "startLine": 456,
+                    "startLine": 459,
                     "startColumn": 4,
-                    "startOffset": 25084,
+                    "startOffset": 25277,
                     "endColumn": 49,
-                    "endOffset": 25129
+                    "endOffset": 25322
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8649,11 +8706,11 @@
             },
             {
                 "to": {
-                    "startLine": 457,
+                    "startLine": 460,
                     "startColumn": 4,
-                    "startOffset": 25134,
+                    "startOffset": 25327,
                     "endColumn": 44,
-                    "endOffset": 25174
+                    "endOffset": 25367
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -8668,11 +8725,11 @@
             },
             {
                 "to": {
-                    "startLine": 458,
+                    "startLine": 461,
                     "startColumn": 4,
-                    "startOffset": 25179,
+                    "startOffset": 25372,
                     "endColumn": 35,
-                    "endOffset": 25210
+                    "endOffset": 25403
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -8687,11 +8744,11 @@
             },
             {
                 "to": {
-                    "startLine": 459,
+                    "startLine": 462,
                     "startColumn": 4,
-                    "startOffset": 25215,
+                    "startOffset": 25408,
                     "endColumn": 48,
-                    "endOffset": 25259
+                    "endOffset": 25452
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -8706,11 +8763,11 @@
             },
             {
                 "to": {
-                    "startLine": 460,
+                    "startLine": 463,
                     "startColumn": 4,
-                    "startOffset": 25264,
+                    "startOffset": 25457,
                     "endColumn": 62,
-                    "endOffset": 25322
+                    "endOffset": 25515
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -8725,11 +8782,11 @@
             },
             {
                 "to": {
-                    "startLine": 461,
+                    "startLine": 464,
                     "startColumn": 4,
-                    "startOffset": 25327,
+                    "startOffset": 25520,
                     "endColumn": 37,
-                    "endOffset": 25360
+                    "endOffset": 25553
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -8744,11 +8801,11 @@
             },
             {
                 "to": {
-                    "startLine": 462,
+                    "startLine": 465,
                     "startColumn": 4,
-                    "startOffset": 25365,
+                    "startOffset": 25558,
                     "endColumn": 52,
-                    "endOffset": 25413
+                    "endOffset": 25606
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -8763,11 +8820,11 @@
             },
             {
                 "to": {
-                    "startLine": 463,
+                    "startLine": 466,
                     "startColumn": 4,
-                    "startOffset": 25418,
+                    "startOffset": 25611,
                     "endColumn": 43,
-                    "endOffset": 25457
+                    "endOffset": 25650
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -8782,11 +8839,11 @@
             },
             {
                 "to": {
-                    "startLine": 464,
+                    "startLine": 467,
                     "startColumn": 4,
-                    "startOffset": 25462,
+                    "startOffset": 25655,
                     "endColumn": 40,
-                    "endOffset": 25498
+                    "endOffset": 25691
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -8801,11 +8858,11 @@
             },
             {
                 "to": {
-                    "startLine": 465,
+                    "startLine": 468,
                     "startColumn": 4,
-                    "startOffset": 25503,
+                    "startOffset": 25696,
                     "endColumn": 52,
-                    "endOffset": 25551
+                    "endOffset": 25744
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -8820,11 +8877,11 @@
             },
             {
                 "to": {
-                    "startLine": 466,
+                    "startLine": 469,
                     "startColumn": 4,
-                    "startOffset": 25556,
+                    "startOffset": 25749,
                     "endColumn": 44,
-                    "endOffset": 25596
+                    "endOffset": 25789
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -8839,11 +8896,11 @@
             },
             {
                 "to": {
-                    "startLine": 467,
+                    "startLine": 470,
                     "startColumn": 4,
-                    "startOffset": 25601,
+                    "startOffset": 25794,
                     "endColumn": 49,
-                    "endOffset": 25646
+                    "endOffset": 25839
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -8858,11 +8915,11 @@
             },
             {
                 "to": {
-                    "startLine": 468,
+                    "startLine": 471,
                     "startColumn": 4,
-                    "startOffset": 25651,
+                    "startOffset": 25844,
                     "endColumn": 45,
-                    "endOffset": 25692
+                    "endOffset": 25885
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -8877,11 +8934,11 @@
             },
             {
                 "to": {
-                    "startLine": 469,
+                    "startLine": 472,
                     "startColumn": 4,
-                    "startOffset": 25697,
+                    "startOffset": 25890,
                     "endColumn": 63,
-                    "endOffset": 25756
+                    "endOffset": 25949
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -8896,11 +8953,11 @@
             },
             {
                 "to": {
-                    "startLine": 470,
+                    "startLine": 473,
                     "startColumn": 4,
-                    "startOffset": 25761,
+                    "startOffset": 25954,
                     "endColumn": 69,
-                    "endOffset": 25826
+                    "endOffset": 26019
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8915,11 +8972,11 @@
             },
             {
                 "to": {
-                    "startLine": 471,
+                    "startLine": 474,
                     "startColumn": 4,
-                    "startOffset": 25831,
+                    "startOffset": 26024,
                     "endColumn": 48,
-                    "endOffset": 25875
+                    "endOffset": 26068
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8934,11 +8991,11 @@
             },
             {
                 "to": {
-                    "startLine": 472,
+                    "startLine": 475,
                     "startColumn": 4,
-                    "startOffset": 25880,
+                    "startOffset": 26073,
                     "endColumn": 57,
-                    "endOffset": 25933
+                    "endOffset": 26126
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -8953,11 +9010,11 @@
             },
             {
                 "to": {
-                    "startLine": 473,
+                    "startLine": 476,
                     "startColumn": 4,
-                    "startOffset": 25938,
+                    "startOffset": 26131,
                     "endColumn": 61,
-                    "endOffset": 25995
+                    "endOffset": 26188
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -8972,11 +9029,11 @@
             },
             {
                 "to": {
-                    "startLine": 474,
+                    "startLine": 477,
                     "startColumn": 4,
-                    "startOffset": 26000,
+                    "startOffset": 26193,
                     "endColumn": 53,
-                    "endOffset": 26049
+                    "endOffset": 26242
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -8991,11 +9048,11 @@
             },
             {
                 "to": {
-                    "startLine": 475,
+                    "startLine": 478,
                     "startColumn": 4,
-                    "startOffset": 26054,
+                    "startOffset": 26247,
                     "endColumn": 50,
-                    "endOffset": 26100
+                    "endOffset": 26293
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9010,11 +9067,11 @@
             },
             {
                 "to": {
-                    "startLine": 476,
+                    "startLine": 479,
                     "startColumn": 4,
-                    "startOffset": 26105,
+                    "startOffset": 26298,
                     "endColumn": 53,
-                    "endOffset": 26154
+                    "endOffset": 26347
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -9029,11 +9086,11 @@
             },
             {
                 "to": {
-                    "startLine": 477,
+                    "startLine": 480,
                     "startColumn": 4,
-                    "startOffset": 26159,
+                    "startOffset": 26352,
                     "endColumn": 57,
-                    "endOffset": 26212
+                    "endOffset": 26405
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9048,11 +9105,11 @@
             },
             {
                 "to": {
-                    "startLine": 478,
+                    "startLine": 481,
                     "startColumn": 4,
-                    "startOffset": 26217,
+                    "startOffset": 26410,
                     "endColumn": 54,
-                    "endOffset": 26267
+                    "endOffset": 26460
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9067,11 +9124,11 @@
             },
             {
                 "to": {
-                    "startLine": 479,
+                    "startLine": 482,
                     "startColumn": 4,
-                    "startOffset": 26272,
+                    "startOffset": 26465,
                     "endColumn": 38,
-                    "endOffset": 26306
+                    "endOffset": 26499
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -9086,11 +9143,11 @@
             },
             {
                 "to": {
-                    "startLine": 480,
+                    "startLine": 483,
                     "startColumn": 4,
-                    "startOffset": 26311,
+                    "startOffset": 26504,
                     "endColumn": 34,
-                    "endOffset": 26341
+                    "endOffset": 26534
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -9105,11 +9162,11 @@
             },
             {
                 "to": {
-                    "startLine": 481,
+                    "startLine": 484,
                     "startColumn": 4,
-                    "startOffset": 26346,
+                    "startOffset": 26539,
                     "endColumn": 55,
-                    "endOffset": 26397
+                    "endOffset": 26590
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -9124,11 +9181,11 @@
             },
             {
                 "to": {
-                    "startLine": 482,
+                    "startLine": 485,
                     "startColumn": 4,
-                    "startOffset": 26402,
+                    "startOffset": 26595,
                     "endColumn": 51,
-                    "endOffset": 26449
+                    "endOffset": 26642
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9143,11 +9200,11 @@
             },
             {
                 "to": {
-                    "startLine": 483,
+                    "startLine": 486,
                     "startColumn": 4,
-                    "startOffset": 26454,
+                    "startOffset": 26647,
                     "endColumn": 63,
-                    "endOffset": 26513
+                    "endOffset": 26706
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9162,11 +9219,11 @@
             },
             {
                 "to": {
-                    "startLine": 484,
+                    "startLine": 487,
                     "startColumn": 4,
-                    "startOffset": 26518,
+                    "startOffset": 26711,
                     "endColumn": 38,
-                    "endOffset": 26552
+                    "endOffset": 26745
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -9181,11 +9238,11 @@
             },
             {
                 "to": {
-                    "startLine": 485,
+                    "startLine": 488,
                     "startColumn": 4,
-                    "startOffset": 26557,
+                    "startOffset": 26750,
                     "endColumn": 49,
-                    "endOffset": 26602
+                    "endOffset": 26795
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -9200,11 +9257,11 @@
             },
             {
                 "to": {
-                    "startLine": 486,
+                    "startLine": 489,
                     "startColumn": 4,
-                    "startOffset": 26607,
+                    "startOffset": 26800,
                     "endColumn": 36,
-                    "endOffset": 26639
+                    "endOffset": 26832
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -9219,11 +9276,11 @@
             },
             {
                 "to": {
-                    "startLine": 487,
+                    "startLine": 490,
                     "startColumn": 4,
-                    "startOffset": 26644,
+                    "startOffset": 26837,
                     "endColumn": 55,
-                    "endOffset": 26695
+                    "endOffset": 26888
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9238,11 +9295,11 @@
             },
             {
                 "to": {
-                    "startLine": 488,
+                    "startLine": 491,
                     "startColumn": 4,
-                    "startOffset": 26700,
+                    "startOffset": 26893,
                     "endColumn": 49,
-                    "endOffset": 26745
+                    "endOffset": 26938
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9257,11 +9314,11 @@
             },
             {
                 "to": {
-                    "startLine": 489,
+                    "startLine": 492,
                     "startColumn": 4,
-                    "startOffset": 26750,
+                    "startOffset": 26943,
                     "endColumn": 74,
-                    "endOffset": 26820
+                    "endOffset": 27013
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9276,11 +9333,11 @@
             },
             {
                 "to": {
-                    "startLine": 490,
+                    "startLine": 493,
                     "startColumn": 4,
-                    "startOffset": 26825,
+                    "startOffset": 27018,
                     "endColumn": 56,
-                    "endOffset": 26877
+                    "endOffset": 27070
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9295,11 +9352,11 @@
             },
             {
                 "to": {
-                    "startLine": 491,
+                    "startLine": 494,
                     "startColumn": 4,
-                    "startOffset": 26882,
+                    "startOffset": 27075,
                     "endColumn": 51,
-                    "endOffset": 26929
+                    "endOffset": 27122
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9314,11 +9371,11 @@
             },
             {
                 "to": {
-                    "startLine": 492,
+                    "startLine": 495,
                     "startColumn": 4,
-                    "startOffset": 26934,
+                    "startOffset": 27127,
                     "endColumn": 65,
-                    "endOffset": 26995
+                    "endOffset": 27188
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9333,11 +9390,11 @@
             },
             {
                 "to": {
-                    "startLine": 493,
+                    "startLine": 496,
                     "startColumn": 4,
-                    "startOffset": 27000,
+                    "startOffset": 27193,
                     "endColumn": 65,
-                    "endOffset": 27061
+                    "endOffset": 27254
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9352,11 +9409,11 @@
             },
             {
                 "to": {
-                    "startLine": 494,
+                    "startLine": 497,
                     "startColumn": 4,
-                    "startOffset": 27066,
+                    "startOffset": 27259,
                     "endColumn": 43,
-                    "endOffset": 27105
+                    "endOffset": 27298
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9371,11 +9428,11 @@
             },
             {
                 "to": {
-                    "startLine": 495,
+                    "startLine": 498,
                     "startColumn": 4,
-                    "startOffset": 27110,
+                    "startOffset": 27303,
                     "endColumn": 56,
-                    "endOffset": 27162
+                    "endOffset": 27355
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9390,11 +9447,11 @@
             },
             {
                 "to": {
-                    "startLine": 496,
+                    "startLine": 499,
                     "startColumn": 4,
-                    "startOffset": 27167,
+                    "startOffset": 27360,
                     "endColumn": 65,
-                    "endOffset": 27228
+                    "endOffset": 27421
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9409,11 +9466,11 @@
             },
             {
                 "to": {
-                    "startLine": 497,
+                    "startLine": 500,
                     "startColumn": 4,
-                    "startOffset": 27233,
+                    "startOffset": 27426,
                     "endColumn": 51,
-                    "endOffset": 27280
+                    "endOffset": 27473
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9428,11 +9485,11 @@
             },
             {
                 "to": {
-                    "startLine": 498,
+                    "startLine": 501,
                     "startColumn": 4,
-                    "startOffset": 27285,
+                    "startOffset": 27478,
                     "endColumn": 44,
-                    "endOffset": 27325
+                    "endOffset": 27518
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -9447,11 +9504,11 @@
             },
             {
                 "to": {
-                    "startLine": 499,
+                    "startLine": 502,
                     "startColumn": 4,
-                    "startOffset": 27330,
+                    "startOffset": 27523,
                     "endColumn": 63,
-                    "endOffset": 27389
+                    "endOffset": 27582
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9466,11 +9523,11 @@
             },
             {
                 "to": {
-                    "startLine": 500,
+                    "startLine": 503,
                     "startColumn": 4,
-                    "startOffset": 27394,
+                    "startOffset": 27587,
                     "endColumn": 49,
-                    "endOffset": 27439
+                    "endOffset": 27632
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9485,11 +9542,11 @@
             },
             {
                 "to": {
-                    "startLine": 501,
+                    "startLine": 504,
                     "startColumn": 4,
-                    "startOffset": 27444,
+                    "startOffset": 27637,
                     "endColumn": 50,
-                    "endOffset": 27490
+                    "endOffset": 27683
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9504,11 +9561,11 @@
             },
             {
                 "to": {
-                    "startLine": 502,
+                    "startLine": 505,
                     "startColumn": 4,
-                    "startOffset": 27495,
+                    "startOffset": 27688,
                     "endColumn": 51,
-                    "endOffset": 27542
+                    "endOffset": 27735
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9523,11 +9580,11 @@
             },
             {
                 "to": {
-                    "startLine": 503,
+                    "startLine": 506,
                     "startColumn": 4,
-                    "startOffset": 27547,
+                    "startOffset": 27740,
                     "endColumn": 62,
-                    "endOffset": 27605
+                    "endOffset": 27798
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9542,11 +9599,11 @@
             },
             {
                 "to": {
-                    "startLine": 504,
+                    "startLine": 507,
                     "startColumn": 4,
-                    "startOffset": 27610,
+                    "startOffset": 27803,
                     "endColumn": 55,
-                    "endOffset": 27661
+                    "endOffset": 27854
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9561,11 +9618,11 @@
             },
             {
                 "to": {
-                    "startLine": 505,
+                    "startLine": 508,
                     "startColumn": 4,
-                    "startOffset": 27666,
+                    "startOffset": 27859,
                     "endColumn": 48,
-                    "endOffset": 27710
+                    "endOffset": 27903
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9580,11 +9637,11 @@
             },
             {
                 "to": {
-                    "startLine": 506,
+                    "startLine": 509,
                     "startColumn": 4,
-                    "startOffset": 27715,
+                    "startOffset": 27908,
                     "endColumn": 46,
-                    "endOffset": 27757
+                    "endOffset": 27950
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9599,11 +9656,11 @@
             },
             {
                 "to": {
-                    "startLine": 507,
+                    "startLine": 510,
                     "startColumn": 4,
-                    "startOffset": 27762,
+                    "startOffset": 27955,
                     "endColumn": 52,
-                    "endOffset": 27810
+                    "endOffset": 28003
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9618,11 +9675,11 @@
             },
             {
                 "to": {
-                    "startLine": 508,
+                    "startLine": 511,
                     "startColumn": 4,
-                    "startOffset": 27815,
+                    "startOffset": 28008,
                     "endColumn": 47,
-                    "endOffset": 27858
+                    "endOffset": 28051
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9637,11 +9694,11 @@
             },
             {
                 "to": {
-                    "startLine": 509,
+                    "startLine": 512,
                     "startColumn": 4,
-                    "startOffset": 27863,
+                    "startOffset": 28056,
                     "endColumn": 51,
-                    "endOffset": 27910
+                    "endOffset": 28103
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9656,11 +9713,11 @@
             },
             {
                 "to": {
-                    "startLine": 510,
+                    "startLine": 513,
                     "startColumn": 4,
-                    "startOffset": 27915,
+                    "startOffset": 28108,
                     "endColumn": 52,
-                    "endOffset": 27963
+                    "endOffset": 28156
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9675,11 +9732,11 @@
             },
             {
                 "to": {
-                    "startLine": 511,
+                    "startLine": 514,
                     "startColumn": 4,
-                    "startOffset": 27968,
+                    "startOffset": 28161,
                     "endColumn": 54,
-                    "endOffset": 28018
+                    "endOffset": 28211
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9694,11 +9751,11 @@
             },
             {
                 "to": {
-                    "startLine": 512,
+                    "startLine": 515,
                     "startColumn": 4,
-                    "startOffset": 28023,
+                    "startOffset": 28216,
                     "endColumn": 41,
-                    "endOffset": 28060
+                    "endOffset": 28253
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9713,11 +9770,11 @@
             },
             {
                 "to": {
-                    "startLine": 513,
+                    "startLine": 516,
                     "startColumn": 4,
-                    "startOffset": 28065,
+                    "startOffset": 28258,
                     "endColumn": 43,
-                    "endOffset": 28104
+                    "endOffset": 28297
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9732,11 +9789,11 @@
             },
             {
                 "to": {
-                    "startLine": 514,
+                    "startLine": 517,
                     "startColumn": 4,
-                    "startOffset": 28109,
+                    "startOffset": 28302,
                     "endColumn": 65,
-                    "endOffset": 28170
+                    "endOffset": 28363
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9751,11 +9808,11 @@
             },
             {
                 "to": {
-                    "startLine": 515,
+                    "startLine": 518,
                     "startColumn": 4,
-                    "startOffset": 28175,
+                    "startOffset": 28368,
                     "endColumn": 53,
-                    "endOffset": 28224
+                    "endOffset": 28417
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9770,11 +9827,11 @@
             },
             {
                 "to": {
-                    "startLine": 516,
+                    "startLine": 519,
                     "startColumn": 4,
-                    "startOffset": 28229,
+                    "startOffset": 28422,
                     "endColumn": 60,
-                    "endOffset": 28285
+                    "endOffset": 28478
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -9789,11 +9846,11 @@
             },
             {
                 "to": {
-                    "startLine": 517,
+                    "startLine": 520,
                     "startColumn": 4,
-                    "startOffset": 28290,
+                    "startOffset": 28483,
                     "endColumn": 47,
-                    "endOffset": 28333
+                    "endOffset": 28526
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -9808,11 +9865,11 @@
             },
             {
                 "to": {
-                    "startLine": 518,
+                    "startLine": 521,
                     "startColumn": 4,
-                    "startOffset": 28338,
+                    "startOffset": 28531,
                     "endColumn": 60,
-                    "endOffset": 28394
+                    "endOffset": 28587
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -9827,11 +9884,11 @@
             },
             {
                 "to": {
-                    "startLine": 519,
+                    "startLine": 522,
                     "startColumn": 4,
-                    "startOffset": 28399,
+                    "startOffset": 28592,
                     "endColumn": 43,
-                    "endOffset": 28438
+                    "endOffset": 28631
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -9846,11 +9903,11 @@
             },
             {
                 "to": {
-                    "startLine": 520,
+                    "startLine": 523,
                     "startColumn": 4,
-                    "startOffset": 28443,
+                    "startOffset": 28636,
                     "endColumn": 49,
-                    "endOffset": 28488
+                    "endOffset": 28681
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -9865,11 +9922,11 @@
             },
             {
                 "to": {
-                    "startLine": 521,
+                    "startLine": 524,
                     "startColumn": 4,
-                    "startOffset": 28493,
+                    "startOffset": 28686,
                     "endColumn": 58,
-                    "endOffset": 28547
+                    "endOffset": 28740
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -9884,11 +9941,11 @@
             },
             {
                 "to": {
-                    "startLine": 522,
+                    "startLine": 525,
                     "startColumn": 4,
-                    "startOffset": 28552,
+                    "startOffset": 28745,
                     "endColumn": 63,
-                    "endOffset": 28611
+                    "endOffset": 28804
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -9903,11 +9960,11 @@
             },
             {
                 "to": {
-                    "startLine": 523,
+                    "startLine": 526,
                     "startColumn": 4,
-                    "startOffset": 28616,
+                    "startOffset": 28809,
                     "endColumn": 62,
-                    "endOffset": 28674
+                    "endOffset": 28867
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9922,11 +9979,11 @@
             },
             {
                 "to": {
-                    "startLine": 524,
+                    "startLine": 527,
                     "startColumn": 4,
-                    "startOffset": 28679,
+                    "startOffset": 28872,
                     "endColumn": 56,
-                    "endOffset": 28731
+                    "endOffset": 28924
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9941,11 +9998,11 @@
             },
             {
                 "to": {
-                    "startLine": 525,
+                    "startLine": 528,
                     "startColumn": 4,
-                    "startOffset": 28736,
+                    "startOffset": 28929,
                     "endColumn": 52,
-                    "endOffset": 28784
+                    "endOffset": 28977
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9960,11 +10017,11 @@
             },
             {
                 "to": {
-                    "startLine": 526,
+                    "startLine": 529,
                     "startColumn": 4,
-                    "startOffset": 28789,
+                    "startOffset": 28982,
                     "endColumn": 61,
-                    "endOffset": 28846
+                    "endOffset": 29039
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9979,11 +10036,11 @@
             },
             {
                 "to": {
-                    "startLine": 527,
+                    "startLine": 530,
                     "startColumn": 4,
-                    "startOffset": 28851,
+                    "startOffset": 29044,
                     "endColumn": 54,
-                    "endOffset": 28901
+                    "endOffset": 29094
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -9998,11 +10055,11 @@
             },
             {
                 "to": {
-                    "startLine": 528,
+                    "startLine": 531,
                     "startColumn": 4,
-                    "startOffset": 28906,
+                    "startOffset": 29099,
                     "endColumn": 42,
-                    "endOffset": 28944
+                    "endOffset": 29137
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10017,11 +10074,11 @@
             },
             {
                 "to": {
-                    "startLine": 529,
+                    "startLine": 532,
                     "startColumn": 4,
-                    "startOffset": 28949,
+                    "startOffset": 29142,
                     "endColumn": 53,
-                    "endOffset": 28998
+                    "endOffset": 29191
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10036,11 +10093,11 @@
             },
             {
                 "to": {
-                    "startLine": 530,
+                    "startLine": 533,
                     "startColumn": 4,
-                    "startOffset": 29003,
+                    "startOffset": 29196,
                     "endColumn": 56,
-                    "endOffset": 29055
+                    "endOffset": 29248
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10055,11 +10112,11 @@
             },
             {
                 "to": {
-                    "startLine": 531,
+                    "startLine": 534,
                     "startColumn": 4,
-                    "startOffset": 29060,
+                    "startOffset": 29253,
                     "endColumn": 55,
-                    "endOffset": 29111
+                    "endOffset": 29304
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10074,11 +10131,11 @@
             },
             {
                 "to": {
-                    "startLine": 532,
+                    "startLine": 535,
                     "startColumn": 4,
-                    "startOffset": 29116,
+                    "startOffset": 29309,
                     "endColumn": 54,
-                    "endOffset": 29166
+                    "endOffset": 29359
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10093,11 +10150,11 @@
             },
             {
                 "to": {
-                    "startLine": 533,
+                    "startLine": 536,
                     "startColumn": 4,
-                    "startOffset": 29171,
+                    "startOffset": 29364,
                     "endColumn": 58,
-                    "endOffset": 29225
+                    "endOffset": 29418
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10112,11 +10169,11 @@
             },
             {
                 "to": {
-                    "startLine": 534,
+                    "startLine": 537,
                     "startColumn": 4,
-                    "startOffset": 29230,
+                    "startOffset": 29423,
                     "endColumn": 55,
-                    "endOffset": 29281
+                    "endOffset": 29474
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10131,11 +10188,11 @@
             },
             {
                 "to": {
-                    "startLine": 535,
+                    "startLine": 538,
                     "startColumn": 4,
-                    "startOffset": 29286,
+                    "startOffset": 29479,
                     "endColumn": 52,
-                    "endOffset": 29334
+                    "endOffset": 29527
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10150,11 +10207,11 @@
             },
             {
                 "to": {
-                    "startLine": 536,
+                    "startLine": 539,
                     "startColumn": 4,
-                    "startOffset": 29339,
+                    "startOffset": 29532,
                     "endColumn": 49,
-                    "endOffset": 29384
+                    "endOffset": 29577
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10169,11 +10226,11 @@
             },
             {
                 "to": {
-                    "startLine": 537,
+                    "startLine": 540,
                     "startColumn": 4,
-                    "startOffset": 29389,
+                    "startOffset": 29582,
                     "endColumn": 51,
-                    "endOffset": 29436
+                    "endOffset": 29629
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -10188,11 +10245,11 @@
             },
             {
                 "to": {
-                    "startLine": 538,
+                    "startLine": 541,
                     "startColumn": 4,
-                    "startOffset": 29441,
+                    "startOffset": 29634,
                     "endColumn": 57,
-                    "endOffset": 29494
+                    "endOffset": 29687
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -10207,11 +10264,11 @@
             },
             {
                 "to": {
-                    "startLine": 539,
+                    "startLine": 542,
                     "startColumn": 4,
-                    "startOffset": 29499,
+                    "startOffset": 29692,
                     "endColumn": 50,
-                    "endOffset": 29545
+                    "endOffset": 29738
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -10226,11 +10283,11 @@
             },
             {
                 "to": {
-                    "startLine": 540,
+                    "startLine": 543,
                     "startColumn": 4,
-                    "startOffset": 29550,
+                    "startOffset": 29743,
                     "endColumn": 57,
-                    "endOffset": 29603
+                    "endOffset": 29796
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -10245,11 +10302,11 @@
             },
             {
                 "to": {
-                    "startLine": 541,
+                    "startLine": 544,
                     "startColumn": 4,
-                    "startOffset": 29608,
+                    "startOffset": 29801,
                     "endColumn": 60,
-                    "endOffset": 29664
+                    "endOffset": 29857
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -10264,11 +10321,11 @@
             },
             {
                 "to": {
-                    "startLine": 542,
+                    "startLine": 545,
                     "startColumn": 4,
-                    "startOffset": 29669,
+                    "startOffset": 29862,
                     "endColumn": 58,
-                    "endOffset": 29723
+                    "endOffset": 29916
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -10283,11 +10340,11 @@
             },
             {
                 "to": {
-                    "startLine": 543,
+                    "startLine": 546,
                     "startColumn": 4,
-                    "startOffset": 29728,
+                    "startOffset": 29921,
                     "endColumn": 61,
-                    "endOffset": 29785
+                    "endOffset": 29978
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -10302,11 +10359,11 @@
             },
             {
                 "to": {
-                    "startLine": 544,
+                    "startLine": 547,
                     "startColumn": 4,
-                    "startOffset": 29790,
+                    "startOffset": 29983,
                     "endColumn": 45,
-                    "endOffset": 29831
+                    "endOffset": 30024
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10321,11 +10378,11 @@
             },
             {
                 "to": {
-                    "startLine": 545,
+                    "startLine": 548,
                     "startColumn": 4,
-                    "startOffset": 29836,
+                    "startOffset": 30029,
                     "endColumn": 48,
-                    "endOffset": 29880
+                    "endOffset": 30073
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10340,11 +10397,11 @@
             },
             {
                 "to": {
-                    "startLine": 546,
+                    "startLine": 549,
                     "startColumn": 4,
-                    "startOffset": 29885,
+                    "startOffset": 30078,
                     "endColumn": 46,
-                    "endOffset": 29927
+                    "endOffset": 30120
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10359,11 +10416,11 @@
             },
             {
                 "to": {
-                    "startLine": 547,
+                    "startLine": 550,
                     "startColumn": 4,
-                    "startOffset": 29932,
+                    "startOffset": 30125,
                     "endColumn": 64,
-                    "endOffset": 29992
+                    "endOffset": 30185
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10378,11 +10435,11 @@
             },
             {
                 "to": {
-                    "startLine": 548,
+                    "startLine": 551,
                     "startColumn": 4,
-                    "startOffset": 29997,
+                    "startOffset": 30190,
                     "endColumn": 94,
-                    "endOffset": 30087
+                    "endOffset": 30280
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10397,11 +10454,11 @@
             },
             {
                 "to": {
-                    "startLine": 549,
+                    "startLine": 552,
                     "startColumn": 4,
-                    "startOffset": 30092,
+                    "startOffset": 30285,
                     "endColumn": 59,
-                    "endOffset": 30147
+                    "endOffset": 30340
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10416,11 +10473,11 @@
             },
             {
                 "to": {
-                    "startLine": 550,
+                    "startLine": 553,
                     "startColumn": 4,
-                    "startOffset": 30152,
+                    "startOffset": 30345,
                     "endColumn": 58,
-                    "endOffset": 30206
+                    "endOffset": 30399
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10435,11 +10492,11 @@
             },
             {
                 "to": {
-                    "startLine": 551,
+                    "startLine": 554,
                     "startColumn": 4,
-                    "startOffset": 30211,
+                    "startOffset": 30404,
                     "endColumn": 65,
-                    "endOffset": 30272
+                    "endOffset": 30465
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10454,11 +10511,11 @@
             },
             {
                 "to": {
-                    "startLine": 552,
+                    "startLine": 555,
                     "startColumn": 4,
-                    "startOffset": 30277,
+                    "startOffset": 30470,
                     "endColumn": 67,
-                    "endOffset": 30340
+                    "endOffset": 30533
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10473,11 +10530,11 @@
             },
             {
                 "to": {
-                    "startLine": 553,
+                    "startLine": 556,
                     "startColumn": 4,
-                    "startOffset": 30345,
+                    "startOffset": 30538,
                     "endColumn": 49,
-                    "endOffset": 30390
+                    "endOffset": 30583
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10492,11 +10549,11 @@
             },
             {
                 "to": {
-                    "startLine": 554,
+                    "startLine": 557,
                     "startColumn": 4,
-                    "startOffset": 30395,
+                    "startOffset": 30588,
                     "endColumn": 52,
-                    "endOffset": 30443
+                    "endOffset": 30636
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10511,11 +10568,11 @@
             },
             {
                 "to": {
-                    "startLine": 555,
+                    "startLine": 558,
                     "startColumn": 4,
-                    "startOffset": 30448,
+                    "startOffset": 30641,
                     "endColumn": 42,
-                    "endOffset": 30486
+                    "endOffset": 30679
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10530,11 +10587,11 @@
             },
             {
                 "to": {
-                    "startLine": 556,
+                    "startLine": 559,
                     "startColumn": 4,
-                    "startOffset": 30491,
+                    "startOffset": 30684,
                     "endColumn": 49,
-                    "endOffset": 30536
+                    "endOffset": 30729
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10549,11 +10606,11 @@
             },
             {
                 "to": {
-                    "startLine": 557,
+                    "startLine": 560,
                     "startColumn": 4,
-                    "startOffset": 30541,
+                    "startOffset": 30734,
                     "endColumn": 51,
-                    "endOffset": 30588
+                    "endOffset": 30781
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10568,11 +10625,11 @@
             },
             {
                 "to": {
-                    "startLine": 558,
+                    "startLine": 561,
                     "startColumn": 4,
-                    "startOffset": 30593,
+                    "startOffset": 30786,
                     "endColumn": 60,
-                    "endOffset": 30649
+                    "endOffset": 30842
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -10587,11 +10644,11 @@
             },
             {
                 "to": {
-                    "startLine": 559,
+                    "startLine": 562,
                     "startColumn": 4,
-                    "startOffset": 30654,
+                    "startOffset": 30847,
                     "endColumn": 57,
-                    "endOffset": 30707
+                    "endOffset": 30900
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\umeng_common_strings.xml",
@@ -10606,11 +10663,11 @@
             },
             {
                 "to": {
-                    "startLine": 560,
+                    "startLine": 563,
                     "startColumn": 4,
-                    "startOffset": 30712,
+                    "startOffset": 30905,
                     "endColumn": 59,
-                    "endOffset": 30767
+                    "endOffset": 30960
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\umeng_common_strings.xml",
@@ -10625,11 +10682,11 @@
             },
             {
                 "to": {
-                    "startLine": 561,
+                    "startLine": 564,
                     "startColumn": 4,
-                    "startOffset": 30772,
+                    "startOffset": 30965,
                     "endColumn": 65,
-                    "endOffset": 30833
+                    "endOffset": 31026
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\umeng_common_strings.xml",
@@ -10644,11 +10701,11 @@
             },
             {
                 "to": {
-                    "startLine": 562,
+                    "startLine": 565,
                     "startColumn": 4,
-                    "startOffset": 30838,
+                    "startOffset": 31031,
                     "endColumn": 56,
-                    "endOffset": 30890
+                    "endOffset": 31083
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\umeng_common_strings.xml",
@@ -10663,11 +10720,11 @@
             },
             {
                 "to": {
-                    "startLine": 563,
+                    "startLine": 566,
                     "startColumn": 4,
-                    "startOffset": 30895,
+                    "startOffset": 31088,
                     "endColumn": 61,
-                    "endOffset": 30952
+                    "endOffset": 31145
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\umeng_common_strings.xml",
@@ -10682,11 +10739,11 @@
             },
             {
                 "to": {
-                    "startLine": 564,
+                    "startLine": 567,
                     "startColumn": 4,
-                    "startOffset": 30957,
+                    "startOffset": 31150,
                     "endColumn": 67,
-                    "endOffset": 31020
+                    "endOffset": 31213
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\umeng_common_strings.xml",
@@ -10701,11 +10758,11 @@
             },
             {
                 "to": {
-                    "startLine": 565,
+                    "startLine": 568,
                     "startColumn": 4,
-                    "startOffset": 31025,
+                    "startOffset": 31218,
                     "endColumn": 76,
-                    "endOffset": 31097
+                    "endOffset": 31290
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\umeng_common_strings.xml",
@@ -10720,11 +10777,11 @@
             },
             {
                 "to": {
-                    "startLine": 566,
+                    "startLine": 569,
                     "startColumn": 4,
-                    "startOffset": 31102,
+                    "startOffset": 31295,
                     "endColumn": 71,
-                    "endOffset": 31169
+                    "endOffset": 31362
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\umeng_common_strings.xml",
@@ -10739,11 +10796,11 @@
             },
             {
                 "to": {
-                    "startLine": 567,
+                    "startLine": 570,
                     "startColumn": 4,
-                    "startOffset": 31174,
+                    "startOffset": 31367,
                     "endColumn": 71,
-                    "endOffset": 31241
+                    "endOffset": 31434
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\umeng_common_strings.xml",
@@ -10758,11 +10815,11 @@
             },
             {
                 "to": {
-                    "startLine": 568,
+                    "startLine": 571,
                     "startColumn": 4,
-                    "startOffset": 31246,
+                    "startOffset": 31439,
                     "endColumn": 64,
-                    "endOffset": 31306
+                    "endOffset": 31499
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\umeng_common_strings.xml",
@@ -10777,11 +10834,11 @@
             },
             {
                 "to": {
-                    "startLine": 569,
+                    "startLine": 572,
                     "startColumn": 4,
-                    "startOffset": 31311,
+                    "startOffset": 31504,
                     "endColumn": 71,
-                    "endOffset": 31378
+                    "endOffset": 31571
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\umeng_common_strings.xml",
@@ -10796,11 +10853,11 @@
             },
             {
                 "to": {
-                    "startLine": 570,
+                    "startLine": 573,
                     "startColumn": 4,
-                    "startOffset": 31383,
+                    "startOffset": 31576,
                     "endColumn": 78,
-                    "endOffset": 31457
+                    "endOffset": 31650
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\umeng_common_strings.xml",
@@ -10815,11 +10872,11 @@
             },
             {
                 "to": {
-                    "startLine": 571,
+                    "startLine": 574,
                     "startColumn": 4,
-                    "startOffset": 31462,
+                    "startOffset": 31655,
                     "endColumn": 75,
-                    "endOffset": 31533
+                    "endOffset": 31726
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\umeng_common_strings.xml",
@@ -10834,11 +10891,11 @@
             },
             {
                 "to": {
-                    "startLine": 572,
+                    "startLine": 575,
                     "startColumn": 4,
-                    "startOffset": 31538,
+                    "startOffset": 31731,
                     "endColumn": 73,
-                    "endOffset": 31607
+                    "endOffset": 31800
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\umeng_common_strings.xml",
@@ -10853,11 +10910,11 @@
             },
             {
                 "to": {
-                    "startLine": 573,
+                    "startLine": 576,
                     "startColumn": 4,
-                    "startOffset": 31612,
+                    "startOffset": 31805,
                     "endColumn": 54,
-                    "endOffset": 31662
+                    "endOffset": 31855
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -10872,11 +10929,11 @@
             },
             {
                 "to": {
-                    "startLine": 574,
+                    "startLine": 577,
                     "startColumn": 4,
-                    "startOffset": 31667,
+                    "startOffset": 31860,
                     "endColumn": 63,
-                    "endOffset": 31726
+                    "endOffset": 31919
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -10891,11 +10948,11 @@
             },
             {
                 "to": {
-                    "startLine": 575,
+                    "startLine": 578,
                     "startColumn": 4,
-                    "startOffset": 31731,
+                    "startOffset": 31924,
                     "endColumn": 51,
-                    "endOffset": 31778
+                    "endOffset": 31971
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -10910,11 +10967,11 @@
             },
             {
                 "to": {
-                    "startLine": 576,
+                    "startLine": 579,
                     "startColumn": 4,
-                    "startOffset": 31783,
+                    "startOffset": 31976,
                     "endColumn": 60,
-                    "endOffset": 31839
+                    "endOffset": 32032
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -10929,11 +10986,11 @@
             },
             {
                 "to": {
-                    "startLine": 577,
+                    "startLine": 580,
                     "startColumn": 4,
-                    "startOffset": 31844,
+                    "startOffset": 32037,
                     "endColumn": 55,
-                    "endOffset": 31895
+                    "endOffset": 32088
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -10948,11 +11005,11 @@
             },
             {
                 "to": {
-                    "startLine": 578,
+                    "startLine": 581,
                     "startColumn": 4,
-                    "startOffset": 31900,
+                    "startOffset": 32093,
                     "endColumn": 64,
-                    "endOffset": 31960
+                    "endOffset": 32153
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -10967,11 +11024,11 @@
             },
             {
                 "to": {
-                    "startLine": 579,
+                    "startLine": 582,
                     "startColumn": 4,
-                    "startOffset": 31965,
+                    "startOffset": 32158,
                     "endColumn": 46,
-                    "endOffset": 32007
+                    "endOffset": 32200
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -10986,11 +11043,11 @@
             },
             {
                 "to": {
-                    "startLine": 580,
+                    "startLine": 583,
                     "startColumn": 4,
-                    "startOffset": 32012,
+                    "startOffset": 32205,
                     "endColumn": 55,
-                    "endOffset": 32063
+                    "endOffset": 32256
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -11005,11 +11062,11 @@
             },
             {
                 "to": {
-                    "startLine": 581,
+                    "startLine": 584,
                     "startColumn": 4,
-                    "startOffset": 32068,
+                    "startOffset": 32261,
                     "endColumn": 66,
-                    "endOffset": 32130
+                    "endOffset": 32323
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -11024,11 +11081,11 @@
             },
             {
                 "to": {
-                    "startLine": 582,
+                    "startLine": 585,
                     "startColumn": 4,
-                    "startOffset": 32135,
+                    "startOffset": 32328,
                     "endColumn": 83,
-                    "endOffset": 32214
+                    "endOffset": 32407
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -11043,11 +11100,11 @@
             },
             {
                 "to": {
-                    "startLine": 583,
+                    "startLine": 586,
                     "startColumn": 4,
-                    "startOffset": 32219,
+                    "startOffset": 32412,
                     "endColumn": 40,
-                    "endOffset": 32255
+                    "endOffset": 32448
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -11062,11 +11119,11 @@
             },
             {
                 "to": {
-                    "startLine": 584,
+                    "startLine": 587,
                     "startColumn": 4,
-                    "startOffset": 32260,
+                    "startOffset": 32453,
                     "endColumn": 41,
-                    "endOffset": 32297
+                    "endOffset": 32490
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -11081,11 +11138,11 @@
             },
             {
                 "to": {
-                    "startLine": 585,
+                    "startLine": 588,
                     "startColumn": 4,
-                    "startOffset": 32302,
+                    "startOffset": 32495,
                     "endColumn": 59,
-                    "endOffset": 32357
+                    "endOffset": 32550
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -11100,11 +11157,11 @@
             },
             {
                 "to": {
-                    "startLine": 586,
+                    "startLine": 589,
                     "startColumn": 4,
-                    "startOffset": 32362,
+                    "startOffset": 32555,
                     "endColumn": 44,
-                    "endOffset": 32402
+                    "endOffset": 32595
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -11119,11 +11176,11 @@
             },
             {
                 "to": {
-                    "startLine": 587,
+                    "startLine": 590,
                     "startColumn": 4,
-                    "startOffset": 32407,
+                    "startOffset": 32600,
                     "endColumn": 44,
-                    "endOffset": 32447
+                    "endOffset": 32640
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -11138,11 +11195,11 @@
             },
             {
                 "to": {
-                    "startLine": 588,
+                    "startLine": 591,
                     "startColumn": 4,
-                    "startOffset": 32452,
+                    "startOffset": 32645,
                     "endColumn": 48,
-                    "endOffset": 32496
+                    "endOffset": 32689
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -11157,11 +11214,11 @@
             },
             {
                 "to": {
-                    "startLine": 589,
+                    "startLine": 592,
                     "startColumn": 4,
-                    "startOffset": 32501,
+                    "startOffset": 32694,
                     "endColumn": 38,
-                    "endOffset": 32535
+                    "endOffset": 32728
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -11176,11 +11233,11 @@
             },
             {
                 "to": {
-                    "startLine": 590,
+                    "startLine": 593,
                     "startColumn": 4,
-                    "startOffset": 32540,
+                    "startOffset": 32733,
                     "endColumn": 36,
-                    "endOffset": 32572
+                    "endOffset": 32765
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -11195,11 +11252,11 @@
             },
             {
                 "to": {
-                    "startLine": 591,
+                    "startLine": 594,
                     "startColumn": 4,
-                    "startOffset": 32577,
+                    "startOffset": 32770,
                     "endColumn": 45,
-                    "endOffset": 32618
+                    "endOffset": 32811
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -11214,11 +11271,11 @@
             },
             {
                 "to": {
-                    "startLine": 592,
+                    "startLine": 595,
                     "startColumn": 4,
-                    "startOffset": 32623,
+                    "startOffset": 32816,
                     "endColumn": 48,
-                    "endOffset": 32667
+                    "endOffset": 32860
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -11233,11 +11290,11 @@
             },
             {
                 "to": {
-                    "startLine": 593,
+                    "startLine": 596,
                     "startColumn": 4,
-                    "startOffset": 32672,
+                    "startOffset": 32865,
                     "endColumn": 51,
-                    "endOffset": 32719
+                    "endOffset": 32912
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -11252,11 +11309,11 @@
             },
             {
                 "to": {
-                    "startLine": 594,
+                    "startLine": 597,
                     "startColumn": 4,
-                    "startOffset": 32724,
+                    "startOffset": 32917,
                     "endColumn": 61,
-                    "endOffset": 32781
+                    "endOffset": 32974
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -11271,11 +11328,11 @@
             },
             {
                 "to": {
-                    "startLine": 595,
+                    "startLine": 598,
                     "startColumn": 4,
-                    "startOffset": 32786,
+                    "startOffset": 32979,
                     "endColumn": 45,
-                    "endOffset": 32827
+                    "endOffset": 33020
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -11290,11 +11347,11 @@
             },
             {
                 "to": {
-                    "startLine": 596,
+                    "startLine": 599,
                     "startColumn": 4,
-                    "startOffset": 32832,
+                    "startOffset": 33025,
                     "endColumn": 62,
-                    "endOffset": 32890
+                    "endOffset": 33083
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -11309,11 +11366,11 @@
             },
             {
                 "to": {
-                    "startLine": 597,
+                    "startLine": 600,
                     "startColumn": 4,
-                    "startOffset": 32895,
+                    "startOffset": 33088,
                     "endColumn": 70,
-                    "endOffset": 32961
+                    "endOffset": 33154
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -11328,11 +11385,11 @@
             },
             {
                 "to": {
-                    "startLine": 598,
+                    "startLine": 601,
                     "startColumn": 4,
-                    "startOffset": 32966,
+                    "startOffset": 33159,
                     "endColumn": 60,
-                    "endOffset": 33022
+                    "endOffset": 33215
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -11347,11 +11404,11 @@
             },
             {
                 "to": {
-                    "startLine": 599,
+                    "startLine": 602,
                     "startColumn": 4,
-                    "startOffset": 33027,
+                    "startOffset": 33220,
                     "endColumn": 60,
-                    "endOffset": 33083
+                    "endOffset": 33276
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -11366,11 +11423,11 @@
             },
             {
                 "to": {
-                    "startLine": 600,
+                    "startLine": 603,
                     "startColumn": 4,
-                    "startOffset": 33088,
+                    "startOffset": 33281,
                     "endColumn": 76,
-                    "endOffset": 33160
+                    "endOffset": 33353
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -11385,11 +11442,11 @@
             },
             {
                 "to": {
-                    "startLine": 601,
+                    "startLine": 604,
                     "startColumn": 4,
-                    "startOffset": 33165,
+                    "startOffset": 33358,
                     "endColumn": 39,
-                    "endOffset": 33200
+                    "endOffset": 33393
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -11404,11 +11461,11 @@
             },
             {
                 "to": {
-                    "startLine": 602,
+                    "startLine": 605,
                     "startColumn": 4,
-                    "startOffset": 33205,
+                    "startOffset": 33398,
                     "endColumn": 49,
-                    "endOffset": 33250
+                    "endOffset": 33443
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -11423,11 +11480,11 @@
             },
             {
                 "to": {
-                    "startLine": 603,
+                    "startLine": 606,
                     "startColumn": 4,
-                    "startOffset": 33255,
+                    "startOffset": 33448,
                     "endColumn": 42,
-                    "endOffset": 33293
+                    "endOffset": 33486
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",
@@ -11442,11 +11499,11 @@
             },
             {
                 "to": {
-                    "startLine": 604,
+                    "startLine": 607,
                     "startColumn": 4,
-                    "startOffset": 33298,
+                    "startOffset": 33491,
                     "endColumn": 54,
-                    "endOffset": 33348
+                    "endOffset": 33541
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-zh\\em_strings.xml",
@@ -11461,11 +11518,11 @@
             },
             {
                 "to": {
-                    "startLine": 605,
+                    "startLine": 608,
                     "startColumn": 4,
-                    "startOffset": 33353,
+                    "startOffset": 33546,
                     "endColumn": 52,
-                    "endOffset": 33401
+                    "endOffset": 33594
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\values-zh\\values-zh.xml",

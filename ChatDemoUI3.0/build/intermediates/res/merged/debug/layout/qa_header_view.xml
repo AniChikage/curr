@@ -12,7 +12,7 @@
         android:id="@+id/qa_header_ll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/solid_red"
+        android:background="@color/tongyi_red"
         android:orientation="vertical" >
         <TextView
             android:id="@+id/qa_hint"

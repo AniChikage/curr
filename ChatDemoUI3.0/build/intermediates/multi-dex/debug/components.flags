@@ -1,0 +1,341 @@
+-injars 'G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\transforms\jarMerging\debug\jars\1\1f\combined.jar'
+-outjars 'G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\multi-dex\debug\componentClasses.jar'
+
+-libraryjars 'D:\Software\ASSDK\build-tools\23.0.1\lib\shrinkedAndroid.jar'
+
+-forceprocessing
+-dontoptimize
+-dontobfuscate
+-dontusemixedcaseclassnames
+-dontpreverify
+-dontnote **,com.android.tools.fd.**,android.support.multidex.MultiDexExtractor
+-dontwarn **
+-printconfiguration 'G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\multi-dex\debug\components.flags'
+
+
+-keep class com.hyphenate.chatuidemo.DemoApplication {
+    <init>();
+    void attachBaseContext(android.content.Context);
+}
+
+-keep class com.hyphenate.chatuidemo.ui.MainActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.SplashActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.LoginActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.RegisterActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.ChatActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.AddContactActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.GroupDetailsActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.GroupsActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.ChatRoomDetailsActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.NewGroupActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.ExitGroupDialog {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.GroupPickContactsActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.PickAtUserActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.easeui.ui.EaseBaiduMapActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.NewFriendsMsgActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.ForwardMessageActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.ContextMenuActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.easeui.ui.EaseShowBigImageActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.easeui.ui.EaseShowNormalFileActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.BlacklistActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.PublicGroupsActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.PublicChatRoomsActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.VoiceCallActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.VideoCallActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.GroupSimpleDetailActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.GroupBlacklistActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.GroupSearchMessageActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.PublicGroupsSeachActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.EditActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.easeui.ui.EaseShowVideoActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.ImageGridActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.RecorderVideoActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.DiagnoseActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.OfflinePushNickActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.RobotsActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.UserProfileActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.SetServersActivity {
+    <init>();
+}
+
+-keep class com.easemob.redpacketui.ui.activity.RPRedPacketActivity {
+    <init>();
+}
+
+-keep class com.easemob.redpacketui.ui.activity.RPDetailActivity {
+    <init>();
+}
+
+-keep class com.easemob.redpacketui.ui.activity.RPRecordActivity {
+    <init>();
+}
+
+-keep class com.easemob.redpacketui.ui.activity.RPWebViewActivity {
+    <init>();
+}
+
+-keep class com.easemob.redpacketui.ui.activity.RPChangeActivity {
+    <init>();
+}
+
+-keep class com.easemob.redpacketui.ui.activity.RPBankCardActivity {
+    <init>();
+}
+
+-keep class com.easemob.redpacketui.ui.activity.RPGroupMemberActivity {
+    <init>();
+}
+
+-keep class com.alipay.sdk.app.H5PayActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.Main.Mainpage {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.Main.QuestionActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.Appointment.AppointDetail {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.Main.ArticleDetail {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.Main.Category {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.Consultant.Csdetail {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.Appointment.AppointConfirm {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.Appointment.MyAppoint {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.MySetting {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.Main.SettingActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.Consellor.ConsellorPage {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.Setting {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.CcSetting {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.Welcome {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.Appointment.CdAppointDetail {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.LoginActivity_new {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.Consellor.ManageSchedule {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.receiver.StartServiceReceiver {
+    <init>();
+}
+
+-keep class com.hyphenate.chat.EMGCMBroadcastReceiver {
+    <init>();
+}
+
+-keep class com.hyphenate.chat.EMGCMListenerService {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.receiver.GCMPushBroadCast {
+    <init>();
+}
+
+-keep class com.xiaomi.mipush.sdk.PushMessageHandler {
+    <init>();
+}
+
+-keep class com.xiaomi.mipush.sdk.MessageHandleService {
+    <init>();
+}
+
+-keep class com.hyphenate.chat.EMMipushReceiver {
+    <init>();
+}
+
+-keep class com.hyphenate.chat.EMHuaweiPushReceiver {
+    <init>();
+}
+
+-keep class com.huawei.android.pushagent.PushEventReceiver {
+    <init>();
+}
+
+-keep class com.huawei.android.pushagent.PushService {
+    <init>();
+}
+
+-keep class com.umeng.update.net.DownloadingService {
+    <init>();
+}
+
+-keep class com.umeng.update.UpdateDialogActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chat.EMChatService {
+    <init>();
+}
+
+-keep class com.hyphenate.chat.EMMonitorReceiver {
+    <init>();
+}
+
+-keep class com.baidu.location.f {
+    <init>();
+}
+
+-keep public class * extends android.app.backup.BackupAgent {
+    <init>();
+}
+
+-keep public class * extends java.lang.annotation.Annotation {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.android.tools.fd.** {
+    <fields>;
+    <methods>;
+}

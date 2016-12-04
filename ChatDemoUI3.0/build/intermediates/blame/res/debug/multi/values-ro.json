@@ -482,8 +482,65 @@
                     "startLine": 27,
                     "startColumn": 4,
                     "startOffset": 2735,
+                    "endColumn": 83,
+                    "endOffset": 2814
+                },
+                "from": {
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.github.chrisbanes.actionbarpulltorefresh\\library\\0.9.9\\res\\values-ro\\values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 206,
+                        "endColumn": 83,
+                        "endOffset": 285
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 2819,
+                    "endColumn": 71,
+                    "endOffset": 2886
+                },
+                "from": {
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.github.chrisbanes.actionbarpulltorefresh\\library\\0.9.9\\res\\values-ro\\values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 290,
+                        "endColumn": 71,
+                        "endOffset": 357
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 2891,
                     "endColumn": 91,
-                    "endOffset": 2822
+                    "endOffset": 2978
+                },
+                "from": {
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.github.chrisbanes.actionbarpulltorefresh\\library\\0.9.9\\res\\values-ro\\values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 362,
+                        "endColumn": 91,
+                        "endOffset": 449
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 2983,
+                    "endColumn": 91,
+                    "endOffset": 3070
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.github.citux\\datetimepicker\\0.2.0\\res\\values-ro\\values-ro.xml",
@@ -498,11 +555,11 @@
             },
             {
                 "to": {
-                    "startLine": 28,
+                    "startLine": 31,
                     "startColumn": 4,
-                    "startOffset": 2827,
+                    "startOffset": 3075,
                     "endColumn": 86,
-                    "endOffset": 2909
+                    "endOffset": 3157
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.github.citux\\datetimepicker\\0.2.0\\res\\values-ro\\values-ro.xml",
@@ -517,11 +574,11 @@
             },
             {
                 "to": {
-                    "startLine": 29,
+                    "startLine": 32,
                     "startColumn": 4,
-                    "startOffset": 2914,
+                    "startOffset": 3162,
                     "endColumn": 91,
-                    "endOffset": 3001
+                    "endOffset": 3249
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.github.citux\\datetimepicker\\0.2.0\\res\\values-ro\\values-ro.xml",
@@ -536,11 +593,11 @@
             },
             {
                 "to": {
-                    "startLine": 30,
+                    "startLine": 33,
                     "startColumn": 4,
-                    "startOffset": 3006,
+                    "startOffset": 3254,
                     "endColumn": 84,
-                    "endOffset": 3086
+                    "endOffset": 3334
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.github.citux\\datetimepicker\\0.2.0\\res\\values-ro\\values-ro.xml",
@@ -555,11 +612,11 @@
             },
             {
                 "to": {
-                    "startLine": 31,
+                    "startLine": 34,
                     "startColumn": 4,
-                    "startOffset": 3091,
+                    "startOffset": 3339,
                     "endColumn": 100,
-                    "endOffset": 3187
+                    "endOffset": 3435
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-ro\\values-ro.xml",
@@ -574,11 +631,11 @@
             },
             {
                 "to": {
-                    "startLine": 32,
+                    "startLine": 35,
                     "startColumn": 4,
-                    "startOffset": 3192,
+                    "startOffset": 3440,
                     "endColumn": 94,
-                    "endOffset": 3282
+                    "endOffset": 3530
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.github.citux\\datetimepicker\\0.2.0\\res\\values-ro\\values-ro.xml",

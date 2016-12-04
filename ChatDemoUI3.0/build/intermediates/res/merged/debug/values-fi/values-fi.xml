@@ -25,6 +25,9 @@
     <string msgid="7586639618712934060" name="hour_picker_description">"Tuntien ympyränmuotoinen liukusäädin"</string>
     <string msgid="2674929164900463786" name="item_is_selected">"<ns1:g id="ITEM">%1$s</ns1:g> on valittu"</string>
     <string msgid="6024811202872705251" name="minute_picker_description">"Minuuttien ympyränmuotoinen liukusäädin"</string>
+    <string name="pull_to_refresh_pull_label">Päivitä vetämällä alas…</string>
+    <string name="pull_to_refresh_refreshing_label">Päivitetään…</string>
+    <string name="pull_to_refresh_release_label">Päivitä vapauttamalla…</string>
     <string msgid="3973338219107019769" name="select_day">"Valitse kuukausi ja päivä"</string>
     <string msgid="7651068754188418859" name="select_hours">"Valitse tunnit"</string>
     <string msgid="8327182090226828481" name="select_minutes">"Valitse minuutit"</string>

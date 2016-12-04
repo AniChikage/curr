@@ -83,46 +83,48 @@ public class QuestionActivity extends Activity {
                         }
                         //
                         */
-                        Log.e("log","handle begin");
-                        new Thread(new Runnable() {
-                            public void run() {
-                                try{
-                                    int i;
-
-                                    ConnNet operaton=new ConnNet();
-                                    JSONArray jsonArray = new JSONArray();
-                                    for (i=0;i<questionListViewAdapter.length;i++){
-                                        JSONObject jsonObject = new JSONObject();
-                                        jsonObject.put("uid", user_id);
-                                        jsonObject.put("mid", (String)questionList.get(i).get("mid"));
-                                        jsonObject.put("result", ((Integer)questionListViewAdapter.tagList[i]).toString());
-                                        jsonArray.put(jsonObject);
-                                    }
-                                    Log.e("log","handle in progress");
-                                    Log.v("bitch", jsonArray.toString());
-                                    String result = operaton.addHarvestz(jsonArray.toString());
-                                    Message msg=new Message();
-                                    msg.obj=result;
-                                    addHandler.sendMessage(msg);
-
-                                } catch (Exception ex){
-                                    Log.v("fuck",ex.toString());
-//                                Toast.makeText(QuestionActivity.this,"失败",Toast.LENGTH_LONG).show();
-                                }
-
+                        int i;
+                        int full_flag=1;
+                        for (i=0;i<questionListViewAdapter.length;i++){
+                            if(questionListViewAdapter.tagList[i].toString().equals("0")){
+                                full_flag = 0;
                             }
-                        }).start();
-                        Log.e("log","handle done");
-                        /*
-                        if (counter_err>0){
-                            Toast.makeText(QuestionActivity.this,"失败",Toast.LENGTH_LONG).show();
-                        }else {
-                            Toast.makeText(QuestionActivity.this, "成功", Toast.LENGTH_LONG).show();
                         }
-                        //Intent intent = new Intent(QuestionActivity.this, Mainpage.class);
-                        //startActivity(intent);
-                        //finish();
-                        */
+                        if(full_flag==1){
+                            Log.e("log","handle begin");
+                            new Thread(new Runnable() {
+                                public void run() {
+                                    try{
+                                        int i;
+
+                                        ConnNet operaton=new ConnNet();
+                                        JSONArray jsonArray = new JSONArray();
+                                        for (i=0;i<questionListViewAdapter.length;i++){
+                                            JSONObject jsonObject = new JSONObject();
+                                            jsonObject.put("uid", user_id);
+                                            jsonObject.put("mid", (String)questionList.get(i).get("mid"));
+                                            jsonObject.put("result", ((Integer)questionListViewAdapter.tagList[i]).toString());
+                                            jsonArray.put(jsonObject);
+                                        }
+                                        Log.e("log","handle in progress");
+                                        Log.v("bitch", jsonArray.toString());
+                                        String result = operaton.addHarvestz(jsonArray.toString());
+                                        Message msg=new Message();
+                                        msg.obj=result;
+                                        addHandler.sendMessage(msg);
+
+                                    } catch (Exception ex){
+                                        Log.v("fuck",ex.toString());
+//                                Toast.makeText(QuestionActivity.this,"失败",Toast.LENGTH_LONG).show();
+                                    }
+
+                                }
+                            }).start();
+                            Log.e("log","handle done");
+                        }
+                        else{
+                            Toast.makeText(QuestionActivity.this,"您还未完成所有题目！~", Toast.LENGTH_LONG).show();
+                        }
                     }
                 });
             }
@@ -140,6 +142,7 @@ public class QuestionActivity extends Activity {
             String string=(String) msg.obj;
             Log.e("addHarvestz",string);
             try{
+                Toast.makeText(QuestionActivity.this,"提交初诊成功！",Toast.LENGTH_LONG).show();
             }
             catch (Exception ex){
                 Log.e("jsonErr",ex.toString());

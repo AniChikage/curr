@@ -19,5 +19,8 @@
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Compartilhar com"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Compartilhar com %s"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Recolher"</string>
+    <string name="pull_to_refresh_pull_label">Puxe para atualizar…</string>
+    <string name="pull_to_refresh_refreshing_label">Carregando…</string>
+    <string name="pull_to_refresh_release_label">Libere para atualizar…</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
 </resources>

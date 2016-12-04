@@ -32,6 +32,8 @@ MERGED from [com.android.support:support-vector-drawable:23.4.0] G:\testan\easem
 MERGED from [com.prolificinteractive:material-calendarview:1.4.2] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.prolificinteractive\material-calendarview\1.4.2\AndroidManifest.xml:8:5-10:41
 MERGED from [com.github.citux:datetimepicker:0.2.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.github.citux\datetimepicker\0.2.0\AndroidManifest.xml:22:5-24:41
 MERGED from [com.android.support:support-v13:23.1.1] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\support-v13\23.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.github.chrisbanes.actionbarpulltorefresh:library:0.9.9] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.github.chrisbanes.actionbarpulltorefresh\library\0.9.9\AndroidManifest.xml:2:5-72
+MERGED from [com.github.castorflex.smoothprogressbar:library:0.4.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.github.castorflex.smoothprogressbar\library\0.4.0\AndroidManifest.xml:3:5-72
 	tools:overrideLibrary
 		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:12:9-56
 	android:targetSdkVersion
@@ -160,6 +162,8 @@ MERGED from [com.android.support:support-vector-drawable:23.4.0] G:\testan\easem
 MERGED from [com.prolificinteractive:material-calendarview:1.4.2] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.prolificinteractive\material-calendarview\1.4.2\AndroidManifest.xml:12:5-20
 MERGED from [com.github.citux:datetimepicker:0.2.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.github.citux\datetimepicker\0.2.0\AndroidManifest.xml:28:5-20
 MERGED from [com.android.support:support-v13:23.1.1] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\support-v13\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.github.chrisbanes.actionbarpulltorefresh:library:0.9.9] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.github.chrisbanes.actionbarpulltorefresh\library\0.9.9\AndroidManifest.xml:3:5-19
+MERGED from [com.github.castorflex.smoothprogressbar:library:0.4.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.github.castorflex.smoothprogressbar\library\0.4.0\AndroidManifest.xml:5:5-19
 	android:label
 		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:57:9-41
 	android:allowBackup

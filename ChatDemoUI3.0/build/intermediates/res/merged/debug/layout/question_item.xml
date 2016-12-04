@@ -8,6 +8,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_weight="1"
+        android:background="@color/tongyi_red"
         android:layout_height="wrap_content"
         android:weightSum="1">
 
@@ -15,7 +16,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="New Text"
-            android:background="@color/solid_red"
             android:textColor="@color/solid_white"
             android:id="@+id/question_content"
             android:gravity="center_vertical"
@@ -31,7 +31,7 @@
         <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal">
+            android:layout_marginLeft="30dp">
 
             <RadioButton
                 android:layout_width="wrap_content"

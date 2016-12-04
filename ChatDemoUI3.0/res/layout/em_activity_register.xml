@@ -14,7 +14,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:src="@drawable/logo" />
+            android:src="@drawable/app_logo" />
     </RelativeLayout>
 
     <LinearLayout
@@ -130,7 +130,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/em_button_login_bg"
+                android:background="@color/tongyi_red"
                 android:onClick="register"
                 android:paddingBottom="7dp"
                 android:paddingTop="7dp"

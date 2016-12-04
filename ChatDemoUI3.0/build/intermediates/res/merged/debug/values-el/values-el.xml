@@ -25,6 +25,9 @@
     <string msgid="7586639618712934060" name="hour_picker_description">"Κυκλικό ρυθμιστικό ωρών"</string>
     <string msgid="2674929164900463786" name="item_is_selected">"Επιλέχτηκε το στοιχείο <ns1:g id="ITEM">%1$s</ns1:g>"</string>
     <string msgid="6024811202872705251" name="minute_picker_description">"Κυκλικό ρυθμιστικό λεπτών"</string>
+    <string name="pull_to_refresh_pull_label">Σύρετε προς τα κάτω για ανανέωση…</string>
+    <string name="pull_to_refresh_refreshing_label">Φόρτωση…</string>
+    <string name="pull_to_refresh_release_label">Αφήστε για ανανέωση…</string>
     <string msgid="3973338219107019769" name="select_day">"Επιλογή μήνα και ημέρας"</string>
     <string msgid="7651068754188418859" name="select_hours">"Επιλέξτε ώρες"</string>
     <string msgid="8327182090226828481" name="select_minutes">"Επιλέξτε λεπτά"</string>

@@ -129,8 +129,29 @@
                     "startLine": 24,
                     "startColumn": 4,
                     "startOffset": 1468,
+                    "endLine": 32,
+                    "endColumn": 12,
+                    "endOffset": 2093
+                },
+                "from": {
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.github.castorflex.smoothprogressbar\\library\\0.4.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 193,
+                        "endLine": 14,
+                        "endColumn": 12,
+                        "endOffset": 818
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 33,
+                    "startColumn": 4,
+                    "startOffset": 2098,
                     "endColumn": 119,
-                    "endOffset": 1583
+                    "endOffset": 2213
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v14\\values-v14.xml",
@@ -145,11 +166,11 @@
             },
             {
                 "to": {
-                    "startLine": 25,
+                    "startLine": 34,
                     "startColumn": 4,
-                    "startOffset": 1588,
+                    "startOffset": 2218,
                     "endColumn": 62,
-                    "endOffset": 1646
+                    "endOffset": 2276
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v14\\values-v14.xml",
@@ -164,12 +185,12 @@
             },
             {
                 "to": {
-                    "startLine": 26,
+                    "startLine": 35,
                     "startColumn": 4,
-                    "startOffset": 1651,
-                    "endLine": 28,
+                    "startOffset": 2281,
+                    "endLine": 37,
                     "endColumn": 12,
-                    "endOffset": 1800
+                    "endOffset": 2430
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v14\\values-v14.xml",
@@ -185,11 +206,11 @@
             },
             {
                 "to": {
-                    "startLine": 29,
+                    "startLine": 38,
                     "startColumn": 4,
-                    "startOffset": 1805,
+                    "startOffset": 2435,
                     "endColumn": 62,
-                    "endOffset": 1863
+                    "endOffset": 2493
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v14\\values-v14.xml",
@@ -204,11 +225,11 @@
             },
             {
                 "to": {
-                    "startLine": 30,
+                    "startLine": 39,
                     "startColumn": 4,
-                    "startOffset": 1868,
+                    "startOffset": 2498,
                     "endColumn": 131,
-                    "endOffset": 1995
+                    "endOffset": 2625
                 },
                 "from": {
                     "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v14\\values-v14.xml",
