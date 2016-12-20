@@ -157,7 +157,7 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
         }
 */
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS); //透明状态栏
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION); //透明导航栏
+        //getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION); //透明导航栏
         hcontext = this.getApplicationContext();
         mycreateSDFile = new createSDFile(hcontext);
         consellor_email = mycreateSDFile.readSDFile("cache");
@@ -732,11 +732,25 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
                     String username = jsonObj.getJSONObject("user").getString("nickname");
                     String str_schedule = jsonObj.getString("schedule");
                     String isAccept = "";
+                    String delivery = "";
+                    String evac="";
                     try{
                         isAccept = jsonObj.getString("refuse");
                     }
                     catch(Exception ex){
                         isAccept = "notSet";
+                    }
+                    try{
+                        delivery = jsonObj.getString("delivery");
+                    }
+                    catch(Exception ex){
+                        delivery = "";
+                    }
+                    try{
+                        evac = jsonObj.getString("evac");
+                    }
+                    catch(Exception ex){
+                        evac = "";
                     }
                     Log.e("isaccept",isAccept);
                     JSONObject jsonObjsc = new JSONObject(str_schedule).getJSONObject("consellor");
@@ -749,6 +763,12 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
                     if(isAccept.equals("0")){
                         if(paid.equals("1")){
                             map.put("appoint_hint", "已支付");
+                            if(delivery.equals("1")){
+                                map.put("appoint_hint", "已完成");
+                                if(evac.equals("1")){
+                                    map.put("appoint_hint", "已评价");
+                                }
+                            }
                         }
                         else{
                             map.put("appoint_hint", "未支付");

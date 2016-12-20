@@ -10,7 +10,7 @@
     <LinearLayout
         android:id="@+id/main_bottom"
         android:layout_width="match_parent"
-        android:layout_height="52dp"
+        android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:background="@color/solid_red"
         android:gravity="center_vertical"
@@ -28,7 +28,7 @@
                 android:id="@+id/btn_conversation"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/longbutton"
+                android:background="@color/solid_gray"
                 android:drawableTop="@drawable/em_tab_chat_bg"
                 android:onClick="onTabClicked"
                 android:paddingBottom="2dip"
@@ -62,23 +62,16 @@
                 android:id="@+id/btn_address_list"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/longbutton"
+                android:background="@color/solid_gray"
                 android:drawableTop="@drawable/em_tab_contact_list_bg"
                 android:onClick="onTabClicked"
                 android:paddingBottom="2dip"
                 android:paddingTop="7dip"
                 android:scaleType="matrix"
-                android:text="我的"
+                android:text="我"
                 android:textColor="@color/em_main_botton_text_color"
                 android:textSize="12sp" />
 
-            <TextView
-                android:id="@+id/unread_address_number"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="10dp"
-                android:visibility="visible" />
         </RelativeLayout>
 
     </LinearLayout>

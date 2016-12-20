@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -18,12 +19,14 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hyphenate.chat.EMChatManager;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chatuidemo.Base64.BASE64Decoder;
+import com.hyphenate.chatuidemo.Evaluation.User;
 import com.hyphenate.chatuidemo.R;
 import com.hyphenate.chatuidemo.netapp.ConnNet;
 import com.hyphenate.chatuidemo.ui.VideoCallActivity;
@@ -42,6 +45,9 @@ public class AppointDetail extends Activity {
     private TextView tv_appoint_detail,adyuyuehao,adordertime,adtime,adperprice,adtotalprice,adcall,adcsname,adpaid;
     private ImageView adcsimg,adback;
     private String appoint_oid, consellor_id="";
+    private LinearLayout yizhifu;
+    private LinearLayout weizhifu;
+    private TextView pingjia;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE); //设置无标题栏
@@ -74,6 +80,9 @@ public class AppointDetail extends Activity {
         tv_appoint_detail = (TextView)findViewById(R.id.tv_appoint_detail);
         adcsimg = (ImageView)findViewById(R.id.adcsimg);
         adback = (ImageView)findViewById(R.id.adback);
+        weizhifu = (LinearLayout)findViewById(R.id.weizhifu);
+        yizhifu = (LinearLayout)findViewById(R.id.yizhifu);
+        pingjia = (TextView)findViewById(R.id.pingjia);
     }
 
     private void InitClickEvent(){
@@ -178,6 +187,20 @@ public class AppointDetail extends Activity {
                 String str_schedule = jsonObj.getString("schedule");
                 String oid = jsonObj.getString("oid");
                 String paid = jsonObj.getString("paid");
+                String delivery = "0";
+                try{
+                    delivery = jsonObj.getString("delivery");
+                }
+                catch (Exception ex){
+                    Log.e("deliveryError",ex.toString());
+                }
+                String evau = "0";
+                try{
+                    evau = jsonObj.getString("evau");
+                }
+                catch (Exception ex){
+                    Log.e("deliveryError",ex.toString());
+                }
                 String requirement = jsonObj.getJSONObject("need").getString("requirement");
                 String createtime = jsonObj.getString("createtime");
                 String totalprice = jsonObj.getString("total");
@@ -203,10 +226,39 @@ public class AppointDetail extends Activity {
                 adtime.setText(period+"小时");
                 if(paid.equals("0")){
                     adpaid.setText("待付款");
-
                 }
                 else{
                     adpaid.setText("已支付");
+                    weizhifu.setVisibility(View.INVISIBLE);
+                    yizhifu.setVisibility(View.INVISIBLE);
+                    if(delivery.equals("0")){
+                        weizhifu.setVisibility(View.VISIBLE);
+                        yizhifu.setVisibility(View.INVISIBLE);
+                    }
+                    else if(delivery.equals("1")){
+                        if(evau.equals("0")){
+                            weizhifu.setVisibility(View.INVISIBLE);
+                            yizhifu.setVisibility(View.VISIBLE);
+                            pingjia.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    Intent intent = new Intent(AppointDetail.this,User.class);
+                                    startActivity(intent);
+                                }
+                            });
+                        }
+                        else{
+                            weizhifu.setVisibility(View.INVISIBLE);
+                            yizhifu.setVisibility(View.VISIBLE);
+                            pingjia.setBackgroundColor(Color.GRAY);
+                            pingjia.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    Toast.makeText(AppointDetail.this,"您已经完成评价",Toast.LENGTH_LONG).show();
+                                }
+                            });
+                        }
+                    }
                 }
 
                 Log.e("consellor id",consellor_id);

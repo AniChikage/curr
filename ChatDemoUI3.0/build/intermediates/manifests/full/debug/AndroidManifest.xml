@@ -373,6 +373,20 @@
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustPan" />
 
+        <!-- EVALUATION USER -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.Evaluation.User"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- EVALUATION CONSELLOR -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.Evaluation.Consellor"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" />
+
         <!-- MYSETTING -->
         <activity
             android:name="com.hyphenate.chatuidemo.ui.MySetting"
@@ -433,6 +447,14 @@
         <!-- CSAPPOINTDETAIL -->
         <activity
             android:name="com.hyphenate.chatuidemo.ui.LoginActivity_new"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <!-- CSAPPOINTDETAIL -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.AlterInfo"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustPan" >

@@ -376,6 +376,20 @@
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustPan"></activity>
 
+        <!-- EVALUATION USER-->
+        <activity
+            android:name=".Evaluation.User"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan"></activity>
+
+        <!-- EVALUATION CONSELLOR-->
+        <activity
+            android:name=".Evaluation.Consellor"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan"></activity>
+
         <!-- MYSETTING-->
         <activity
             android:name=".ui.MySetting"
@@ -436,6 +450,14 @@
         <!-- CSAPPOINTDETAIL-->
         <activity
             android:name=".ui.LoginActivity_new"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+
+        <!-- CSAPPOINTDETAIL-->
+        <activity
+            android:name=".ui.AlterInfo"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustPan">

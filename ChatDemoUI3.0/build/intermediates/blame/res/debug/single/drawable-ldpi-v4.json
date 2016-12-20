@@ -128,10 +128,6 @@
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable-ldpi\\em_logo_uidemo.png"
     },
     {
-        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\home_slected.png",
-        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable-ldpi\\home_slected.png"
-    },
-    {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\minusred.png",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable-ldpi\\minusred.png"
     },
@@ -152,20 +148,12 @@
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable-ldpi\\drawer.png"
     },
     {
-        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\me_slected.png",
-        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable-ldpi\\me_slected.png"
-    },
-    {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\zixunshi_default.png",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable-ldpi\\zixunshi_default.png"
     },
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\plusgray.png",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable-ldpi\\plusgray.png"
-    },
-    {
-        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\home_default.png",
-        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable-ldpi\\home_default.png"
     },
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\c1.png",
@@ -262,10 +250,6 @@
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\kepu.png",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable-ldpi\\kepu.png"
-    },
-    {
-        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\me.png",
-        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable-ldpi\\me.png"
     },
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\anli.png",

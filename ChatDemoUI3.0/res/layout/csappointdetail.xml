@@ -6,7 +6,7 @@
 
     <LinearLayout
         android:layout_weight="2984"
-        android:background="@drawable/longbutton"
+        android:background="@color/tongyi_red"
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="match_parent">
@@ -416,33 +416,67 @@
         android:layout_height="match_parent">
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_weight="3115"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
-
-        <Button
-            android:layout_weight="1"
-            android:id="@+id/adcancelorder"
-            android:text="通过"
-            android:textSize="20dp"
-            android:background="@drawable/longbutton"
-            android:textColor="#fff"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/ll_shenhe"
+            android:layout_weight="3115"
             android:visibility="invisible"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-        <Button
-            android:layout_weight="1"
-            android:id="@+id/btn_reject"
-            android:text="拒绝"
-            android:textSize="20dp"
-            android:visibility="invisible"
-            android:background="@color/solid_gray"
-            android:textColor="#000"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
-    </LinearLayout>
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/adcancelorder"
+                android:text="通过"
+                android:textSize="20dp"
+                android:background="@color/tongyi_red"
+                android:textColor="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/btn_reject"
+                android:text="拒绝"
+                android:textSize="20dp"
+                android:background="@color/solid_gray"
+                android:textColor="#000"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_yiwancheng"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textColor="@color/solid_white"
+                android:text="已完成"
+                android:gravity="center"
+                android:background="@color/tongyi_red"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_pingjia"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_pingjia"
+                android:textColor="@color/solid_white"
+                android:text="评价"
+                android:gravity="center"
+                android:background="@color/tongyi_red"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
 
 </LinearLayout>

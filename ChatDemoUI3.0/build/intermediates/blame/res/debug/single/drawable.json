@@ -28,12 +28,12 @@
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\EaseUI\\unspecified\\res\\drawable\\ease_mm_listitem_grey.xml"
     },
     {
-        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\em_mm_title_act_btn_pressed.9.png",
-        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\em_mm_title_act_btn_pressed.9.png"
-    },
-    {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\em_mm_title_act_btn_pressed.9.png",
+        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\em_mm_title_act_btn_pressed.9.png"
     },
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\em_actionbar_camera_icon.png",
@@ -68,6 +68,10 @@
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\em_button_myprofile_selector.xml"
     },
     {
+        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\home_default.png",
+        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\home_default.png"
+    },
+    {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\regi_bg.jpg",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\regi_bg.jpg"
     },
@@ -82,6 +86,10 @@
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\question_mark_default.png",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\question_mark_default.png"
+    },
+    {
+        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\sb_thumb.xml",
+        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\sb_thumb.xml"
     },
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\em_btn_bottom_selector.xml",
@@ -172,12 +180,12 @@
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\EaseUI\\unspecified\\res\\drawable\\ease_chat_send_btn_selector.xml"
     },
     {
-        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\em_camera_switch_selector.xml",
-        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\em_camera_switch_selector.xml"
-    },
-    {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\sign_circle_alpha.png",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\sign_circle_alpha.png"
+    },
+    {
+        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\em_camera_switch_selector.xml",
+        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\em_camera_switch_selector.xml"
     },
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\ease_btn_cancel_pressed_shape.xml",
@@ -200,16 +208,20 @@
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\umeng_update_dialog_bg.xml"
     },
     {
-        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\ease_common_tab_bg.xml",
-        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\EaseUI\\unspecified\\res\\drawable\\ease_common_tab_bg.xml"
-    },
-    {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\em_ic_right_arrow.png",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\em_ic_right_arrow.png"
     },
     {
+        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\ease_common_tab_bg.xml",
+        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\EaseUI\\unspecified\\res\\drawable\\ease_common_tab_bg.xml"
+    },
+    {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\seekbar_thumb_normal.jpg",
+        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\seekbar_thumb_normal.jpg"
     },
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\em_chat_red_packet_selector.xml",
@@ -308,12 +320,12 @@
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\default_avatar.png"
     },
     {
-        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\em_btn_style_alert_dialog_special.xml",
-        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\em_btn_style_alert_dialog_special.xml"
-    },
-    {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\xuzhi.png",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\xuzhi.png"
+    },
+    {
+        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\em_btn_style_alert_dialog_special.xml",
+        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\em_btn_style_alert_dialog_special.xml"
     },
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\tab_bg.png",
@@ -444,6 +456,10 @@
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\em_icon_account.png"
     },
     {
+        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\sb_bar.xml",
+        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\sb_bar.xml"
+    },
+    {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\zixunshi_default.png",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\zixunshi_default.png"
     },
@@ -456,12 +472,12 @@
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\call_hangup_bg.xml"
     },
     {
-        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\rp_btn_blue_normal_shape.xml",
-        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\drawable\\rp_btn_blue_normal_shape.xml"
-    },
-    {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\em_chat_video_call_pressed.png",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\em_chat_video_call_pressed.png"
+    },
+    {
+        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\rp_btn_blue_normal_shape.xml",
+        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\drawable\\rp_btn_blue_normal_shape.xml"
     },
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\rp_btn_white_selector.xml",
@@ -496,12 +512,12 @@
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\em_call_answer_bg.xml"
     },
     {
-        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\rp_sidebar_background.xml",
-        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\drawable\\rp_sidebar_background.xml"
-    },
-    {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\c9.png",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\c9.png"
+    },
+    {
+        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\rp_sidebar_background.xml",
+        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\drawable\\rp_sidebar_background.xml"
     },
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\em_chat_voice_call_selector.xml",
@@ -540,20 +556,24 @@
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\em_tab_setting_bg.xml"
     },
     {
-        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\em_btn_green_pressed_shape.xml",
-        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\em_btn_green_pressed_shape.xml"
+        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\rp_btn_open_selector.xml",
+        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\drawable\\rp_btn_open_selector.xml"
     },
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\em_button_normal_shape.xml",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\em_button_normal_shape.xml"
     },
     {
-        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\rp_btn_open_selector.xml",
-        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\drawable\\rp_btn_open_selector.xml"
+        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\em_btn_green_pressed_shape.xml",
+        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\em_btn_green_pressed_shape.xml"
     },
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\ease_sidebar_background_pressed.xml",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\EaseUI\\unspecified\\res\\drawable\\ease_sidebar_background_pressed.xml"
+    },
+    {
+        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\home_slected.png",
+        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\home_slected.png"
     },
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\rectangle.xml",
@@ -640,12 +660,12 @@
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\c7.png"
     },
     {
-        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\em_tab_chat_bg.xml",
-        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\em_tab_chat_bg.xml"
-    },
-    {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\plusred.png",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\plusred.png"
+    },
+    {
+        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\em_tab_chat_bg.xml",
+        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\em_tab_chat_bg.xml"
     },
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
@@ -728,6 +748,10 @@
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\em_chat_file_normal.png"
     },
     {
+        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\email.png",
+        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\email.png"
+    },
+    {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\ease_timestampe_bg.xml",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\EaseUI\\unspecified\\res\\drawable\\ease_timestampe_bg.xml"
     },
@@ -744,12 +768,12 @@
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\drawable\\rp_btn_selector.xml"
     },
     {
-        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
-        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_dialog_material_background_light.xml"
-    },
-    {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\em_dx_checkbox_off.png",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\em_dx_checkbox_off.png"
+    },
+    {
+        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
+        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_dialog_material_background_light.xml"
     },
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\wise.png",
@@ -804,12 +828,12 @@
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\em_button_login_bg.xml"
     },
     {
-        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\ease_btn_blue_normal_shape.xml",
-        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\EaseUI\\unspecified\\res\\drawable\\ease_btn_blue_normal_shape.xml"
-    },
-    {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\em_icon_mute_on.png",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\em_icon_mute_on.png"
+    },
+    {
+        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\ease_btn_blue_normal_shape.xml",
+        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\EaseUI\\unspecified\\res\\drawable\\ease_btn_blue_normal_shape.xml"
     },
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\ease_btn_cancel_bj.xml",
@@ -912,16 +936,16 @@
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\umeng_update_button_ok_bg_tap.xml"
     },
     {
+        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\em_new_friends_icon.png",
+        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\em_new_friends_icon.png"
+    },
+    {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_update_button_ok_bg_selector.xml",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\umeng_update_button_ok_bg_selector.xml"
     },
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\em_btn_green_selector.xml",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\em_btn_green_selector.xml"
-    },
-    {
-        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\em_new_friends_icon.png",
-        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\em_new_friends_icon.png"
     },
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
@@ -942,6 +966,10 @@
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\em_btn_gray_selector.xml",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\em_btn_gray_selector.xml"
+    },
+    {
+        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\seekbar_thumb_pressed.jpg",
+        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\seekbar_thumb_pressed.jpg"
     },
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\welcome_bg.png",
@@ -974,6 +1002,10 @@
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\rp_btn_blue_cancel_shape.xml",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\drawable\\rp_btn_blue_cancel_shape.xml"
+    },
+    {
+        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\cale.png",
+        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\cale.png"
     },
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\em_button_selector_shape.xml",

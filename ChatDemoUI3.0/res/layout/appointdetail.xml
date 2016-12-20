@@ -416,31 +416,49 @@
         android:layout_height="match_parent">
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_weight="3115"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal">
-
-        <Button
-            android:layout_weight="1"
-            android:id="@+id/adcancelorder"
-            android:text="取消预约"
-            android:textSize="20dp"
-            android:background="#ddd"
-            android:textColor="#939393"
+        <LinearLayout
+            android:id="@+id/weizhifu"
+            android:visibility="invisible"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-        <Button
-            android:layout_weight="1"
-            android:id="@+id/btn_pay"
+            android:layout_height="match_parent">
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/adcancelorder"
+                android:text="取消预约"
+                android:textSize="20dp"
+                android:background="#ddd"
+                android:textColor="#939393"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/btn_pay"
+                android:background="@color/tongyi_red"
+                android:text="支付"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/yizhifu"
+            android:visibility="invisible"
             android:background="@color/tongyi_red"
-            android:text="支付"
-            android:textColor="#fff"
-            android:textSize="20dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-    </LinearLayout>
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/pingjia"
+                android:gravity="center"
+                android:text="评价"
+                android:textColor="@color/solid_white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </RelativeLayout>
 
 </LinearLayout>

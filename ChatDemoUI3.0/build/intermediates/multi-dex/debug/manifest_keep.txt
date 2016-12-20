@@ -55,6 +55,8 @@
 -keep class com.hyphenate.chatuidemo.Consultant.Csdetail { <init>(); }
 -keep class com.hyphenate.chatuidemo.Appointment.AppointConfirm { <init>(); }
 -keep class com.hyphenate.chatuidemo.Appointment.MyAppoint { <init>(); }
+-keep class com.hyphenate.chatuidemo.Evaluation.User { <init>(); }
+-keep class com.hyphenate.chatuidemo.Evaluation.Consellor { <init>(); }
 -keep class com.hyphenate.chatuidemo.ui.MySetting { <init>(); }
 -keep class com.hyphenate.chatuidemo.Main.SettingActivity { <init>(); }
 -keep class com.hyphenate.chatuidemo.Consellor.ConsellorPage { <init>(); }
@@ -63,6 +65,7 @@
 -keep class com.hyphenate.chatuidemo.ui.Welcome { <init>(); }
 -keep class com.hyphenate.chatuidemo.Appointment.CdAppointDetail { <init>(); }
 -keep class com.hyphenate.chatuidemo.ui.LoginActivity_new { <init>(); }
+-keep class com.hyphenate.chatuidemo.ui.AlterInfo { <init>(); }
 -keep class com.hyphenate.chatuidemo.Consellor.ManageSchedule { <init>(); }
 -keep class com.hyphenate.chatuidemo.receiver.StartServiceReceiver { <init>(); }
 -keep class com.hyphenate.chat.EMGCMBroadcastReceiver { <init>(); }

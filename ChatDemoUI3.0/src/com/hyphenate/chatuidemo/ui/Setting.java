@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.animation.Interpolator;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,6 +26,7 @@ public class Setting extends Activity {
     private createSDFile mycreateSDFile;
     private String type;
     private TextView tv_clear_cache;
+    private TextView tv_alter_info;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +39,7 @@ public class Setting extends Activity {
     private void initId(){
         btn_logout = (Button)findViewById(R.id.btn_logout);
         tv_clear_cache = (TextView)findViewById(R.id.clear_cache);
+        tv_alter_info = (TextView)findViewById(R.id.alter_info);
         mycreateSDFile = new createSDFile(getBaseContext());
         type = mycreateSDFile.readSDFile("cachetype");
     }
@@ -44,6 +47,7 @@ public class Setting extends Activity {
     private void initClick(){
         btn_logout.setOnClickListener(onClickListener);
         tv_clear_cache.setOnClickListener(onClickListener);
+        tv_alter_info.setOnClickListener(onClickListener);
     }
 
     View.OnClickListener onClickListener = new View.OnClickListener() {
@@ -56,6 +60,9 @@ public class Setting extends Activity {
                 case R.id.btn_logout:
                     logout();
                     break;
+                case R.id.alter_info:
+                    startAlter();
+                    break;
             }
         }
     };
@@ -64,6 +71,11 @@ public class Setting extends Activity {
         mycreateSDFile.deleteSDFile("cache");
         mycreateSDFile.deleteSDFile("cachetype");
         Toast.makeText(this,"清除缓存成功！",Toast.LENGTH_LONG).show();
+    }
+
+    private void startAlter(){
+        Intent intent = new Intent(Setting.this,AlterInfo.class);
+        startActivity(intent);
     }
 
     private void logout(){

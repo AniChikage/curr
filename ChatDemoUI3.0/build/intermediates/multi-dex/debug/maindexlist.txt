@@ -8,6 +8,7 @@ com/hyphenate/easeui/ui/EaseShowNormalFileActivity.class
 org/apache/http/cookie/Cookie.class
 android/support/v4/app/FragmentManagerState.class
 com/easemob/redpacketui/ui/a/ba.class
+com/hyphenate/chatuidemo/Appointment/AppointDetail$5$1.class
 com/hyphenate/easeui/R$dimen.class
 com/hyphenate/easeui/R$color.class
 org/apache/http/impl/SocketHttpClientConnection.class
@@ -20,6 +21,7 @@ org/apache/http/client/methods/HttpDelete.class
 com/hyphenate/chatuidemo/ui/MainActivity$3.class
 com/easemob/redpacketui/callback/c.class
 android/support/v7/app/AppCompatActivity.class
+com/hyphenate/chatuidemo/Appointment/CdAppointDetail$7$1.class
 com/easemob/redpacketui/R$anim.class
 org/apache/commons/logging/impl/Jdk14Logger.class
 org/apache/commons/logging/LogConfigurationException.class
@@ -202,6 +204,7 @@ android/support/v4/media/MediaMetadataCompat$RatingKey.class
 android/support/v4/view/MotionEventCompat.class
 org/apache/http/conn/EofSensorInputStream.class
 com/prolificinteractive/materialcalendarview/format/ArrayWeekDayFormatter.class
+com/hyphenate/chatuidemo/ui/LoginActivity$11.class
 com/parse/ParseUser.class
 com/huawei/android/pushagent/PushReceiver.class
 com/hyphenate/easeui/ui/EaseShowBigImageActivity$1.class
@@ -236,6 +239,7 @@ android/support/v4/view/ViewCompat$MarshmallowViewCompatImpl.class
 com/easemob/redpacketui/ui/activity/RPWebViewActivity$a.class
 org/apache/http/impl/cookie/BrowserCompatSpec.class
 android/support/v4/media/session/MediaSessionCompat$QueueItem.class
+com/hyphenate/chatuidemo/Evaluation/Consellor$4.class
 com/hyphenate/chatuidemo/Appointment/AppointConfirm$3.class
 com/huawei/android/pushselfshow/richpush/tools/Console.class
 org/apache/http/impl/client/RoutedRequest.class
@@ -280,6 +284,8 @@ android/support/annotation/RequiresPermission.class
 com/hyphenate/chatuidemo/ui/MainActivity$18.class
 com/hyphenate/easeui/utils/EaseLoadLocalBigImgTask.class
 com/android/datetimepicker/date/DatePickerDialog$OnDateSetListener.class
+com/hyphenate/chatuidemo/ui/LoginActivity$9.class
+com/hyphenate/chatuidemo/ui/AlterInfo$5.class
 org/apache/http/impl/client/AbstractAuthenticationHandler.class
 android/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper.class
 android/support/annotation/BoolRes.class
@@ -381,6 +387,7 @@ com/hyphenate/chatuidemo/Consultant/Csdetail.class
 android/support/v4/app/FragmentManagerImpl.class
 org/apache/http/auth/BasicUserPrincipal.class
 com/hyphenate/chatuidemo/ui/MainActivity$1.class
+com/hyphenate/chatuidemo/Appointment/CdAppointDetail$7$3.class
 com/hyphenate/easeui/ui/EaseShowBigImageActivity$2.class
 com/baidu/platform/comapi/map/i.class
 com/hyphenate/media/EMLocalSurfaceView.class
@@ -457,6 +464,7 @@ org/apache/http/impl/cookie/NetscapeDraftSpec.class
 com/easemob/redpacketsdk/bean/TokenData.class
 android/support/annotation/InterpolatorRes.class
 org/apache/http/impl/cookie/RFC2965DiscardAttributeHandler.class
+com/hyphenate/chatuidemo/ui/AlterInfo$3.class
 com/alipay/sdk/app/i.class
 org/apache/http/impl/DefaultHttpClientConnection.class
 android/support/v4/content/WakefulBroadcastReceiver.class
@@ -582,6 +590,7 @@ com/prolificinteractive/materialcalendarview/MaterialCalendarView$State.class
 com/hyphenate/chatuidemo/ui/GroupDetailsActivity$10.class
 com/easemob/redpacketsdk/RedPacket.class
 com/hyphenate/chatuidemo/ui/MainActivity$6.class
+com/hyphenate/chatuidemo/Evaluation/User$1.class
 com/hyphenate/easeui/widget/photoview/IPhotoView.class
 com/hyphenate/chatuidemo/ui/MainActivity$4.class
 com/easemob/redpacketui/ui/a/m.class
@@ -723,6 +732,7 @@ com/hyphenate/chatuidemo/ui/LoginActivity_new$3.class
 com/baidu/location/LLSInterface.class
 android/support/v7/app/ActionBar.class
 com/baidu/mapapi/common/SysOSUtil.class
+com/hyphenate/chatuidemo/Evaluation/Consellor$1.class
 android/support/multidex/MultiDex$V4.class
 android/support/annotation/TransitionRes.class
 android/support/annotation/PluralsRes.class
@@ -792,6 +802,7 @@ com/hyphenate/chatuidemo/ui/UserProfileActivity.class
 com/hyphenate/chatuidemo/ui/GroupPickContactsActivity$1.class
 android/support/v4/view/ScrollingView.class
 org/apache/http/cookie/CookieOrigin.class
+com/hyphenate/chatuidemo/ui/LoginActivity$10.class
 android/support/v4/view/ViewCompat$LayerType.class
 org/apache/http/entity/StringEntity.class
 android/support/v7/app/ActionBar$Tab.class
@@ -814,6 +825,7 @@ org/apache/http/auth/AuthSchemeRegistry.class
 android/support/multidex/MultiDex.class
 com/easemob/redpacketui/recyclerview/widget/RecyclerView$RecyclerViewDataObserver.class
 com/hyphenate/easeui/ui/EaseBaiduMapActivity$1.class
+com/hyphenate/chatuidemo/ui/AlterInfo.class
 org/apache/http/client/protocol/RequestProxyAuthentication.class
 android/support/v4/app/FragmentActivity.class
 org/apache/http/client/HttpRequestRetryHandler.class
@@ -852,6 +864,8 @@ com/easemob/redpacketui/recyclerview/widget/RecyclerView$ItemAnimatorRestoreList
 android/support/v4/app/NoSaveStateFrameLayout.class
 android/support/v4/media/RatingCompat$StarStyle.class
 com/easemob/redpacketui/callback/NotifyGroupMemberCallback.class
+com/hyphenate/chatuidemo/Evaluation/Consellor$3.class
+com/hyphenate/chatuidemo/ui/LoginActivity$8.class
 android/support/annotation/StringRes.class
 org/apache/http/client/NonRepeatableRequestException.class
 org/apache/http/protocol/HTTP.class
@@ -862,6 +876,7 @@ org/apache/http/protocol/ResponseServer.class
 com/easemob/redpacketsdk/callback/ReviewCallback.class
 com/baidu/location/a/b$b.class
 org/apache/http/params/HttpAbstractParamBean.class
+com/hyphenate/chatuidemo/ui/AlterInfo$1.class
 com/easemob/redpacketui/base/BaseActivity.class
 org/apache/http/impl/entity/EntitySerializer.class
 com/hyphenate/EMCallBack.class
@@ -946,6 +961,7 @@ org/apache/http/protocol/HttpRequestInterceptorList.class
 org/apache/http/impl/conn/DefaultHttpRoutePlanner.class
 android/support/annotation/MenuRes.class
 com/huawei/android/pushagent/PushService$a.class
+com/hyphenate/chatuidemo/Appointment/AppointDetail$5$2.class
 org/apache/http/protocol/DefaultedHttpContext.class
 com/hyphenate/chatuidemo/ui/MainActivity$2.class
 com/easemob/redpacketui/netstatus/b$a.class
@@ -980,11 +996,13 @@ com/hyphenate/chatuidemo/ui/VoiceCallActivity$2.class
 com/easemob/redpacketsdk/callback/CardInfoCallBack.class
 org/apache/http/HttpException.class
 android/support/v7/appcompat/R$attr.class
+com/hyphenate/chatuidemo/Evaluation/Consellor.class
 com/prolificinteractive/materialcalendarview/Experimental.class
 com/hyphenate/chat/EMCallManager.class
 org/apache/http/conn/BasicEofSensorWatcher.class
 com/easemob/redpacketsdk/callback/SendPacketCallback.class
 org/apache/http/impl/io/HttpResponseWriter.class
+com/hyphenate/chatuidemo/Evaluation/User.class
 com/xiaomi/mipush/sdk/MiPushClient$MiPushClientCallback.class
 org/apache/http/protocol/RequestConnControl.class
 com/baidu/mapapi/map/j.class
@@ -1131,6 +1149,7 @@ com/baidu/location/BDLocation.class
 com/xiaomi/mipush/sdk/a.class
 com/hyphenate/chatuidemo/ui/GroupSearchMessageActivity$5.class
 org/apache/http/protocol/ResponseDate.class
+com/hyphenate/chatuidemo/Evaluation/User$2.class
 com/hyphenate/chatuidemo/ui/MainActivity$5.class
 org/apache/http/auth/UsernamePasswordCredentials.class
 com/bumptech/glide/DrawableRequestBuilder.class
@@ -1204,6 +1223,7 @@ org/apache/http/impl/cookie/RFC2965SpecFactory.class
 com/huawei/android/pushagent/PushReceiver$ReceiveType.class
 org/apache/http/impl/auth/UnsupportedDigestAlgorithmException.class
 org/apache/http/util/CharArrayBuffer.class
+com/hyphenate/chatuidemo/ui/AlterInfo$4.class
 com/hyphenate/chatuidemo/ui/MainActivity$20.class
 org/apache/http/impl/conn/LoggingSessionOutputBuffer.class
 com/hyphenate/chat/EMChatManager.class
@@ -1312,6 +1332,7 @@ org/apache/http/auth/Credentials.class
 com/hyphenate/chat/EMGroupInfo.class
 com/hyphenate/easeui/R$anim.class
 org/apache/commons/codec/net/QCodec.class
+com/hyphenate/chatuidemo/Evaluation/Consellor$5.class
 org/apache/http/ConnectionReuseStrategy.class
 android/support/v4/widget/DrawerLayout$EdgeGravity.class
 com/hyphenate/easeui/ui/EaseBaiduMapActivity$BaiduSDKReceiver.class
@@ -1324,6 +1345,7 @@ com/easemob/redpacketsdk/presenter/impl/PacketDetailPresenter.class
 android/support/v4/app/FragmentActivity$HostCallbacks.class
 android/support/v4/media/VolumeProviderCompat$Callback.class
 org/apache/http/protocol/RequestTargetHost.class
+com/hyphenate/chatuidemo/Appointment/CdAppointDetail$7$2.class
 android/support/annotation/Nullable.class
 android/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase.class
 android/support/v4/media/MediaMetadataCompat$Builder.class
@@ -1356,6 +1378,7 @@ com/hyphenate/chatuidemo/ui/GroupDetailsActivity$8.class
 org/apache/http/conn/params/ConnRouteParams.class
 org/apache/http/client/protocol/RequestTargetAuthentication.class
 android/support/v4/view/ViewCompat$LollipopViewCompatImpl.class
+com/hyphenate/chatuidemo/Evaluation/Consellor$2.class
 com/android/datetimepicker/date/DatePickerController.class
 com/baidu/mapapi/navi/BaiduMapNavigation.class
 android/support/v4/media/session/PlaybackStateCompat$Actions.class
@@ -1390,6 +1413,7 @@ org/apache/commons/codec/language/RefinedSoundex.class
 android/support/multidex/MultiDexExtractor.class
 android/support/v4/view/ViewCompat$ScrollIndicators.class
 com/easemob/redpacketui/R$drawable.class
+com/hyphenate/chatuidemo/Appointment/CdAppointDetail$8.class
 org/apache/http/impl/cookie/NetscapeDraftSpecFactory.class
 com/baidu/mapapi/map/OverlayOptions.class
 com/hyphenate/chatuidemo/Consellor/ConsellorPage$13.class
@@ -1407,6 +1431,7 @@ com/prolificinteractive/materialcalendarview/OnDateSelectedListener.class
 com/hyphenate/chatuidemo/ui/RecorderVideoActivity$4.class
 com/prolificinteractive/materialcalendarview/OnMonthChangedListener.class
 com/hyphenate/chatuidemo/db/UserDao.class
+com/hyphenate/chatuidemo/ui/AlterInfo$2.class
 org/apache/http/impl/cookie/BestMatchSpec.class
 com/hyphenate/easeui/adapter/EaseContactAdapter.class
 com/hyphenate/easeui/ui/EaseShowVideoActivity$1.class

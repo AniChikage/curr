@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -17,11 +18,13 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chatuidemo.Base64.BASE64Decoder;
+import com.hyphenate.chatuidemo.Evaluation.Consellor;
 import com.hyphenate.chatuidemo.R;
 import com.hyphenate.chatuidemo.netapp.ConnNet;
 import com.hyphenate.chatuidemo.ui.VideoCallActivity;
@@ -42,12 +45,16 @@ public class CdAppointDetail extends Activity {
     private String appoint_oid, consellor_id="";
     private String user_email;
     private String isAccept="";
+    private LinearLayout ll_shenhe;
+    private LinearLayout ll_yiwancheng;
+    private LinearLayout ll_pingjia;
+    private TextView tv_pingjia;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE); //设置无标题栏
         setContentView(R.layout.csappointdetail);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS); //透明状态栏
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION); //透明导航栏
+        //getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION); //透明导航栏
         hcontext = this.getApplicationContext();
 
         Bundle bundle = getIntent().getExtras();
@@ -75,6 +82,10 @@ public class CdAppointDetail extends Activity {
         tv_appoint_detail = (TextView)findViewById(R.id.tv_appoint_detail);
         adcsimg = (ImageView)findViewById(R.id.adcsimg);
         adback = (ImageView)findViewById(R.id.adback);
+        ll_shenhe = (LinearLayout)findViewById(R.id.ll_shenhe);
+        ll_yiwancheng = (LinearLayout)findViewById(R.id.ll_yiwancheng);
+        ll_pingjia = (LinearLayout)findViewById(R.id.ll_pingjia);
+        tv_pingjia = (TextView)findViewById(R.id.tv_pingjia);
     }
 
     private void InitClickEvent(){
@@ -232,6 +243,20 @@ public class CdAppointDetail extends Activity {
                 String str_schedule = jsonObj.getString("schedule");
                 String oid = jsonObj.getString("oid");
                 String paid = jsonObj.getString("paid");
+                String delivery="0";
+                try{
+                    delivery = jsonObj.getString("delivery");
+                }
+                catch (Exception ex){
+                    Log.e("",ex.toString());
+                }
+                String evac = "0";
+                try{
+                    evac = jsonObj.getString("evac");
+                }
+                catch (Exception ex){
+                    Log.e("",ex.toString());
+                }
                 String user_name = jsonObj.getJSONObject("user").getString("nickname");
                 user_email = jsonObj.getJSONObject("user").getString("email");
                 String requirement = jsonObj.getJSONObject("need").getString("requirement");
@@ -255,6 +280,7 @@ public class CdAppointDetail extends Activity {
                 catch (Exception ex){
                     isAccept = "notSet";
                 }
+
                 tv_appoint_detail.setText(requirement);
                 consellor_id = user_email;
                 adyuyuehao.setText("预约号："+oid);
@@ -267,18 +293,80 @@ public class CdAppointDetail extends Activity {
                     adpaid.setText("已拒绝");
                     adcancelorer.setVisibility(View.INVISIBLE);
                     btn_reject.setVisibility(View.INVISIBLE);
+                    ll_shenhe.setVisibility(View.INVISIBLE);
+                    ll_yiwancheng.setVisibility(View.INVISIBLE);
+                    ll_pingjia.setVisibility(View.INVISIBLE);
                 }
-                else if(isAccept.equals("0")){
+                else if(isAccept.equals("0")){ //已审核
                     if(paid.equals("0")){
                         adpaid.setText("待付款");
                     }
                     else{
                         adpaid.setText("已支付");
+                        if(delivery.equals("0")){
+                            ll_yiwancheng.setVisibility(View.VISIBLE);
+                            ll_shenhe.setVisibility(View.INVISIBLE);
+                            ll_pingjia.setVisibility(View.INVISIBLE);
+                            ll_yiwancheng.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    new Thread(new Runnable() {
+                                        public void run() {
+                                            try{
+                                                ConnNet operaton=new ConnNet();
+                                                String result=operaton.csAltOrder(appoint_oid,"1");
+                                                Message msg=new Message();
+                                                msg.obj=result;
+                                                cs_alter_delivery.sendMessage(msg);
+                                            }
+                                            catch (Exception ex){
+                                                Log.e("get orders","失败");
+                                            }
+
+                                        }
+                                    }).start();
+                                }
+                            });
+                        }
+                        else if(delivery.equals("1")){
+                            if(evac.equals("0")){
+                                ll_yiwancheng.setVisibility(View.INVISIBLE);
+                                ll_shenhe.setVisibility(View.INVISIBLE);
+                                ll_pingjia.setVisibility(View.VISIBLE);
+                                ll_pingjia.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        //go to pingjia
+                                        Intent intent = new Intent(CdAppointDetail.this, Consellor.class);
+                                        Bundle bundle = new Bundle();
+                                        bundle.putString("appoint_oid",appoint_oid);
+                                        intent.putExtras(bundle);
+                                        startActivity(intent);
+                                    }
+                                });
+                            }
+                            else{
+                                ll_yiwancheng.setVisibility(View.INVISIBLE);
+                                ll_shenhe.setVisibility(View.INVISIBLE);
+                                ll_pingjia.setVisibility(View.VISIBLE);
+                                ll_pingjia.setBackgroundColor(Color.GRAY);
+                                tv_pingjia.setBackgroundColor(Color.GRAY);
+                                tv_pingjia.setTextColor(Color.BLACK);
+                                ll_pingjia.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        Toast.makeText(CdAppointDetail.this,"您已经完成评价",Toast.LENGTH_LONG).show();
+                                    }
+                                });
+                            }
+                        }
                     }
                     adcancelorer.setVisibility(View.INVISIBLE);
                     btn_reject.setVisibility(View.INVISIBLE);
+                    ll_shenhe.setVisibility(View.INVISIBLE);
                 }
                 else{
+                    //还未审核
                     if(paid.equals("0")){
                         adpaid.setText("待付款");
                     }
@@ -287,6 +375,9 @@ public class CdAppointDetail extends Activity {
                     }
                     adcancelorer.setVisibility(View.VISIBLE);
                     btn_reject.setVisibility(View.VISIBLE);
+                    ll_shenhe.setVisibility(View.VISIBLE);
+                    ll_yiwancheng.setVisibility(View.INVISIBLE);
+                    ll_pingjia.setVisibility(View.INVISIBLE);
                 }
                 //if()
                 Log.e("consellor id",consellor_id);
@@ -297,6 +388,28 @@ public class CdAppointDetail extends Activity {
             super.handleMessage(msg);
         }
     };
+
+    Handler cs_alter_delivery=new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            String string=(String) msg.obj;
+            Log.e("cancel_status",string);
+            try {
+                String del = new JSONObject(string).getString("altOrder");
+                if(del.equals("1")){
+                    Toast.makeText(CdAppointDetail.this,"成功！", Toast.LENGTH_LONG).show();
+                }
+                else{
+                    Toast.makeText(CdAppointDetail.this,"失败！", Toast.LENGTH_LONG).show();
+                }
+            } catch (JSONException e) {
+                System.out.println("Jsons parse error !");
+                e.printStackTrace();
+            }
+            super.handleMessage(msg);
+        }
+    };
+
 
     private void video(String consellornoid) {
         /**

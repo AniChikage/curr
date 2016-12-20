@@ -42,8 +42,8 @@ public final class R {
 		public static final int spb_default_reversed = 0x7f07000a;
 	}
 	public static final class color {
-		public static final int default_progress_bar_color = 0x7f0a0041;
-		public static final int spb_default_color = 0x7f0a0091;
+		public static final int default_progress_bar_color = 0x7f0a0042;
+		public static final int spb_default_color = 0x7f0a0093;
 	}
 	public static final class dimen {
 		public static final int ptr_progress_bar_stroke_width = 0x7f080091;
@@ -66,7 +66,7 @@ public final class R {
 		public static final int spb_default_sections_count = 0x7f0b0005;
 	}
 	public static final class layout {
-		public static final int default_header = 0x7f03003d;
+		public static final int default_header = 0x7f03003e;
 	}
 	public static final class string {
 		public static final int pull_to_refresh_pull_label = 0x7f06001f;

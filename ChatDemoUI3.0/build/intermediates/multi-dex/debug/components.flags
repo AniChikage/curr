@@ -230,6 +230,14 @@
     <init>();
 }
 
+-keep class com.hyphenate.chatuidemo.Evaluation.User {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.Evaluation.Consellor {
+    <init>();
+}
+
 -keep class com.hyphenate.chatuidemo.ui.MySetting {
     <init>();
 }
@@ -259,6 +267,10 @@
 }
 
 -keep class com.hyphenate.chatuidemo.ui.LoginActivity_new {
+    <init>();
+}
+
+-keep class com.hyphenate.chatuidemo.ui.AlterInfo {
     <init>();
 }
 

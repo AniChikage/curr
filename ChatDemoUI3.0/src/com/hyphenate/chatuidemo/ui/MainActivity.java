@@ -596,11 +596,26 @@ public class MainActivity extends BaseActivity {
 					String sid = jsonObj.getString("sid");
 					String oid = jsonObj.getString("oid");
 					String paid = jsonObj.getString("paid");
+
 					try{
 						isAccept = jsonObj.getString("refuse");
 					}
 					catch (Exception ex){
 						isAccept = "notSet";
+					}
+					String delivery = "0";
+					try{
+						delivery = jsonObj.getString("delivery");
+					}
+					catch (Exception ex){
+						delivery = "0";
+					}
+					String evau = "0";
+					try{
+						evau = jsonObj.getString("evau");
+					}
+					catch (Exception ex){
+						evau = "0";
 					}
 					String starttime = jsonObj.getString("starttime");
 					String str_schedule = jsonObj.getString("schedule");
@@ -616,10 +631,17 @@ public class MainActivity extends BaseActivity {
 					else if(isAccept.equals("0")){
 						if(paid.equals("1")){
 							map.put("appoint_hint", "已支付");
+							if(delivery.equals("1")){
+								map.put("appoint_hint", "已完成");
+							}
+							if(evau.equals("1")){
+								map.put("appoint_hint", "已评价");
+							}
 						}
 						else{
 							map.put("appoint_hint", "未支付");
 						}
+
 					}
 					else{
 						map.put("appoint_hint", "未通过");

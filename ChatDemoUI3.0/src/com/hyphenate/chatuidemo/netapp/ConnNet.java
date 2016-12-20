@@ -31,6 +31,8 @@ public class ConnNet {
 
 
     private static final String urlLogin="http://www.clr-vision.com:18080/Therapista/user/login";
+    private static final String urlForgetPwd="http://www.clr-vision.com:18080/Therapista/user/forgetpwd";
+    private static final String urlAlterUserInfo="http://www.clr-vision.com:18080/Therapista/user/altUser";
     private static final String urlgetConsellors="http://www.clr-vision.com:18080/Therapista/consellor/getConsellors";
     private static final String urlConsellorLogin="http://www.clr-vision.com:18080/Therapista/consellor/login";
     private static final String urladdConsellor="http://www.clr-vision.com:18080/Therapista/consellor/addConsellor";
@@ -265,7 +267,7 @@ public class ConnNet {
                 //Log.v("asd",singleConsellor);
             }
             else {
-                result="注册失败！";
+                result="获取用户信息失败！";
             }
         }
         catch (Exception e) {
@@ -468,6 +470,119 @@ public class ConnNet {
         return result;
     }
 
+    //alt order update user
+    public String userAltOrder(String oid, String refuse){
+        String result="";
+        try {
+            List<NameValuePair> params=new ArrayList<NameValuePair>();
+            params.add(new BasicNameValuePair("oid",oid));
+            params.add(new BasicNameValuePair("refuse",refuse));
+
+            HttpEntity entity = new UrlEncodedFormEntity(params, HTTP.UTF_8);
+            HttpPost httpPost = new HttpPost(urlAltOrder);
+            httpPost.setEntity(entity);
+            HttpClient client = new DefaultHttpClient();
+            HttpResponse httpResponse = client.execute(httpPost);
+
+            if (httpResponse.getStatusLine().getStatusCode()== HttpStatus.SC_OK) {
+                result= EntityUtils.toString(httpResponse.getEntity(), "utf-8");
+                //Log.v("asd",singleConsellor);
+            }
+            else {
+                result="更改order失败";
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            result = e.toString();
+        }
+        result = result.replace("\\\"","\"");
+        result = result.replace("\"{","{");
+        result = result.replace("}\"","}");
+        return result;
+    }
+
+    //alt order update cs
+    public String csAltOrder(String oid, String refuse){
+        String result="";
+        try {
+            List<NameValuePair> params=new ArrayList<NameValuePair>();
+            params.add(new BasicNameValuePair("oid",oid));
+            params.add(new BasicNameValuePair("delivery",refuse));
+
+            HttpEntity entity = new UrlEncodedFormEntity(params, HTTP.UTF_8);
+            HttpPost httpPost = new HttpPost(urlAltOrder);
+            httpPost.setEntity(entity);
+            HttpClient client = new DefaultHttpClient();
+            HttpResponse httpResponse = client.execute(httpPost);
+
+            if (httpResponse.getStatusLine().getStatusCode()== HttpStatus.SC_OK) {
+                result= EntityUtils.toString(httpResponse.getEntity(), "utf-8");
+                //Log.v("asd",singleConsellor);
+            }
+            else {
+                result="更改order失败";
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            result = e.toString();
+        }
+        result = result.replace("\\\"","\"");
+        result = result.replace("\"{","{");
+        result = result.replace("}\"","}");
+        return result;
+    }
+
+    //alt order update cs
+    public String csAltOrderPingjia(String oid, String impressb,
+                                    String impresse,
+                                    String motive,
+                                    String cooperation,
+                                    String expectation,
+                                    String profession,
+                                    String neutrality,
+                                    String acceptation,
+                                    String achievement,String evac){
+        String result="";
+        try {
+            List<NameValuePair> params=new ArrayList<NameValuePair>();
+            params.add(new BasicNameValuePair("oid",oid));
+            params.add(new BasicNameValuePair("impressb",impressb));
+            params.add(new BasicNameValuePair("impresse",impresse));
+            params.add(new BasicNameValuePair("motive",motive));
+            params.add(new BasicNameValuePair("cooperation",cooperation));
+            params.add(new BasicNameValuePair("expectation",expectation));
+            params.add(new BasicNameValuePair("profession",profession));
+            params.add(new BasicNameValuePair("neutrality",neutrality));
+            params.add(new BasicNameValuePair("acceptation",acceptation));
+            params.add(new BasicNameValuePair("achievement",achievement));
+            params.add(new BasicNameValuePair("evac",evac));
+
+            HttpEntity entity = new UrlEncodedFormEntity(params, HTTP.UTF_8);
+            HttpPost httpPost = new HttpPost(urlAltOrder);
+            httpPost.setEntity(entity);
+            HttpClient client = new DefaultHttpClient();
+            HttpResponse httpResponse = client.execute(httpPost);
+
+            if (httpResponse.getStatusLine().getStatusCode()== HttpStatus.SC_OK) {
+                result= EntityUtils.toString(httpResponse.getEntity(), "utf-8");
+                //Log.v("asd",singleConsellor);
+            }
+            else {
+                result="更改order失败";
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            result = e.toString();
+        }
+        result = result.replace("\\\"","\"");
+        result = result.replace("\"{","{");
+        result = result.replace("}\"","}");
+        return result;
+    }
+
     public String getOrderByUid(String user_id){
         String result="";
         try {
@@ -486,6 +601,48 @@ public class ConnNet {
             }
             else {
                 result="获取oid预约失败！";
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            result = e.toString();
+        }
+        result = result.replace("\\\"","\"");
+        result = result.replace("\"{","{");
+        result = result.replace("}\"","}");
+        return result;
+    }
+
+    public String AlterUserInfo(String email, String nickname, String password, String emergency, String address,
+                                String religion, String homeland, String marriage,
+                                String realname, String gender, String birthday, String tel){
+        String result="";
+        try {
+            List<NameValuePair> params=new ArrayList<NameValuePair>();
+            params.add(new BasicNameValuePair("email",email));
+            params.add(new BasicNameValuePair("nickname",nickname));
+            params.add(new BasicNameValuePair("password",password));
+            params.add(new BasicNameValuePair("emergency",emergency));
+            params.add(new BasicNameValuePair("address",address));
+            params.add(new BasicNameValuePair("religion",religion));
+            params.add(new BasicNameValuePair("homeland",homeland));
+            params.add(new BasicNameValuePair("marriage",marriage));
+            params.add(new BasicNameValuePair("realname",realname));
+            params.add(new BasicNameValuePair("gender",gender));
+            params.add(new BasicNameValuePair("birthday",birthday));
+            params.add(new BasicNameValuePair("tel",tel));
+
+            HttpEntity entity = new UrlEncodedFormEntity(params, HTTP.UTF_8);
+            HttpPost httpPost = new HttpPost(urlAlterUserInfo);
+            httpPost.setEntity(entity);
+            HttpClient client = new DefaultHttpClient();
+            HttpResponse httpResponse = client.execute(httpPost);
+
+            if (httpResponse.getStatusLine().getStatusCode()== HttpStatus.SC_OK) {
+                result= EntityUtils.toString(httpResponse.getEntity(), "utf-8");
+            }
+            else {
+                result="更改user信息失败！";
             }
         }
         catch (Exception e) {
@@ -690,6 +847,39 @@ public class ConnNet {
             else
             {
                 result="获取失败！";
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            result = e.toString();
+        }
+        result = result.replace("\\\"","\"");
+        result = result.replace("\"{","{");
+        result = result.replace("}\"","}");
+        // result = parseConnselor(result);
+        return result;
+    }
+
+    //forgetPwd
+    public String forgetPwd(String email){
+        String result = "";
+        try {
+            List<NameValuePair> params=new ArrayList<NameValuePair>();
+            params.add(new BasicNameValuePair("email",email));
+
+            HttpEntity entity = new UrlEncodedFormEntity(params, HTTP.UTF_8);
+            HttpPost httpPost = new HttpPost(urlForgetPwd);
+            httpPost.setEntity(entity);
+            HttpClient client = new DefaultHttpClient();
+            HttpResponse httpResponse = client.execute(httpPost);
+
+            if (httpResponse.getStatusLine().getStatusCode()== HttpStatus.SC_OK)
+            {
+                result= EntityUtils.toString(httpResponse.getEntity(), "utf-8");
+            }
+            else
+            {
+                result="获取密码失败！";
             }
 
         } catch (Exception e) {

@@ -43,6 +43,8 @@ import com.hyphenate.chatuidemo.db.DemoDBManager;
 import com.hyphenate.chatuidemo.netapp.ConnNet;
 import com.hyphenate.easeui.utils.EaseCommonUtils;
 
+import org.json.JSONObject;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -57,6 +59,8 @@ public class LoginActivity extends BaseActivity {
 	private EditText passwordEditText;
 
 	private TextView log_scan;
+	private TextView login_regi;
+	private TextView login_forgetpwd;
 
 	private createSDFile mycreateSDFile;
 
@@ -84,6 +88,20 @@ public class LoginActivity extends BaseActivity {
 
 		usernameEditText = (EditText) findViewById(R.id.username);
 		passwordEditText = (EditText) findViewById(R.id.password);
+		login_regi = (TextView)findViewById(R.id.login_regi);
+		login_regi.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+			}
+		});
+		login_forgetpwd = (TextView)findViewById(R.id.login_forgetpwd);
+		login_forgetpwd.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				forgetPwd();
+			}
+		});
 		user_role = (RadioButton) findViewById(R.id.user_role);
 		consellor_role = (RadioButton) findViewById(R.id.consellor_role);
 		log_scan = (TextView)findViewById(R.id.log_scan);
@@ -343,7 +361,44 @@ public class LoginActivity extends BaseActivity {
 		startActivityForResult(new Intent(this, RegisterActivity.class), 0);
 	}
 
-
+	public void forgetPwd() {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				if(!usernameEditText.getText().toString().equals("")){
+					ConnNet operaton=new ConnNet();
+					String resul=operaton.forgetPwd(usernameEditText.getText().toString());
+					Message msg=new Message();
+					msg.obj=resul;
+					hforgetpwd.sendMessage(msg);
+				}
+				else{
+					Toast.makeText(LoginActivity.this,"邮箱不能为空！",Toast.LENGTH_LONG).show();
+				}
+			}
+		}).start();
+	}
+	Handler hforgetpwd=new Handler(){
+		@Override
+		public void handleMessage(Message msg) {
+			String string=(String) msg.obj;
+			Log.e("hforgetpwd" ,string);
+			try{
+				String alterFlag = new JSONObject(string).getString("rdmpwd");
+				if(!alterFlag.equals("unregistered")&&!alterFlag.equals("0")){
+					Toast.makeText(LoginActivity.this,"密码发送成功！",Toast.LENGTH_LONG).show();
+				}
+				else{
+					Toast.makeText(LoginActivity.this,"密码发送失败！",Toast.LENGTH_LONG).show();
+				}
+			}
+			catch (Exception ex){
+				Log.e("hforgetpwd",ex.toString());
+			}
+			//pd1.dismiss();
+			super.handleMessage(msg);
+		}
+	};
 
 	@Override
 	protected void onResume() {

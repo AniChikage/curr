@@ -44,7 +44,7 @@ public class AppointConfirm extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE); //设置无标题栏
         setContentView(R.layout.appointconfirm);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS); //透明状态栏
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION); //透明导航栏
+        //getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION); //透明导航栏
         context = getApplication();
         pd = new ProgressDialog(AppointConfirm.this);
         Bundle bundle = getIntent().getExtras();
