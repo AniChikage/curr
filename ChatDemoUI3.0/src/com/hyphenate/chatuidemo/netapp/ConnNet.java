@@ -535,6 +535,42 @@ public class ConnNet {
     }
 
     //alt order update cs
+    public String uAltOrder(String oid, String taidu, String xiaoguo, String advice,String evau)
+    {
+        String result="";
+        try {
+            List<NameValuePair> params=new ArrayList<NameValuePair>();
+            params.add(new BasicNameValuePair("oid",oid));
+            params.add(new BasicNameValuePair("honest",taidu));
+            params.add(new BasicNameValuePair("helpful",xiaoguo));
+            params.add(new BasicNameValuePair("advice",advice));
+            params.add(new BasicNameValuePair("evau",evau));
+
+            HttpEntity entity = new UrlEncodedFormEntity(params, HTTP.UTF_8);
+            HttpPost httpPost = new HttpPost(urlAltOrder);
+            httpPost.setEntity(entity);
+            HttpClient client = new DefaultHttpClient();
+            HttpResponse httpResponse = client.execute(httpPost);
+
+            if (httpResponse.getStatusLine().getStatusCode()== HttpStatus.SC_OK) {
+                result= EntityUtils.toString(httpResponse.getEntity(), "utf-8");
+                //Log.v("asd",singleConsellor);
+            }
+            else {
+                result="更改order失败";
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            result = e.toString();
+        }
+        result = result.replace("\\\"","\"");
+        result = result.replace("\"{","{");
+        result = result.replace("}\"","}");
+        return result;
+    }
+
+    //alt order update cs
     public String csAltOrderPingjia(String oid, String impressb,
                                     String impresse,
                                     String motive,

@@ -243,6 +243,9 @@ public class AppointDetail extends Activity {
                                 @Override
                                 public void onClick(View v) {
                                     Intent intent = new Intent(AppointDetail.this,User.class);
+                                    Bundle bundle = new Bundle();
+                                    bundle.putString("appoint_oid",appoint_oid);
+                                    intent.putExtras(bundle);
                                     startActivity(intent);
                                 }
                             });

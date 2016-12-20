@@ -210,6 +210,7 @@ com/huawei/android/pushagent/PushReceiver.class
 com/hyphenate/easeui/ui/EaseShowBigImageActivity$1.class
 org/apache/http/impl/client/TunnelRefusedException.class
 org/apache/http/HttpHost.class
+com/hyphenate/chatuidemo/Evaluation/User$3.class
 com/parse/Parse.class
 org/apache/http/impl/auth/RFC2617Scheme.class
 com/hyphenate/chatuidemo/ui/GroupSearchMessageActivity$4.class
@@ -386,6 +387,7 @@ org/apache/http/impl/cookie/RFC2965CommentUrlAttributeHandler.class
 com/hyphenate/chatuidemo/Consultant/Csdetail.class
 android/support/v4/app/FragmentManagerImpl.class
 org/apache/http/auth/BasicUserPrincipal.class
+com/hyphenate/chatuidemo/Evaluation/User$6.class
 com/hyphenate/chatuidemo/ui/MainActivity$1.class
 com/hyphenate/chatuidemo/Appointment/CdAppointDetail$7$3.class
 com/hyphenate/easeui/ui/EaseShowBigImageActivity$2.class
@@ -783,6 +785,7 @@ com/hyphenate/EMMessageListener.class
 com/baidu/platform/comapi/map/k.class
 com/hyphenate/chatuidemo/ui/MainActivity$7.class
 com/huawei/android/pushagent/a/e.class
+com/hyphenate/chatuidemo/Evaluation/User$4.class
 com/hyphenate/chatuidemo/ui/GroupSearchMessageActivity$3.class
 android/support/v7/app/ActionBar$NavigationMode.class
 org/apache/commons/codec/EncoderException.class
@@ -1340,6 +1343,7 @@ android/support/v4/media/MediaMetadataCompat.class
 com/easemob/redpacketui/ui/a/bf.class
 android/support/annotation/RequiresPermission$Read.class
 com/easemob/redpacketui/recyclerview/widget/RecyclerView$ItemAnimator$ItemHolderInfo.class
+com/hyphenate/chatuidemo/Evaluation/User$5.class
 com/hyphenate/chatuidemo/ui/ContactListFragment.class
 com/easemob/redpacketsdk/presenter/impl/PacketDetailPresenter.class
 android/support/v4/app/FragmentActivity$HostCallbacks.class
