@@ -973,7 +973,7 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
 
                 public void run() {
                     if (toChatUsername.equals(groupId)) {
-                        Toast.makeText(getActivity(), R.string.you_are_group, Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity(), R.string.you_are_group, Toast.LENGTH_SHORT).show();
                         Activity activity = getActivity();
                         if (activity != null && !activity.isFinishing()) {
                             activity.finish();
@@ -989,7 +989,7 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
             getActivity().runOnUiThread(new Runnable() {
                 public void run() {
                     if (toChatUsername.equals(groupId)) {
-                        Toast.makeText(getActivity(), R.string.the_current_group, Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity(), R.string.the_current_group, Toast.LENGTH_SHORT).show();
                         Activity activity = getActivity();
                         if (activity != null && !activity.isFinishing()) {
                             activity.finish();

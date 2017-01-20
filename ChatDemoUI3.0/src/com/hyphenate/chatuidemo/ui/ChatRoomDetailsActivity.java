@@ -210,7 +210,7 @@ public class ChatRoomDetailsActivity extends BaseActivity implements OnClickList
 					runOnUiThread(new Runnable() {
 						public void run() {
 							progressDialog.dismiss();
-							Toast.makeText(getApplicationContext(), "Failed to quit group: " + e.getMessage(), Toast.LENGTH_LONG).show();
+							Toast.makeText(getApplicationContext(), "Failed to quit group: " + e.getMessage(), Toast.LENGTH_SHORT).show();
 						}
 					});
 				}

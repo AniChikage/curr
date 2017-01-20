@@ -107,7 +107,7 @@ public class AppointDetail extends Activity {
                     }
                     break;
                 case R.id.btn_pay:
-                    Toast.makeText(AppointDetail.this,"开发中……", Toast.LENGTH_LONG).show();
+                    Toast.makeText(AppointDetail.this,"开发中……", Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.adback:
                     finish();
@@ -147,10 +147,10 @@ public class AppointDetail extends Activity {
             try {
                 String del = new JSONObject(string).getString("del");
                 if(del.equals("1")){
-                    Toast.makeText(AppointDetail.this,"删除预约成功！", Toast.LENGTH_LONG).show();
+                    Toast.makeText(AppointDetail.this,"删除预约成功！", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    Toast.makeText(AppointDetail.this,"删除预约失败！", Toast.LENGTH_LONG).show();
+                    Toast.makeText(AppointDetail.this,"删除预约失败！", Toast.LENGTH_SHORT).show();
                 }
             } catch (JSONException e) {
                 System.out.println("Jsons parse error !");
@@ -257,7 +257,7 @@ public class AppointDetail extends Activity {
                             pingjia.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
-                                    Toast.makeText(AppointDetail.this,"您已经完成评价",Toast.LENGTH_LONG).show();
+                                    Toast.makeText(AppointDetail.this,"您已经完成评价",Toast.LENGTH_SHORT).show();
                                 }
                             });
                         }

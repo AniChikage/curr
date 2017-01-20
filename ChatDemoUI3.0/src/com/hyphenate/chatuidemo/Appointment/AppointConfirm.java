@@ -84,7 +84,7 @@ public class AppointConfirm extends Activity {
                     msg.obj = result;
                     needhandler.sendMessage(msg);
                 } catch (Exception ex) {
-                    Toast.makeText(AppointConfirm.this, "get needs fails", Toast.LENGTH_LONG).show();
+                    Toast.makeText(AppointConfirm.this, "get needs fails", Toast.LENGTH_SHORT).show();
                 }
             }
         }).start();
@@ -98,7 +98,7 @@ public class AppointConfirm extends Activity {
                     msg.obj = result;
                     hGetSchedule.sendMessage(msg);
                 } catch (Exception ex) {
-                    Toast.makeText(AppointConfirm.this, "get needs fails", Toast.LENGTH_LONG).show();
+                    Toast.makeText(AppointConfirm.this, "get needs fails", Toast.LENGTH_SHORT).show();
                 }
             }
         }).start();
@@ -152,11 +152,11 @@ public class AppointConfirm extends Activity {
                         msg.obj = result;
                         haddneed.sendMessage(msg);
                     } catch (Exception ex) {
-                        Toast.makeText(AppointConfirm.this, "添加病例描述失败！", Toast.LENGTH_LONG).show();
+                        Toast.makeText(AppointConfirm.this, "添加病例描述失败！", Toast.LENGTH_SHORT).show();
                     }
                 }
                 else{
-                    Toast.makeText(AppointConfirm.this,"您需要添加病例描述", Toast.LENGTH_LONG).show();
+                    Toast.makeText(AppointConfirm.this,"您需要添加病例描述", Toast.LENGTH_SHORT).show();
                 }
             }
         }).start();
@@ -194,7 +194,7 @@ public class AppointConfirm extends Activity {
                             haddorder.sendMessage(msg);
                         }
                         catch (Exception ex) {
-                            Toast.makeText(AppointConfirm.this, "添加病例描述失败！", Toast.LENGTH_LONG).show();
+                            Toast.makeText(AppointConfirm.this, "添加病例描述失败！", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }).start();
@@ -254,7 +254,7 @@ public class AppointConfirm extends Activity {
                             haddorderdone.sendMessage(msg);
                         }
                         catch (Exception ex) {
-                            Toast.makeText(AppointConfirm.this, "添加病例描述失败！", Toast.LENGTH_LONG).show();
+                            Toast.makeText(AppointConfirm.this, "添加病例描述失败！", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }).start();
@@ -274,11 +274,11 @@ public class AppointConfirm extends Activity {
             try {
                 String jsonObjs = new JSONObject(string).getString("addOrder");
                 if(jsonObjs!=""){
-                    Toast.makeText(AppointConfirm.this,"提交成功！",Toast.LENGTH_LONG).show();
+                    Toast.makeText(AppointConfirm.this,"提交成功！",Toast.LENGTH_SHORT).show();
                     pd.dismiss();
                 }
                 else{
-                    Toast.makeText(AppointConfirm.this,"提交失败！",Toast.LENGTH_LONG).show();
+                    Toast.makeText(AppointConfirm.this,"提交失败！",Toast.LENGTH_SHORT).show();
                 }
             }
             catch (Exception ex){

@@ -122,7 +122,7 @@ public class LoginActivity_new extends BaseActivity {
 	 */
 	public void login(View view) {
 		if(!user_role.isChecked()&&!consellor_role.isChecked()){
-			Toast.makeText(this,"请先选择登陆角色！",Toast.LENGTH_LONG).show();
+			Toast.makeText(this,"请先选择登陆角色！",Toast.LENGTH_SHORT).show();
 		}
 		else{
 			if (!EaseCommonUtils.isNetWorkConnected(this)) {
@@ -213,7 +213,7 @@ public class LoginActivity_new extends BaseActivity {
 									handler.sendMessage(msg);
 								}
 								catch (Exception ex){
-									Toast.makeText(LoginActivity_new.this,"用户名或者密码不能为空",Toast.LENGTH_LONG).show();
+									Toast.makeText(LoginActivity_new.this,"用户名或者密码不能为空",Toast.LENGTH_SHORT).show();
 								}
 
 							}
@@ -241,14 +241,14 @@ public class LoginActivity_new extends BaseActivity {
 									cshandler.sendMessage(msg);
 								}
 								catch (Exception ex){
-									Toast.makeText(LoginActivity_new.this,"用户名或者密码不能为空",Toast.LENGTH_LONG).show();
+									Toast.makeText(LoginActivity_new.this,"用户名或者密码不能为空",Toast.LENGTH_SHORT).show();
 								}
 
 							}
 						}).start();
 					}
 					else{
-						Toast.makeText(LoginActivity_new.this,"请先选择登陆角色",Toast.LENGTH_LONG).show();
+						Toast.makeText(LoginActivity_new.this,"请先选择登陆角色",Toast.LENGTH_SHORT).show();
 					}
 
 
@@ -302,7 +302,7 @@ public class LoginActivity_new extends BaseActivity {
 			}
             /*
             else if(string.indexOf("unregistered")>0) {
-                Toast.makeText(Login.this,"该账号尚未注册！",Toast.LENGTH_LONG);
+                Toast.makeText(Login.this,"该账号尚未注册！",Toast.LENGTH_SHORT);
             }*/
 			else{
 				Toast.makeText(LoginActivity_new.this, "用户登录失败", Toast.LENGTH_SHORT).show();

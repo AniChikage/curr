@@ -191,6 +191,13 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/nornal_style"></activity>
+
+        <!-- 协议 -->
+        <activity
+            android:name=".ui.Xieyi"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/nornal_style"></activity>
         <!-- 视频通话 -->
         <activity
             android:name=".ui.VideoCallActivity"
@@ -434,7 +441,6 @@
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

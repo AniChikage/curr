@@ -57,7 +57,7 @@ public class GroupBlacklistActivity extends BaseActivity {
 				} catch (HyphenateException e) {
 					runOnUiThread(new Runnable() {
 						public void run() {
-							Toast.makeText(getApplicationContext(), st1, Toast.LENGTH_LONG).show();
+							Toast.makeText(getApplicationContext(), st1, Toast.LENGTH_SHORT).show();
 							progressBar.setVisibility(View.INVISIBLE);
 						}
 					});

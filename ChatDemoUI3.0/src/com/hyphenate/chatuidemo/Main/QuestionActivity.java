@@ -76,7 +76,7 @@ public class QuestionActivity extends Activity {
                                             new DialogInterface.OnClickListener(){
                                                 public void onClick(DialogInterface dialoginterface, int i){
                                                     //按钮事件
-                                                    Toast.makeText(QuestionActivity.this, "确定",Toast.LENGTH_LONG).show();
+                                                    Toast.makeText(QuestionActivity.this, "确定",Toast.LENGTH_SHORT).show();
                                                 }
                                             }).show();
                             return;
@@ -115,7 +115,7 @@ public class QuestionActivity extends Activity {
 
                                     } catch (Exception ex){
                                         Log.v("fuck",ex.toString());
-//                                Toast.makeText(QuestionActivity.this,"失败",Toast.LENGTH_LONG).show();
+//                                Toast.makeText(QuestionActivity.this,"失败",Toast.LENGTH_SHORT).show();
                                     }
 
                                 }
@@ -123,13 +123,13 @@ public class QuestionActivity extends Activity {
                             Log.e("log","handle done");
                         }
                         else{
-                            Toast.makeText(QuestionActivity.this,"您还未完成所有题目！~", Toast.LENGTH_LONG).show();
+                            Toast.makeText(QuestionActivity.this,"您还未完成所有题目！~", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
             }
             catch (Exception ex){
-                Toast.makeText(QuestionActivity.this,ex.toString(), Toast.LENGTH_LONG).show();
+                Toast.makeText(QuestionActivity.this,ex.toString(), Toast.LENGTH_SHORT).show();
             }
         }
 
@@ -142,7 +142,7 @@ public class QuestionActivity extends Activity {
             String string=(String) msg.obj;
             Log.e("addHarvestz",string);
             try{
-                Toast.makeText(QuestionActivity.this,"提交初诊成功！",Toast.LENGTH_LONG).show();
+                Toast.makeText(QuestionActivity.this,"提交初诊成功！",Toast.LENGTH_SHORT).show();
             }
             catch (Exception ex){
                 Log.e("jsonErr",ex.toString());
@@ -175,7 +175,7 @@ public class QuestionActivity extends Activity {
                     msg.obj=result;
                     handler.sendMessage(msg);
                 } catch (Exception ex){
-                    Toast.makeText(QuestionActivity.this,"失败", Toast.LENGTH_LONG).show();
+                    Toast.makeText(QuestionActivity.this,"失败", Toast.LENGTH_SHORT).show();
                 }
 
             }

@@ -108,7 +108,7 @@ public class Category extends Activity {
                     jrywhandler.sendMessage(msg);
                 }
                 catch (Exception ex){
-                    Toast.makeText(Category.this,"今日要闻获取失败", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Category.this,"今日要闻获取失败", Toast.LENGTH_SHORT).show();
                 }
 
             }

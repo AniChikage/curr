@@ -48,6 +48,7 @@ import com.hyphenate.chatuidemo.Appointment.AppointDetail;
 import com.hyphenate.chatuidemo.Appointment.CdAppointDetail;
 import com.hyphenate.chatuidemo.Appointment.MyAppoint;
 import com.hyphenate.chatuidemo.Consultant.Csdetail;
+import com.hyphenate.chatuidemo.Evaluation.Consellor;
 import com.hyphenate.chatuidemo.Help.createSDFile;
 import com.hyphenate.chatuidemo.Main.QuestionActivity;
 import com.hyphenate.chatuidemo.R;
@@ -57,6 +58,7 @@ import com.hyphenate.chatuidemo.ui.Setting;
 import com.prolificinteractive.materialcalendarview.CalendarDay;
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
 import com.prolificinteractive.materialcalendarview.OnDateSelectedListener;
+import com.wang.avi.AVLoadingIndicatorView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -104,6 +106,12 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
     private ProgressDialog pd1=null;
     private ProgressDialog pd2=null;
     private ProgressDialog pd_del=null;
+//    private AVLoadingIndicatorView avi=null;
+//    private TextView fetching_tv;
+//    private AVLoadingIndicatorView avi_adding=null;
+//    private TextView adding_tv;
+//    private AVLoadingIndicatorView avi_deleting=null;
+//    private TextView deleting_tv;
     private Button[] mTabs;
     private TextView unreadLabel;
     private TextView unreadAddressLable;
@@ -145,31 +153,32 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
 
         calendar1 = Calendar.getInstance();
         onTimeSetListener = this;
-        /*
-        try{
-            dateFormat = DateFormat.getDateInstance(DateFormat.LONG, Locale.getDefault());
-            timeFormat = new SimpleDateFormat(TIME_PATTERN, Locale.getDefault());
-            //update();
-            TimePickerDialog.newInstance(this, calendar1.get(Calendar.HOUR_OF_DAY), calendar1.get(Calendar.MINUTE), true).show(getFragmentManager(), "timePicker");
-        }
-        catch (Exception ex){
-            Log.e("timeerr",ex.toString());
-        }
-*/
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS); //透明状态栏
-        //getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION); //透明导航栏
         hcontext = this.getApplicationContext();
         mycreateSDFile = new createSDFile(hcontext);
-        consellor_email = mycreateSDFile.readSDFile("cache");
+        consellor_email = mycreateSDFile.readSDFile("cache"); //建立cache文件
         instance = this;
         pd = new ProgressDialog(ConsellorPage.this);
         pd1 = new ProgressDialog(ConsellorPage.this);
         pd2 = new ProgressDialog(ConsellorPage.this);
         pd_del = new ProgressDialog(ConsellorPage.this);
+        //avi = new AVLoadingIndicatorView(ConsellorPage.this);
+//        avi = (AVLoadingIndicatorView)findViewById(R.id.fetching);
+//        fetching_tv = (TextView)findViewById(R.id.fetching_tv);
+//        avi_adding = (AVLoadingIndicatorView)findViewById(R.id.adding);
+//        adding_tv = (TextView)findViewById(R.id.adding_tv);
+//        avi_deleting = (AVLoadingIndicatorView)findViewById(R.id.deleting);
+//        deleting_tv = (TextView)findViewById(R.id.deleting_tv);
         try{
             initId();
-            pd.setMessage("获取中……");
+            pd.setMessage("获取中...");
             pd.show();
+//            avi.show();
+//            avi_adding.hide();
+//            avi_deleting.hide();
+//            adding_tv.setVisibility(View.INVISIBLE);
+//            deleting_tv.setVisibility(View.INVISIBLE);
+            //region 获取初始信息
             new Thread(new Runnable() {
                 public void run() {
                     try {
@@ -179,16 +188,18 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
                         msg.obj = result;
                         hGetConsellor.sendMessage(msg);
                     } catch (Exception ex) {
-                        Toast.makeText(ConsellorPage.this, "咨询师获取失败", Toast.LENGTH_LONG).show();
+                        Toast.makeText(ConsellorPage.this, "咨询师获取失败", Toast.LENGTH_SHORT).show();
                     }
                 }
             }).start();
+            //endregion
         }
         catch(Exception ex){
             ex.printStackTrace();
         }
     }
 
+    //region 初始化ID
     private void initId(){
         listView = (ListView)findViewById(R.id.listview);
         header_view = LayoutInflater.from(hcontext).inflate(R.layout.mainpage_mine_header, null);
@@ -200,6 +211,7 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
         mTabs[1] = (Button) findViewById(R.id.btn_address_list);
         mTabs[0].setSelected(true);
 
+        //region 添加日程事件
         txt_starttime = (TextView)findViewById(R.id.txt_starttime);
         txt_endtime = (TextView)findViewById(R.id.txt_endtime);
         btn_endtime = (TextView)findViewById(R.id.btn_endtime);
@@ -238,8 +250,10 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
         toAdd_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pd2.setMessage("添加中……");
-                pd2.show();
+//                avi_adding.show();
+//                adding_tv.setVisibility(View.VISIBLE);
+                pd1.setMessage("添加中...");
+                pd1.show();
                 isAdd = 1;
                 if(select_time!=""&&txt_starttime.getText().toString()!=""&&txt_endtime.getText().toString()!=""){
                     new Thread(new Runnable() {
@@ -258,7 +272,7 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
                                 msg.obj = result;
                                 hAddSchedule.sendMessage(msg);
                             }catch (Exception ex) {
-                                Toast.makeText(hcontext, "添加日程失败", Toast.LENGTH_LONG).show();
+                                Toast.makeText(hcontext, "添加日程失败", Toast.LENGTH_SHORT).show();
                             }
                         }
                     }).start();
@@ -280,6 +294,7 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
                 ll_add.setVisibility(View.INVISIBLE);
             }
         });
+        //endregion
 
         richeng_page = (RelativeLayout)findViewById(R.id.richeng_page);
         wode_page = (RelativeLayout)findViewById(R.id.wode_page);
@@ -317,7 +332,9 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
         header_ll.setLayoutParams(lpmine);
         listView.addHeaderView(header_view);
     }
+    //endregion
 
+    //region 添加日程：handle
     Handler hAddSchedule = new Handler(){
         @Override
         public void handleMessage(Message msg) {
@@ -326,11 +343,10 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
             try {
                 String status = new JSONObject(string).getString("addSchedule");
                 if(status.equals("1")){
-
                     refreshSche();
                 }
                 else{
-                    Toast.makeText(ConsellorPage.this,"添加日程失败！",Toast.LENGTH_LONG).show();
+                    Toast.makeText(ConsellorPage.this,"添加日程失败！",Toast.LENGTH_SHORT).show();
                     refreshSche();
                 }
             } catch (Exception e) {
@@ -341,7 +357,9 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
             super.handleMessage(msg);
         }
     };
+    //endregion
 
+    //region 添加日程完成：刷新
     public void refreshSche(){
         ll_down.removeAllViews();
         new Thread(new Runnable() {
@@ -381,19 +399,22 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
                         }
                     }
                 } catch (Exception ex) {
-                    Toast.makeText(hcontext, "预约失败", Toast.LENGTH_LONG).show();
+                    Toast.makeText(hcontext, "预约失败", Toast.LENGTH_SHORT).show();
                 }
             }
         }).start();
 
     }
+    //endregion
 
     OnDateSelectedListener onDateSelectedListener = new OnDateSelectedListener() {
         @Override
         public void onDateSelected(@NonNull MaterialCalendarView widget, @NonNull CalendarDay date, boolean selected) {
-            //Toast.makeText(ConsellorPage.this,widget.getSelectedDate().toString(),Toast.LENGTH_LONG).show();
+            //Toast.makeText(ConsellorPage.this,widget.getSelectedDate().toString(),Toast.LENGTH_SHORT).show();
             pd1.setMessage("获取中……");
             pd1.show();
+//            avi.show();
+//            fetching_tv.setVisibility(View.VISIBLE);
             String role = "${inputCount}*0.04*383+${saleCount}*15";
             Pattern p = Pattern.compile("\\{.*?\\}");// 查找规则公式中大括号以内的字符
             Matcher m = p.matcher(widget.getSelectedDate().toString());
@@ -421,7 +442,7 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
                         select_time = selectedDate;
                         if(difDay>=0&&difDay<=6){
                             ConnNet operaton = new ConnNet();
-                            String result = operaton.getPerSchedule(cid,selectedDate);
+                            String result = operaton.getPerSchedule(cid,sdate);
                             Log.e("csnoid",cid);
                             Log.e("sdate",sdate);
                             Log.e("selectdate",selectedDate);
@@ -443,7 +464,7 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
                             }
                         }
                     } catch (Exception ex) {
-                        Toast.makeText(hcontext, "预约失败", Toast.LENGTH_LONG).show();
+                        Toast.makeText(hcontext, "预约失败", Toast.LENGTH_SHORT).show();
                     }
                 }
             }).start();
@@ -453,7 +474,7 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
     Handler hupdate = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-            Toast.makeText(hcontext, "请选择七天之内的时间",Toast.LENGTH_LONG).show();
+            Toast.makeText(hcontext, "请选择七天之内的时间",Toast.LENGTH_SHORT).show();
             super.handleMessage(msg);
         }
     };
@@ -518,16 +539,18 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
                             System.arraycopy(mHits, 1, mHits, 0, mHits.length - 1);
                             mHits[mHits.length - 1] = SystemClock.uptimeMillis(); // 系统开机时间
                             if (mHits[0] >= (SystemClock.uptimeMillis() - 500)) {
-                                //Toast.makeText(ConsellorPage.this, "这就是传说中的双击事件", Toast.LENGTH_LONG).show();
+                                //Toast.makeText(ConsellorPage.this, "这就是传说中的双击事件", Toast.LENGTH_SHORT).show();
                                 new AlertDialog.Builder(ConsellorPage.this).setTitle("确定删除该日程吗？")
                                         .setIcon(android.R.drawable.ic_dialog_info)
                                         .setPositiveButton("确定", new DialogInterface.OnClickListener() {
                                             @Override
                                             public void onClick(DialogInterface dialog, int which) {
-                                                //Toast.makeText(hcontext, "yes", Toast.LENGTH_LONG).show();
+                                                //Toast.makeText(hcontext, "yes", Toast.LENGTH_SHORT).show();
                                                 // 点击“确认”后的操作
                                                 pd_del.setMessage("删除中......");
                                                 pd_del.show();
+//                                                avi_deleting.show();
+//                                                deleting_tv.setVisibility(View.VISIBLE);
                                                 new Thread(new Runnable() {
                                                     public void run() {
                                                         try {
@@ -538,7 +561,7 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
                                                             hdelschedule.sendMessage(msg);
 
                                                         } catch (Exception ex) {
-                                                            Toast.makeText(hcontext, "删除日程失败", Toast.LENGTH_LONG).show();
+                                                            Toast.makeText(hcontext, "删除日程失败", Toast.LENGTH_SHORT).show();
                                                         }
                                                     }
                                                 }).start();
@@ -552,7 +575,7 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
                                             }
                                         }).show();
                             }
-                            //Toast.makeText(Csdetail.this,String.valueOf(tv.getId()),Toast.LENGTH_LONG).show();
+                            //Toast.makeText(Csdetail.this,String.valueOf(tv.getId()),Toast.LENGTH_SHORT).show();
                         }
                     });
                     ll_down.addView(tv,btParams);
@@ -595,7 +618,7 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
                         tv.setBackgroundResource(R.drawable.csborder);
                         tv.setTextColor(Color.RED);
                         tv.setTag("1");
-                        //Toast.makeText(Csdetail.this,String.valueOf(tv.getId()),Toast.LENGTH_LONG).show();
+                        //Toast.makeText(Csdetail.this,String.valueOf(tv.getId()),Toast.LENGTH_SHORT).show();
                     }
                 });
                 /*
@@ -610,9 +633,11 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
                 ll_down.addView(tv,btParams);
                 try{
                     pd1.dismiss();
+//                    avi.hide();
+//                    fetching_tv.setVisibility(View.INVISIBLE);
                     pd2.dismiss();
                     if(isAdd == 1)
-                        Toast.makeText(ConsellorPage.this,"添加日程成功！",Toast.LENGTH_LONG).show();
+                        Toast.makeText(ConsellorPage.this,"添加日程成功！",Toast.LENGTH_SHORT).show();
                     isAdd = 0;
                     ll_add.setVisibility(View.INVISIBLE);
                 }
@@ -624,6 +649,8 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
                 e.printStackTrace();
                 try{
                     pd1.dismiss();
+//                    avi.hide();
+//                    fetching_tv.setVisibility(View.INVISIBLE);
                     pd2.dismiss();
                 }
                 catch (Exception ex){
@@ -644,10 +671,10 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
             try{
                 String del_status = new JSONObject(string).getString("delSchedule");
                 if(del_status.equals("1")){
-                    Toast.makeText(ConsellorPage.this,"删除日程成功！",Toast.LENGTH_LONG).show();
+                    Toast.makeText(ConsellorPage.this,"删除日程成功！",Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    Toast.makeText(ConsellorPage.this,"删除日程失败！",Toast.LENGTH_LONG).show();
+                    Toast.makeText(ConsellorPage.this,"删除日程失败！",Toast.LENGTH_SHORT).show();
                 }
             }
             catch (Exception ex){
@@ -655,6 +682,8 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
             }
             refreshSche();
             pd_del.dismiss();
+//            avi_deleting.hide();
+//            deleting_tv.setVisibility(View.INVISIBLE);
             super.handleMessage(msg);
         }
     };
@@ -685,6 +714,7 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
     }
 
 
+    //region 获取初始信息
     //first step: get Consellor id
     Handler hGetConsellor = new Handler(){
         @Override
@@ -703,7 +733,7 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
                             msg.obj = result;
                             hAdapt.sendMessage(msg);
                         } catch (Exception ex) {
-                            Toast.makeText(ConsellorPage.this, "咨询师获取失败", Toast.LENGTH_LONG).show();
+                            Toast.makeText(ConsellorPage.this, "咨询师获取失败", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }).start();
@@ -714,7 +744,9 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
             super.handleMessage(msg);
         }
     };
+    //endregion
 
+    //region 获取初始信息
     Handler hAdapt = new Handler(){
         @Override
         public void handleMessage(Message msg) {
@@ -820,10 +852,13 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
                     }
                 }
             });
+//            avi.hide();
+//            fetching_tv.setVisibility(View.INVISIBLE);
             pd.dismiss();
             super.handleMessage(msg);
         }
     };
+    //endregion
 
     private static Bitmap getBitmapFromByte(byte[] temp){
         if(temp != null){
@@ -856,6 +891,6 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
             txt_starttime.setText(timeFormat.format(calendar1.getTime()));
         else
             txt_endtime.setText(timeFormat.format(calendar1.getTime()));
-        //Toast.makeText(ConsellorPage.this,timeFormat.format(calendar1.getTime()),Toast.LENGTH_LONG ).show();
+        //Toast.makeText(ConsellorPage.this,timeFormat.format(calendar1.getTime()),Toast.LENGTH_SHORT ).show();
     }
 }

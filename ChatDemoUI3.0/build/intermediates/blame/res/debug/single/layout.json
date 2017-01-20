@@ -288,6 +288,10 @@
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\layout\\em_row_group.xml"
     },
     {
+        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\layout\\xieyi.xml",
+        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\layout\\xieyi.xml"
+    },
+    {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\layout\\rp_send_record_list_header.xml",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\redpacketlibrary\\unspecified\\res\\layout\\rp_send_record_list_header.xml"
     },

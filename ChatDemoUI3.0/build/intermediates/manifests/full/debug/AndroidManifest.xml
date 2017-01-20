@@ -188,6 +188,13 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/nornal_style" />
+
+        <!-- 协议 -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.Xieyi"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/nornal_style" />
         <!-- 视频通话 -->
         <activity
             android:name="com.hyphenate.chatuidemo.ui.VideoCallActivity"

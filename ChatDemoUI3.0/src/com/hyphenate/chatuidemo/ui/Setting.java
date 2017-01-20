@@ -70,7 +70,7 @@ public class Setting extends Activity {
     private void clearCache(){
         mycreateSDFile.deleteSDFile("cache");
         mycreateSDFile.deleteSDFile("cachetype");
-        Toast.makeText(this,"清除缓存成功！",Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"清除缓存成功！",Toast.LENGTH_SHORT).show();
     }
 
     private void startAlter(){

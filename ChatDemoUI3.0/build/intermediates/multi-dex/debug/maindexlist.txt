@@ -519,6 +519,7 @@ com/hyphenate/chatuidemo/ui/ForwardMessageActivity$1.class
 com/hyphenate/exceptions/HyphenateException.class
 com/hyphenate/chatuidemo/ui/MainActivity$17.class
 com/prolificinteractive/materialcalendarview/CalendarMode.class
+com/hyphenate/chatuidemo/ui/Xieyi$1.class
 com/hyphenate/chatuidemo/Appointment/AppointConfirm$1.class
 android/support/v4/media/session/PlaybackStateCompat$1.class
 org/apache/http/conn/ManagedClientConnection.class
@@ -921,6 +922,7 @@ android/support/v4/app/ActivityCompatHoneycomb.class
 android/support/v4/view/ViewCompatICSMr1.class
 org/apache/http/protocol/RequestDate.class
 com/hyphenate/chatuidemo/ui/GroupBlacklistActivity.class
+com/hyphenate/chatuidemo/ui/RegisterActivity$3.class
 com/baidu/platform/comapi/map/N.class
 org/apache/http/impl/cookie/RFC2109VersionHandler.class
 org/apache/http/message/BasicHeaderElement.class
@@ -968,6 +970,7 @@ com/hyphenate/chatuidemo/Appointment/AppointDetail$5$2.class
 org/apache/http/protocol/DefaultedHttpContext.class
 com/hyphenate/chatuidemo/ui/MainActivity$2.class
 com/easemob/redpacketui/netstatus/b$a.class
+com/hyphenate/chatuidemo/Evaluation/User$7.class
 com/huawei/android/pushagent/b/e/d.class
 com/hyphenate/chatuidemo/Main/SettingActivity.class
 com/xiaomi/mipush/sdk/PushMessageReceiver.class
@@ -995,6 +998,7 @@ org/apache/http/impl/io/AbstractMessageWriter.class
 com/prolificinteractive/materialcalendarview/MaterialCalendarView$1.class
 com/hyphenate/chatuidemo/ui/CallActivity$2.class
 org/apache/http/StatusLine.class
+com/hyphenate/chatuidemo/ui/Xieyi.class
 com/hyphenate/chatuidemo/ui/VoiceCallActivity$2.class
 com/easemob/redpacketsdk/callback/CardInfoCallBack.class
 org/apache/http/HttpException.class

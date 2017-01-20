@@ -203,7 +203,7 @@ public class Csdetail extends Activity {
                     msg.obj = result;
                     cshandler.sendMessage(msg);
                 } catch (Exception ex) {
-                    Toast.makeText(Csdetail.this, "咨询师获取失败", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Csdetail.this, "咨询师获取失败", Toast.LENGTH_SHORT).show();
                 }
             }
         }).start();
@@ -234,13 +234,13 @@ public class Csdetail extends Activity {
                                     msg.obj = result;
                                     hschedule.sendMessage(msg);
                                 } catch (Exception ex) {
-                                    Toast.makeText(Csdetail.this, "预约失败", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(Csdetail.this, "预约失败", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         }).start();
                     }
                     else{
-                        Toast.makeText(Csdetail.this,"您还未登陆！", Toast.LENGTH_LONG).show();
+                        Toast.makeText(Csdetail.this,"您还未登陆！", Toast.LENGTH_SHORT).show();
                     }
 
                     break;
@@ -310,10 +310,10 @@ public class Csdetail extends Activity {
                 }
             }
             if(sid.equals(""))
-                Toast.makeText(Csdetail.this,"还未选择", Toast.LENGTH_LONG).show();
+                Toast.makeText(Csdetail.this,"还未选择", Toast.LENGTH_SHORT).show();
         }
         catch (Exception ex){
-            Toast.makeText(Csdetail.this,"您还未选择日期！", Toast.LENGTH_LONG).show();
+            Toast.makeText(Csdetail.this,"您还未选择日期！", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -385,7 +385,7 @@ public class Csdetail extends Activity {
                             hdialog.sendMessage(msg);
                             tempDialog.dismiss();
                         } catch (Exception ex) {
-                            Toast.makeText(Csdetail.this, "添加病例描述失败！", Toast.LENGTH_LONG).show();
+                            Toast.makeText(Csdetail.this, "添加病例描述失败！", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }).start();
@@ -456,7 +456,7 @@ public class Csdetail extends Activity {
                     msg.obj = result;
                     hschedule.sendMessage(msg);
                 } catch (Exception ex) {
-                    Toast.makeText(Csdetail.this, "咨询师获取失败", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Csdetail.this, "咨询师获取失败", Toast.LENGTH_SHORT).show();
                 }
             }
         }).start();
@@ -600,7 +600,7 @@ public class Csdetail extends Activity {
                             tv.setBackgroundResource(R.drawable.csborder);
                             tv.setTextColor(Color.RED);
                             tv.setTag("1");
-                            //Toast.makeText(Csdetail.this,String.valueOf(tv.getId()),Toast.LENGTH_LONG).show();
+                            //Toast.makeText(Csdetail.this,String.valueOf(tv.getId()),Toast.LENGTH_SHORT).show();
                         }
                     });
                     lldown.addView(tv,btParams);

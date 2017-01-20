@@ -328,7 +328,7 @@ public class GroupDetailsActivity extends BaseActivity implements OnClickListene
 					runOnUiThread(new Runnable() {
 						public void run() {
 							progressDialog.dismiss();
-							Toast.makeText(getApplicationContext(), getResources().getString(R.string.Exit_the_group_chat_failure) + " " + e.getMessage(), Toast.LENGTH_LONG).show();
+							Toast.makeText(getApplicationContext(), getResources().getString(R.string.Exit_the_group_chat_failure) + " " + e.getMessage(), Toast.LENGTH_SHORT).show();
 						}
 					});
 				}
@@ -360,7 +360,7 @@ public class GroupDetailsActivity extends BaseActivity implements OnClickListene
 					runOnUiThread(new Runnable() {
 						public void run() {
 							progressDialog.dismiss();
-							Toast.makeText(getApplicationContext(), st5 + e.getMessage(), Toast.LENGTH_LONG).show();
+							Toast.makeText(getApplicationContext(), st5 + e.getMessage(), Toast.LENGTH_SHORT).show();
 						}
 					});
 				}
@@ -398,7 +398,7 @@ public class GroupDetailsActivity extends BaseActivity implements OnClickListene
 					runOnUiThread(new Runnable() {
 						public void run() {
 							progressDialog.dismiss();
-							Toast.makeText(getApplicationContext(), st6 + e.getMessage(), Toast.LENGTH_LONG).show();
+							Toast.makeText(getApplicationContext(), st6 + e.getMessage(), Toast.LENGTH_SHORT).show();
 						}
 					});
 				}
@@ -468,7 +468,7 @@ public class GroupDetailsActivity extends BaseActivity implements OnClickListene
 		                runOnUiThread(new Runnable() {
 		                    public void run() {
 		                        progressDialog.dismiss();
-		                        Toast.makeText(getApplicationContext(), R.string.remove_group_of, Toast.LENGTH_LONG).show();
+		                        Toast.makeText(getApplicationContext(), R.string.remove_group_of, Toast.LENGTH_SHORT).show();
 		                    }
 		                });
 		                
@@ -501,7 +501,7 @@ public class GroupDetailsActivity extends BaseActivity implements OnClickListene
 		                runOnUiThread(new Runnable() {
 		                    public void run() {
 		                        progressDialog.dismiss();
-		                        Toast.makeText(getApplicationContext(), st9, Toast.LENGTH_LONG).show();
+		                        Toast.makeText(getApplicationContext(), st9, Toast.LENGTH_SHORT).show();
 		                    }
 		                });
 		            }
@@ -677,7 +677,7 @@ public class GroupDetailsActivity extends BaseActivity implements OnClickListene
 									deleteDialog.dismiss();
 									runOnUiThread(new Runnable() {
 										public void run() {
-											Toast.makeText(getApplicationContext(), st14 + e.getMessage(), Toast.LENGTH_LONG).show();
+											Toast.makeText(getApplicationContext(), st14 + e.getMessage(), Toast.LENGTH_SHORT).show();
 										}
 									});
 								}

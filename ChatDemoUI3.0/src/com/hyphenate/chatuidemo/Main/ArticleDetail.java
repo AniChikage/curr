@@ -100,7 +100,7 @@ public class ArticleDetail extends Activity {
                     handler.sendMessage(msg);
                 }
                 catch (Exception ex){
-                    Toast.makeText(ArticleDetail.this,"文章获取失败", Toast.LENGTH_LONG).show();
+                    Toast.makeText(ArticleDetail.this,"文章获取失败", Toast.LENGTH_SHORT).show();
                 }
 
             }

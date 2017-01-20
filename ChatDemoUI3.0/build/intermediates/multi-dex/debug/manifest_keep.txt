@@ -25,6 +25,7 @@
 -keep class com.hyphenate.chatuidemo.ui.PublicGroupsActivity { <init>(); }
 -keep class com.hyphenate.chatuidemo.ui.PublicChatRoomsActivity { <init>(); }
 -keep class com.hyphenate.chatuidemo.ui.VoiceCallActivity { <init>(); }
+-keep class com.hyphenate.chatuidemo.ui.Xieyi { <init>(); }
 -keep class com.hyphenate.chatuidemo.ui.VideoCallActivity { <init>(); }
 -keep class com.hyphenate.chatuidemo.ui.GroupSimpleDetailActivity { <init>(); }
 -keep class com.hyphenate.chatuidemo.ui.GroupBlacklistActivity { <init>(); }

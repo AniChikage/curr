@@ -315,7 +315,7 @@ public class MySetting extends BaseActivity {
 					if (ChatActivity.activityInstance != null && ChatActivity.activityInstance.toChatUsername != null &&
 							username.equals(ChatActivity.activityInstance.toChatUsername)) {
 					    String st10 = getResources().getString(R.string.have_you_removed);
-					    Toast.makeText(MySetting.this, ChatActivity.activityInstance.getToChatUsername() + st10, Toast.LENGTH_LONG)
+					    Toast.makeText(MySetting.this, ChatActivity.activityInstance.getToChatUsername() + st10, Toast.LENGTH_SHORT)
 					    .show();
 					    ChatActivity.activityInstance.finish();
 					}

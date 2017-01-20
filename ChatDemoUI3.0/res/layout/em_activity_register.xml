@@ -22,7 +22,7 @@
         android:layout_height="0dip"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_weight="1.5"
+        android:layout_weight="2.5"
         android:orientation="vertical" >
 
         <RelativeLayout
@@ -137,6 +137,28 @@
                 android:text="@string/register"
                 android:textColor="@android:color/white"
                 android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_weight="3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/xieyi"
+                android:text="点击注册即表示您已充分阅读、理解并完全接受《用户协议》"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <TextView
+                android:layout_weight="3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
         </LinearLayout>
     </LinearLayout>
 

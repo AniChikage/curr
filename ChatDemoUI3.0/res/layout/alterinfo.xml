@@ -127,6 +127,7 @@
                 android:layout_height="35dp"
                 android:orientation="horizontal">
                 <TextView
+                    android:id="@+id/ai_phone_tv"
                     android:textColor="@color/hint_color"
                     android:text="紧急联系人电话"
                     android:gravity="center_vertical"
@@ -146,6 +147,8 @@
             </LinearLayout>
 
             <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/ll1"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="@color/hint_color"
@@ -158,6 +161,7 @@
                 android:layout_height="30dp"
                 android:orientation="horizontal">
                 <TextView
+                    android:id="@+id/ai_address_tv"
                     android:textColor="@color/hint_color"
                     android:text="收件地址"
                     android:gravity="center_vertical"
@@ -177,6 +181,8 @@
             </LinearLayout>
 
             <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/ll2"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="@color/hint_color"
@@ -189,6 +195,7 @@
                 android:layout_height="30dp"
                 android:orientation="horizontal">
                 <TextView
+                    android:id="@+id/ai_region_tv"
                     android:textColor="@color/hint_color"
                     android:text="宗教信仰"
                     android:gravity="center_vertical"
@@ -208,6 +215,8 @@
             </LinearLayout>
 
             <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/ll3"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="@color/hint_color"
@@ -220,6 +229,7 @@
                 android:layout_height="30dp"
                 android:orientation="horizontal">
                 <TextView
+                    android:id="@+id/ai_hometown_tv"
                     android:textColor="@color/hint_color"
                     android:text="家乡"
                     android:gravity="center_vertical"
@@ -239,6 +249,8 @@
             </LinearLayout>
 
             <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/ll4"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="@color/hint_color"
@@ -251,6 +263,7 @@
                 android:layout_height="30dp"
                 android:orientation="horizontal">
                 <TextView
+                    android:id="@+id/ai_hunyin_tv"
                     android:textColor="@color/hint_color"
                     android:text="婚姻状况"
                     android:gravity="center_vertical"
@@ -270,6 +283,8 @@
             </LinearLayout>
 
             <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/ll5"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="@color/hint_color"

@@ -21,6 +21,7 @@ import com.hyphenate.chatuidemo.netapp.ConnNet;
 import com.hyphenate.exceptions.HyphenateException;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -28,6 +29,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONObject;
@@ -40,6 +42,7 @@ public class RegisterActivity extends BaseActivity {
 	private EditText userNameEditText;
 	private EditText passwordEditText;
 	private EditText confirmPwdEditText;
+	private TextView xieyi;
 	private static String urlPath="http://www.clr-vision.com:18080/Therapista/user/addUser";
 
 	@Override
@@ -49,6 +52,14 @@ public class RegisterActivity extends BaseActivity {
 		userNameEditText = (EditText) findViewById(R.id.username);
 		passwordEditText = (EditText) findViewById(R.id.password);
 		confirmPwdEditText = (EditText) findViewById(R.id.confirm_password);
+		xieyi = (TextView)findViewById(R.id.xieyi);
+		xieyi.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(RegisterActivity.this,Xieyi.class);
+				startActivity(intent);
+			}
+		});
 	}
 
 	public void register(View view) {

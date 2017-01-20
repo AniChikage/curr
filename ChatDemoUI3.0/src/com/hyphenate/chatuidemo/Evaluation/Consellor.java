@@ -171,10 +171,10 @@ public class Consellor extends Activity {
             try {
                 String sta = new JSONObject(string).getString("altOrder");
                 if(sta.equals("1")){
-                    Toast.makeText(Consellor.this,"评价完成！",Toast.LENGTH_LONG).show();
+                    Toast.makeText(Consellor.this,"评价完成！",Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    Toast.makeText(Consellor.this,"评价失败！",Toast.LENGTH_LONG).show();
+                    Toast.makeText(Consellor.this,"评价失败！",Toast.LENGTH_SHORT).show();
                 }
             }
             catch (Exception ex){

@@ -142,7 +142,7 @@ public class LoginActivity extends BaseActivity {
 	 */
 	public void login(View view) {
 		if(!user_role.isChecked()&&!consellor_role.isChecked()){
-			Toast.makeText(this,"请先选择登陆角色！",Toast.LENGTH_LONG).show();
+			Toast.makeText(this,"请先选择登陆角色！",Toast.LENGTH_SHORT).show();
 		}
 		else{
 			if (!EaseCommonUtils.isNetWorkConnected(this)) {
@@ -233,7 +233,7 @@ public class LoginActivity extends BaseActivity {
 									handler.sendMessage(msg);
 								}
 								catch (Exception ex){
-									Toast.makeText(LoginActivity.this,"用户名或者密码不能为空",Toast.LENGTH_LONG).show();
+									Toast.makeText(LoginActivity.this,"用户名或者密码不能为空",Toast.LENGTH_SHORT).show();
 								}
 
 							}
@@ -261,14 +261,14 @@ public class LoginActivity extends BaseActivity {
 									cshandler.sendMessage(msg);
 								}
 								catch (Exception ex){
-									Toast.makeText(LoginActivity.this,"用户名或者密码不能为空",Toast.LENGTH_LONG).show();
+									Toast.makeText(LoginActivity.this,"用户名或者密码不能为空",Toast.LENGTH_SHORT).show();
 								}
 
 							}
 						}).start();
 					}
 					else{
-						Toast.makeText(LoginActivity.this,"请先选择登陆角色",Toast.LENGTH_LONG).show();
+						Toast.makeText(LoginActivity.this,"请先选择登陆角色",Toast.LENGTH_SHORT).show();
 					}
 
 
@@ -322,7 +322,7 @@ public class LoginActivity extends BaseActivity {
 			}
             /*
             else if(string.indexOf("unregistered")>0) {
-                Toast.makeText(Login.this,"该账号尚未注册！",Toast.LENGTH_LONG);
+                Toast.makeText(Login.this,"该账号尚未注册！",Toast.LENGTH_SHORT);
             }*/
 			else{
 				Toast.makeText(LoginActivity.this, "用户登录失败", Toast.LENGTH_SHORT).show();
@@ -373,7 +373,7 @@ public class LoginActivity extends BaseActivity {
 					hforgetpwd.sendMessage(msg);
 				}
 				else{
-					Toast.makeText(LoginActivity.this,"邮箱不能为空！",Toast.LENGTH_LONG).show();
+					Toast.makeText(LoginActivity.this,"邮箱不能为空！",Toast.LENGTH_SHORT).show();
 				}
 			}
 		}).start();
@@ -386,10 +386,10 @@ public class LoginActivity extends BaseActivity {
 			try{
 				String alterFlag = new JSONObject(string).getString("rdmpwd");
 				if(!alterFlag.equals("unregistered")&&!alterFlag.equals("0")){
-					Toast.makeText(LoginActivity.this,"密码发送成功！",Toast.LENGTH_LONG).show();
+					Toast.makeText(LoginActivity.this,"密码发送成功！",Toast.LENGTH_SHORT).show();
 				}
 				else{
-					Toast.makeText(LoginActivity.this,"密码发送失败！",Toast.LENGTH_LONG).show();
+					Toast.makeText(LoginActivity.this,"密码发送失败！",Toast.LENGTH_SHORT).show();
 				}
 			}
 			catch (Exception ex){

@@ -263,7 +263,7 @@ public class ContactListFragment extends EaseContactListFragment {
 					getActivity().runOnUiThread(new Runnable() {
 						public void run() {
 							pd.dismiss();
-							Toast.makeText(getActivity(), st2 + e.getMessage(), Toast.LENGTH_LONG).show();
+							Toast.makeText(getActivity(), st2 + e.getMessage(), Toast.LENGTH_SHORT).show();
 						}
 					});
 
@@ -289,7 +289,7 @@ public class ContactListFragment extends EaseContactListFragment {
                                 refresh();
                             }else{
                                 String s1 = getResources().getString(R.string.get_failed_please_check);
-                                Toast.makeText(getActivity(), s1, Toast.LENGTH_LONG).show();
+                                Toast.makeText(getActivity(), s1, Toast.LENGTH_SHORT).show();
                                 loadingView.setVisibility(View.GONE);
                             }
                         }

@@ -119,7 +119,7 @@ public class Mainpage extends Activity {
                         msg.obj = result;
                         hgetuser.sendMessage(msg);
                     } catch (Exception ex) {
-                        Toast.makeText(Mainpage.this, "咨询师获取失败", Toast.LENGTH_LONG).show();
+                        Toast.makeText(Mainpage.this, "咨询师获取失败", Toast.LENGTH_SHORT).show();
                     }
                 }
             }).start();
@@ -132,7 +132,7 @@ public class Mainpage extends Activity {
                 app_username.setText("您还未登录！");
             }
             catch (Exception ex){
-                Toast.makeText(Mainpage.this,"获取失败", Toast.LENGTH_LONG).show();
+                Toast.makeText(Mainpage.this,"获取失败", Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -153,7 +153,7 @@ public class Mainpage extends Activity {
                     app_username.setText(user_nickname);
                 }
                 catch (Exception ex){
-                    Toast.makeText(Mainpage.this,"获取失败", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Mainpage.this,"获取失败", Toast.LENGTH_SHORT).show();
                 }
             } catch (JSONException e) {
                 System.out.println("获取用户失败");
@@ -233,7 +233,7 @@ public class Mainpage extends Activity {
                     handler.sendMessage(msg);
                 }
                 catch (Exception ex){
-                    Toast.makeText(Mainpage.this,"咨询师获取失败", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Mainpage.this,"咨询师获取失败", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -252,7 +252,7 @@ public class Mainpage extends Activity {
                     csadhandler.sendMessage(msg);
                 }
                 catch (Exception ex){
-                    Toast.makeText(Mainpage.this,"咨询师获取失败", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Mainpage.this,"咨询师获取失败", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -287,7 +287,7 @@ public class Mainpage extends Activity {
         mp_setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Mainpage.this,"开发中", Toast.LENGTH_LONG).show();
+                Toast.makeText(Mainpage.this,"开发中", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -763,7 +763,7 @@ public class Mainpage extends Activity {
                     jrywhandler.sendMessage(msg);
                 }
                 catch (Exception ex){
-                    Toast.makeText(Mainpage.this,"今日要闻获取失败", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Mainpage.this,"今日要闻获取失败", Toast.LENGTH_SHORT).show();
                 }
 
             }

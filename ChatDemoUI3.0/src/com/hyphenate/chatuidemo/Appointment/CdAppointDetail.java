@@ -112,7 +112,7 @@ public class CdAppointDetail extends Activity {
                     break;
                 /*
                 case R.id.btn_pay:
-                    Toast.makeText(CdAppointDetail.this,"开发中……", Toast.LENGTH_LONG).show();
+                    Toast.makeText(CdAppointDetail.this,"开发中……", Toast.LENGTH_SHORT).show();
                     break;
                     */
                 case R.id.adback:
@@ -162,10 +162,10 @@ public class CdAppointDetail extends Activity {
             try {
                 String del = new JSONObject(string).getString("altOrder");
                 if(del.equals("1")){
-                    Toast.makeText(CdAppointDetail.this,"审核通过！", Toast.LENGTH_LONG).show();
+                    Toast.makeText(CdAppointDetail.this,"审核通过！", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    Toast.makeText(CdAppointDetail.this,"审核no！", Toast.LENGTH_LONG).show();
+                    Toast.makeText(CdAppointDetail.this,"审核no！", Toast.LENGTH_SHORT).show();
                 }
             } catch (JSONException e) {
                 System.out.println("Jsons parse error !");
@@ -203,10 +203,10 @@ public class CdAppointDetail extends Activity {
             try {
                 String del = new JSONObject(string).getString("del");
                 if(del.equals("1")){
-                    Toast.makeText(CdAppointDetail.this,"删除预约成功！", Toast.LENGTH_LONG).show();
+                    Toast.makeText(CdAppointDetail.this,"删除预约成功！", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    Toast.makeText(CdAppointDetail.this,"删除预约失败！", Toast.LENGTH_LONG).show();
+                    Toast.makeText(CdAppointDetail.this,"删除预约失败！", Toast.LENGTH_SHORT).show();
                 }
             } catch (JSONException e) {
                 System.out.println("Jsons parse error !");
@@ -355,7 +355,7 @@ public class CdAppointDetail extends Activity {
                                 ll_pingjia.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
-                                        Toast.makeText(CdAppointDetail.this,"您已经完成评价",Toast.LENGTH_LONG).show();
+                                        Toast.makeText(CdAppointDetail.this,"您已经完成评价",Toast.LENGTH_SHORT).show();
                                     }
                                 });
                             }
@@ -397,10 +397,10 @@ public class CdAppointDetail extends Activity {
             try {
                 String del = new JSONObject(string).getString("altOrder");
                 if(del.equals("1")){
-                    Toast.makeText(CdAppointDetail.this,"成功！", Toast.LENGTH_LONG).show();
+                    Toast.makeText(CdAppointDetail.this,"成功！", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    Toast.makeText(CdAppointDetail.this,"失败！", Toast.LENGTH_LONG).show();
+                    Toast.makeText(CdAppointDetail.this,"失败！", Toast.LENGTH_SHORT).show();
                 }
             } catch (JSONException e) {
                 System.out.println("Jsons parse error !");

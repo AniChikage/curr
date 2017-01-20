@@ -110,6 +110,10 @@
     <init>();
 }
 
+-keep class com.hyphenate.chatuidemo.ui.Xieyi {
+    <init>();
+}
+
 -keep class com.hyphenate.chatuidemo.ui.VideoCallActivity {
     <init>();
 }

@@ -482,7 +482,7 @@ public class VideoCallActivity extends CallActivity implements OnClickListener {
                 String filepath = callHelper.stopVideoRecord();
                 isRecording = false;
                 recordBtn.setText(R.string.recording_video);
-                Toast.makeText(getApplicationContext(), String.format(getString(R.string.record_finish_toast), filepath), Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), String.format(getString(R.string.record_finish_toast), filepath), Toast.LENGTH_SHORT).show();
             }
             break;
         case R.id.root_layout:

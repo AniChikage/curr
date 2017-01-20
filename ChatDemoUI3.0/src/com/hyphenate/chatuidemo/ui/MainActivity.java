@@ -263,7 +263,7 @@ public class MainActivity extends BaseActivity {
 						msg.obj = result;
 						hgetuser.sendMessage(msg);
 					} catch (Exception ex) {
-						Toast.makeText(MainActivity.this, "咨询师获取失败", Toast.LENGTH_LONG).show();
+						Toast.makeText(MainActivity.this, "咨询师获取失败", Toast.LENGTH_SHORT).show();
 					}
 				}
 			}).start();
@@ -321,7 +321,7 @@ public class MainActivity extends BaseActivity {
 					initFirstVisit();
 				}
 				catch (Exception ex){
-					Toast.makeText(MainActivity.this,"获取失败",Toast.LENGTH_LONG).show();
+					Toast.makeText(MainActivity.this,"获取失败",Toast.LENGTH_SHORT).show();
 				}
 			} catch (JSONException e) {
 				System.out.println("获取用户失败");
@@ -372,7 +372,7 @@ public class MainActivity extends BaseActivity {
 					msg.obj = result;
 					hCheckFirstVisit.sendMessage(msg);
 				} catch (Exception ex) {
-					Toast.makeText(in_hcontext, "咨询师获取失败", Toast.LENGTH_LONG).show();
+					Toast.makeText(in_hcontext, "咨询师获取失败", Toast.LENGTH_SHORT).show();
 				}
 			}
 		}).start();
@@ -530,7 +530,7 @@ public class MainActivity extends BaseActivity {
 					in_hcontext.startActivity(intent);
 				}
 				else{
-					Toast.makeText(in_hcontext,"您已经完成初诊",Toast.LENGTH_LONG).show();
+					Toast.makeText(in_hcontext,"您已经完成初诊",Toast.LENGTH_SHORT).show();
 				}
 			}
 		});
@@ -548,7 +548,7 @@ public class MainActivity extends BaseActivity {
 				//startActivity(intent);
 				in_hcontext.startActivity(intent);
 				//logout();
-				//Toast.makeText(MainActivity.this,"开发中",Toast.LENGTH_LONG).show();
+				//Toast.makeText(MainActivity.this,"开发中",Toast.LENGTH_SHORT).show();
 			}
 		});
 
@@ -704,7 +704,7 @@ public class MainActivity extends BaseActivity {
 					handler.sendMessage(msg);
 				}
 				catch (Exception ex){
-					Toast.makeText(MainActivity.this,"咨询师获取失败",Toast.LENGTH_LONG).show();
+					Toast.makeText(MainActivity.this,"咨询师获取失败",Toast.LENGTH_SHORT).show();
 				}
 
 			}
@@ -1045,7 +1045,7 @@ public class MainActivity extends BaseActivity {
 							msg.obj = result;
 							recmdhandler.sendMessage(msg);
 						} catch (Exception ex) {
-							Toast.makeText(in_hcontext, "咨询师获取失败", Toast.LENGTH_LONG).show();
+							Toast.makeText(in_hcontext, "咨询师获取失败", Toast.LENGTH_SHORT).show();
 						}
 					}
 				}).start();
@@ -1069,7 +1069,7 @@ public class MainActivity extends BaseActivity {
 							msg.obj = result;
 							recmdhandler.sendMessage(msg);
 						} catch (Exception ex) {
-							Toast.makeText(in_hcontext, "咨询师获取失败", Toast.LENGTH_LONG).show();
+							Toast.makeText(in_hcontext, "咨询师获取失败", Toast.LENGTH_SHORT).show();
 						}
 					}
 				}).start();
@@ -1104,7 +1104,7 @@ public class MainActivity extends BaseActivity {
 					jrywhandler.sendMessage(msg);
 				}
 				catch (Exception ex){
-					Toast.makeText(MainActivity.this,"今日要闻获取失败",Toast.LENGTH_LONG).show();
+					Toast.makeText(MainActivity.this,"今日要闻获取失败",Toast.LENGTH_SHORT).show();
 				}
 
 			}
@@ -1370,7 +1370,7 @@ public class MainActivity extends BaseActivity {
 					if (ChatActivity.activityInstance != null && ChatActivity.activityInstance.toChatUsername != null &&
 							username.equals(ChatActivity.activityInstance.toChatUsername)) {
 					    String st10 = getResources().getString(R.string.have_you_removed);
-					    Toast.makeText(MainActivity.this, ChatActivity.activityInstance.getToChatUsername() + st10, Toast.LENGTH_LONG)
+					    Toast.makeText(MainActivity.this, ChatActivity.activityInstance.getToChatUsername() + st10, Toast.LENGTH_SHORT)
 					    .show();
 					    ChatActivity.activityInstance.finish();
 					}
@@ -1723,7 +1723,7 @@ public class MainActivity extends BaseActivity {
 					in_hcontext.startActivity(intent);
 				}
 				else{
-					Toast.makeText(in_hcontext,"您已经完成初诊",Toast.LENGTH_LONG).show();
+					Toast.makeText(in_hcontext,"您已经完成初诊",Toast.LENGTH_SHORT).show();
 				}
 			}
 		});

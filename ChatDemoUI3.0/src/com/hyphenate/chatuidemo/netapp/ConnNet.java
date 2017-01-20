@@ -33,6 +33,7 @@ public class ConnNet {
     private static final String urlLogin="http://www.clr-vision.com:18080/Therapista/user/login";
     private static final String urlForgetPwd="http://www.clr-vision.com:18080/Therapista/user/forgetpwd";
     private static final String urlAlterUserInfo="http://www.clr-vision.com:18080/Therapista/user/altUser";
+    private static final String urlAlterConsellorInfo="http://www.clr-vision.com:18080/Therapista/consellor/altConsellor";
     private static final String urlgetConsellors="http://www.clr-vision.com:18080/Therapista/consellor/getConsellors";
     private static final String urlConsellorLogin="http://www.clr-vision.com:18080/Therapista/consellor/login";
     private static final String urladdConsellor="http://www.clr-vision.com:18080/Therapista/consellor/addConsellor";
@@ -52,6 +53,7 @@ public class ConnNet {
     private static final String urlAddNeed="http://www.clr-vision.com:18080/Therapista/need/addNeed";
     private static final String urlGetNeeds="http://www.clr-vision.com:18080/Therapista/need/getNeeds";
     private static final String urlGetUser="http://www.clr-vision.com:18080/Therapista/user/getUser";
+    private static final String urlGetConsellor="http://www.clr-vision.com:18080/Therapista/consellor/getConsellor";
     private static final String urlAddOrder="http://www.clr-vision.com:18080/Therapista/order/addOrder";
     private static final String urlGetOrders="http://www.clr-vision.com:18080/Therapista/order/getOrders";
     private static final String urlGetOrder="http://www.clr-vision.com:18080/Therapista/order/getOrder";
@@ -649,6 +651,48 @@ public class ConnNet {
         return result;
     }
 
+    public String AlterConsellorInfo(String csid, String nickname, String password, String address,
+                                String religion, String homeland, String marriage,
+                                String realname, String gender, String birthday, String tel){
+        String result="";
+        try {
+            List<NameValuePair> params=new ArrayList<NameValuePair>();
+            params.add(new BasicNameValuePair("id",csid));
+            params.add(new BasicNameValuePair("username",nickname));
+            params.add(new BasicNameValuePair("password",password));
+            params.add(new BasicNameValuePair("address",address));
+            params.add(new BasicNameValuePair("religion",religion));
+            params.add(new BasicNameValuePair("homeland",homeland));
+            params.add(new BasicNameValuePair("marriage",marriage));
+            params.add(new BasicNameValuePair("realname",realname));
+            params.add(new BasicNameValuePair("gender",gender));
+            params.add(new BasicNameValuePair("birth",birthday));
+            params.add(new BasicNameValuePair("tel",tel));
+
+            HttpEntity entity = new UrlEncodedFormEntity(params, HTTP.UTF_8);
+            HttpPost httpPost = new HttpPost(urlAlterConsellorInfo);
+            httpPost.setEntity(entity);
+            HttpClient client = new DefaultHttpClient();
+            HttpResponse httpResponse = client.execute(httpPost);
+
+            if (httpResponse.getStatusLine().getStatusCode()== HttpStatus.SC_OK) {
+                result= EntityUtils.toString(httpResponse.getEntity(), "utf-8");
+            }
+            else {
+                result="更改user信息失败！";
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            result = e.toString();
+        }
+        result = result.replace("\\\"","\"");
+        result = result.replace("\"{","{");
+        result = result.replace("}\"","}");
+        return result;
+    }
+
+
     public String AlterUserInfo(String email, String nickname, String password, String emergency, String address,
                                 String religion, String homeland, String marriage,
                                 String realname, String gender, String birthday, String tel){
@@ -665,7 +709,7 @@ public class ConnNet {
             params.add(new BasicNameValuePair("marriage",marriage));
             params.add(new BasicNameValuePair("realname",realname));
             params.add(new BasicNameValuePair("gender",gender));
-            params.add(new BasicNameValuePair("birthday",birthday));
+            params.add(new BasicNameValuePair("birth",birthday));
             params.add(new BasicNameValuePair("tel",tel));
 
             HttpEntity entity = new UrlEncodedFormEntity(params, HTTP.UTF_8);
@@ -690,8 +734,6 @@ public class ConnNet {
         result = result.replace("}\"","}");
         return result;
     }
-
-
 
     /*
     * 获取咨询师
@@ -813,7 +855,7 @@ public class ConnNet {
             }
             else
             {
-                result="获取失败！";
+                result="获取某个咨询师的日程失败！";
             }
 
         } catch (Exception e) {

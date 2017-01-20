@@ -43,6 +43,7 @@ public class User extends Activity {
     private TextView eva_user_cname;
     private TextView eva_user_queren;
     private ImageView img;
+    private ImageView back;
     private Context mContext;
     private String appoint_oid;
     private int taidu=0;
@@ -80,6 +81,13 @@ public class User extends Activity {
         eva_user_cname = (TextView)findViewById(R.id.eva_user_cname);
         eva_user_queren = (TextView)findViewById(R.id.eva_user_queren);
         img = (ImageView)findViewById(R.id.img);
+        back = (ImageView)findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         eva_user_advice = (EditText) findViewById(R.id.eva_user_advice);
         eva_user_queren.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -164,10 +172,10 @@ public class User extends Activity {
             try {
                 String sta = new JSONObject(string).getString("altOrder");
                 if(sta.equals("1")){
-                    Toast.makeText(User.this,"评价完成！",Toast.LENGTH_LONG).show();
+                    Toast.makeText(User.this,"评价完成！",Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    Toast.makeText(User.this,"评价失败！",Toast.LENGTH_LONG).show();
+                    Toast.makeText(User.this,"评价失败！",Toast.LENGTH_SHORT).show();
                 }
             }
             catch (Exception ex){
