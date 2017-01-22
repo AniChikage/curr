@@ -683,6 +683,7 @@ org/apache/http/cookie/MalformedCookieException.class
 org/apache/http/protocol/HttpRequestHandlerRegistry.class
 com/hyphenate/chatuidemo/ui/LoginActivity$1.class
 android/support/v7/app/AppCompatDelegate.class
+com/apkfuns/xprogressdialog/XProgressDialog.class
 com/hyphenate/chatuidemo/ui/Setting$1.class
 android/support/annotation/Keep.class
 com/huawei/android/pushagent/b/b/a.class

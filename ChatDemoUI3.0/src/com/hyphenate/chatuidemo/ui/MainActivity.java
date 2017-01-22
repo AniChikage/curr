@@ -59,6 +59,7 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.apkfuns.xprogressdialog.XProgressDialog;
 import com.easemob.redpacketui.RedPacketConstant;
 import com.easemob.redpacketui.utils.RedPacketUtil;
 import com.hyphenate.EMCallBack;
@@ -160,6 +161,8 @@ public class MainActivity extends BaseActivity {
 	private static AppointAdapter appointAdapter;
 	private TextView anli,kepu,xuzhi;
 	private ImageView iv_anli,iv_kepu,iv_xuzhi;
+	private XProgressDialog xdialog;
+	private XProgressDialog sysncs_xpd;
 
 	private List<Map<String, Object>> csabLista,jrywList;
 	private static List<Map<String, Object>> minelist;
@@ -176,10 +179,12 @@ public class MainActivity extends BaseActivity {
 	private String useremail;
 	public static MainActivity instance = null;
 	private ProgressDialog pd=null;
-	/**
-	 * check if current user account was remove
-	 */
-
+	private boolean isCsFetched;
+	private boolean isMineFetched;
+	private boolean isJRYWover;
+	private boolean isJRYWADover;
+	private boolean isCSover;
+	private boolean isCSADover;
 	//endregion
 
 	public boolean getCurrentAccountRemoved() {
@@ -193,18 +198,15 @@ public class MainActivity extends BaseActivity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE); //设置无标题栏
 		hcontext=this.getApplicationContext();
 		mycreateSDFile = new createSDFile(hcontext);
-		//if(mycreateSDFile.hasFile("cache")){
-		//	setContentView(R.layout.em_activity_main);
-		//}
-		//else{
-			setContentView(R.layout.em_activity_main);
-		//}
+		setContentView(R.layout.em_activity_main);
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS); //透明状态栏
 		in_hcontext = hcontext;
 
 		pd = new ProgressDialog(MainActivity.this);
 		pd_update = new ProgressDialog(MainActivity.this);
 
+
+		//region 判断是否已经登录,得到useremail
 		instance = this;
 		if(mycreateSDFile.hasFile("cache")){
 			useremail = mycreateSDFile.readSDFile("cache");
@@ -215,7 +217,7 @@ public class MainActivity extends BaseActivity {
 			Log.e(TAG,"has not cache");
 		}
 		Log.e(TAG,useremail);
-		//监听生命周期
+		//endregion
 
 		//region 垃圾
 		if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -242,6 +244,7 @@ public class MainActivity extends BaseActivity {
 		requestPermissions();
 		//endregion
 
+		//region 初始化view和data
 		try{
 			initView();
 			initData();
@@ -249,6 +252,7 @@ public class MainActivity extends BaseActivity {
 		catch (Exception ex){
 			Log.e("error",ex.toString());
 		}
+		//endregion
 
 		//region 获取用户
 		if(mycreateSDFile.hasFile("cache")) {
@@ -289,6 +293,7 @@ public class MainActivity extends BaseActivity {
 		//endregion
 	}
 
+	//region 垃圾
 	@TargetApi(23)
 	private void requestPermissions() {
 		PermissionsManager.getInstance().requestAllManifestPermissionsIfNecessary(this, new PermissionsResultAction() {
@@ -303,7 +308,9 @@ public class MainActivity extends BaseActivity {
 			}
 		});
 	}
+	//endregion
 
+	//region handler获取用户
 	//first step: get user
 	Handler hgetuser = new Handler(){
 		@Override
@@ -330,11 +337,16 @@ public class MainActivity extends BaseActivity {
 			super.handleMessage(msg);
 		}
 	};
+	//endregion
 
-	/**
-	 * init views
-	 */
+	//region 初始化view
 	private void initView() {
+		isCsFetched = false;
+		isMineFetched = false;
+		isJRYWover = false;
+		isJRYWADover = false;
+		isCSover = false;
+		isCSADover = false;
 		unreadLabel = (TextView) findViewById(R.id.unread_msg_number);
 		unreadAddressLable = (TextView) findViewById(R.id.unread_address_number);
 		tologin = (TextView)findViewById(R.id.tologin);
@@ -355,10 +367,17 @@ public class MainActivity extends BaseActivity {
 		// select first tab
 		mTabs[0].setSelected(true);
 	}
+	//endregion
 
 	private void initData(){
+		xdialog = new XProgressDialog(this, "正在加载..", XProgressDialog.THEME_HEART_PROGRESS);
+		xdialog.show();
+		xdialog.setCanceledOnTouchOutside(false);
+
+
+
 		initMainpage();
-		initConsellor();
+		//initConsellor();
 		//initMine();
 	}
 
@@ -497,6 +516,9 @@ public class MainActivity extends BaseActivity {
 
 	//region initConsellor
 	private void initConsellor(){
+		sysncs_xpd = new XProgressDialog(this, "正在加载..", XProgressDialog.THEME_HEART_PROGRESS);
+		sysncs_xpd.show();
+		sysncs_xpd.setCanceledOnTouchOutside(false);
 		//mainpage_cs_listview = (ListView)findViewById(R.id.mainpage_cs_listview);
 		mainpage_cs_header_view = LayoutInflater.from(this).inflate(R.layout.mainpage_cs_header, null);
 		SysnConsellors();
@@ -786,6 +808,15 @@ public class MainActivity extends BaseActivity {
 			});
 			//Log.e("TAG" ,string);
 			//Log.e("TAG" ,String.valueOf(string.length()));
+			try{
+				isCSover = true;
+				if(isCSover && isCSADover){
+					sysncs_xpd.dismiss();
+				}
+			}
+			catch (Exception ex){
+				Log.e("同步咨询师列表出错",ex.toString());
+			}
 			super.handleMessage(msg);
 		}
 	};
@@ -826,6 +857,7 @@ public class MainActivity extends BaseActivity {
 	Handler mpcs_handler=new Handler(){
 		@Override
 		public void handleMessage(Message msg) {
+
 			String string=(String) msg.obj;
 			ArrayList<String> adimg = new ArrayList<String>();
 			ArrayList<String> adhint = new ArrayList<String>();
@@ -847,6 +879,15 @@ public class MainActivity extends BaseActivity {
 				e.printStackTrace();
 			}
 			slideShowViewCs.init(adhint,adimg,adid,user_id);
+			try{
+				isCSADover = true;
+				if(isCSover && isCSADover){
+					sysncs_xpd.dismiss();
+				}
+			}
+			catch (Exception ex){
+				Log.e("同步咨询师header出错",ex.toString());
+			}
 			super.handleMessage(msg);
 		}
 	};
@@ -1114,6 +1155,7 @@ public class MainActivity extends BaseActivity {
 	Handler jrywhandler=new Handler(){
 		@Override
 		public void handleMessage(Message msg) {
+
 			String string=(String) msg.obj;
 			boolean havedata = false;
 			List<Map<String, Object>> listItems = new ArrayList<Map<String, Object>>();
@@ -1167,7 +1209,15 @@ public class MainActivity extends BaseActivity {
 					}
 				});
 			}
-
+			try{
+				isJRYWover = true;
+				if(isJRYWADover && isJRYWover){
+					xdialog.dismiss();
+				}
+			}
+			catch (Exception ex){
+				Log.e("xlog",ex.toString());
+			}
 			super.handleMessage(msg);
 		}
 	};
@@ -1192,9 +1242,9 @@ public class MainActivity extends BaseActivity {
 
 	Handler mainpage_header=new Handler(){
 		@Override
+
 		public void handleMessage(Message msg) {
 			String string=(String) msg.obj;
-
 			ArrayList<String> adimg = new ArrayList<String>();
 			ArrayList<String> adhint = new ArrayList<String>();
 			ArrayList<String> adid = new ArrayList<String>();
@@ -1215,6 +1265,15 @@ public class MainActivity extends BaseActivity {
 				e.printStackTrace();
 			}
 			slideshow.init(adhint,adimg,adid);
+			try{
+				isJRYWADover = true;
+				if(isJRYWADover && isJRYWover){
+					xdialog.dismiss();
+				}
+			}
+			catch (Exception ex){
+				Log.e("xlog",ex.toString());
+			}
 			super.handleMessage(msg);
 		}
 	};
@@ -1240,6 +1299,10 @@ public class MainActivity extends BaseActivity {
 			break;
 		case R.id.btn_address_list:
 			index = 1;
+			if(!isCsFetched){
+				initConsellor();
+				isCsFetched = true;
+			}
 			break;
 		case R.id.btn_setting:
 			index = 2;

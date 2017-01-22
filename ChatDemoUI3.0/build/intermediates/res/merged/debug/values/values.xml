@@ -216,6 +216,7 @@
     <declare-styleable name="EaseImageView"><attr format="color" name="ease_border_color"/><attr format="dimension" name="ease_border_width"/><attr format="integer" name="ease_press_alpha"/><attr format="color" name="ease_press_color"/><attr format="dimension" name="ease_radius"/><attr format="enum" name="ease_shape_type"><enum name="none" value="0"/><enum name="round" value="1"/><enum name="rectangle" value="2"/></attr></declare-styleable>
     <declare-styleable name="EaseSwitchButton"><attr format="reference" name="switchOpenImage"/><attr format="reference" name="switchCloseImage"/><attr name="switchStatus"><enum name="open" value="0"/><enum name="close" value="1"/></attr></declare-styleable>
     <declare-styleable name="EaseTitleBar"><attr format="string" name="titleBarTitle"/><attr format="reference" name="titleBarLeftImage"/><attr format="reference" name="titleBarRightImage"/><attr format="reference|color" name="titleBarBackground"/></declare-styleable>
+    <declare-styleable name="HeartProgressView"><attr format="color" name="heartColor"/></declare-styleable>
     <declare-styleable name="LinearLayoutCompat"><attr name="android:orientation"/><attr name="android:gravity"/><attr name="android:baselineAligned"/><attr name="android:baselineAlignedChildIndex"/><attr name="android:weightSum"/><attr format="boolean" name="measureWithLargestChild"/><attr name="divider"/><attr name="showDividers"><flag name="none" value="0"/><flag name="beginning" value="1"/><flag name="middle" value="2"/><flag name="end" value="4"/></attr><attr format="dimension" name="dividerPadding"/></declare-styleable>
     <declare-styleable name="LinearLayoutCompat_Layout"><attr name="android:layout_width"/><attr name="android:layout_height"/><attr name="android:layout_weight"/><attr name="android:layout_gravity"/></declare-styleable>
     <declare-styleable name="ListPopupWindow"><attr name="android:dropDownVerticalOffset"/><attr name="android:dropDownHorizontalOffset"/></declare-styleable>
@@ -367,6 +368,7 @@
     <dimen name="notification_large_icon_height">64dp</dimen>
     <dimen name="notification_large_icon_width">64dp</dimen>
     <dimen name="notification_subtext_size">12dp</dimen>
+    <dimen name="padding_dialog_bg">12dp</dimen>
     <dimen name="padding_search_bar">5dp</dimen>
     <dimen name="picker_dimen">270dip</dimen>
     <dimen name="ptr_progress_bar_stroke_width">4dp</dimen>
@@ -428,6 +430,9 @@
     <dimen name="size_avatar">48dp</dimen>
     <dimen name="spb_default_stroke_separator_length">4dp</dimen>
     <dimen name="spb_default_stroke_width">4dp</dimen>
+    <dimen name="spot_progress_margin">24dp</dimen>
+    <dimen name="spot_progress_spot_size">6dp</dimen>
+    <dimen name="spot_progress_width">250dp</dimen>
     <dimen name="time_label_size">60sp</dimen>
     <dimen name="year_label_height">64dp</dimen>
     <dimen name="year_label_text_size">22dp</dimen>
@@ -2944,6 +2949,9 @@
     <style name="dialog_animation" parent="@android:style/Animation.Dialog">
         <item name="android:windowEnterAnimation">@anim/rp_fade_in</item>
         <item name="android:windowExitAnimation">@anim/rp_fade_out</item>
+    </style>
+    <style name="dialog_msg_text">
+        <item name="android:textColor">#C1C1C1</item>
     </style>
     <style name="horizontal_slide" parent="android:Theme.NoTitleBar">
         <item name="android:windowAnimationStyle">@style/AnimFade2</item>

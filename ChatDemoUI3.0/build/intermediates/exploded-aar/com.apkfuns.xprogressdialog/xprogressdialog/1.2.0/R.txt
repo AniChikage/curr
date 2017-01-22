@@ -1,0 +1,15 @@
+int attr heartColor 0x7f010000
+int dimen padding_dialog_bg 0x7f040000
+int dimen spot_progress_margin 0x7f040001
+int dimen spot_progress_spot_size 0x7f040002
+int dimen spot_progress_width 0x7f040003
+int drawable bg_dialog 0x7f020000
+int drawable spot 0x7f020001
+int id message 0x7f060001
+int id progress 0x7f060000
+int layout view_xprogressdialog_circle_progress 0x7f030000
+int layout view_xprogressdialog_heart_progress 0x7f030001
+int layout view_xprogressdialog_spot 0x7f030002
+int style dialog_msg_text 0x7f050000
+int[] styleable HeartProgressView { 0x7f010000 }
+int styleable HeartProgressView_heartColor 0

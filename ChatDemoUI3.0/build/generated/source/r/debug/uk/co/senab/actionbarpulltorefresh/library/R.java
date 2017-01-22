@@ -8,33 +8,33 @@ package uk.co.senab.actionbarpulltorefresh.library;
 
 public final class R {
 	public static final class attr {
-		public static final int ptrHeaderBackground = 0x7f010109;
-		public static final int ptrHeaderHeight = 0x7f01010a;
+		public static final int ptrHeaderBackground = 0x7f01010a;
+		public static final int ptrHeaderHeight = 0x7f01010b;
 		public static final int ptrHeaderStyle = 0x7f01002a;
-		public static final int ptrHeaderTitleTextAppearance = 0x7f01010b;
-		public static final int ptrProgressBarColor = 0x7f01010c;
-		public static final int ptrProgressBarHeight = 0x7f01010e;
-		public static final int ptrProgressBarStyle = 0x7f01010d;
-		public static final int ptrPullText = 0x7f01010f;
-		public static final int ptrRefreshingText = 0x7f010110;
-		public static final int ptrReleaseText = 0x7f010111;
-		public static final int ptrSmoothProgressBarStyle = 0x7f010112;
-		public static final int ptrViewDelegateClass = 0x7f010113;
-		public static final int spbStyle = 0x7f010129;
-		public static final int spb_background = 0x7f010136;
-		public static final int spb_color = 0x7f01012a;
-		public static final int spb_colors = 0x7f010134;
-		public static final int spb_generate_background_with_colors = 0x7f010137;
-		public static final int spb_interpolator = 0x7f010131;
-		public static final int spb_mirror_mode = 0x7f010133;
-		public static final int spb_progressiveStart_activated = 0x7f010135;
-		public static final int spb_progressiveStart_speed = 0x7f01012f;
-		public static final int spb_progressiveStop_speed = 0x7f010130;
-		public static final int spb_reversed = 0x7f010132;
-		public static final int spb_sections_count = 0x7f01012d;
-		public static final int spb_speed = 0x7f01012e;
-		public static final int spb_stroke_separator_length = 0x7f01012c;
-		public static final int spb_stroke_width = 0x7f01012b;
+		public static final int ptrHeaderTitleTextAppearance = 0x7f01010c;
+		public static final int ptrProgressBarColor = 0x7f01010d;
+		public static final int ptrProgressBarHeight = 0x7f01010f;
+		public static final int ptrProgressBarStyle = 0x7f01010e;
+		public static final int ptrPullText = 0x7f010110;
+		public static final int ptrRefreshingText = 0x7f010111;
+		public static final int ptrReleaseText = 0x7f010112;
+		public static final int ptrSmoothProgressBarStyle = 0x7f010113;
+		public static final int ptrViewDelegateClass = 0x7f010114;
+		public static final int spbStyle = 0x7f01012a;
+		public static final int spb_background = 0x7f010137;
+		public static final int spb_color = 0x7f01012b;
+		public static final int spb_colors = 0x7f010135;
+		public static final int spb_generate_background_with_colors = 0x7f010138;
+		public static final int spb_interpolator = 0x7f010132;
+		public static final int spb_mirror_mode = 0x7f010134;
+		public static final int spb_progressiveStart_activated = 0x7f010136;
+		public static final int spb_progressiveStart_speed = 0x7f010130;
+		public static final int spb_progressiveStop_speed = 0x7f010131;
+		public static final int spb_reversed = 0x7f010133;
+		public static final int spb_sections_count = 0x7f01012e;
+		public static final int spb_speed = 0x7f01012f;
+		public static final int spb_stroke_separator_length = 0x7f01012d;
+		public static final int spb_stroke_width = 0x7f01012c;
 	}
 	public static final class bool {
 		public static final int spb_default_mirror_mode = 0x7f070008;
@@ -46,9 +46,9 @@ public final class R {
 		public static final int spb_default_color = 0x7f0a0093;
 	}
 	public static final class dimen {
-		public static final int ptr_progress_bar_stroke_width = 0x7f080091;
-		public static final int spb_default_stroke_separator_length = 0x7f0800c5;
-		public static final int spb_default_stroke_width = 0x7f0800c6;
+		public static final int ptr_progress_bar_stroke_width = 0x7f080092;
+		public static final int spb_default_stroke_separator_length = 0x7f0800c6;
+		public static final int spb_default_stroke_width = 0x7f0800c7;
 	}
 	public static final class id {
 		public static final int inside = 0x7f0d0048;
@@ -66,7 +66,7 @@ public final class R {
 		public static final int spb_default_sections_count = 0x7f0b0005;
 	}
 	public static final class layout {
-		public static final int default_header = 0x7f03003e;
+		public static final int default_header = 0x7f03003f;
 	}
 	public static final class string {
 		public static final int pull_to_refresh_pull_label = 0x7f06001f;
@@ -79,7 +79,7 @@ public final class R {
 		public static final int Theme_SmoothProgressBarDefaults = 0x7f090138;
 	}
 	public static final class styleable {
-		public static final int[] PullToRefreshHeader = { 0x7f010109, 0x7f01010a, 0x7f01010b, 0x7f01010c, 0x7f01010d, 0x7f01010e, 0x7f01010f, 0x7f010110, 0x7f010111, 0x7f010112 };
+		public static final int[] PullToRefreshHeader = { 0x7f01010a, 0x7f01010b, 0x7f01010c, 0x7f01010d, 0x7f01010e, 0x7f01010f, 0x7f010110, 0x7f010111, 0x7f010112, 0x7f010113 };
 		public static final int PullToRefreshHeader_ptrHeaderBackground = 0;
 		public static final int PullToRefreshHeader_ptrHeaderHeight = 1;
 		public static final int PullToRefreshHeader_ptrHeaderTitleTextAppearance = 2;
@@ -90,9 +90,9 @@ public final class R {
 		public static final int PullToRefreshHeader_ptrRefreshingText = 7;
 		public static final int PullToRefreshHeader_ptrReleaseText = 8;
 		public static final int PullToRefreshHeader_ptrSmoothProgressBarStyle = 9;
-		public static final int[] PullToRefreshView = { 0x7f010113 };
+		public static final int[] PullToRefreshView = { 0x7f010114 };
 		public static final int PullToRefreshView_ptrViewDelegateClass = 0;
-		public static final int[] SmoothProgressBar = { 0x7f010129, 0x7f01012a, 0x7f01012b, 0x7f01012c, 0x7f01012d, 0x7f01012e, 0x7f01012f, 0x7f010130, 0x7f010131, 0x7f010132, 0x7f010133, 0x7f010134, 0x7f010135, 0x7f010136, 0x7f010137 };
+		public static final int[] SmoothProgressBar = { 0x7f01012a, 0x7f01012b, 0x7f01012c, 0x7f01012d, 0x7f01012e, 0x7f01012f, 0x7f010130, 0x7f010131, 0x7f010132, 0x7f010133, 0x7f010134, 0x7f010135, 0x7f010136, 0x7f010137, 0x7f010138 };
 		public static final int SmoothProgressBar_spbStyle = 0;
 		public static final int SmoothProgressBar_spb_background = 13;
 		public static final int SmoothProgressBar_spb_color = 1;
