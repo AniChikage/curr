@@ -18,7 +18,7 @@ public final class R {
 	}
 	public static final class drawable {
 		public static final int bg_dialog = 0x7f020051;
-		public static final int spot = 0x7f020230;
+		public static final int spot = 0x7f020232;
 	}
 	public static final class id {
 		public static final int message = 0x7f0d0156;

@@ -23,6 +23,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.apkfuns.xprogressdialog.XProgressDialog;
 import com.hyphenate.chat.EMChatManager;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chatuidemo.Base64.BASE64Decoder;
@@ -48,6 +49,7 @@ public class AppointDetail extends Activity {
     private LinearLayout yizhifu;
     private LinearLayout weizhifu;
     private TextView pingjia;
+    private XProgressDialog xpd;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE); //设置无标题栏
@@ -55,6 +57,9 @@ public class AppointDetail extends Activity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS); //透明状态栏
         //getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION); //透明导航栏
         hcontext = this.getApplicationContext();
+        xpd = new XProgressDialog(this, "正在加载..", XProgressDialog.THEME_HEART_PROGRESS);
+        xpd.show();
+        xpd.setCanceledOnTouchOutside(false);
 
         Bundle bundle = getIntent().getExtras();
         if(bundle!=null){
@@ -268,6 +273,12 @@ public class AppointDetail extends Activity {
             } catch (JSONException e) {
                 System.out.println("Jsons parse error !");
                 e.printStackTrace();
+            }
+            try{
+                xpd.dismiss();
+            }
+            catch (Exception ex){
+                Log.e("fetching error",ex.toString());
             }
             super.handleMessage(msg);
         }

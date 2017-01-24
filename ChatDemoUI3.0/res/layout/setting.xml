@@ -23,14 +23,41 @@
             </LinearLayout>
             <LinearLayout
                 android:layout_weight="1"
+                android:orientation="horizontal"
                 android:background="@color/solid_gray"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="70dp"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_weight="7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:src="@drawable/clean"
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    </LinearLayout>
+                </LinearLayout>
+
                 <TextView
                     android:id="@+id/clear_cache"
                     android:text="清除缓存"
                     android:gravity="center_vertical"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
             </LinearLayout>
@@ -55,14 +82,40 @@
             </LinearLayout>
             <LinearLayout
                 android:layout_weight="1"
+                android:orientation="horizontal"
                 android:background="@color/solid_gray"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="70dp"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_weight="7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:src="@drawable/percas"
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    </LinearLayout>
+                </LinearLayout>
                 <TextView
                     android:id="@+id/alter_info"
                     android:text="更改个人信息"
                     android:gravity="center_vertical"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
             </LinearLayout>
@@ -85,7 +138,7 @@
 
 
     <LinearLayout
-        android:layout_weight="7"
+        android:layout_weight="9"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <Button

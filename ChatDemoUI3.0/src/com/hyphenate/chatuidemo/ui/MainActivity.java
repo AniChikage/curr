@@ -163,6 +163,7 @@ public class MainActivity extends BaseActivity {
 	private ImageView iv_anli,iv_kepu,iv_xuzhi;
 	private XProgressDialog xdialog;
 	private XProgressDialog sysncs_xpd;
+	private static XProgressDialog sysnmine_xpd;
 
 	private List<Map<String, Object>> csabLista,jrywList;
 	private static List<Map<String, Object>> minelist;
@@ -373,8 +374,6 @@ public class MainActivity extends BaseActivity {
 		xdialog = new XProgressDialog(this, "正在加载..", XProgressDialog.THEME_HEART_PROGRESS);
 		xdialog.show();
 		xdialog.setCanceledOnTouchOutside(false);
-
-
 
 		initMainpage();
 		//initConsellor();

@@ -73,8 +73,8 @@ public final class R {
 		public static final int year_label_text_size = 0x7f080033;
 	}
 	public static final class drawable {
-		public static final int done_background_color = 0x7f02006b;
-		public static final int done_background_color_dark = 0x7f02006c;
+		public static final int done_background_color = 0x7f02006c;
+		public static final int done_background_color_dark = 0x7f02006d;
 	}
 	public static final class id {
 		public static final int ampm_hitspace = 0x7f0d03a7;

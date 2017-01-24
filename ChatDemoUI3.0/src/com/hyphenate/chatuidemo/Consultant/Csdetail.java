@@ -35,6 +35,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.apkfuns.xprogressdialog.XProgressDialog;
 import com.hyphenate.chatuidemo.Adapter.CsOtherInfoAdapter;
 import com.hyphenate.chatuidemo.Adapter.JrywListViewAdapter;
 import com.hyphenate.chatuidemo.Appointment.AppointConfirm;
@@ -81,14 +82,18 @@ public class Csdetail extends Activity {
     private List<Map<String, Object>> csotList;
     private CsOtherInfoAdapter csOtherInfoAdapter;
     private ProgressDialog pb=null;
+    private XProgressDialog fetching_xpd;
+    private XProgressDialog order_xpd;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE); //设置无标题栏
         setContentView(R.layout.csdetail);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS); //透明状态栏
         //getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION); //透明导航栏
-        context = this.getApplicationContext();
-        pb = new ProgressDialog(Csdetail.this);
+        //context = this.getApplicationContext();
+        context = this.getBaseContext();
+        //pb = new ProgressDialog(Csdetail.this);
+
         initId();
         initDate();
         initOnClick();
@@ -194,6 +199,9 @@ public class Csdetail extends Activity {
     }
 
     private void initGetSingleCs() {
+        fetching_xpd = new XProgressDialog(this, "正在加载..", XProgressDialog.THEME_HEART_PROGRESS);
+        fetching_xpd.show();
+        fetching_xpd.setCanceledOnTouchOutside(false);
         new Thread(new Runnable() {
             public void run() {
                 try {
@@ -216,6 +224,14 @@ public class Csdetail extends Activity {
             switch (v.getId()) {
                 case R.id.csdtyuyue:
                     if(user_id!=null){
+                        try{
+                            order_xpd = new XProgressDialog(Csdetail.this, "正在加载..", XProgressDialog.THEME_HEART_PROGRESS);
+                            order_xpd.show();
+                            order_xpd.setCanceledOnTouchOutside(false);
+                        }
+                        catch (Exception ex){
+                            Log.e("order",ex.toString());
+                        }
                         date_select.setVisibility(View.VISIBLE);
                         setBackground(0);
                         new Thread(new Runnable() {
@@ -437,8 +453,8 @@ public class Csdetail extends Activity {
 
     //
     private void freshSchedule(final int flag){
-        pb.setMessage("获取中......");
-        pb.show();
+        //pb.setMessage("获取中......");
+        //pb.show();
         new Thread(new Runnable() {
             public void run() {
                 try {
@@ -542,6 +558,12 @@ public class Csdetail extends Activity {
             csotList = listItems;
             csOtherInfoAdapter = new CsOtherInfoAdapter(context, csotList);
             csdt_listview.setAdapter(csOtherInfoAdapter);
+            try{
+                fetching_xpd.dismiss();
+            }
+            catch (Exception ex){
+                Log.e("fetching error",ex.toString());
+            }
             super.handleMessage(msg);
         }
 
@@ -609,7 +631,14 @@ public class Csdetail extends Activity {
                 System.out.println("Jsons parse error !");
                 e.printStackTrace();
             }
-            pb.dismiss();
+
+            try{
+                //pb.dismiss();
+                order_xpd.dismiss();
+            }
+            catch (Exception ex){
+                Log.e("fetching error",ex.toString());
+            }
             super.handleMessage(msg);
         }
 
