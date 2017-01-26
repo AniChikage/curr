@@ -281,6 +281,7 @@
     <string name="sd_card_does_not_exist">SD卡不存在，不能拍照</string>
     <string name="search">搜索</string>
     <string name="search_header">搜</string>
+    <string msgid="146198913615257606" name="search_menu_title">"搜索"</string>
     <string name="search_new">搜</string>
     <string name="search_pubic_group">搜索公开群</string>
     <string name="searching">正在搜索..</string>

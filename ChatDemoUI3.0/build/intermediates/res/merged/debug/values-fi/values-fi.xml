@@ -28,6 +28,7 @@
     <string name="pull_to_refresh_pull_label">Päivitä vetämällä alas…</string>
     <string name="pull_to_refresh_refreshing_label">Päivitetään…</string>
     <string name="pull_to_refresh_release_label">Päivitä vapauttamalla…</string>
+    <string msgid="146198913615257606" name="search_menu_title">"Haku"</string>
     <string msgid="3973338219107019769" name="select_day">"Valitse kuukausi ja päivä"</string>
     <string msgid="7651068754188418859" name="select_hours">"Valitse tunnit"</string>
     <string msgid="8327182090226828481" name="select_minutes">"Valitse minuutit"</string>

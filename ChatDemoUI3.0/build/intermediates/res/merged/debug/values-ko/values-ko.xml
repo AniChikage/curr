@@ -28,6 +28,7 @@
     <string name="pull_to_refresh_pull_label">당겨서 새로 고침…</string>
     <string name="pull_to_refresh_refreshing_label">로드 중…</string>
     <string name="pull_to_refresh_release_label">놓아서 새로 고침…</string>
+    <string msgid="146198913615257606" name="search_menu_title">"검색"</string>
     <string msgid="3973338219107019769" name="select_day">"월/일 선택"</string>
     <string msgid="7651068754188418859" name="select_hours">"시간 선택"</string>
     <string msgid="8327182090226828481" name="select_minutes">"분 선택"</string>

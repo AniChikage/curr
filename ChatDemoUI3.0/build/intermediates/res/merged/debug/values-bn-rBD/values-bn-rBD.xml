@@ -7,7 +7,7 @@
     <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"আরো বিকল্প"</string>
     <string msgid="4076576682505996667" name="abc_action_mode_done">"সম্পন্ন হয়েছে"</string>
     <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"সবগুলো দেখুন"</string>
-    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"একটি অ্যাপ্লিকেশান চয়ন করুন"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"একটি অ্যাপ্লিকেশান বেছে নিন"</string>
     <string msgid="121134116657445385" name="abc_capital_off">"বন্ধ"</string>
     <string msgid="3405795526292276155" name="abc_capital_on">"চালু"</string>
     <string msgid="7723749260725869598" name="abc_search_hint">"অনুসন্ধান..."</string>
@@ -16,8 +16,8 @@
     <string msgid="8264924765203268293" name="abc_searchview_description_search">"অনুসন্ধান করুন"</string>
     <string msgid="8928215447528550784" name="abc_searchview_description_submit">"ক্যোয়ারী জমা দিন"</string>
     <string msgid="893419373245838918" name="abc_searchview_description_voice">"ভয়েস অনুসন্ধান"</string>
-    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"এর সাথে ভাগ করুন"</string>
-    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"%s এর সাথে ভাগ করুন"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"এর সাথে শেয়ার করুন"</string>
+    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"%s এর সাথে শেয়ার করুন"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"সঙ্কুচিত করুন"</string>
     <string msgid="3968620852217927702" name="day_picker_description">"দিন দিয়ে সংগঠিত মাসের গ্রিড"</string>
     <string msgid="6908431551612331381" name="deleted_key">"<ns1:g id="KEY">%1$s</ns1:g> মুছে ফেলা হয়েছে"</string>
@@ -25,6 +25,7 @@
     <string msgid="7586639618712934060" name="hour_picker_description">"বৃত্তাকার ঘন্টা নির্বাচকের স্লাইডার"</string>
     <string msgid="2674929164900463786" name="item_is_selected">"<ns1:g id="ITEM">%1$s</ns1:g> নির্বাচন করা হয়েছে"</string>
     <string msgid="6024811202872705251" name="minute_picker_description">"বৃত্তাকার মিনিট নির্বাচকের স্লাইডার"</string>
+    <string msgid="146198913615257606" name="search_menu_title">"অনুসন্ধান করুন"</string>
     <string msgid="3973338219107019769" name="select_day">"মাস এবং দিন নির্বাচন করুন"</string>
     <string msgid="7651068754188418859" name="select_hours">"ঘন্টা নির্বাচন করুন"</string>
     <string msgid="8327182090226828481" name="select_minutes">"মিনিট নির্বাচন করুন"</string>

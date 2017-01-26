@@ -28,6 +28,7 @@
     <string name="pull_to_refresh_pull_label">اسحب للتحديث…</string>
     <string name="pull_to_refresh_refreshing_label">تحميل…</string>
     <string name="pull_to_refresh_release_label">اترك للتحديث…</string>
+    <string msgid="146198913615257606" name="search_menu_title">"البحث"</string>
     <string msgid="3973338219107019769" name="select_day">"تحديد الشهر واليوم"</string>
     <string msgid="7651068754188418859" name="select_hours">"تحديد الساعات"</string>
     <string msgid="8327182090226828481" name="select_minutes">"تحديد الدقائق"</string>

@@ -28,6 +28,7 @@
     <string name="pull_to_refresh_pull_label">משוך לרענון…</string>
     <string name="pull_to_refresh_refreshing_label">טוען…</string>
     <string name="pull_to_refresh_release_label">שחרר לרענון…</string>
+    <string msgid="146198913615257606" name="search_menu_title">"חפש"</string>
     <string msgid="3973338219107019769" name="select_day">"בחר חודש ויום"</string>
     <string msgid="7651068754188418859" name="select_hours">"בחר שעות"</string>
     <string msgid="8327182090226828481" name="select_minutes">"בחר דקות"</string>

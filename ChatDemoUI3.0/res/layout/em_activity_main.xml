@@ -115,6 +115,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         </ListView>
+
         <ListView
             android:id="@+id/mainpage_cs_listview"
             android:divider="@null"
@@ -122,13 +123,19 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         </ListView>
-        <ListView
-            android:id="@+id/mainpage_mine_listview"
-            android:divider="@null"
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/id_swipe_ly"
             android:visibility="invisible"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        </ListView>
+            android:layout_height="match_parent" >
+            <ListView
+                android:id="@+id/mainpage_mine_listview"
+                android:divider="@null"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </ListView>
+        </android.support.v4.widget.SwipeRefreshLayout>
         <TextView
             android:id="@+id/tologin"
             android:visibility="invisible"

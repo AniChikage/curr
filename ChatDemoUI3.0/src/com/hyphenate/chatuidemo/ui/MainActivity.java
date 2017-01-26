@@ -40,6 +40,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentHostCallback;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.LocalBroadcastManager;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Base64;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -50,7 +51,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.AbsListView;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -101,6 +104,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -108,12 +112,14 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 @SuppressLint("NewApi")
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity{
 
 	//region 变量
 	protected static final String TAG = "MainActivity";
+	private static Drawable user_drawable;
 	// textview for unread message count
 	private TextView unreadLabel;
+	private static final int REFRESH_COMPLETE = 0X110;
 	private static String user_id=null;
 	private static String user_id_s;
 	private static String isAccept;
@@ -123,6 +129,7 @@ public class MainActivity extends BaseActivity {
 	private TextView unreadAddressLable;
 	private TextView paixu;
 	private static TextView app_username;
+	private static ImageView app_portrait;
 	private TextView btn_recmd;
 	private TextView btn_default;
 	private TextView tologin;
@@ -186,6 +193,7 @@ public class MainActivity extends BaseActivity {
 	private boolean isJRYWADover;
 	private boolean isCSover;
 	private boolean isCSADover;
+	private SwipeRefreshLayout mSwipeLayout;
 	//endregion
 
 	public boolean getCurrentAccountRemoved() {
@@ -202,6 +210,22 @@ public class MainActivity extends BaseActivity {
 		setContentView(R.layout.em_activity_main);
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS); //透明状态栏
 		in_hcontext = hcontext;
+
+		//region 定义下拉菜单
+		mSwipeLayout = (SwipeRefreshLayout) findViewById(R.id.id_swipe_ly);
+		//mSwipeLayout.setOnRefreshListener(this);
+		mSwipeLayout.setColorSchemeResources(R.color.holo_blue_bright,
+				R.color.holo_green_light,
+				R.color.holo_orange_light,
+				R.color.holo_red_light);
+		//mSwipeLayout.setProgressBackgroundColorSchemeResource(R.color.holo_green_light);
+		mSwipeLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+			@Override
+			public void onRefresh() {
+				mHandler.sendEmptyMessageDelayed(REFRESH_COMPLETE, 2000);
+			}
+		});
+		//endregion
 
 		pd = new ProgressDialog(MainActivity.this);
 		pd_update = new ProgressDialog(MainActivity.this);
@@ -322,6 +346,13 @@ public class MainActivity extends BaseActivity {
 				JSONObject jsonObjs = new JSONObject(string).getJSONObject("user");
 				user_id = jsonObjs.getString("id");
 				user_id_s = user_id;
+				try{
+					String portrait = jsonObjs.getString("portrait");
+					user_drawable =new BitmapDrawable(getBitmapFromByte(Base64.decode(portrait,Base64.DEFAULT)));
+				}
+				catch (Exception ex){
+					Log.e("noUserPortrait",ex.toString());
+				}
 				Log.e(TAG,user_id);
 				try{
 					//initView();
@@ -363,6 +394,26 @@ public class MainActivity extends BaseActivity {
 		mTabs[2] = (Button) findViewById(R.id.btn_setting);
 		mainpage_mp_listview = (ListView) findViewById(R.id.mainpage_mp_listview);
 		mainpage_cs_listview = (ListView) findViewById(R.id.mainpage_cs_listview);
+//		mainpage_cs_listview.setOnScrollListener(new AbsListView.OnScrollListener() {
+//
+//			@Override
+//			public void onScrollStateChanged(AbsListView view, int scrollState) {
+//			}
+//
+//			@Override
+//			public void onScroll(AbsListView view, int firstVisibleItem,
+//								 int visibleItemCount, int totalItemCount) {
+//				boolean enable = false;
+//				if(mainpage_cs_listview != null && mainpage_cs_listview.getChildCount() > 0){
+//					// check if the first item of the list is visible
+//					boolean firstItemVisible = mainpage_cs_listview.getFirstVisiblePosition() == 0;
+//					// check if the top of the first item is visible
+//					boolean topOfFirstItemVisible = mainpage_cs_listview.getChildAt(0).getTop() == 0;
+//					// enabling or disabling the refresh layout
+//					enable = firstItemVisible && topOfFirstItemVisible;
+//				}
+//				mSwipeLayout.setEnabled(enable);
+//			}});
 		mainpage_mine_listview = (ListView) findViewById(R.id.mainpage_mine_listview);
 		mainpage_listview = new ListView[]{mainpage_mp_listview,mainpage_cs_listview,mainpage_mine_listview};
 		// select first tab
@@ -525,11 +576,19 @@ public class MainActivity extends BaseActivity {
 	}
 	//endregion
 
+	//region initMine
 	private static void initMine(){
 		mainpage_mine_header_view = LayoutInflater.from(in_hcontext).inflate(R.layout.mainpage_mine_header, null);
 		mainpage_mine_header_ll = (LinearLayout)mainpage_mine_header_view.findViewById(R.id.mine_header_ll);
 		app_username = (TextView)mainpage_mine_header_view.findViewById(R.id.app_username);
+		app_portrait = (ImageView) mainpage_mine_header_view.findViewById(R.id.portrait);
 		app_username.setText(EMClient.getInstance().getCurrentUser().toString());
+		try{
+			app_portrait.setImageDrawable(user_drawable);
+		}
+		catch (Exception ex){
+			Log.e("noUserPortrait",ex.toString());
+		}
 		Log.e("","lllllllllllll");
 		dochuzhen = (ImageView) mainpage_mine_header_view.findViewById(R.id.dochuzhen);
 		if(firstChecked.equals("0")){
@@ -585,6 +644,7 @@ public class MainActivity extends BaseActivity {
 		mainpage_mine_header_ll.setLayoutParams(lpmine);
 		SysnMyAppoint();
 	}
+	//endregion
 
 	private static void SysnMyAppoint(){
 		new Thread(new Runnable() {
@@ -614,7 +674,12 @@ public class MainActivity extends BaseActivity {
 				Log.e("orders len",String.valueOf(jsonObjs.length()));
 				for(int i = 0; i < jsonObjs.length() ; i++){
 					JSONObject jsonObj = (JSONObject)jsonObjs.get(i);
-					String sid = jsonObj.getString("sid");
+					String sid = "";
+					try{
+						sid = jsonObj.getString("sid");
+					}
+					catch (Exception ex){
+					}
 					String oid = jsonObj.getString("oid");
 					String paid = jsonObj.getString("paid");
 
@@ -638,8 +703,20 @@ public class MainActivity extends BaseActivity {
 					catch (Exception ex){
 						evau = "0";
 					}
-					String starttime = jsonObj.getString("starttime");
-					String str_schedule = jsonObj.getString("schedule");
+					String starttime = "0";
+					try{
+						starttime = jsonObj.getString("starttime");
+					}
+					catch (Exception ex){
+						starttime = "0";
+					}
+					String str_schedule = "0";
+//					try{
+					str_schedule = jsonObj.getString("schedule");
+//					}
+//					catch (Exception ex){
+//						str_schedule = "0";
+//					}
 					JSONObject jsonObjsc = new JSONObject(str_schedule).getJSONObject("consellor");
 					String portrait = jsonObjsc.getString("portrait");
 					String consellor_name = jsonObjsc.getString("realname");
@@ -878,6 +955,21 @@ public class MainActivity extends BaseActivity {
 				e.printStackTrace();
 			}
 			slideShowViewCs.init(adhint,adimg,adid,user_id);
+			slideShowViewCs.setOnTouchListener(new View.OnTouchListener() {
+				             @Override
+				             public boolean onTouch(View v, MotionEvent event) {
+					                 switch (event.getAction()) {
+						                     case MotionEvent.ACTION_MOVE:
+							                         mSwipeLayout.setEnabled(false);
+							                         break;
+						                     case MotionEvent.ACTION_UP:
+							                     case MotionEvent.ACTION_CANCEL:
+													 mSwipeLayout.setEnabled(true);
+							                         break;
+						                 }
+					                 return false;
+					             }
+				         });
 			try{
 				isCSADover = true;
 				if(isCSover && isCSADover){
@@ -1295,9 +1387,11 @@ public class MainActivity extends BaseActivity {
 		switch (view.getId()) {
 		case R.id.btn_conversation:
 			index = 0;
+			mSwipeLayout.setVisibility(View.INVISIBLE);
 			break;
 		case R.id.btn_address_list:
 			index = 1;
+			mSwipeLayout.setVisibility(View.INVISIBLE);
 			if(!isCsFetched){
 				initConsellor();
 				isCsFetched = true;
@@ -1305,6 +1399,7 @@ public class MainActivity extends BaseActivity {
 			break;
 		case R.id.btn_setting:
 			index = 2;
+			mSwipeLayout.setVisibility(View.VISIBLE);
 			break;
 		}
 
@@ -1831,4 +1926,39 @@ public class MainActivity extends BaseActivity {
 			System.exit(0);
 		}
 	}
+
+	//region “我”的信息下拉刷新
+	private Handler mHandler = new Handler()
+	{
+		public void handleMessage(android.os.Message msg)
+		{
+			switch (msg.what)
+			{
+				case REFRESH_COMPLETE:
+//					mDatas.addAll(Arrays.asList("Lucene", "Canvas", "Bitmap"));
+//					mAdapter.notifyDataSetChanged();
+					try{
+						mainpage_mine_listview.removeHeaderView(mainpage_mine_header_view);
+						mainpage_mine_listview.setAdapter(null);
+						initMine();
+					}
+					catch (Exception ex){
+						Log.e("下拉刷新",ex.toString());
+					}
+					mSwipeLayout.setRefreshing(false);
+					break;
+			}
+		};
+	};
+
+	//下拉刷新
+	public void onRefresh()
+	{
+		// Log.e("xxx", Thread.currentThread().getName());
+		// UI Thread
+		mHandler.sendEmptyMessageDelayed(REFRESH_COMPLETE, 2000);
+	}
+
+	//endregion
+
 }

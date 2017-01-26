@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="recyclerview-21.0.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.klinkerapps/recyclerview/21.0.0/a732ef9e3252a8c315e3955dbd4618342623fd9b/recyclerview-21.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.klinkerapps/recyclerview/21.0.0/fa03995d1eec7c0f2bb5fa8265f00a9e8a66120c/recyclerview-21.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

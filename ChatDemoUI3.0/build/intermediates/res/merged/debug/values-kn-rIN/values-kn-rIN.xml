@@ -13,7 +13,7 @@
     <string msgid="7723749260725869598" name="abc_search_hint">"ಹುಡುಕಿ…"</string>
     <string msgid="3691816814315814921" name="abc_searchview_description_clear">"ಪ್ರಶ್ನೆಯನ್ನು ತೆರವುಗೊಳಿಸು"</string>
     <string msgid="2550479030709304392" name="abc_searchview_description_query">"ಪ್ರಶ್ನೆಯನ್ನು ಹುಡುಕಿ"</string>
-    <string msgid="8264924765203268293" name="abc_searchview_description_search">"ಹುಡುಕು"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"ಹುಡುಕಿ"</string>
     <string msgid="8928215447528550784" name="abc_searchview_description_submit">"ಪ್ರಶ್ನೆಯನ್ನು ಸಲ್ಲಿಸು"</string>
     <string msgid="893419373245838918" name="abc_searchview_description_voice">"ಧ್ವನಿ ಹುಡುಕಾಟ"</string>
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"ಇವರೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಿ"</string>
@@ -25,6 +25,7 @@
     <string msgid="7586639618712934060" name="hour_picker_description">"ಗಂಟೆಗಳ ವೃತ್ತಾಕಾರ ಸ್ಲೈಡರ್"</string>
     <string msgid="2674929164900463786" name="item_is_selected">"<ns1:g id="ITEM">%1$s</ns1:g> ಆಯ್ಕೆ ಮಾಡಲಾಗಿದೆ"</string>
     <string msgid="6024811202872705251" name="minute_picker_description">"ನಿಮಿಷಗಳ ವೃತ್ತಾಕಾರ ಸ್ಲೈಡರ್"</string>
+    <string msgid="146198913615257606" name="search_menu_title">"ಹುಡುಕಿ"</string>
     <string msgid="3973338219107019769" name="select_day">"ತಿಂಗಳು ಮತ್ತು ದಿನವನ್ನು ಆಯ್ಕೆಮಾಡಿ"</string>
     <string msgid="7651068754188418859" name="select_hours">"ಗಂಟೆಗಳನ್ನು ಆಯ್ಕೆಮಾಡಿ"</string>
     <string msgid="8327182090226828481" name="select_minutes">"ನಿಮಿಷಗಳನ್ನು ಆಯ್ಕೆಮಾಡಿ"</string>

@@ -355,6 +355,15 @@
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustPan"></activity>
 
+        <!-- TEST -->
+        <activity
+            android:name=".ui.Test"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
+
         <!-- CATEGORY -->
         <activity
             android:name=".Main.Category"

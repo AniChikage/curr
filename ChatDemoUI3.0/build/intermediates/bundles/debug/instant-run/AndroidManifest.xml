@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.hyphenate.chatuidemo"
+    package="com.anichikage.mdcapp"
     android:largeHeap="true"
     android:versionCode="38"
     android:versionName="3.1.6" >
 
     <uses-sdk
-        android:minSdkVersion="14"
+        android:minSdkVersion="19"
         android:targetSdkVersion="22" />
 
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -189,6 +189,13 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/nornal_style" />
+
+        <!-- 协议 -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.Xieyi"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/nornal_style" />
         <!-- 视频通话 -->
         <activity
             android:name="com.hyphenate.chatuidemo.ui.VideoCallActivity"
@@ -346,6 +353,14 @@
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustPan" />
 
+        <!-- TEST -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.Test"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
         <!-- CATEGORY -->
         <activity
             android:name="com.hyphenate.chatuidemo.Main.Category"
@@ -370,6 +385,20 @@
         <!-- MYAPPOINT -->
         <activity
             android:name="com.hyphenate.chatuidemo.Appointment.MyAppoint"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- EVALUATION USER -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.Evaluation.User"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- EVALUATION CONSELLOR -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.Evaluation.Consellor"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustPan" />

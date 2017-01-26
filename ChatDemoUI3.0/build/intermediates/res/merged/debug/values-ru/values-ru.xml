@@ -28,6 +28,7 @@
     <string name="pull_to_refresh_pull_label">потяните</string>
     <string name="pull_to_refresh_refreshing_label">обновление</string>
     <string name="pull_to_refresh_release_label">отпустите</string>
+    <string msgid="146198913615257606" name="search_menu_title">"Поиск"</string>
     <string msgid="3973338219107019769" name="select_day">"Выберите месяц и день"</string>
     <string msgid="7651068754188418859" name="select_hours">"Выберите часы"</string>
     <string msgid="8327182090226828481" name="select_minutes">"Выберите минуты"</string>

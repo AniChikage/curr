@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="JellyRefreshLayout"><attr format="color" name="jellyColor"/><attr format="dimension" name="headerHeight"/><attr format="dimension" name="pullHeight"/><attr format="dimension" name="triggerHeight"/></declare-styleable>
+    <string name="app_name">JellyRefresh</string>
+</resources>

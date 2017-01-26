@@ -25,6 +25,7 @@
     <string msgid="7586639618712934060" name="hour_picker_description">"គ្រាប់​រំកិល​រង្វង់​ម៉ោង"</string>
     <string msgid="2674929164900463786" name="item_is_selected">"បាន​ជ្រើស <ns1:g id="ITEM">%1$s</ns1:g>"</string>
     <string msgid="6024811202872705251" name="minute_picker_description">"គ្រាប់​រំកិល​រង្វង់​នាទី"</string>
+    <string msgid="146198913615257606" name="search_menu_title">"ស្វែងរក"</string>
     <string msgid="3973338219107019769" name="select_day">"ជ្រើស​ខែ និង​ថ្ងៃ"</string>
     <string msgid="7651068754188418859" name="select_hours">"ជ្រើស​ម៉ោង"</string>
     <string msgid="8327182090226828481" name="select_minutes">"ជ្រើស​នាទី"</string>

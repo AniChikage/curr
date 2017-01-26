@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.hyphenate.chatuidemo"
+    package="com.anichikage.mdcapp"
     android:largeHeap="true"
     android:versionCode="38"
     android:versionName="3.1.6" >
 
     <uses-sdk
-        android:minSdkVersion="14"
+        android:minSdkVersion="19"
         android:targetSdkVersion="22" />
 
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -351,6 +351,14 @@
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustPan" />
+
+        <!-- TEST -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.Test"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
 
         <!-- CATEGORY -->
         <activity

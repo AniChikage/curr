@@ -25,6 +25,7 @@
     <string msgid="7586639618712934060" name="hour_picker_description">"Amahora weslayidi esiyindingilizi"</string>
     <string msgid="2674929164900463786" name="item_is_selected">"I-<ns1:g id="ITEM">%1$s</ns1:g> ekhethiwe"</string>
     <string msgid="6024811202872705251" name="minute_picker_description">"Amaminithi weslayidi esiyindingilizi"</string>
+    <string msgid="146198913615257606" name="search_menu_title">"Sesha"</string>
     <string msgid="3973338219107019769" name="select_day">"Khetha inyanga nosuku"</string>
     <string msgid="7651068754188418859" name="select_hours">"Khetha amahora"</string>
     <string msgid="8327182090226828481" name="select_minutes">"Khetha amaminithi"</string>

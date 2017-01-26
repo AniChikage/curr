@@ -28,6 +28,7 @@
     <string name="pull_to_refresh_pull_label">Pociągnij, aby odświeżyć…</string>
     <string name="pull_to_refresh_refreshing_label">Wczytywanie…</string>
     <string name="pull_to_refresh_release_label">Puść, aby odświeżyć…</string>
+    <string msgid="146198913615257606" name="search_menu_title">"Szukaj"</string>
     <string msgid="3973338219107019769" name="select_day">"Wybierz miesiąc i dzień"</string>
     <string msgid="7651068754188418859" name="select_hours">"Wybierz godziny"</string>
     <string msgid="8327182090226828481" name="select_minutes">"Wybierz minuty"</string>

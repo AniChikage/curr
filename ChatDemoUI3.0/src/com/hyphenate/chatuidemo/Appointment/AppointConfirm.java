@@ -22,6 +22,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.apkfuns.xprogressdialog.XProgressDialog;
 import com.hyphenate.chatuidemo.R;
 import com.hyphenate.chatuidemo.netapp.ConnNet;
 
@@ -39,6 +40,8 @@ public class AppointConfirm extends Activity {
     private String user_id, sid, nid, starttime,danjia;
     private ImageView acback,iv_portrait;
     private ProgressDialog pd=null;
+    private XProgressDialog fetching_xpd;
+    private XProgressDialog adding_xpd;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE); //设置无标题栏
@@ -142,6 +145,14 @@ public class AppointConfirm extends Activity {
     public void addOrder(){
         pd.setMessage("提交中......");
         pd.show();
+        try{
+            adding_xpd = new XProgressDialog(this,"正在加载...",XProgressDialog.THEME_HEART_PROGRESS);
+            adding_xpd.show();
+            adding_xpd.setCanceledOnTouchOutside(false);
+        }
+        catch (Exception ex){
+            Log.e("adding_xpd",ex.toString());
+        }
         new Thread(new Runnable() {
             public void run() {
                 if(!blms.getText().toString().equals("")){
@@ -200,7 +211,11 @@ public class AppointConfirm extends Activity {
                 }).start();
             }
             catch (Exception ex){
-
+                try{
+                    adding_xpd.dismiss();
+                }
+                catch (Exception e){
+                }
             }
             super.handleMessage(msg);
         }
@@ -260,7 +275,11 @@ public class AppointConfirm extends Activity {
                 }).start();
             }
             catch (Exception ex){
-
+                try{
+                    adding_xpd.dismiss();
+                }
+                catch (Exception e){
+                }
             }
             super.handleMessage(msg);
         }
@@ -282,7 +301,16 @@ public class AppointConfirm extends Activity {
                 }
             }
             catch (Exception ex){
-
+                try{
+                    adding_xpd.dismiss();
+                }
+                catch (Exception e){
+                }
+            }
+            try{
+                adding_xpd.dismiss();
+            }
+            catch (Exception ex){
             }
             super.handleMessage(msg);
         }

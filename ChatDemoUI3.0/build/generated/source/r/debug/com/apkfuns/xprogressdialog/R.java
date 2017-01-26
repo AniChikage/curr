@@ -8,32 +8,32 @@ package com.apkfuns.xprogressdialog;
 
 public final class R {
 	public static final class attr {
-		public static final int heartColor = 0x7f0100ee;
+		public static final int heartColor = 0x7f0100f8;
 	}
 	public static final class dimen {
-		public static final int padding_dialog_bg = 0x7f080090;
-		public static final int spot_progress_margin = 0x7f0800c8;
-		public static final int spot_progress_spot_size = 0x7f0800c9;
-		public static final int spot_progress_width = 0x7f0800ca;
+		public static final int padding_dialog_bg = 0x7f0800a7;
+		public static final int spot_progress_margin = 0x7f0800df;
+		public static final int spot_progress_spot_size = 0x7f0800e0;
+		public static final int spot_progress_width = 0x7f0800e1;
 	}
 	public static final class drawable {
-		public static final int bg_dialog = 0x7f020051;
-		public static final int spot = 0x7f020232;
+		public static final int bg_dialog = 0x7f020059;
+		public static final int spot = 0x7f020245;
 	}
 	public static final class id {
-		public static final int message = 0x7f0d0156;
-		public static final int progress = 0x7f0d03be;
+		public static final int message = 0x7f0d015e;
+		public static final int progress = 0x7f0d03e0;
 	}
 	public static final class layout {
-		public static final int view_xprogressdialog_circle_progress = 0x7f03010d;
-		public static final int view_xprogressdialog_heart_progress = 0x7f03010e;
-		public static final int view_xprogressdialog_spot = 0x7f03010f;
+		public static final int view_xprogressdialog_circle_progress = 0x7f04011d;
+		public static final int view_xprogressdialog_heart_progress = 0x7f04011e;
+		public static final int view_xprogressdialog_spot = 0x7f04011f;
 	}
 	public static final class style {
-		public static final int dialog_msg_text = 0x7f09018d;
+		public static final int dialog_msg_text = 0x7f0901c8;
 	}
 	public static final class styleable {
-		public static final int[] HeartProgressView = { 0x7f0100ee };
+		public static final int[] HeartProgressView = { 0x7f0100f8 };
 		public static final int HeartProgressView_heartColor = 0;
 	}
 }

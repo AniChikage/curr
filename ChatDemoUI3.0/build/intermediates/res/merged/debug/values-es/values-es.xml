@@ -28,6 +28,7 @@
     <string name="pull_to_refresh_pull_label">Desliza el dedo hacia abajo para actualizar.</string>
     <string name="pull_to_refresh_refreshing_label">Cargando…</string>
     <string name="pull_to_refresh_release_label">Soltar para actualizar…</string>
+    <string msgid="146198913615257606" name="search_menu_title">"Buscar"</string>
     <string msgid="3973338219107019769" name="select_day">"Seleccionar mes y día"</string>
     <string msgid="7651068754188418859" name="select_hours">"Seleccionar horas"</string>
     <string msgid="8327182090226828481" name="select_minutes">"Seleccionar minutos"</string>
