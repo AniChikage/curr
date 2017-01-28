@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -20,6 +21,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.apkfuns.xprogressdialog.XProgressDialog;
 import com.hyphenate.chatuidemo.Adapter.ArticleTextAdapter;
 import com.hyphenate.chatuidemo.Base64.BASE64Decoder;
 import com.hyphenate.chatuidemo.R;
@@ -45,6 +47,7 @@ public class ArticleDetail extends Activity {
     private Context hcontext;
     private View header_View;
     private LinearLayout header_ll;
+    private XProgressDialog fetching_xpd;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE); //设置无标题栏
@@ -61,6 +64,10 @@ public class ArticleDetail extends Activity {
         try {
             Bundle bundle = getIntent().getExtras();
             if(bundle!=null){
+                //fetching article: progressdialog
+                fetching_xpd = new XProgressDialog(this,"正在加载..",XProgressDialog.THEME_HEART_PROGRESS);
+                fetching_xpd.show();
+                fetching_xpd.setCanceledOnTouchOutside(false);
                 String data = bundle.getString("msgid");
                 testid.setText(data);
                 SysnArticleDetail(data);
@@ -84,7 +91,7 @@ public class ArticleDetail extends Activity {
         int height1 = wm1.getDefaultDisplay().getHeight();
         ViewGroup.LayoutParams lp1 =header_ll.getLayoutParams();
         lp1.width=lp1.MATCH_PARENT;
-        lp1.height=height1*900/1932;
+        lp1.height=height1*870/1932;
         header_ll.setLayoutParams(lp1);
     }
 
@@ -119,7 +126,9 @@ public class ArticleDetail extends Activity {
                 String jtitle = jsonObjs.getString("title");
                 String jtime = jsonObjs.getString("ptime");
                 String jsubstance = jsonObjs.getString("substance");
-                headerimg.setImageBitmap(getBitmapFromByte(Base64.decode(jcover, Base64.DEFAULT)));
+//                headerimg.setImageBitmap(getBitmapFromByte(Base64.decode(jcover, Base64.DEFAULT)));
+//                headerimg.setImageDrawable(new BitmapDrawable(getBitmapFromByte(Base64.decode(jcover, Base64.DEFAULT))));
+                headerimg.setBackground(new BitmapDrawable(getBitmapFromByte(Base64.decode(jcover, Base64.DEFAULT))));
                 title.setText(jtitle);
                 time.setText(jtime);
                 Map<String, Object> map = new HashMap<String, Object>();
@@ -133,7 +142,12 @@ public class ArticleDetail extends Activity {
             catch (Exception ex){
                 Log.e("jsonErr",ex.toString());
             }
-
+            try{
+                fetching_xpd.dismiss();
+            }
+            catch (Exception ex){
+                Log.e("fetching",ex.toString());
+            }
             super.handleMessage(msg);
         }
     };

@@ -944,7 +944,7 @@
     <string name="name_str_format_received">%1$s共收到</string>
     <string name="name_str_format_send">%1$s共发出</string>
     <string name="network_anomalies">Network is not available, please check the network!</string>
-    <string name="network_isnot_available">The network is not available</string>
+    <string name="network_isnot_available">网络不可用</string>
     <string name="network_unavailable">The network connection is not available, please check the network</string>
     <string name="network_unstable">Network unstable</string>
     <string name="newchat">Create new group</string>

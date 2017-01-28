@@ -23,6 +23,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.apkfuns.xprogressdialog.XProgressDialog;
 import com.hyphenate.chatuidemo.Adapter.JrywListViewAdapter;
 import com.hyphenate.chatuidemo.R;
 import com.hyphenate.chatuidemo.netapp.ConnNet;
@@ -50,6 +51,9 @@ public class Category extends Activity {
     private JrywListViewAdapter jrywListViewAdapter;
     private TextView category_name;
     private String data;
+    private XProgressDialog fetching_xpd;
+    private boolean sysnContent;
+    private boolean sysnAds;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,7 +69,18 @@ public class Category extends Activity {
             data = bundle.getString("category_name");
             Log.e("category_name",data);
 
-
+            //try{
+                fetching_xpd = new XProgressDialog(this,"正在加载..",XProgressDialog.THEME_HEART_PROGRESS);
+                fetching_xpd.show();
+                fetching_xpd.setCanceledOnTouchOutside(false);
+//            }
+//            catch (Exception ex){
+//                Log.e("fetching",ex.toString());
+//            }
+            //初始化未同步的内容标识
+            sysnContent = false;
+            sysnAds = false;
+            //
             category_listview = (ListView) findViewById(R.id.category_listview);
             category_header_View = LayoutInflater.from(this).inflate(R.layout.category_header, null,false);
             category_header_ll = (LinearLayout) category_header_View.findViewById(R.id.category_header_ll);
@@ -74,7 +89,7 @@ public class Category extends Activity {
             ViewGroup.LayoutParams lp1 =category_header_ll.getLayoutParams();
             lp1.width=lp1.MATCH_PARENT;
             //lp1.height=height1*693/1679;
-            lp1.height=height1*560/1679;
+            lp1.height=height1*620/1679;
             category_header_ll.setLayoutParams(lp1);
 
             SysnJRYW();
@@ -171,6 +186,15 @@ public class Category extends Activity {
                     }
                 }
             });
+            try{
+                sysnContent = true;
+                if(sysnContent && sysnAds){
+                    fetching_xpd.dismiss();
+                }
+            }
+            catch (Exception ex){
+
+            }
             super.handleMessage(msg);
         }
     };
@@ -227,7 +251,15 @@ public void handleMessage(Message msg) {
                 e.printStackTrace();
             }
             slideShowView.init(adhint,adimg,adid);
+            try{
+                sysnAds = true;
+                if(sysnContent && sysnAds){
+                    fetching_xpd.dismiss();
+                }
+            }
+            catch (Exception ex){
 
+            }
             super.handleMessage(msg);
         }
     };

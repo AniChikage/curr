@@ -11,7 +11,14 @@
                     "endOffset": 110
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_color.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_color.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 59,
+                        "endOffset": 110
+                    }
                 }
             },
             {
@@ -24,7 +31,15 @@
                     "endOffset": 1525
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\styles.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\styles.xml",
+                    "position": {
+                        "startLine": 66,
+                        "startColumn": 4,
+                        "startOffset": 2688,
+                        "endLine": 95,
+                        "endColumn": 24,
+                        "endOffset": 4116
+                    }
                 }
             },
             {
@@ -37,7 +52,15 @@
                     "endOffset": 2235
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\styles.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\styles.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 723,
+                        "endLine": 36,
+                        "endColumn": 24,
+                        "endOffset": 1439
+                    }
                 }
             },
             {
@@ -50,7 +73,15 @@
                     "endOffset": 2773
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\styles.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\styles.xml",
+                    "position": {
+                        "startLine": 54,
+                        "startColumn": 4,
+                        "startOffset": 2146,
+                        "endLine": 64,
+                        "endColumn": 24,
+                        "endOffset": 2682
+                    }
                 }
             },
             {
@@ -63,7 +94,15 @@
                     "endOffset": 3454
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\styles.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\styles.xml",
+                    "position": {
+                        "startLine": 38,
+                        "startColumn": 4,
+                        "startOffset": 1445,
+                        "endLine": 52,
+                        "endColumn": 24,
+                        "endOffset": 2140
+                    }
                 }
             },
             {
@@ -76,7 +115,15 @@
                     "endOffset": 3570
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\styles.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\styles.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 606,
+                        "endLine": 19,
+                        "endColumn": 24,
+                        "endOffset": 718
+                    }
                 }
             },
             {
@@ -88,7 +135,14 @@
                     "endOffset": 3629
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-large-v4\\values-large-v4.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-large-v4\\values-large-v4.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 58,
+                        "endOffset": 109
+                    }
                 }
             },
             {
@@ -100,7 +154,14 @@
                     "endOffset": 3700
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-large-v4\\values-large-v4.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-large-v4\\values-large-v4.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 114,
+                        "endColumn": 70,
+                        "endOffset": 180
+                    }
                 }
             },
             {
@@ -112,7 +173,14 @@
                     "endOffset": 3771
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-large-v4\\values-large-v4.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-large-v4\\values-large-v4.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 185,
+                        "endColumn": 70,
+                        "endOffset": 251
+                    }
                 }
             },
             {
@@ -124,7 +192,14 @@
                     "endOffset": 3841
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-large-v4\\values-large-v4.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-large-v4\\values-large-v4.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 256,
+                        "endColumn": 69,
+                        "endOffset": 321
+                    }
                 }
             },
             {
@@ -136,7 +211,14 @@
                     "endOffset": 3911
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-large-v4\\values-large-v4.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-large-v4\\values-large-v4.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 326,
+                        "endColumn": 69,
+                        "endOffset": 391
+                    }
                 }
             },
             {
@@ -148,7 +230,14 @@
                     "endOffset": 3979
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-large-v4\\values-large-v4.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-large-v4\\values-large-v4.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 396,
+                        "endColumn": 67,
+                        "endOffset": 459
+                    }
                 }
             },
             {
@@ -160,7 +249,14 @@
                     "endOffset": 4047
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-large-v4\\values-large-v4.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-large-v4\\values-large-v4.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 464,
+                        "endColumn": 67,
+                        "endOffset": 527
+                    }
                 }
             },
             {
@@ -172,7 +268,14 @@
                     "endOffset": 4100
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\em_dimens.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\em_dimens.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 663,
+                        "endColumn": 52,
+                        "endOffset": 711
+                    }
                 }
             },
             {
@@ -184,7 +287,14 @@
                     "endOffset": 4154
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\em_dimens.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\em_dimens.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 716,
+                        "endColumn": 53,
+                        "endOffset": 765
+                    }
                 }
             },
             {
@@ -196,7 +306,14 @@
                     "endOffset": 4199
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\dimens.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\dimens.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 106,
+                        "endColumn": 44,
+                        "endOffset": 146
+                    }
                 }
             },
             {
@@ -208,7 +325,14 @@
                     "endOffset": 4244
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\dimens.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 61,
+                        "endColumn": 44,
+                        "endOffset": 101
+                    }
                 }
             },
             {
@@ -220,7 +344,14 @@
                     "endOffset": 4288
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\dimens.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\dimens.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 17,
+                        "endColumn": 43,
+                        "endOffset": 56
+                    }
                 }
             },
             {
@@ -232,7 +363,14 @@
                     "endOffset": 4326
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1111,
+                        "endColumn": 37,
+                        "endOffset": 1144
+                    }
                 }
             },
             {
@@ -244,7 +382,14 @@
                     "endOffset": 4392
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 105,
+                        "endColumn": 65,
+                        "endOffset": 166
+                    }
                 }
             },
             {
@@ -256,7 +401,14 @@
                     "endOffset": 4439
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 1149,
+                        "endColumn": 46,
+                        "endOffset": 1191
+                    }
                 }
             },
             {
@@ -268,7 +420,14 @@
                     "endOffset": 4497
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 523,
+                        "endColumn": 57,
+                        "endOffset": 576
+                    }
                 }
             },
             {
@@ -280,7 +439,14 @@
                     "endOffset": 4544
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 889,
+                        "endColumn": 46,
+                        "endOffset": 931
+                    }
                 }
             },
             {
@@ -292,7 +458,14 @@
                     "endOffset": 4591
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 311,
+                        "endColumn": 46,
+                        "endOffset": 353
+                    }
                 }
             },
             {
@@ -304,7 +477,14 @@
                     "endOffset": 4633
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1069,
+                        "endColumn": 41,
+                        "endOffset": 1106
+                    }
                 }
             },
             {
@@ -316,7 +496,14 @@
                     "endOffset": 4672
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 850,
+                        "endColumn": 38,
+                        "endOffset": 884
+                    }
                 }
             },
             {
@@ -328,7 +515,14 @@
                     "endOffset": 4718
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 987,
+                        "endColumn": 45,
+                        "endOffset": 1028
+                    }
                 }
             },
             {
@@ -340,7 +534,14 @@
                     "endOffset": 4769
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 936,
+                        "endColumn": 50,
+                        "endOffset": 982
+                    }
                 }
             },
             {
@@ -352,7 +553,14 @@
                     "endOffset": 4837
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 243,
+                        "endColumn": 67,
+                        "endOffset": 306
+                    }
                 }
             },
             {
@@ -364,7 +572,14 @@
                     "endOffset": 4884
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 403,
+                        "endColumn": 46,
+                        "endOffset": 445
+                    }
                 }
             },
             {
@@ -376,7 +591,14 @@
                     "endOffset": 4956
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 171,
+                        "endColumn": 71,
+                        "endOffset": 238
+                    }
                 }
             },
             {
@@ -388,7 +610,14 @@
                     "endOffset": 4992
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1033,
+                        "endColumn": 35,
+                        "endOffset": 1064
+                    }
                 }
             },
             {
@@ -400,7 +629,14 @@
                     "endOffset": 5032
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 1196,
+                        "endColumn": 39,
+                        "endOffset": 1231
+                    }
                 }
             },
             {
@@ -412,7 +648,14 @@
                     "endOffset": 5077
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 358,
+                        "endColumn": 44,
+                        "endOffset": 398
+                    }
                 }
             },
             {
@@ -424,7 +667,14 @@
                     "endOffset": 5133
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 729,
+                        "endColumn": 55,
+                        "endOffset": 780
+                    }
                 }
             },
             {
@@ -436,7 +686,14 @@
                     "endOffset": 5191
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 4,
+                        "startOffset": 1301,
+                        "endColumn": 57,
+                        "endOffset": 1354
+                    }
                 }
             },
             {
@@ -448,7 +705,14 @@
                     "endOffset": 5253
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 4,
+                        "startOffset": 1359,
+                        "endColumn": 61,
+                        "endOffset": 1416
+                    }
                 }
             },
             {
@@ -460,7 +724,14 @@
                     "endOffset": 5328
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 654,
+                        "endColumn": 74,
+                        "endOffset": 724
+                    }
                 }
             },
             {
@@ -472,7 +743,14 @@
                     "endOffset": 5393
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 785,
+                        "endColumn": 64,
+                        "endOffset": 845
+                    }
                 }
             },
             {
@@ -484,7 +762,14 @@
                     "endOffset": 5458
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 1236,
+                        "endColumn": 64,
+                        "endOffset": 1296
+                    }
                 }
             },
             {
@@ -496,7 +781,14 @@
                     "endOffset": 5531
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 581,
+                        "endColumn": 72,
+                        "endOffset": 649
+                    }
                 }
             },
             {
@@ -508,7 +800,14 @@
                     "endOffset": 5604
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 450,
+                        "endColumn": 72,
+                        "endOffset": 518
+                    }
                 }
             },
             {
@@ -521,7 +820,15 @@
                     "endOffset": 6041
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_styles.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_styles.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 247,
+                        "endLine": 10,
+                        "endColumn": 12,
+                        "endOffset": 679
+                    }
                 }
             },
             {
@@ -534,7 +841,15 @@
                     "endOffset": 6273
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\styles.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\styles.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 54,
+                        "endLine": 9,
+                        "endColumn": 12,
+                        "endOffset": 281
+                    }
                 }
             },
             {
@@ -547,7 +862,15 @@
                     "endOffset": 6593
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\styles.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\styles.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 286,
+                        "endLine": 16,
+                        "endColumn": 12,
+                        "endOffset": 601
+                    }
                 }
             },
             {
@@ -685,7 +1008,14 @@
                     "endOffset": 7554
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-large-v4\\values-large-v4.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-large-v4\\values-large-v4.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 532,
+                        "endColumn": 103,
+                        "endOffset": 631
+                    }
                 }
             },
             {
@@ -697,7 +1027,14 @@
                     "endOffset": 7670
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-large-v4\\values-large-v4.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-large-v4\\values-large-v4.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 636,
+                        "endColumn": 115,
+                        "endOffset": 747
+                    }
                 }
             },
             {
@@ -1130,7 +1467,15 @@
                     "endOffset": 10546
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_styles.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_styles.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 90,
+                        "endLine": 4,
+                        "endColumn": 12,
+                        "endOffset": 242
+                    }
                 }
             },
             {
@@ -1142,7 +1487,14 @@
                     "endOffset": 10613
                 },
                 "from": {
-                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_styles.xml"
+                    "file": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\values-large\\huanxin_styles.xml",
+                    "position": {
+                        "startLine": 1,
+                        "startColumn": 4,
+                        "startOffset": 16,
+                        "endColumn": 73,
+                        "endOffset": 85
+                    }
                 }
             }
         ]

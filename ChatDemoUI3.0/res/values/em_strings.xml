@@ -58,7 +58,7 @@
     <string name="button_search">Find</string>
     <string name="button_add">Add</string>
     <string name="search_header">Search</string>
-    <string name="network_isnot_available">The network is not available</string>
+    <string name="network_isnot_available">网络不可用</string>
     <string name="recoding_fail">The recording failure, please try again！</string>
     <string name="select_contacts">Select the contact</string>
     <string name="confirm_forward_to">Confirm to forward to：%1$s ?</string>
