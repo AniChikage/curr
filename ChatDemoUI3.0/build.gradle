@@ -90,4 +90,5 @@ dependencies {
     compile 'com.klinkerapps:recyclerview:21.0.0'
     compile 'com.android.support:appcompat-v7:25.1.0'
     compile 'cn.bingoogolapple:bga-refreshlayout:1.1.7'
+    compile 'cn.aigestudio.datepicker:DatePicker:2.2.0'
 }

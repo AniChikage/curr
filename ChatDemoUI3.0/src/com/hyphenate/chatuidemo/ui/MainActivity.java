@@ -27,6 +27,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -149,6 +150,10 @@ public class MainActivity extends BaseActivity{
 	public boolean isConflict = false;
 	// user account was removed
 	private boolean isCurrentAccountRemoved = false;
+	//
+	private boolean isMainpageRefreshing = false;
+//	private boolean isSysnJRYWOver = false;
+//	private boolean isMainpageRefreshing = false;
 
 	private ListView mainpage_mp_listview;
 	private ListView mainpage_cs_listview;
@@ -193,7 +198,11 @@ public class MainActivity extends BaseActivity{
 	private boolean isJRYWADover;
 	private boolean isCSover;
 	private boolean isCSADover;
-	private SwipeRefreshLayout mSwipeLayout;
+	private static SwipeRefreshLayout mSwipeLayout;
+	private static boolean isMineFetchingOver = false;
+	private SwipeRefreshLayout mainpage_srl;
+	private XProgressDialog fetching_cs_list;
+	private ImageView cs_paixu;
 	//endregion
 
 	public boolean getCurrentAccountRemoved() {
@@ -222,7 +231,25 @@ public class MainActivity extends BaseActivity{
 		mSwipeLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
 			@Override
 			public void onRefresh() {
+				isMineFetchingOver = true;
 				mHandler.sendEmptyMessageDelayed(REFRESH_COMPLETE, 2000);
+			}
+		});
+		//endregion
+
+		//region 定义下拉菜单:mainpage
+		mainpage_srl = (SwipeRefreshLayout) findViewById(R.id.mainpage_srl);
+		//mainpage_srl.setOnRefreshListener(this);
+		mainpage_srl.setColorSchemeResources(R.color.holo_blue_bright,
+				R.color.holo_green_light,
+				R.color.holo_orange_light,
+				R.color.holo_red_light);
+		//mSwipeLayout.setProgressBackgroundColorSchemeResource(R.color.holo_green_light);
+		mainpage_srl.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+			@Override
+			public void onRefresh() {
+				isMainpageRefreshing = true;
+				mainpage_Handler.sendEmptyMessageDelayed(REFRESH_COMPLETE, 2000);
 			}
 		});
 		//endregion
@@ -786,6 +813,15 @@ public class MainActivity extends BaseActivity{
 					}
 				}
 			});
+			try{
+				if(isMineFetchingOver){
+					mSwipeLayout.setRefreshing(false);
+					isMineFetchingOver = false;
+				}
+			}
+			catch (Exception ex){
+				Log.e("mineFetching",ex.toString());
+			}
 			super.handleMessage(msg);
 		}
 	};
@@ -902,7 +938,9 @@ public class MainActivity extends BaseActivity{
 		paixu = (TextView) mainpage_cs_header_view.findViewById(R.id.paixu);
 		btn_recmd = (TextView) mainpage_cs_header_view.findViewById(R.id.btn_recmd);
 		btn_default = (TextView) mainpage_cs_header_view.findViewById(R.id.btn_default);
+		cs_paixu = (ImageView)mainpage_cs_header_view.findViewById(R.id.cs_paixu);
 		paixu.setOnClickListener(new click_paixu());
+		cs_paixu.setOnClickListener(new click_paixu());
 		btn_recmd.setOnClickListener(new click_recmd());
 		btn_default.setOnClickListener(new click_default());
 		WindowManager wm1 = this.getWindowManager();
@@ -996,6 +1034,15 @@ public class MainActivity extends BaseActivity{
 						popupwindow.showAsDropDown(v, 0, 5);
 					}
 					break;
+				case R.id.cs_paixu:
+					if (popupwindow != null&&popupwindow.isShowing()) {
+						popupwindow.dismiss();
+						return;
+					} else {
+						initmPopupWindowView();
+						popupwindow.showAsDropDown(v, 0, 5);
+					}
+					break;
 				default:
 					break;
 			}
@@ -1005,8 +1052,15 @@ public class MainActivity extends BaseActivity{
 	class click_recmd implements View.OnClickListener{
 		@Override
 		public void onClick(View v) {
-			pd.setMessage("获取中……");
-			pd.show();
+//			pd.setMessage("获取中……");
+//			pd.show();
+			try{
+				fetching_cs_list = new XProgressDialog(MainActivity.this, "正在加载..",XProgressDialog.THEME_HEART_PROGRESS);
+				fetching_cs_list.show();
+				fetching_cs_list.setCanceledOnTouchOutside(false);
+			}
+			catch (Exception ex){
+			}
 			new Thread(new Runnable(){
 				@Override
 				public void run() {
@@ -1028,8 +1082,15 @@ public class MainActivity extends BaseActivity{
 	class click_default implements View.OnClickListener{
 		@Override
 		public void onClick(View v) {
-			pd.setMessage("获取中……");
-			pd.show();
+//			pd.setMessage("获取中……");
+//			pd.show();
+			try{
+				fetching_cs_list = new XProgressDialog(MainActivity.this, "正在加载..",XProgressDialog.THEME_HEART_PROGRESS);
+				fetching_cs_list.show();
+				fetching_cs_list.setCanceledOnTouchOutside(false);
+			}
+			catch (Exception ex){
+			}
 			new Thread(new Runnable(){
 				@Override
 				public void run() {
@@ -1090,12 +1151,7 @@ public class MainActivity extends BaseActivity{
 				System.out.println("Jsons parse error !");
 				e.printStackTrace();
 			}
-			try{
-				pd.dismiss();
-			}
-			catch (Exception ex){
-				ex.printStackTrace();
-			}
+
 			//mainpage_cs_listview.addHeaderView(mainpage_cs_header_view);
 			csabLista = listItems;
 			csabListViewAdapter = new CsabListViewAdapter(hcontext, csabLista);
@@ -1128,6 +1184,12 @@ public class MainActivity extends BaseActivity{
 			});
 			//Log.e("TAG" ,string);
 			//Log.e("TAG" ,String.valueOf(string.length()));
+			try{
+				fetching_cs_list.dismiss();
+			}
+			catch (Exception ex){
+				ex.printStackTrace();
+			}
 			super.handleMessage(msg);
 		}
 	};
@@ -1166,8 +1228,15 @@ public class MainActivity extends BaseActivity{
 			@Override
 			public void onClick(View v) {
 				paixu.setText("专长");
-				pd.setMessage("获取中……");
-				pd.show();
+//				pd.setMessage("获取中……");
+//				pd.show();
+				try{
+					fetching_cs_list = new XProgressDialog(MainActivity.this, "正在加载..",XProgressDialog.THEME_HEART_PROGRESS);
+					fetching_cs_list.show();
+					fetching_cs_list.setCanceledOnTouchOutside(false);
+				}
+				catch (Exception ex){
+				}
 				new Thread(new Runnable() {
 					public void run() {
 						try {
@@ -1190,8 +1259,15 @@ public class MainActivity extends BaseActivity{
 			@Override
 			public void onClick(View v) {
 				paixu.setText("价格");
-				pd.setMessage("获取中……");
-				pd.show();
+//				pd.setMessage("获取中……");
+//				pd.show();
+				try{
+					fetching_cs_list = new XProgressDialog(MainActivity.this, "正在加载..",XProgressDialog.THEME_HEART_PROGRESS);
+					fetching_cs_list.show();
+					fetching_cs_list.setCanceledOnTouchOutside(false);
+				}
+				catch (Exception ex){
+				}
 				new Thread(new Runnable() {
 					public void run() {
 						try {
@@ -1304,6 +1380,10 @@ public class MainActivity extends BaseActivity{
 				isJRYWover = true;
 				if(isJRYWADover && isJRYWover){
 					xdialog.dismiss();
+					if(isMainpageRefreshing){
+						mainpage_srl.setRefreshing(false);
+						isMainpageRefreshing = false;
+					}
 				}
 			}
 			catch (Exception ex){
@@ -1360,6 +1440,10 @@ public class MainActivity extends BaseActivity{
 				isJRYWADover = true;
 				if(isJRYWADover && isJRYWover){
 					xdialog.dismiss();
+					if(isMainpageRefreshing){
+						mainpage_srl.setRefreshing(false);
+						isMainpageRefreshing = false;
+					}
 				}
 			}
 			catch (Exception ex){
@@ -1388,10 +1472,12 @@ public class MainActivity extends BaseActivity{
 		case R.id.btn_conversation:
 			index = 0;
 			mSwipeLayout.setVisibility(View.INVISIBLE);
+			mainpage_srl.setVisibility(View.VISIBLE);
 			break;
 		case R.id.btn_address_list:
 			index = 1;
 			mSwipeLayout.setVisibility(View.INVISIBLE);
+			mainpage_srl.setVisibility(View.INVISIBLE);
 			if(!isCsFetched){
 				initConsellor();
 				isCsFetched = true;
@@ -1400,6 +1486,7 @@ public class MainActivity extends BaseActivity{
 		case R.id.btn_setting:
 			index = 2;
 			mSwipeLayout.setVisibility(View.VISIBLE);
+			mainpage_srl.setVisibility(View.INVISIBLE);
 			break;
 		}
 
@@ -1945,7 +2032,7 @@ public class MainActivity extends BaseActivity{
 					catch (Exception ex){
 						Log.e("下拉刷新",ex.toString());
 					}
-					mSwipeLayout.setRefreshing(false);
+					//mSwipeLayout.setRefreshing(false);
 					break;
 			}
 		};
@@ -1958,6 +2045,39 @@ public class MainActivity extends BaseActivity{
 		// UI Thread
 		mHandler.sendEmptyMessageDelayed(REFRESH_COMPLETE, 2000);
 	}
+
+	//endregion
+
+	//region “主页(mainpage)”的信息下拉刷新
+	private Handler mainpage_Handler = new Handler()
+	{
+		public void handleMessage(android.os.Message msg)
+		{
+			switch (msg.what)
+			{
+				case REFRESH_COMPLETE:
+//					mDatas.addAll(Arrays.asList("Lucene", "Canvas", "Bitmap"));
+//					mAdapter.notifyDataSetChanged();
+					try{
+						mainpage_mp_listview.removeHeaderView(mainpage_mp_header_view);
+						mainpage_mp_listview.setAdapter(null);
+						initMainpage();
+					}
+					catch (Exception ex){
+						Log.e("mainpage下拉刷新",ex.toString());
+					}
+					break;
+			}
+		};
+	};
+
+	//下拉刷新
+//	public void onRefresh()
+//	{
+//		// Log.e("xxx", Thread.currentThread().getName());
+//		// UI Thread
+//		mHandler.sendEmptyMessageDelayed(REFRESH_COMPLETE, 2000);
+//	}
 
 	//endregion
 

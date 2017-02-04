@@ -653,7 +653,7 @@ public class ConnNet {
 
     public String AlterConsellorInfo(String csid, String nickname, String password, String address,
                                 String religion, String homeland, String marriage,
-                                String realname, String gender, String birthday, String tel){
+                                String realname, String gender, String birthday, String tel, String portrait){
         String result="";
         try {
             List<NameValuePair> params=new ArrayList<NameValuePair>();
@@ -668,6 +668,7 @@ public class ConnNet {
             params.add(new BasicNameValuePair("gender",gender));
             params.add(new BasicNameValuePair("birth",birthday));
             params.add(new BasicNameValuePair("tel",tel));
+            params.add(new BasicNameValuePair("portrait",portrait));
 
             HttpEntity entity = new UrlEncodedFormEntity(params, HTTP.UTF_8);
             HttpPost httpPost = new HttpPost(urlAlterConsellorInfo);
@@ -695,7 +696,7 @@ public class ConnNet {
 
     public String AlterUserInfo(String email, String nickname, String password, String emergency, String address,
                                 String religion, String homeland, String marriage,
-                                String realname, String gender, String birthday, String tel){
+                                String realname, String gender, String birthday, String tel, String portrait){
         String result="";
         try {
             List<NameValuePair> params=new ArrayList<NameValuePair>();
@@ -711,6 +712,7 @@ public class ConnNet {
             params.add(new BasicNameValuePair("gender",gender));
             params.add(new BasicNameValuePair("birth",birthday));
             params.add(new BasicNameValuePair("tel",tel));
+            params.add(new BasicNameValuePair("portrait",portrait));
 
             HttpEntity entity = new UrlEncodedFormEntity(params, HTTP.UTF_8);
             HttpPost httpPost = new HttpPost(urlAlterUserInfo);

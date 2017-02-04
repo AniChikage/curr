@@ -37,7 +37,11 @@
                 android:background="@color/alter_bg"
                 android:layout_width="match_parent"
                 android:layout_height="120dp">
-
+                <ImageView
+                    android:id="@+id/ai_portrait"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
             </LinearLayout>
 
             <LinearLayout

@@ -21,8 +21,8 @@ public final class R {
 		public static final int spot = 0x7f020245;
 	}
 	public static final class id {
-		public static final int message = 0x7f0d015e;
-		public static final int progress = 0x7f0d03e0;
+		public static final int message = 0x7f0d015f;
+		public static final int progress = 0x7f0d03e3;
 	}
 	public static final class layout {
 		public static final int view_xprogressdialog_circle_progress = 0x7f04011d;

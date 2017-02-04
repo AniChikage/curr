@@ -2,11 +2,17 @@ package com.hyphenate.chatuidemo.ui;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -22,6 +28,9 @@ import com.hyphenate.chatuidemo.R;
 import com.hyphenate.chatuidemo.netapp.ConnNet;
 
 import org.json.JSONObject;
+
+import java.io.ByteArrayOutputStream;
+import java.io.FileNotFoundException;
 
 /**
  * Created by AniChikage on 2016/12/5.
@@ -53,6 +62,7 @@ public class AlterInfo extends Activity {
     private TextView ai_queren;
     private TextView ai_phone_tv;
     private ImageView ai_back;
+    private ImageView ai_portrait;
     private LinearLayout ll1,ll2,ll3,ll4,ll5;
     //endregion
 
@@ -97,6 +107,7 @@ public class AlterInfo extends Activity {
         ai_region_tv = (TextView)findViewById(R.id.ai_region_tv);
         ai_address_tv = (TextView)findViewById(R.id.ai_address_tv);
         ai_back = (ImageView)findViewById(R.id.ai_back);
+        ai_portrait = (ImageView)findViewById(R.id.ai_portrait);
         ll1 = (LinearLayout)findViewById(R.id.ll1);
         ll2 = (LinearLayout)findViewById(R.id.ll2);
         ll3 = (LinearLayout)findViewById(R.id.ll3);
@@ -109,6 +120,7 @@ public class AlterInfo extends Activity {
     private void initOnClick(){
         ai_queren.setOnClickListener(onClickListener);
         ai_back.setOnClickListener(onClickListener);
+        ai_portrait.setOnClickListener(onClickListener);
     }
     //endregion
 
@@ -127,11 +139,44 @@ public class AlterInfo extends Activity {
                 case R.id.ai_back:
                     finish();
                     break;
+                case R.id.ai_portrait:
+                    changePortrait();
+                    break;
                 default:
                     break;
             }
         }
     };
+    //endregion
+
+    //region 点击头像
+    private void changePortrait(){
+        Intent intent = new Intent();
+                /* 开启Pictures画面Type设定为image */
+        intent.setType("image/*");
+                /* 使用Intent.ACTION_GET_CONTENT这个Action */
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+                /* 取得相片后返回本画面 */
+        startActivityForResult(intent, 1);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode == RESULT_OK) {
+            Uri uri = data.getData();
+            Log.e("uri", uri.toString());
+            ContentResolver cr = this.getContentResolver();
+            try {
+                Bitmap bitmap = BitmapFactory.decodeStream(cr.openInputStream(uri));
+                ImageView imageView = (ImageView) findViewById(R.id.ai_portrait);
+                /* 将Bitmap设定到ImageView */
+                imageView.setImageBitmap(bitmap);
+            } catch (FileNotFoundException e) {
+                Log.e("Exception", e.getMessage(),e);
+            }
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
     //endregion
 
     //region 确认按钮，更新个人信息
@@ -144,17 +189,19 @@ public class AlterInfo extends Activity {
                     //pd1.show();
                     ConnNet operaton=new ConnNet();
                     String resul="";
+                    String minePortrait;
+                    minePortrait = bitmaptoString(((BitmapDrawable)ai_portrait.getDrawable()).getBitmap());
                     if(mycreateSDFile.readSDFile("cachetype").equals("user")){
                         resul=operaton.AlterUserInfo(mycreateSDFile.readSDFile("cache"),ai_nickname.getText().toString(),ai_password.getText().toString(),
                                 ai_phone.getText().toString(),ai_address.getText().toString(),ai_region.getText().toString(),
                                 ai_hometown.getText().toString(),ai_hunyin.getText().toString(),ai_realname.getText().toString(),
-                                ai_gender.getText().toString(),ai_birthday.getText().toString(),ai_telephone.getText().toString());
+                                ai_gender.getText().toString(),ai_birthday.getText().toString(),ai_telephone.getText().toString(),minePortrait);
                     }
                     else{
                         resul=operaton.AlterConsellorInfo(csid,ai_nickname.getText().toString(),ai_password.getText().toString(),
                                 ai_address.getText().toString(),ai_region.getText().toString(),
                                 ai_hometown.getText().toString(),ai_hunyin.getText().toString(),ai_realname.getText().toString(),
-                                ai_gender.getText().toString(),ai_birthday.getText().toString(),ai_telephone.getText().toString());
+                                ai_gender.getText().toString(),ai_birthday.getText().toString(),ai_telephone.getText().toString(),minePortrait);
                     }
                     Message msg=new Message();
                     msg.obj=resul;
@@ -324,6 +371,13 @@ public class AlterInfo extends Activity {
                 catch (Exception ex){
                     ai_telephone.setText("");
                 }
+                try{
+                    String por = new JSONObject(string).getJSONObject("user").getString("portrait");
+                    ai_portrait.setImageDrawable(new BitmapDrawable(getBitmapFromByte(Base64.decode(por,Base64.DEFAULT))));
+                }
+                catch (Exception ex){
+
+                }
             }
             else if(mycreateSDFile.readSDFile("cachetype").equals("consellor")){
                 if(mycreateSDFile.readSDFile("cachetype").equals("consellor")){
@@ -404,4 +458,33 @@ public class AlterInfo extends Activity {
             super.handleMessage(msg);
         }
     };
+
+    //region base64转bitmap
+    private static Bitmap getBitmapFromByte(byte[] temp){
+        if(temp != null){
+            Bitmap bitmap = BitmapFactory.decodeByteArray(temp, 0, temp.length);
+            return bitmap;
+        }else{
+            return null;
+        }
+    }
+    //endregion
+
+    //region bitmap转base64
+    /**
+     * 通过Base32将Bitmap转换成Base64字符串
+     * @param bitmap
+     * @return
+     */
+    public static String bitmaptoString(Bitmap bitmap) {
+        String string = null;
+        ByteArrayOutputStream bStream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, bStream);
+        byte[] bytes = bStream.toByteArray();
+        string = Base64.encodeToString(bytes, Base64.DEFAULT);
+        return string;
+    }
+    //endregion
+
+
 }

@@ -143,8 +143,8 @@ public class AppointConfirm extends Activity {
     };
 
     public void addOrder(){
-        pd.setMessage("提交中......");
-        pd.show();
+//        pd.setMessage("提交中......");
+//        pd.show();
         try{
             adding_xpd = new XProgressDialog(this,"正在加载...",XProgressDialog.THEME_HEART_PROGRESS);
             adding_xpd.show();
@@ -294,7 +294,7 @@ public class AppointConfirm extends Activity {
                 String jsonObjs = new JSONObject(string).getString("addOrder");
                 if(jsonObjs!=""){
                     Toast.makeText(AppointConfirm.this,"提交成功！",Toast.LENGTH_SHORT).show();
-                    pd.dismiss();
+                    //pd.dismiss();
                 }
                 else{
                     Toast.makeText(AppointConfirm.this,"提交失败！",Toast.LENGTH_SHORT).show();

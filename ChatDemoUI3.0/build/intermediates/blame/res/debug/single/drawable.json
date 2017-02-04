@@ -92,24 +92,24 @@
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_ic_ab_back_material.xml"
     },
     {
-        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\question_mark_default.png",
-        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\question_mark_default.png"
-    },
-    {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\sb_thumb.xml",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\sb_thumb.xml"
+    },
+    {
+        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\question_mark_default.png",
+        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\question_mark_default.png"
     },
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\em_btn_bottom_selector.xml",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\em_btn_bottom_selector.xml"
     },
     {
-        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\ease_recording_text_hint_bg.xml",
-        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\EaseUI\\unspecified\\res\\drawable\\ease_recording_text_hint_bg.xml"
-    },
-    {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\mpcase.png",
         "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\res\\drawable\\mpcase.png"
+    },
+    {
+        "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\ease_recording_text_hint_bg.xml",
+        "source": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\exploded-aar\\ChatDemoUI3.0\\EaseUI\\unspecified\\res\\drawable\\ease_recording_text_hint_bg.xml"
     },
     {
         "merged": "G:\\testan\\easemob-sdk-3.1.5\\examples\\ChatDemoUI3.0\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_update_btn_check_off_holo_light.png",
