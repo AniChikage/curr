@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="library-1.0.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/build/intermediates/exploded-aar/cn.zhikaizhang.calendar/library/1.0.1/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/build/intermediates/exploded-aar/cn.zhikaizhang.calendar/library/1.0.1/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.zhikaizhang.calendar/library/1.0.1/a6685524735c170149cde818813d4c863e73f1cd/library-1.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

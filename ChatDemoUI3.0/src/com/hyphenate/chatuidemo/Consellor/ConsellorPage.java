@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -41,6 +42,7 @@ import android.widget.Toast;
 import com.android.datetimepicker.date.DatePickerDialog;
 import com.android.datetimepicker.time.RadialPickerLayout;
 import com.android.datetimepicker.time.TimePickerDialog;
+import com.apkfuns.xprogressdialog.XProgressDialog;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chatuidemo.Adapter.CsAppointAdapter;
 import com.hyphenate.chatuidemo.Adapter.CsabListViewAdapter;
@@ -69,12 +71,17 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.TimeZone;
+import java.util.concurrent.ExecutionException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import cn.aigestudio.datepicker.views.DatePicker;
+import io.blackbox_vision.materialcalendarview.view.CalendarView;
 
 /**
  * Created by AniChikage on 2016/9/27.
@@ -87,6 +94,7 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
     private createSDFile mycreateSDFile;
     private ListView listView;
     private String cid;
+    private String final_selected_date;
     private Context hcontext;
     private long[] mHits = new long[2];
     private int isAdd = 0;
@@ -106,6 +114,10 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
     private ProgressDialog pd1=null;
     private ProgressDialog pd2=null;
     private ProgressDialog pd_del=null;
+    private XProgressDialog fetching_xpd;
+    private XProgressDialog fetchingSingleSchedule_xpd;
+    private XProgressDialog addingSchedule_xpd;
+    private XProgressDialog deletingSchedule_xpd;
 //    private AVLoadingIndicatorView avi=null;
 //    private TextView fetching_tv;
 //    private AVLoadingIndicatorView avi_adding=null;
@@ -119,6 +131,7 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
     private RelativeLayout richeng_page;
     private RelativeLayout wode_page;
     private MaterialCalendarView materialCalendarView;
+    private CalendarView calendarView;
     private RelativeLayout ll_down;
     private double difDay;
 
@@ -151,6 +164,10 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
         requestWindowFeature(Window.FEATURE_NO_TITLE); //设置无标题栏
         setContentView(R.layout.consellorpage);
 
+        //region
+
+        //endregion
+
         calendar1 = Calendar.getInstance();
         onTimeSetListener = this;
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS); //透明状态栏
@@ -162,6 +179,10 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
         pd1 = new ProgressDialog(ConsellorPage.this);
         pd2 = new ProgressDialog(ConsellorPage.this);
         pd_del = new ProgressDialog(ConsellorPage.this);
+        fetching_xpd = new XProgressDialog(ConsellorPage.this,"正在加载..",XProgressDialog.THEME_HEART_PROGRESS);
+        fetchingSingleSchedule_xpd = new XProgressDialog(ConsellorPage.this,"正在加载..",XProgressDialog.THEME_HEART_PROGRESS);
+        addingSchedule_xpd = new XProgressDialog(ConsellorPage.this,"正在添加..",XProgressDialog.THEME_HEART_PROGRESS);
+        deletingSchedule_xpd = new XProgressDialog(ConsellorPage.this,"正在删除..",XProgressDialog.THEME_HEART_PROGRESS);
         //avi = new AVLoadingIndicatorView(ConsellorPage.this);
 //        avi = (AVLoadingIndicatorView)findViewById(R.id.fetching);
 //        fetching_tv = (TextView)findViewById(R.id.fetching_tv);
@@ -171,8 +192,10 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
 //        deleting_tv = (TextView)findViewById(R.id.deleting_tv);
         try{
             initId();
-            pd.setMessage("获取中...");
-            pd.show();
+            fetching_xpd.show();
+            fetching_xpd.setCanceledOnTouchOutside(false);
+//            pd.setMessage("获取中...");
+//            pd.show();
 //            avi.show();
 //            avi_adding.hide();
 //            avi_deleting.hide();
@@ -252,16 +275,18 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
             public void onClick(View v) {
 //                avi_adding.show();
 //                adding_tv.setVisibility(View.VISIBLE);
-                pd1.setMessage("添加中...");
-                pd1.show();
+//                pd1.setMessage("添加中...");
+//                pd1.show();
                 isAdd = 1;
-                if(select_time!=""&&txt_starttime.getText().toString()!=""&&txt_endtime.getText().toString()!=""){
+                if(final_selected_date!=""&&txt_starttime.getText().toString()!=""&&txt_endtime.getText().toString()!=""){
+                    addingSchedule_xpd.show();
+                    addingSchedule_xpd.setCanceledOnTouchOutside(false);
                     new Thread(new Runnable() {
                         public void run() {
 
                             try {
                                 ConnNet operaton = new ConnNet();
-                                String adddate = select_time;
+                                String adddate = final_selected_date;
                                 String addstarttime = adddate+" "+txt_starttime.getText().toString()+":00";
                                 String addendtime = adddate+" "+txt_endtime.getText().toString()+":00";
                                 Log.e("adddate",adddate);
@@ -334,6 +359,10 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
     }
     //endregion
 
+    //region
+
+    //endregion
+
     //region 添加日程：handle
     Handler hAddSchedule = new Handler(){
         @Override
@@ -354,6 +383,7 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
                 e.printStackTrace();
             }
             //pd2.dismiss();
+
             super.handleMessage(msg);
         }
     };
@@ -365,39 +395,39 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
         new Thread(new Runnable() {
             public void run() {
                 try {
-                    java.text.SimpleDateFormat   df= new java.text.SimpleDateFormat( "yyyy-MM-dd ");
-                    Calendar calendar= Calendar.getInstance();
-                    calendar.setTimeZone(TimeZone.getTimeZone("GMT+8:00"));
-                    String sdate = String.valueOf(df.format(calendar.getTime()));
-                    sdate = sdate.replaceAll(" ","");
-                    difDay = mcv.getSelectedDate().getDay() - calendar.getTime().getDay();
-                    String selectedDate = mcv.getSelectedDate().getYear()+"-"+String.valueOf(Integer.valueOf(mcv.getSelectedDate().getMonth())+1)+"-"+mcv.getSelectedDate().getDay();
-                    Log.e("时间差",String.valueOf(difDay));
-                    difDay -= 20;
-                    Log.e("时间差",String.valueOf(difDay));
-                    select_time = selectedDate;
-                    if(difDay>=0&&difDay<=6){
+//                    java.text.SimpleDateFormat   df= new java.text.SimpleDateFormat( "yyyy-MM-dd ");
+//                    Calendar calendar= Calendar.getInstance();
+//                    calendar.setTimeZone(TimeZone.getTimeZone("GMT+8:00"));
+//                    String sdate = String.valueOf(df.format(calendar.getTime()));
+//                    sdate = sdate.replaceAll(" ","");
+//                    difDay = mcv.getSelectedDate().getDay() - calendar.getTime().getDay();
+//                    String selectedDate = mcv.getSelectedDate().getYear()+"-"+String.valueOf(Integer.valueOf(mcv.getSelectedDate().getMonth())+1)+"-"+mcv.getSelectedDate().getDay();
+//                    Log.e("时间差",String.valueOf(difDay));
+//                    difDay -= 20;
+//                    Log.e("时间差",String.valueOf(difDay));
+//                    select_time = selectedDate;
+//                    if(difDay>=0&&difDay<=6){
                         ConnNet operaton = new ConnNet();
-                        String result = operaton.getPerSchedule(cid,selectedDate);
-                        Log.e("csnoid",cid);
-                        Log.e("sdate",sdate);
-                        Log.e("selectdate",selectedDate);
-                        Log.e("date",df.format(calendar.getTime()));
+                        String result = operaton.getPerSchedule(cid,final_selected_date);
+//                        Log.e("csnoid",cid);
+//                        Log.e("sdate",sdate);
+//                        Log.e("selectdate",selectedDate);
+//                        Log.e("date",df.format(calendar.getTime()));
                         Message msg = new Message();
                         msg.obj = result;
                         hschedule.sendMessage(msg);
-                    }
-                    else{
-                        Message msg = new Message();
-                        msg.obj = "请选择七天之内的时间";
-                        hupdate.sendMessage(msg);
-                        try{
-                            ll_down.removeAllViews();
-                        }
-                        catch (Exception ex){
-                            Log.e("kak",ex.toString());
-                        }
-                    }
+//                    }
+//                    else{
+//                        Message msg = new Message();
+//                        msg.obj = "请选择七天之内的时间";
+//                        hupdate.sendMessage(msg);
+//                        try{
+//                            ll_down.removeAllViews();
+//                        }
+//                        catch (Exception ex){
+//                            Log.e("kak",ex.toString());
+//                        }
+//                    }
                 } catch (Exception ex) {
                     Toast.makeText(hcontext, "预约失败", Toast.LENGTH_SHORT).show();
                 }
@@ -409,10 +439,12 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
 
     OnDateSelectedListener onDateSelectedListener = new OnDateSelectedListener() {
         @Override
-        public void onDateSelected(@NonNull MaterialCalendarView widget, @NonNull CalendarDay date, boolean selected) {
+        public void onDateSelected(@NonNull MaterialCalendarView widget, @NonNull CalendarDay date, final boolean selected) {
             //Toast.makeText(ConsellorPage.this,widget.getSelectedDate().toString(),Toast.LENGTH_SHORT).show();
-            pd1.setMessage("获取中……");
-            pd1.show();
+            fetchingSingleSchedule_xpd.show();
+            fetchingSingleSchedule_xpd.setCanceledOnTouchOutside(false);
+//            pd1.setMessage("获取中……");
+//            pd1.show();
 //            avi.show();
 //            fetching_tv.setVisibility(View.VISIBLE);
             String role = "${inputCount}*0.04*383+${saleCount}*15";
@@ -420,12 +452,15 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
             Matcher m = p.matcher(widget.getSelectedDate().toString());
             while (m.find()) {// 遍历找到的所有大括号
                 String param = m.group().replaceAll("\\{\\}", "");// 去掉括号
-                Log.e("param",param);
+                //Log.e("param",param);
             }
             mcv = widget;
             select_year = mcv.getSelectedDate().getYear()+"";
             select_month = String.valueOf(Integer.valueOf(mcv.getSelectedDate().getMonth())+1);
-            select_day = mcv.getSelectedDate().getDate()+"";
+            select_day = mcv.getSelectedDate().getDay()+"";
+            Log.e("select_year",select_year);
+            Log.e("select_month",select_month);
+            Log.e("select_day",select_day);
             new Thread(new Runnable() {
                 public void run() {
                     try {
@@ -434,35 +469,118 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
                         calendar.setTimeZone(TimeZone.getTimeZone("GMT+8:00"));
                         String sdate = String.valueOf(df.format(calendar.getTime()));
                         sdate = sdate.replaceAll(" ","");
-                        difDay = mcv.getSelectedDate().getDay() - calendar.getTime().getDay();
-                        String selectedDate = mcv.getSelectedDate().getYear()+"-"+String.valueOf(Integer.valueOf(mcv.getSelectedDate().getMonth())+1)+"-"+mcv.getSelectedDate().getDay();
-                        Log.e("时间差",String.valueOf(difDay));
-                        difDay -= 20;
-                        Log.e("时间差",String.valueOf(difDay));
-                        select_time = selectedDate;
-                        if(difDay>=0&&difDay<=6){
-                            ConnNet operaton = new ConnNet();
-                            String result = operaton.getPerSchedule(cid,sdate);
-                            Log.e("csnoid",cid);
-                            Log.e("sdate",sdate);
-                            Log.e("selectdate",selectedDate);
-                            Log.e("date",df.format(calendar.getTime()));
-                            Message msg = new Message();
-                            msg.obj = result;
-                            hschedule.sendMessage(msg);
+                        Log.e("sdate",sdate);
+                        String[] date = sdate.split("-");
+                        String year = date[0];
+                        String month = date[1];
+                        String day = date[2];
+                        Log.e("year",year+"");
+                        Log.e("month",month+"");
+                        Log.e("day",day+"");
+
+                        if (select_month.length() == 1) {
+                            select_month = "0"+select_month;
                         }
-                        else{
-                            Message msg = new Message();
-                            msg.obj = "请选择七天之内的时间";
-                            pd1.dismiss();
-                            hupdate.sendMessage(msg);
-                            try{
-                                ll_down.removeAllViews();
+                        if (select_day.length() == 1) {
+                            select_day = "0"+select_day;
+                        }
+//                        final_selected_date = select_year + "-" + select_month +"-"+ select_day;
+                        if(select_year.equals(year)){
+                            if(select_month.equals(month)){
+                                if((Integer.valueOf(select_day)-Integer.valueOf(day))<=6 && (Integer.valueOf(select_day)-Integer.valueOf(day))>=0){
+                                    ConnNet operaton = new ConnNet();
+                                    final_selected_date = select_year+"-"+select_month+"-"+select_day;
+                                    Log.e("finalDate",final_selected_date);
+                                    String result = operaton.getPerSchedule(cid,final_selected_date);
+                                    Log.e("csnoid",cid);
+                                    Message msg = new Message();
+                                    msg.obj = result;
+                                    hschedule.sendMessage(msg);
+                                }
+                                else{
+                                    Message msg = new Message();
+                                    msg.obj = "请选择七天之内的时间";
+                                    fetchingSingleSchedule_xpd.dismiss();
+                                    hupdate.sendMessage(msg);
+                                    try{
+                                        ll_down.removeAllViews();
+                                    }
+                                    catch (Exception ex){
+                                        Log.e("kak",ex.toString());
+                                    }
+                                }
                             }
-                            catch (Exception ex){
-                                Log.e("kak",ex.toString());
+                            else if(Integer.valueOf(select_month)-Integer.valueOf(month) == 1){
+                                if(Integer.valueOf(month) == 1 || Integer.valueOf(month) == 3 || Integer.valueOf(month) == 5 ||
+                                        Integer.valueOf(month) == 7 ||Integer.valueOf(month) == 8 || Integer.valueOf(month) == 10 ||
+                                        Integer.valueOf(month) == 12){
+                                    if((Integer.valueOf(day)+6)%31 >=0 && (Integer.valueOf(day)+6)%31<=6){
+                                        ConnNet operaton = new ConnNet();
+                                        String final_selected_date = select_year+select_month+select_day;
+                                        Log.e("finalDate",final_selected_date);
+                                        String result = operaton.getPerSchedule(cid,final_selected_date);
+                                        Log.e("csnoid",cid);
+                                        Message msg = new Message();
+                                        msg.obj = result;
+                                        hschedule.sendMessage(msg);
+                                    }
+                                }
+                                if(Integer.valueOf(month) == 4 || Integer.valueOf(month) == 6 || Integer.valueOf(month) == 9 ||
+                                        Integer.valueOf(month) == 11 ){
+                                    if((Integer.valueOf(day)+6)%30 >=0 && (Integer.valueOf(day)+6)%30<=6){
+                                        ConnNet operaton = new ConnNet();
+                                        String final_selected_date = select_year+select_month+select_day;
+                                        Log.e("finalDate",final_selected_date);
+                                        String result = operaton.getPerSchedule(cid,final_selected_date);
+                                        Log.e("csnoid",cid);
+                                        Message msg = new Message();
+                                        msg.obj = result;
+                                        hschedule.sendMessage(msg);
+                                    }
+                                }
+                                if(Integer.valueOf(month) == 4 || Integer.valueOf(month) == 6 || Integer.valueOf(month) == 9 ||
+                                        Integer.valueOf(month) == 11 ){
+                                    if((Integer.valueOf(day)+6)%30 >=0 && (Integer.valueOf(day)+6)%30<=6){
+                                        ConnNet operaton = new ConnNet();
+                                        String final_selected_date = select_year+select_month+select_day;
+                                        Log.e("finalDate",final_selected_date);
+                                        String result = operaton.getPerSchedule(cid,final_selected_date);
+                                        Log.e("csnoid",cid);
+                                        Message msg = new Message();
+                                        msg.obj = result;
+                                        hschedule.sendMessage(msg);
+                                    }
+                                }
+                                if(Integer.valueOf(month) == 2){
+                                    if(isLeap(Integer.valueOf(select_year))){
+                                        if((Integer.valueOf(day)+6)%29 >=0 && (Integer.valueOf(day)+6)%29<=6){
+                                            ConnNet operaton = new ConnNet();
+                                            String final_selected_date = select_year+select_month+select_day;
+                                            Log.e("finalDate",final_selected_date);
+                                            String result = operaton.getPerSchedule(cid,final_selected_date);
+                                            Log.e("csnoid",cid);
+                                            Message msg = new Message();
+                                            msg.obj = result;
+                                            hschedule.sendMessage(msg);
+                                        }
+                                    }
+                                    else{
+                                        if((Integer.valueOf(day)+6)%28 >=0 && (Integer.valueOf(day)+6)%28<=6){
+                                            ConnNet operaton = new ConnNet();
+                                            String final_selected_date = select_year+select_month+select_day;
+                                            Log.e("finalDate",final_selected_date);
+                                            String result = operaton.getPerSchedule(cid,final_selected_date);
+                                            Log.e("csnoid",cid);
+                                            Message msg = new Message();
+                                            msg.obj = result;
+                                            hschedule.sendMessage(msg);
+                                        }
+                                    }
+                                }
                             }
                         }
+
+
                     } catch (Exception ex) {
                         Toast.makeText(hcontext, "预约失败", Toast.LENGTH_SHORT).show();
                     }
@@ -547,8 +665,10 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
                                             public void onClick(DialogInterface dialog, int which) {
                                                 //Toast.makeText(hcontext, "yes", Toast.LENGTH_SHORT).show();
                                                 // 点击“确认”后的操作
-                                                pd_del.setMessage("删除中......");
-                                                pd_del.show();
+//                                                pd_del.setMessage("删除中......");
+//                                                pd_del.show();
+                                                deletingSchedule_xpd.show();
+                                                deletingSchedule_xpd.setCanceledOnTouchOutside(false);
 //                                                avi_deleting.show();
 //                                                deleting_tv.setVisibility(View.VISIBLE);
                                                 new Thread(new Runnable() {
@@ -632,10 +752,28 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
                 */
                 ll_down.addView(tv,btParams);
                 try{
-                    pd1.dismiss();
+                    try{
+                        fetchingSingleSchedule_xpd.dismiss();
+                    }
+                    catch (Exception ex){
+
+                    }
+                    try{
+                        addingSchedule_xpd.dismiss();
+                    }
+                    catch (Exception ex){
+
+                    }try{
+                        deletingSchedule_xpd.dismiss();
+                    }
+                    catch (Exception ex){
+
+                    }
+
+//                    pd1.dismiss();
 //                    avi.hide();
 //                    fetching_tv.setVisibility(View.INVISIBLE);
-                    pd2.dismiss();
+//                    pd2.dismiss();
                     if(isAdd == 1)
                         Toast.makeText(ConsellorPage.this,"添加日程成功！",Toast.LENGTH_SHORT).show();
                     isAdd = 0;
@@ -648,10 +786,12 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
                 System.out.println("Jsons parse error !");
                 e.printStackTrace();
                 try{
-                    pd1.dismiss();
+                    fetchingSingleSchedule_xpd.dismiss();
+                    addingSchedule_xpd.dismiss();
+//                    pd1.dismiss();
 //                    avi.hide();
 //                    fetching_tv.setVisibility(View.INVISIBLE);
-                    pd2.dismiss();
+//                    pd2.dismiss();
                 }
                 catch (Exception ex){
                     Log.e("err","err");
@@ -681,7 +821,8 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
                 Log.e("msg","del error");
             }
             refreshSche();
-            pd_del.dismiss();
+//            deletingSchedule_xpd.dismiss();
+//            pd_del.dismiss();
 //            avi_deleting.hide();
 //            deleting_tv.setVisibility(View.INVISIBLE);
             super.handleMessage(msg);
@@ -696,9 +837,11 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
         switch (view.getId()) {
             case R.id.btn_conversation:
                 index = 0;
+                ll_down.setVisibility(View.VISIBLE);
                 break;
             case R.id.btn_address_list:
                 index = 1;
+                ll_down.setVisibility(View.INVISIBLE);
                 break;
         }
 
@@ -740,6 +883,12 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
             } catch (Exception e) {
                 System.out.println("获取用户失败");
                 e.printStackTrace();
+            }
+            try{
+                fetching_xpd.dismiss();
+            }
+            catch (Exception ex){
+                Log.e("",ex.toString());
             }
             super.handleMessage(msg);
         }
@@ -884,6 +1033,7 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
         calendar1.set(Calendar.HOUR_OF_DAY, hourOfDay);
         calendar1.set(Calendar.MINUTE, minute);
         update();
+
     }
 
     private void update() {
@@ -892,5 +1042,9 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
         else
             txt_endtime.setText(timeFormat.format(calendar1.getTime()));
         //Toast.makeText(ConsellorPage.this,timeFormat.format(calendar1.getTime()),Toast.LENGTH_SHORT ).show();
+    }
+
+    private boolean isLeap(int year){
+        return year%4==0&&year%100!=0||year%400==0?true:false;
     }
 }

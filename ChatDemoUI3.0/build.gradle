@@ -91,4 +91,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.1.0'
     compile 'cn.bingoogolapple:bga-refreshlayout:1.1.7'
     compile 'cn.aigestudio.datepicker:DatePicker:2.2.0'
+    compile 'com.github.BlackBoxVision:material-calendar-view:v1.5.2'
+    compile 'cn.zhikaizhang.calendar:library:1.0.1'
 }

@@ -56,6 +56,20 @@ MERGED from [com.android.databinding:library:1.2.1] G:\testan\easemob-sdk-3.1.5\
 MERGED from [com.android.databinding:adapters:1.2.1] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.databinding\adapters\1.2.1\AndroidManifest.xml:22:5-24:41
 MERGED from [com.android.databinding:library:1.2.1] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.databinding\library\1.2.1\AndroidManifest.xml:22:5-24:41
 MERGED from [cn.aigestudio.datepicker:DatePicker:2.2.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\cn.aigestudio.datepicker\DatePicker\2.2.0\AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.BlackBoxVision:material-calendar-view:v1.5.2] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.github.BlackBoxVision\material-calendar-view\v1.5.2\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:25.1.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-vector-drawable:25.1.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.0\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-compat:25.1.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.0\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:animated-vector-drawable:25.1.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.1.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.0\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-compat:25.1.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.0\AndroidManifest.xml:21:5-23:58
+MERGED from [cn.zhikaizhang.calendar:library:1.0.1] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\cn.zhikaizhang.calendar\library\1.0.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:25.1.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-vector-drawable:25.1.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.0\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-compat:25.1.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.0\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:animated-vector-drawable:25.1.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.1.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.0\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-compat:25.1.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.0\AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
 		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:12:9-56
 	android:targetSdkVersion
@@ -202,8 +216,23 @@ MERGED from [com.android.support:support-compat:25.1.0] G:\testan\easemob-sdk-3.
 MERGED from [com.android.support:animated-vector-drawable:25.1.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-vector-drawable:25.1.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.0\AndroidManifest.xml:23:5-20
 MERGED from [com.android.support:support-compat:25.1.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.0\AndroidManifest.xml:25:5-20
+MERGED from [com.github.BlackBoxVision:material-calendar-view:v1.5.2] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.github.BlackBoxVision\material-calendar-view\v1.5.2\AndroidManifest.xml:11:5-13:38
+MERGED from [com.android.support:appcompat-v7:25.1.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:25.1.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.0\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-compat:25.1.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.1.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:25.1.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.0\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-compat:25.1.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:25.1.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:25.1.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.0\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-compat:25.1.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.1.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:25.1.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.0\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-compat:25.1.0] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.0\AndroidManifest.xml:25:5-20
 	android:label
 		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:57:9-41
+	android:supportsRtl
+		ADDED from [com.github.BlackBoxVision:material-calendar-view:v1.5.2] G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\build\intermediates\exploded-aar\com.github.BlackBoxVision\material-calendar-view\v1.5.2\AndroidManifest.xml:13:9-35
 	android:allowBackup
 		ADDED from G:\testan\easemob-sdk-3.1.5\examples\ChatDemoUI3.0\AndroidManifest.xml:54:9-35
 	android:icon

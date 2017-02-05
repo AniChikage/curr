@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <io.blackbox_vision.materialcalendarview.view.HeaderView
+        android:id="@+id/header_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <include android:id="@+id/week_layout" layout="@layout/week_view" />
+
+    <LinearLayout android:id="@+id/days_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <include layout="@layout/week_view1" />
+        <include layout="@layout/week_view2" />
+        <include layout="@layout/week_view3" />
+        <include layout="@layout/week_view4" />
+        <include layout="@layout/week_view5" />
+        <include layout="@layout/week_view6" />
+    </LinearLayout>
+
+</LinearLayout>

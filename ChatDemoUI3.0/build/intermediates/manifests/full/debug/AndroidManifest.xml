@@ -52,7 +52,8 @@
         android:allowBackup="true"
         android:icon="@drawable/app_logo"
         android:label="@string/app_name"
-        android:largeHeap="true" >
+        android:largeHeap="true"
+        android:supportsRtl="true" >
         <activity
             android:name="com.hyphenate.chatuidemo.ui.MainActivity"
             android:launchMode="singleTask"

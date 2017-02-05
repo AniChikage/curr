@@ -1,5 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="calendarview__weektext_0">
+        <item>一</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+        <item>日</item>
+    </string-array>
+    <string-array name="calendarview__weektext_1">
+        <item>周一</item>
+        <item>周二</item>
+        <item>周三</item>
+        <item>周四</item>
+        <item>周五</item>
+        <item>周六</item>
+        <item>周日</item>
+    </string-array>
+    <string-array name="calendarview__weektext_2">
+        <item>星期一</item>
+        <item>星期二</item>
+        <item>星期三</item>
+        <item>星期四</item>
+        <item>星期五</item>
+        <item>星期六</item>
+        <item>星期日</item>
+    </string-array>
+    <string-array name="calendarview__weektext_3">
+        <item>Mon</item>
+        <item>Tus</item>
+        <item>Wed</item>
+        <item>Thu</item>
+        <item>Fri</item>
+        <item>Sat</item>
+        <item>Sun</item>
+    </string-array>
     <string-array name="greetings">
         <item>恭喜发财，大吉大利！</item>
         <item>情绪不对，红包安慰！</item>
@@ -80,11 +116,14 @@
     <color name="common_bottom_bar_selected_bg">#161718</color>
     <color name="common_botton_bar_blue">#2ea7e0</color>
     <color name="common_top_bar_blue">#4ebcd3</color>
+    <color name="current_day_of_month">#03A7E9</color>
     <color name="dark_gray">#363636</color>
     <color name="darker_blue">#0099cc</color>
     <color name="date_picker_text_disabled">#ccc</color>
     <color name="date_picker_text_normal">#ff999999</color>
     <color name="date_picker_view_animator">#f2f2f2</color>
+    <color name="day_disabled_background_color">#F1F5F8</color>
+    <color name="day_disabled_text_color">#DEDEDE</color>
     <color name="default_progress_bar_color">#FF33B5E5</color>
     <color name="dim_foreground_disabled_material_dark">#80bebebe</color>
     <color name="dim_foreground_disabled_material_light">#80323232</color>
@@ -161,6 +200,7 @@
     <color name="secondary_text_default_material_light">#8a000000</color>
     <color name="secondary_text_disabled_material_dark">#36ffffff</color>
     <color name="secondary_text_disabled_material_light">#24000000</color>
+    <color name="selected_day_background">#03A7E9</color>
     <color name="solid_blue">#0000ff</color>
     <color name="solid_gray">#dddddd</color>
     <color name="solid_green">#f0f0</color>
@@ -191,6 +231,7 @@
     <color name="top_red_color">#D24F44</color>
     <color name="transparent_black">#7f000000</color>
     <color name="voip_interface_text_color">#bababa</color>
+    <color name="weekend_color">#FF0000</color>
     <declare-styleable name="AVLoadingIndicatorView"><attr format="dimension" name="minWidth"/><attr format="dimension" name="maxWidth"/><attr format="dimension" name="minHeight"/><attr format="dimension" name="maxHeight"/><attr format="string" name="indicatorName"/><attr format="color" name="indicatorColor"/></declare-styleable>
     <declare-styleable name="ActionBar"><attr name="navigationMode"><enum name="normal" value="0"/><enum name="listMode" value="1"/><enum name="tabMode" value="2"/></attr><attr name="displayOptions"><flag name="none" value="0"/><flag name="useLogo" value="0x1"/><flag name="showHome" value="0x2"/><flag name="homeAsUp" value="0x4"/><flag name="showTitle" value="0x8"/><flag name="showCustom" value="0x10"/><flag name="disableHome" value="0x20"/></attr><attr name="title"/><attr format="string" name="subtitle"/><attr format="reference" name="titleTextStyle"/><attr format="reference" name="subtitleTextStyle"/><attr format="reference" name="icon"/><attr format="reference" name="logo"/><attr format="reference" name="divider"/><attr format="reference" name="background"/><attr format="reference|color" name="backgroundStacked"/><attr format="reference|color" name="backgroundSplit"/><attr format="reference" name="customNavigationLayout"/><attr name="height"/><attr format="reference" name="homeLayout"/><attr format="reference" name="progressBarStyle"/><attr format="reference" name="indeterminateProgressStyle"/><attr format="dimension" name="progressBarPadding"/><attr name="homeAsUpIndicator"/><attr format="dimension" name="itemPadding"/><attr format="boolean" name="hideOnContentScroll"/><attr format="dimension" name="contentInsetStart"/><attr format="dimension" name="contentInsetEnd"/><attr format="dimension" name="contentInsetLeft"/><attr format="dimension" name="contentInsetRight"/><attr format="dimension" name="contentInsetStartWithNavigation"/><attr format="dimension" name="contentInsetEndWithActions"/><attr format="dimension" name="elevation"/><attr format="reference" name="popupTheme"/></declare-styleable>
     <declare-styleable name="ActionBarLayout"><attr name="android:layout_gravity"/></declare-styleable>
@@ -205,6 +246,7 @@
     <declare-styleable name="AppCompatTextView"><attr format="reference|boolean" name="textAllCaps"/><attr name="android:textAppearance"/></declare-styleable>
     <declare-styleable name="AppCompatTheme"><attr format="boolean" name="windowActionBar"/><attr format="boolean" name="windowNoTitle"/><attr format="boolean" name="windowActionBarOverlay"/><attr format="boolean" name="windowActionModeOverlay"/><attr format="dimension|fraction" name="windowFixedWidthMajor"/><attr format="dimension|fraction" name="windowFixedHeightMinor"/><attr format="dimension|fraction" name="windowFixedWidthMinor"/><attr format="dimension|fraction" name="windowFixedHeightMajor"/><attr format="dimension|fraction" name="windowMinWidthMajor"/><attr format="dimension|fraction" name="windowMinWidthMinor"/><attr name="android:windowIsFloating"/><attr name="android:windowAnimationStyle"/><attr format="reference" name="actionBarTabStyle"/><attr format="reference" name="actionBarTabBarStyle"/><attr format="reference" name="actionBarTabTextStyle"/><attr format="reference" name="actionOverflowButtonStyle"/><attr format="reference" name="actionOverflowMenuStyle"/><attr format="reference" name="actionBarPopupTheme"/><attr format="reference" name="actionBarStyle"/><attr format="reference" name="actionBarSplitStyle"/><attr format="reference" name="actionBarTheme"/><attr format="reference" name="actionBarWidgetTheme"/><attr format="dimension" name="actionBarSize"><enum name="wrap_content" value="0"/></attr><attr format="reference" name="actionBarDivider"/><attr format="reference" name="actionBarItemBackground"/><attr format="reference" name="actionMenuTextAppearance"/><attr format="color|reference" name="actionMenuTextColor"/><attr format="reference" name="actionModeStyle"/><attr format="reference" name="actionModeCloseButtonStyle"/><attr format="reference" name="actionModeBackground"/><attr format="reference" name="actionModeSplitBackground"/><attr format="reference" name="actionModeCloseDrawable"/><attr format="reference" name="actionModeCutDrawable"/><attr format="reference" name="actionModeCopyDrawable"/><attr format="reference" name="actionModePasteDrawable"/><attr format="reference" name="actionModeSelectAllDrawable"/><attr format="reference" name="actionModeShareDrawable"/><attr format="reference" name="actionModeFindDrawable"/><attr format="reference" name="actionModeWebSearchDrawable"/><attr format="reference" name="actionModePopupWindowStyle"/><attr format="reference" name="textAppearanceLargePopupMenu"/><attr format="reference" name="textAppearanceSmallPopupMenu"/><attr format="reference" name="textAppearancePopupMenuHeader"/><attr format="reference" name="dialogTheme"/><attr format="dimension" name="dialogPreferredPadding"/><attr format="reference" name="listDividerAlertDialog"/><attr format="reference" name="actionDropDownStyle"/><attr format="dimension" name="dropdownListPreferredItemHeight"/><attr format="reference" name="spinnerDropDownItemStyle"/><attr format="reference" name="homeAsUpIndicator"/><attr format="reference" name="actionButtonStyle"/><attr format="reference" name="buttonBarStyle"/><attr format="reference" name="buttonBarButtonStyle"/><attr format="reference" name="selectableItemBackground"/><attr format="reference" name="selectableItemBackgroundBorderless"/><attr format="reference" name="borderlessButtonStyle"/><attr format="reference" name="dividerVertical"/><attr format="reference" name="dividerHorizontal"/><attr format="reference" name="activityChooserViewStyle"/><attr format="reference" name="toolbarStyle"/><attr format="reference" name="toolbarNavigationButtonStyle"/><attr format="reference" name="popupMenuStyle"/><attr format="reference" name="popupWindowStyle"/><attr format="reference|color" name="editTextColor"/><attr format="reference" name="editTextBackground"/><attr format="reference" name="imageButtonStyle"/><attr format="reference" name="textAppearanceSearchResultTitle"/><attr format="reference" name="textAppearanceSearchResultSubtitle"/><attr format="reference|color" name="textColorSearchUrl"/><attr format="reference" name="searchViewStyle"/><attr format="dimension" name="listPreferredItemHeight"/><attr format="dimension" name="listPreferredItemHeightSmall"/><attr format="dimension" name="listPreferredItemHeightLarge"/><attr format="dimension" name="listPreferredItemPaddingLeft"/><attr format="dimension" name="listPreferredItemPaddingRight"/><attr format="reference" name="dropDownListViewStyle"/><attr format="reference" name="listPopupWindowStyle"/><attr format="reference" name="textAppearanceListItem"/><attr format="reference" name="textAppearanceListItemSmall"/><attr format="reference" name="panelBackground"/><attr format="dimension" name="panelMenuListWidth"/><attr format="reference" name="panelMenuListTheme"/><attr format="reference" name="listChoiceBackgroundIndicator"/><attr format="color" name="colorPrimary"/><attr format="color" name="colorPrimaryDark"/><attr format="color" name="colorAccent"/><attr format="color" name="colorControlNormal"/><attr format="color" name="colorControlActivated"/><attr format="color" name="colorControlHighlight"/><attr format="color" name="colorButtonNormal"/><attr format="color" name="colorSwitchThumbNormal"/><attr format="reference" name="controlBackground"/><attr format="color" name="colorBackgroundFloating"/><attr format="reference" name="alertDialogStyle"/><attr format="reference" name="alertDialogButtonGroupStyle"/><attr format="boolean" name="alertDialogCenterButtons"/><attr format="reference" name="alertDialogTheme"/><attr format="reference|color" name="textColorAlertDialogListItem"/><attr format="reference" name="buttonBarPositiveButtonStyle"/><attr format="reference" name="buttonBarNegativeButtonStyle"/><attr format="reference" name="buttonBarNeutralButtonStyle"/><attr format="reference" name="autoCompleteTextViewStyle"/><attr format="reference" name="buttonStyle"/><attr format="reference" name="buttonStyleSmall"/><attr format="reference" name="checkboxStyle"/><attr format="reference" name="checkedTextViewStyle"/><attr format="reference" name="editTextStyle"/><attr format="reference" name="radioButtonStyle"/><attr format="reference" name="ratingBarStyle"/><attr format="reference" name="ratingBarStyleIndicator"/><attr format="reference" name="ratingBarStyleSmall"/><attr format="reference" name="seekBarStyle"/><attr format="reference" name="spinnerStyle"/><attr format="reference" name="switchStyle"/><attr format="reference" name="listMenuViewStyle"/></declare-styleable>
     <declare-styleable name="ButtonBarLayout"><attr format="boolean" name="allowStacking"/></declare-styleable>
+    <declare-styleable name="CalendarView"><attr format="integer" name="mode"/></declare-styleable>
     <declare-styleable name="ColorStateListItem"><attr name="android:color"/><attr format="float" name="alpha"/><attr name="android:alpha"/></declare-styleable>
     <declare-styleable name="CompoundButton"><attr name="android:button"/><attr format="color" name="buttonTint"/><attr name="buttonTintMode"><enum name="src_over" value="3"/><enum name="src_in" value="5"/><enum name="src_atop" value="9"/><enum name="multiply" value="14"/><enum name="screen" value="15"/></attr></declare-styleable>
     <declare-styleable name="ContactItemView"><attr format="reference" name="contactItemImage"/><attr format="string" name="contactItemName"/></declare-styleable>
@@ -222,7 +264,7 @@
     <declare-styleable name="LinearLayoutCompat"><attr name="android:orientation"/><attr name="android:gravity"/><attr name="android:baselineAligned"/><attr name="android:baselineAlignedChildIndex"/><attr name="android:weightSum"/><attr format="boolean" name="measureWithLargestChild"/><attr name="divider"/><attr name="showDividers"><flag name="none" value="0"/><flag name="beginning" value="1"/><flag name="middle" value="2"/><flag name="end" value="4"/></attr><attr format="dimension" name="dividerPadding"/></declare-styleable>
     <declare-styleable name="LinearLayoutCompat_Layout"><attr name="android:layout_width"/><attr name="android:layout_height"/><attr name="android:layout_weight"/><attr name="android:layout_gravity"/></declare-styleable>
     <declare-styleable name="ListPopupWindow"><attr name="android:dropDownVerticalOffset"/><attr name="android:dropDownHorizontalOffset"/></declare-styleable>
-    <declare-styleable name="MaterialCalendarView"><attr format="reference" name="mcv_dateTextAppearance"/><attr format="reference" name="mcv_weekDayTextAppearance"/><attr format="reference" name="mcv_headerTextAppearance"/><attr format="color" name="mcv_arrowColor"/><attr format="reference" name="mcv_leftArrowMask"/><attr format="reference" name="mcv_rightArrowMask"/><attr format="color" name="mcv_selectionColor"/><attr format="integer" name="mcv_showOtherDates"><flag name="none" value="0"/><flag name="other_months" value="1"/><flag name="out_of_range" value="2"/><flag name="decorated_disabled" value="4"/><flag name="defaults" value="4"/><flag name="all" value="7"/></attr><attr format="boolean" name="mcv_allowClickDaysOutsideCurrentMonth"/><attr format="reference" name="mcv_weekDayLabels"/><attr format="reference" name="mcv_monthLabels"/><attr format="dimension" name="mcv_tileSize"><enum name="match_parent" value="-1"/></attr><attr format="dimension" name="mcv_tileHeight"><enum name="match_parent" value="-1"/></attr><attr format="dimension" name="mcv_tileWidth"><enum name="match_parent" value="-1"/></attr><attr format="enum" name="mcv_firstDayOfWeek"><enum name="sunday" value="1"/><enum name="monday" value="2"/><enum name="tuesday" value="3"/><enum name="wednesday" value="4"/><enum name="thursday" value="5"/><enum name="friday" value="6"/><enum name="saturday" value="7"/></attr><attr format="enum" name="mcv_calendarMode"><enum name="month" value="0"/><enum name="week" value="1"/></attr><attr format="enum" name="mcv_titleAnimationOrientation"><enum name="vertical" value="0"/><enum name="horizontal" value="1"/></attr></declare-styleable>
+    <declare-styleable name="MaterialCalendarView"><attr format="color" name="calendarBackgroundColor"/><attr format="color" name="calendarButtonBackgroundColor"/><attr format="reference" name="calendarBackButtonDrawable"/><attr format="reference" name="calendarNextButtonDrawable"/><attr format="color" name="calendarSelectedDayBackgroundColor"/><attr format="color" name="calendarCurrentDayBackgroundColor"/><attr format="color" name="calendarDisabledDayBackgroundColor"/><attr format="color" name="calendarWeekBackgroundColor"/><attr format="color" name="calendarTitleBackgroundColor"/><attr format="color" name="calendarTitleTextColor"/><attr format="color" name="calendarDayOfWeekTextColor"/><attr format="color" name="calendarDisabledDayTextColor"/><attr format="color" name="calendarSelectedDayTextColor"/><attr format="color" name="calendarWeekendTextColor"/><attr format="color" name="calendarCurrentDayTextColor"/><attr format="boolean" name="calendarIsOverflowDatesVisible"/><attr format="boolean" name="calendarIsMultiSelectDayEnabled"/><attr name="calendarWeekendDays"><flag name="sunday" value="1"/><flag name="monday" value="2"/><flag name="tuesday" value="4"/><flag name="wednesday" value="8"/><flag name="thursday" value="16"/><flag name="friday" value="32"/><flag name="saturday" value="64"/></attr><attr format="reference" name="mcv_dateTextAppearance"/><attr format="reference" name="mcv_weekDayTextAppearance"/><attr format="reference" name="mcv_headerTextAppearance"/><attr format="color" name="mcv_arrowColor"/><attr format="reference" name="mcv_leftArrowMask"/><attr format="reference" name="mcv_rightArrowMask"/><attr format="color" name="mcv_selectionColor"/><attr format="integer" name="mcv_showOtherDates"><flag name="none" value="0"/><flag name="other_months" value="1"/><flag name="out_of_range" value="2"/><flag name="decorated_disabled" value="4"/><flag name="defaults" value="4"/><flag name="all" value="7"/></attr><attr format="boolean" name="mcv_allowClickDaysOutsideCurrentMonth"/><attr format="reference" name="mcv_weekDayLabels"/><attr format="reference" name="mcv_monthLabels"/><attr format="dimension" name="mcv_tileSize"><enum name="match_parent" value="-1"/></attr><attr format="dimension" name="mcv_tileHeight"><enum name="match_parent" value="-1"/></attr><attr format="dimension" name="mcv_tileWidth"><enum name="match_parent" value="-1"/></attr><attr format="enum" name="mcv_firstDayOfWeek"><enum name="sunday" value="1"/><enum name="monday" value="2"/><enum name="tuesday" value="3"/><enum name="wednesday" value="4"/><enum name="thursday" value="5"/><enum name="friday" value="6"/><enum name="saturday" value="7"/></attr><attr format="enum" name="mcv_calendarMode"><enum name="month" value="0"/><enum name="week" value="1"/></attr><attr format="enum" name="mcv_titleAnimationOrientation"><enum name="vertical" value="0"/><enum name="horizontal" value="1"/></attr></declare-styleable>
     <declare-styleable name="MenuGroup"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:checkableBehavior"/><attr name="android:visible"/><attr name="android:enabled"/></declare-styleable>
     <declare-styleable name="MenuItem"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:title"/><attr name="android:titleCondensed"/><attr name="android:icon"/><attr name="android:alphabeticShortcut"/><attr name="android:numericShortcut"/><attr name="android:checkable"/><attr name="android:checked"/><attr name="android:visible"/><attr name="android:enabled"/><attr name="android:onClick"/><attr name="showAsAction"><flag name="never" value="0"/><flag name="ifRoom" value="1"/><flag name="always" value="2"/><flag name="withText" value="4"/><flag name="collapseActionView" value="8"/></attr><attr format="reference" name="actionLayout"/><attr format="string" name="actionViewClass"/><attr format="string" name="actionProviderClass"/></declare-styleable>
     <declare-styleable name="MenuView"><attr name="android:itemTextAppearance"/><attr name="android:horizontalDivider"/><attr name="android:verticalDivider"/><attr name="android:headerBackground"/><attr name="android:itemBackground"/><attr name="android:windowAnimationStyle"/><attr name="android:itemIconDisabledAlpha"/><attr format="boolean" name="preserveIconSpacing"/><attr format="reference" name="subMenuArrow"/></declare-styleable>
@@ -318,21 +360,29 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
+    <dimen name="actionbar_size">56dp</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="ampm_label_size">16sp</dimen>
     <dimen name="ampm_left_padding">6dip</dimen>
+    <dimen name="calendarTitlePaddingBottom">8dp</dimen>
+    <dimen name="calendarTitlePaddingTop">8dp</dimen>
     <dimen name="call_button_padding_left">25dp</dimen>
     <dimen name="call_button_padding_right">25dp</dimen>
     <dimen name="call_button_padding_vertical">10dp</dimen>
     <dimen name="chat_nick_margin_left">17dp</dimen>
     <dimen name="chat_nick_text_size">13sp</dimen>
+    <dimen name="dateTitleTextSize">18sp</dimen>
     <dimen name="date_picker_component_width">270dp</dimen>
     <dimen name="date_picker_header_height">30dp</dimen>
     <dimen name="date_picker_header_text_size">14dp</dimen>
     <dimen name="date_picker_view_animator_height">270dp</dimen>
+    <dimen name="dayOfMonthImageMarginTop">20dp</dimen>
+    <dimen name="dayOfMonthIndicatorSize">3dp</dimen>
+    <dimen name="dayOfWeekTextSize">16sp</dimen>
     <dimen name="day_number_select_circle_radius">16dp</dimen>
     <dimen name="day_number_size">16sp</dimen>
+    <dimen name="day_of_month_background_size">32dp</dimen>
     <dimen name="dialogHeight">401dp</dimen>
     <dimen name="dialogWidth">307dp</dimen>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
@@ -373,6 +423,7 @@
     <dimen name="image_thumbnail_spacing">1dp</dimen>
     <dimen name="item_touch_helper_max_drag_scroll_per_frame">20dp</dimen>
     <dimen name="margin_chat_activity">5dp</dimen>
+    <dimen name="minDayCellHeight">40dp</dimen>
     <dimen name="minimum_margin_sides">48dip</dimen>
     <dimen name="minimum_margin_top_bottom">24dip</dimen>
     <dimen name="month_day_label_text_size">10sp</dimen>
@@ -394,6 +445,7 @@
     <dimen name="notification_subtext_size">13sp</dimen>
     <dimen name="notification_top_pad">10dp</dimen>
     <dimen name="notification_top_pad_large_text">5dp</dimen>
+    <dimen name="padding">8dp</dimen>
     <dimen name="padding_dialog_bg">12dp</dimen>
     <dimen name="padding_search_bar">5dp</dimen>
     <dimen name="picker_dimen">270dip</dimen>
@@ -460,6 +512,10 @@
     <dimen name="spot_progress_spot_size">6dp</dimen>
     <dimen name="spot_progress_width">250dp</dimen>
     <dimen name="time_label_size">60sp</dimen>
+    <dimen name="underline_height">2dp</dimen>
+    <dimen name="underline_weight">6dp</dimen>
+    <dimen name="weekTitlePaddingBottom">8dp</dimen>
+    <dimen name="weekTitlePaddingTop">8dp</dimen>
     <dimen name="year_label_height">64dp</dimen>
     <dimen name="year_label_text_size">22dp</dimen>
     <drawable name="blue">#770000ff</drawable>
@@ -756,6 +812,9 @@
     <string name="copy">Copy</string>
     <string name="copy_message">Copy message</string>
     <string name="count_unit">个</string>
+    <string name="day_of_month_container" translatable="false">dayOfMonthContainer</string>
+    <string name="day_of_month_text" translatable="false">dayOfMonthText</string>
+    <string name="day_of_week" translatable="false">dayOfWeek</string>
     <string name="day_of_week_label_typeface">sans-serif</string>
     <string name="day_picker_description">Month grid of days</string>
     <string name="debit_card">借记卡</string>
@@ -1008,6 +1067,28 @@
     <string name="resend_sms_code">重新获取</string>
     <string name="retry_str">"%1$s 秒后重试"</string>
     <string name="robot_chat">Robot chat</string>
+    <string name="roboto_black" translatable="false">fonts/Roboto-Black.ttf</string>
+    <string name="roboto_black_italic" translatable="false">fonts/Roboto-BlackItalic.ttf</string>
+    <string name="roboto_bold" translatable="false">fonts/Roboto-Bold.ttf</string>
+    <string name="roboto_bold_italic" translatable="false">fonts/Roboto-BoldItalic.ttf</string>
+    <string name="roboto_condensed_bold" translatable="false">fonts/RobotoCondensed-Bold.ttf</string>
+    <string name="roboto_condensed_bold_italic" translatable="false">fonts/RobotoCondensed-BoldItalic.ttf</string>
+    <string name="roboto_condensed_italic" translatable="false">fonts/RobotoCondensed-Italic.ttf</string>
+    <string name="roboto_condensed_light" translatable="false">fonts/RobotoCondensed-Light.ttf</string>
+    <string name="roboto_condensed_light_italic" translatable="false">fonts/RobotoCondensed-LightItalic.ttf</string>
+    <string name="roboto_condensed_regular" translatable="false">fonts/RobotoCondensed-Regular.ttf</string>
+    <string name="roboto_italic" translatable="false">fonts/Roboto-Italic.ttf</string>
+    <string name="roboto_light" translatable="false">fonts/Roboto-Light.ttf</string>
+    <string name="roboto_light_italic" translatable="false">fonts/Roboto-LightItalic.ttf</string>
+    <string name="roboto_medium" translatable="false">fonts/Roboto-Medium.ttf</string>
+    <string name="roboto_medium_italic" translatable="false">fonts/Roboto-MediumItalic.ttf</string>
+    <string name="roboto_regular" translatable="false">fonts/Roboto-Regular.ttf</string>
+    <string name="roboto_slab_bold" translatable="false">fonts/RobotoSlab-Bold.ttf</string>
+    <string name="roboto_slab_light" translatable="false">fonts/RobotoSlab-Light.ttf</string>
+    <string name="roboto_slab_regular" translatable="false">fonts/RobotoSlab-Regular.ttf</string>
+    <string name="roboto_slab_thin" translatable="false">fonts/RobotoSlab-Thin.ttf</string>
+    <string name="roboto_thin" translatable="false">fonts/Roboto-Thin.ttf</string>
+    <string name="roboto_thin_italic" translatable="false">fonts/Roboto-ThinItalic.ttf</string>
     <string name="sans_serif">sans-serif</string>
     <string name="save">Save</string>
     <string name="save_new_nickname">Save new nickname</string>
@@ -1245,6 +1326,7 @@
     </style>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
+    <style name="AppBaseTheme" parent="android:Theme.Light"/>
     <style name="AppTheme" parent="android:Theme.Light"/>
     <style name="AvatarIconStyle">
         <item name="android:layout_width">@dimen/size165px</item>
@@ -2299,6 +2381,23 @@
         <item name="android:textColor">@color/text_grey</item>
         <item name="android:textSize">@dimen/font42px</item>
         <item name="android:layout_marginLeft">15dp</item>
+    </style>
+    <style name="CalendarView"/>
+    <style name="CalendarView.DayOfTheMonth">
+        <item name="android:textSize">14sp</item>
+        <item name="android:minHeight">@dimen/minDayCellHeight</item>
+    </style>
+    <style name="CalendarView.DayOfTheWeek">
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="CalendarViewTitle" parent="android:Theme.Holo.Light">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:layout_gravity">center</item>
     </style>
     <style name="ChangeButtonStyle">
         <item name="android:layout_width">wrap_content</item>
