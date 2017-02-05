@@ -18,6 +18,7 @@ import android.os.Message;
 import android.os.SystemClock;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Base64;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -118,6 +119,7 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
     private XProgressDialog fetchingSingleSchedule_xpd;
     private XProgressDialog addingSchedule_xpd;
     private XProgressDialog deletingSchedule_xpd;
+//    private XProgressDialog fetchingMine_xpd;
 //    private AVLoadingIndicatorView avi=null;
 //    private TextView fetching_tv;
 //    private AVLoadingIndicatorView avi_adding=null;
@@ -142,6 +144,7 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
     private DateFormat dateFormat;
     private SimpleDateFormat timeFormat;
     private TimePickerDialog.OnTimeSetListener onTimeSetListener;
+    private SwipeRefreshLayout mine_srl;
 
     private TextView txt_starttime;
     private TextView txt_endtime;
@@ -157,6 +160,9 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
     private String select_time="";
 
     private int which_one=0;
+    private boolean isMineFetchingOver = false;
+    private boolean isMineFetching = false;
+    private final int REFRESH_COMPLETE = 0X110;
     //endregion
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -164,8 +170,20 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
         requestWindowFeature(Window.FEATURE_NO_TITLE); //设置无标题栏
         setContentView(R.layout.consellorpage);
 
-        //region
-
+        //region “我的信息”下拉刷新设置
+        mine_srl = (SwipeRefreshLayout) findViewById(R.id.mine_srl);
+        //mSwipeLayout.setOnRefreshListener(this);
+        mine_srl.setColorSchemeResources(R.color.holo_blue_bright,
+                R.color.holo_green_light,
+                R.color.holo_orange_light,
+                R.color.holo_red_light);
+        //mSwipeLayout.setProgressBackgroundColorSchemeResource(R.color.holo_green_light);
+        mine_srl.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                refreshingHandler.sendEmptyMessageDelayed(REFRESH_COMPLETE, 2000);
+            }
+        });
         //endregion
 
         calendar1 = Calendar.getInstance();
@@ -183,6 +201,7 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
         fetchingSingleSchedule_xpd = new XProgressDialog(ConsellorPage.this,"正在加载..",XProgressDialog.THEME_HEART_PROGRESS);
         addingSchedule_xpd = new XProgressDialog(ConsellorPage.this,"正在添加..",XProgressDialog.THEME_HEART_PROGRESS);
         deletingSchedule_xpd = new XProgressDialog(ConsellorPage.this,"正在删除..",XProgressDialog.THEME_HEART_PROGRESS);
+//        fetchingMine_xpd = new XProgressDialog(ConsellorPage.this,"正在加载..",XProgressDialog.THEME_HEART_PROGRESS);
         //avi = new AVLoadingIndicatorView(ConsellorPage.this);
 //        avi = (AVLoadingIndicatorView)findViewById(R.id.fetching);
 //        fetching_tv = (TextView)findViewById(R.id.fetching_tv);
@@ -202,19 +221,7 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
 //            adding_tv.setVisibility(View.INVISIBLE);
 //            deleting_tv.setVisibility(View.INVISIBLE);
             //region 获取初始信息
-            new Thread(new Runnable() {
-                public void run() {
-                    try {
-                        ConnNet operaton = new ConnNet();
-                        String result = operaton.getConsellor(consellor_email);
-                        Message msg = new Message();
-                        msg.obj = result;
-                        hGetConsellor.sendMessage(msg);
-                    } catch (Exception ex) {
-                        Toast.makeText(ConsellorPage.this, "咨询师获取失败", Toast.LENGTH_SHORT).show();
-                    }
-                }
-            }).start();
+            initMine();
             //endregion
         }
         catch(Exception ex){
@@ -355,12 +362,27 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
         lpmine.width=lpmine.MATCH_PARENT;
         lpmine.height=upmineh;
         header_ll.setLayoutParams(lpmine);
-        listView.addHeaderView(header_view);
+
     }
     //endregion
 
-    //region
+    //region initMine
+    private void initMine(){
 
+        new Thread(new Runnable() {
+            public void run() {
+                try {
+                    ConnNet operaton = new ConnNet();
+                    String result = operaton.getConsellor(consellor_email);
+                    Message msg = new Message();
+                    msg.obj = result;
+                    hGetConsellor.sendMessage(msg);
+                } catch (Exception ex) {
+                    Toast.makeText(ConsellorPage.this, "咨询师获取失败", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }).start();
+    }
     //endregion
 
     //region 添加日程：handle
@@ -437,12 +459,41 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
     }
     //endregion
 
+    //region “我的”的信息下拉刷新
+    private Handler refreshingHandler = new Handler()
+    {
+        public void handleMessage(android.os.Message msg)
+        {
+            switch (msg.what)
+            {
+                case REFRESH_COMPLETE:
+                    try{
+                        listView.removeHeaderView(header_view);
+                        listView.setAdapter(null);
+                        isMineFetching = true;
+//                        fetchingMine_xpd.show();
+//                        fetchingMine_xpd.setCanceledOnTouchOutside(false);
+                        initMine();
+                    }
+                    catch (Exception ex){
+                        Log.e("mine下拉刷新",ex.toString());
+                    }
+                    break;
+            }
+        };
+    };
+    //endregion
+
+    //region 更新我的信息
+    //endregion
+
     OnDateSelectedListener onDateSelectedListener = new OnDateSelectedListener() {
         @Override
         public void onDateSelected(@NonNull MaterialCalendarView widget, @NonNull CalendarDay date, final boolean selected) {
             //Toast.makeText(ConsellorPage.this,widget.getSelectedDate().toString(),Toast.LENGTH_SHORT).show();
             fetchingSingleSchedule_xpd.show();
             fetchingSingleSchedule_xpd.setCanceledOnTouchOutside(false);
+            ll_down.setVisibility(View.VISIBLE);
 //            pd1.setMessage("获取中……");
 //            pd1.show();
 //            avi.show();
@@ -890,6 +941,16 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
             catch (Exception ex){
                 Log.e("",ex.toString());
             }
+            try{
+                if(isMineFetching){
+//                    fetchingMine_xpd.dismiss();
+                    mine_srl.setRefreshing(false);
+                    isMineFetching = false;
+                }
+            }
+            catch (Exception ex){
+                Log.e("",ex.toString());
+            }
             super.handleMessage(msg);
         }
     };
@@ -905,67 +966,73 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
                 JSONArray jsonObjs = new JSONObject(string).getJSONArray("orders");
                 Log.e("orders len",String.valueOf(jsonObjs.length()));
                 for(int i = 0; i < jsonObjs.length() ; i++){
-                    JSONObject jsonObj = (JSONObject)jsonObjs.get(i);
-                    String sid = jsonObj.getString("sid");
-                    String oid = jsonObj.getString("oid");
-                    String paid = jsonObj.getString("paid");
-                    String starttime = jsonObj.getString("starttime");
-                    String username = jsonObj.getJSONObject("user").getString("nickname");
-                    String str_schedule = jsonObj.getString("schedule");
-                    String isAccept = "";
-                    String delivery = "";
-                    String evac="";
                     try{
-                        isAccept = jsonObj.getString("refuse");
-                    }
-                    catch(Exception ex){
-                        isAccept = "notSet";
-                    }
-                    try{
-                        delivery = jsonObj.getString("delivery");
-                    }
-                    catch(Exception ex){
-                        delivery = "";
-                    }
-                    try{
-                        evac = jsonObj.getString("evac");
-                    }
-                    catch(Exception ex){
-                        evac = "";
-                    }
-                    Log.e("isaccept",isAccept);
-                    JSONObject jsonObjsc = new JSONObject(str_schedule).getJSONObject("consellor");
-                    //String portrait = jsonObjsc.getString("portrait");
-                    String portrait = jsonObj.getJSONObject("user").getString("portrait");
-                    String consellor_name = jsonObjsc.getString("realname");
-                    Drawable drawable = new BitmapDrawable(getBitmapFromByte(Base64.decode(portrait,Base64.DEFAULT)));
-                    Map<String, Object> map = new HashMap<String, Object>();
-                    map.put("appoint_img", drawable);
-                    if(isAccept.equals("0")){
-                        if(paid.equals("1")){
-                            map.put("appoint_hint", "已支付");
-                            if(delivery.equals("1")){
-                                map.put("appoint_hint", "已完成");
-                                if(evac.equals("1")){
-                                    map.put("appoint_hint", "已评价");
+                        JSONObject jsonObj = (JSONObject)jsonObjs.get(i);
+                        String sid = jsonObj.getString("sid");
+                        String oid = jsonObj.getString("oid");
+                        String paid = jsonObj.getString("paid");
+                        String starttime = jsonObj.getString("starttime");
+                        String username = jsonObj.getJSONObject("user").getString("nickname");
+                        String str_schedule = jsonObj.getString("schedule");
+                        String isAccept = "";
+                        String delivery = "";
+                        String evac="";
+                        try{
+                            isAccept = jsonObj.getString("refuse");
+                        }
+                        catch(Exception ex){
+                            isAccept = "notSet";
+                        }
+                        try{
+                            delivery = jsonObj.getString("delivery");
+                        }
+                        catch(Exception ex){
+                            delivery = "";
+                        }
+                        try{
+                            evac = jsonObj.getString("evac");
+                        }
+                        catch(Exception ex){
+                            evac = "";
+                        }
+                        Log.e("isaccept",isAccept);
+                        JSONObject jsonObjsc = new JSONObject(str_schedule).getJSONObject("consellor");
+                        //String portrait = jsonObjsc.getString("portrait");
+                        String portrait = jsonObj.getJSONObject("user").getString("portrait");
+                        String consellor_name = jsonObjsc.getString("realname");
+                        Drawable drawable = new BitmapDrawable(getBitmapFromByte(Base64.decode(portrait,Base64.DEFAULT)));
+                        Map<String, Object> map = new HashMap<String, Object>();
+                        map.put("appoint_img", drawable);
+                        if(isAccept.equals("0")){
+                            if(paid.equals("1")){
+                                map.put("appoint_hint", "已支付");
+                                if(delivery.equals("1")){
+                                    map.put("appoint_hint", "已完成");
+                                    if(evac.equals("1")){
+                                        map.put("appoint_hint", "已评价");
+                                    }
                                 }
                             }
+                            else{
+                                map.put("appoint_hint", "未支付");
+                            }
+                        }
+                        else if(isAccept.equals("1")){
+                            map.put("appoint_hint", "已拒绝");
                         }
                         else{
-                            map.put("appoint_hint", "未支付");
+                            map.put("appoint_hint", "还未审核");
                         }
+                        map.put("appoint_oid",oid);
+                        map.put("appoint_cname",consellor_name);
+                        map.put("appoint_time", starttime);              //姓名
+                        map.put("appoint_username", username);              //姓名
+                        listItems.add(map);
                     }
-                    else if(isAccept.equals("1")){
-                        map.put("appoint_hint", "已拒绝");
+                    catch (Exception ex){
+                        Log.e("s",ex.toString());
                     }
-                    else{
-                        map.put("appoint_hint", "还未审核");
-                    }
-                    map.put("appoint_oid",oid);
-                    map.put("appoint_cname",consellor_name);
-                    map.put("appoint_time", starttime);              //姓名
-                    map.put("appoint_username", username);              //姓名
-                    listItems.add(map);
+
                 }
             } catch (Exception e) {
                 System.out.println("通过cid获取的预约失败！");
@@ -973,6 +1040,7 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
             }
 
             list = listItems;
+            listView.addHeaderView(header_view);
             //listView.addHeaderView(header_view);
             csAppointAdapter = new CsAppointAdapter(hcontext, list);
             listView.setAdapter(csAppointAdapter);
@@ -1003,7 +1071,12 @@ public class ConsellorPage extends Activity implements DatePickerDialog.OnDateSe
             });
 //            avi.hide();
 //            fetching_tv.setVisibility(View.INVISIBLE);
-            pd.dismiss();
+            try{
+                pd.dismiss();
+            }
+            catch (Exception ex){
+
+            }
             super.handleMessage(msg);
         }
     };

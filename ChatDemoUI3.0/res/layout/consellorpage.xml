@@ -130,11 +130,17 @@
             android:id="@+id/wode_page"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <ListView
-                android:id="@+id/listview"
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/mine_srl"
+                android:visibility="visible"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-            </ListView>
+                android:layout_height="match_parent" >
+                <ListView
+                    android:id="@+id/listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </ListView>
+            </android.support.v4.widget.SwipeRefreshLayout>
         </RelativeLayout>
 
         <LinearLayout
